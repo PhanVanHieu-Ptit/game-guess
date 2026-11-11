@@ -1,0 +1,26 @@
+{
+  "name": "game-guess",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lắt Léo — game đố mẹo hack não kiểu Việt.",
+  "engines": {
+    "node": ">=22.22.3 <23"
+  },
+  "packageManager": "npm@10.9.8",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}
