@@ -1,0 +1,97 @@
+{
+  "label": "dev",
+  "url": "http://localhost:3218/",
+  "chromeVersion": "157.0.8103.40",
+  "status": 200,
+  "dom": {
+    "lang": "vi",
+    "title": "Lắt Léo",
+    "h1": "Lắt Léo",
+    "paragraph": "Game đố mẹo hack não kiểu Việt. Đây là trang mẫu của khung dự án.",
+    "viewportMeta": "width=device-width, initial-scale=1",
+    "nextRuntimePresent": true,
+    "scriptSrcs": [
+      "http://localhost:3218/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js",
+      "http://localhost:3218/_next/static/chunks/1q96_modules_next_dist_compiled_react-dom_cjs_react-dom_development_1sqry0_53krp4.js",
+      "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_react-dom_0grqycjrj6mju._.js",
+      "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js",
+      "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jmam7qwg.js",
+      "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_1amofcmz--cdp._.js",
+      "http://localhost:3218/_next/static/chunks/node_modules_next_dist_client_1165-soo5tfpf._.js",
+      "http://localhost:3218/_next/static/chunks/node_modules_next_dist_05y3oi5z9mc_3._.js",
+      "http://localhost:3218/_next/static/chunks/node_modules_%40swc_helpers_cjs_1r9vbqwj2323d._.js",
+      "http://localhost:3218/_next/static/chunks/_1anvha4rlo79g._.js",
+      "http://localhost:3218/_next/static/chunks/turbopack-_11q0wbt2n0d9y._.js",
+      "http://localhost:3218/_next/static/chunks/_219uq1sj0q91c._.js",
+      "http://localhost:3218/_next/static/chunks/node_modules_next_dist_20wefz_f1k6jn._.js",
+      "http://localhost:3218/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js",
+      "http://localhost:3218/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js",
+      "http://localhost:3218/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0fb9-gqu7_t97._.js"
+    ]
+  },
+  "consoleMessages": [
+    {
+      "type": "info",
+      "text": "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold",
+      "location": {
+        "url": "http://localhost:3218/_next/static/chunks/node_modules_next_dist_05y3oi5z9mc_3._.js",
+        "line": 760,
+        "column": 27,
+        "lineNumber": 760,
+        "columnNumber": 27
+      }
+    },
+    {
+      "type": "log",
+      "text": "[HMR] connected",
+      "location": {
+        "url": "http://localhost:3218/_next/static/chunks/node_modules_next_dist_05y3oi5z9mc_3._.js",
+        "line": 760,
+        "column": 27,
+        "lineNumber": 760,
+        "columnNumber": 27
+      }
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "badResponses": [],
+  "requestCount": 16,
+  "requestUrls": [
+    "http://localhost:3218/",
+    "http://localhost:3218/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0fb9-gqu7_t97._.js",
+    "http://localhost:3218/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js",
+    "http://localhost:3218/_next/static/chunks/1q96_modules_next_dist_compiled_react-dom_cjs_react-dom_development_1sqry0_53krp4.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_react-dom_0grqycjrj6mju._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jmam7qwg.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_1amofcmz--cdp._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_client_1165-soo5tfpf._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_05y3oi5z9mc_3._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_%40swc_helpers_cjs_1r9vbqwj2323d._.js",
+    "http://localhost:3218/_next/static/chunks/_1anvha4rlo79g._.js",
+    "http://localhost:3218/_next/static/chunks/turbopack-_11q0wbt2n0d9y._.js",
+    "http://localhost:3218/_next/static/chunks/_219uq1sj0q91c._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_20wefz_f1k6jn._.js",
+    "http://localhost:3218/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js"
+  ],
+  "scriptRequests": [
+    "http://localhost:3218/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0fb9-gqu7_t97._.js",
+    "http://localhost:3218/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js",
+    "http://localhost:3218/_next/static/chunks/1q96_modules_next_dist_compiled_react-dom_cjs_react-dom_development_1sqry0_53krp4.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_react-dom_0grqycjrj6mju._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jmam7qwg.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_compiled_1amofcmz--cdp._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_client_1165-soo5tfpf._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_05y3oi5z9mc_3._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_%40swc_helpers_cjs_1r9vbqwj2323d._.js",
+    "http://localhost:3218/_next/static/chunks/_1anvha4rlo79g._.js",
+    "http://localhost:3218/_next/static/chunks/turbopack-_11q0wbt2n0d9y._.js",
+    "http://localhost:3218/_next/static/chunks/_219uq1sj0q91c._.js",
+    "http://localhost:3218/_next/static/chunks/node_modules_next_dist_20wefz_f1k6jn._.js",
+    "http://localhost:3218/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js"
+  ],
+  "threeRequests": [],
+  "consoleErrorsOrWarnings": []
+}

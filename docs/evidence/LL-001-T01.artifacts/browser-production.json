@@ -1,0 +1,44 @@
+{
+  "label": "production",
+  "url": "http://localhost:3217/",
+  "chromeVersion": "157.0.8103.40",
+  "status": 200,
+  "dom": {
+    "lang": "vi",
+    "title": "Lắt Léo",
+    "h1": "Lắt Léo",
+    "paragraph": "Game đố mẹo hack não kiểu Việt. Đây là trang mẫu của khung dự án.",
+    "viewportMeta": "width=device-width, initial-scale=1",
+    "nextRuntimePresent": true,
+    "scriptSrcs": [
+      "http://localhost:3217/_next/static/chunks/0m3mby5pxg4oz.js",
+      "http://localhost:3217/_next/static/chunks/39_j1bdzreq0m.js",
+      "http://localhost:3217/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+      "http://localhost:3217/_next/static/chunks/3qfy96eoyh-ek.js",
+      "http://localhost:3217/_next/static/chunks/0cz1d0mv5g_q7.js",
+      "http://localhost:3217/_next/static/chunks/0j1we3cwg31qe.js"
+    ]
+  },
+  "consoleMessages": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "badResponses": [],
+  "requestCount": 6,
+  "requestUrls": [
+    "http://localhost:3217/",
+    "http://localhost:3217/_next/static/chunks/0j1we3cwg31qe.js",
+    "http://localhost:3217/_next/static/chunks/0m3mby5pxg4oz.js",
+    "http://localhost:3217/_next/static/chunks/39_j1bdzreq0m.js",
+    "http://localhost:3217/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+    "http://localhost:3217/_next/static/chunks/3qfy96eoyh-ek.js"
+  ],
+  "scriptRequests": [
+    "http://localhost:3217/_next/static/chunks/0j1we3cwg31qe.js",
+    "http://localhost:3217/_next/static/chunks/0m3mby5pxg4oz.js",
+    "http://localhost:3217/_next/static/chunks/39_j1bdzreq0m.js",
+    "http://localhost:3217/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+    "http://localhost:3217/_next/static/chunks/3qfy96eoyh-ek.js"
+  ],
+  "threeRequests": [],
+  "consoleErrorsOrWarnings": []
+}
