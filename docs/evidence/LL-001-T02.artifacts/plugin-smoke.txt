@@ -1,0 +1,55 @@
+# Plugin smoke — LL-001-T02 — 2026-11-12 07:19:35 +0700
+# eslint v10.14.0
+
+## fixture src/tmp-fixture-plugins.tsx
+```tsx
+import { useEffect, useState } from 'react';
+
+function Broken({ label }: { label: string }) {
+  if (label) {
+    useState(0);
+  }
+  useEffect(() => {
+    console.log(label);
+  }, []);
+  return <p>{label}</p>;
+}
+
+export default function () {
+  const items = [1, 2, 3];
+  return (
+    <ul>
+      {items.map((n) => (
+        <li>{n}</li>
+      ))}
+      <img src="/x.png" />
+      <Broken label="x" />
+    </ul>
+  );
+}
+```
+
+## npx eslint src/tmp-fixture-plugins.tsx --max-warnings 0
+```
+
+/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/src/tmp-fixture-plugins.tsx
+   5:5   error    React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render                                                                                                                                                              react-hooks/rules-of-hooks
+   9:6   warning  React Hook useEffect has a missing dependency: 'label'. Either include it or remove the dependency array                                                                                                                                                                                 react-hooks/exhaustive-deps
+  13:1   warning  Unexpected default export of anonymous function                                                                                                                                                                                                                                          import/no-anonymous-default-export
+  13:16  error    Component definition is missing display name                                                                                                                                                                                                                                             react/display-name
+  18:9   error    Missing "key" prop for element in iterator                                                                                                                                                                                                                                               react/jsx-key
+  20:7   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  20:7   warning  img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                jsx-a11y/alt-text
+
+✖ 7 problems (3 errors, 4 warnings)
+
+```
+exit=1  (1 = có lỗi lint; 2 = ESLint/plugin crash)
+
+## Rule id theo plugin đã xuất hiện trong kết quả:
+- [x] react-hooks/rules-of-hooks
+- [x] react-hooks/exhaustive-deps
+- [x] react/jsx-key
+- [x] jsx-a11y/alt-text
+- [x] @next/next/no-img-element
+- [x] import/no-anonymous-default-export

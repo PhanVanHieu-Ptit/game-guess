@@ -2072,7 +2072,7 @@
       "id": "Q11",
       "status": "unresolved",
       "question": "DoD, người review và quy tắc cho phép hoãn high severity?",
-      "working_baseline": "DoD tài liệu này là bản nháp cần xác nhận.",
+      "working_baseline": "DoD tài liệu này là bản nháp cần xác nhận. Từ 2026-11-12 người dùng chọn dùng DoD tạm (scrum/HO_SO.md mục 6, Câu 1) cho tới Retro 20/11/2026, người duyệt là người dùng; Q11 chính thức vẫn mở và chốt ở Retro.",
       "evidence": []
     },
     {
@@ -2533,12 +2533,12 @@
         {
           "id": "LL-001-T01-S01",
           "title": "Chọn phiên bản tương thích ở thời điểm thực thi, pin Node/package manager và Next.js; sinh lockfile.",
-          "status": "in_review"
+          "status": "done"
         },
         {
           "id": "LL-001-T01-S02",
           "title": "Tạo App Router TypeScript tối thiểu; metadata và html lang=vi; bỏ file mẫu không dùng.",
-          "status": "in_review"
+          "status": "done"
         }
       ],
       "acceptance_criteria": [
@@ -2556,7 +2556,7 @@
         "npm run build"
       ],
       "manual_verification": [],
-      "status": "in_review",
+      "status": "done",
       "readiness": "ready",
       "evidence": [
         {
@@ -2658,6 +2658,17 @@
           "revision": "HEAD 666c413aeaada490768a201155653377d1958de7 + uncommitted working tree (gồm next.config.ts, sha256 6811b6add470b95d)",
           "recorded_at": "2026-11-11T20:36:58+07:00",
           "result": "pass: found 0 vulnerabilities"
+        },
+        {
+          "kind": "decision",
+          "artifact": "docs/evidence/LL-001-T01.md",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae (nhánh init); sha256 của 8 file thuộc phạm vi ở HEAD và working tree khớp bảng mục 1 của bằng chứng",
+          "recorded_at": "2026-11-12T07:10:53+07:00",
+          "result": "approved: người dùng chọn «Đặt done» cho LL-001-T01 (hộp thoại xác nhận, 2026-11-12) sau khi được báo giới hạn: chỉ Chrome 157 headless trên macOS, chưa có người review độc lập, tác giả chưa chạy lại build ngày 2026-11-12 (chỉ đối chiếu hash). Đồng thời chọn «Dùng DoD tạm» (scrum/HO_SO.md mục 6, Câu 1) cho tới Retro 20/11/2026; Q11 chính thức vẫn mở.",
+          "reviewer": "hieu (người dùng; PO kiêm người duyệt duy nhất theo OPS-3)",
+          "scope_task_ids": [
+            "LL-001-T01"
+          ]
         }
       ],
       "sprint_id": "SP-00"
@@ -2681,7 +2692,8 @@
       "affected_files": [
         "package.json",
         "eslint.config.mjs",
-        ".prettierrc.json"
+        ".prettierrc.json",
+        "package-lock.json"
       ],
       "implementation_steps": [
         "Thêm lint, format:check, typecheck và scripts chạy không tương tác.",
@@ -2691,12 +2703,12 @@
         {
           "id": "LL-001-T02-S01",
           "title": "Thêm lint, format:check, typecheck và scripts chạy không tương tác.",
-          "status": "todo"
+          "status": "in_review"
         },
         {
           "id": "LL-001-T02-S02",
           "title": "Chạy trên scaffold và sửa lỗi cấu hình, tránh bỏ qua toàn bộ source.",
-          "status": "todo"
+          "status": "in_review"
         }
       ],
       "acceptance_criteria": [
@@ -2715,9 +2727,147 @@
         "npm run typecheck"
       ],
       "manual_verification": [],
-      "status": "todo",
-      "readiness": "dependency_blocked",
-      "evidence": [],
+      "status": "in_review",
+      "readiness": "ready",
+      "evidence": [
+        {
+          "kind": "command",
+          "command": "npm install --save-dev --save-exact --no-fund eslint@9.39.5 eslint-config-next@16.4.6 prettier@3.10.0",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-install-eslint9-attempt.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree",
+          "recorded_at": "2026-11-12T07:12:39+07:00",
+          "result": "đã cài; npm báo eslint@9.39.5 deprecated ('no longer supported'); 8 moderate",
+          "superseded": true,
+          "superseded_reason": "Mọi bản ESLint 9.x (51/51) bị deprecated; thay bằng eslint@10.14.0 (mục tiếp theo)."
+        },
+        {
+          "kind": "command",
+          "command": "npm install --save-dev --save-exact --no-fund eslint@10.14.0",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-install-eslint10.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree",
+          "recorded_at": "2026-11-12T07:13:33+07:00",
+          "result": "pass: 3 cảnh báo ERESOLVE overriding peer dependency (eslint-plugin-import, -jsx-a11y, -react có peer range ≤ ESLint 9); 10 moderate (một advisory)"
+        },
+        {
+          "kind": "command",
+          "command": "npm ci --no-fund",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:09+07:00",
+          "result": "pass: 340 gói; sha256 lockfile không đổi sau npm ci (d29c97e4a5eaf6f23952274c6559d4d1fef980c148d0000d5b291ee9c3349426); 3 cảnh báo ERESOLVE như trên"
+        },
+        {
+          "kind": "command",
+          "command": "npm run lint",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:17+07:00",
+          "result": "pass: eslint . --max-warnings 0, 0 lỗi, 0 cảnh báo trên scaffold"
+        },
+        {
+          "kind": "command",
+          "command": "npm run format:check",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:19+07:00",
+          "result": "pass: All matched files use Prettier code style (phạm vi: . !docs/** !**/*.md)"
+        },
+        {
+          "kind": "command",
+          "command": "npm run typecheck",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:20+07:00",
+          "result": "pass: tsc --noEmit"
+        },
+        {
+          "kind": "command",
+          "command": "npm run check",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:21+07:00",
+          "result": "pass: lint + format:check + typecheck trên cây sạch"
+        },
+        {
+          "kind": "command",
+          "command": "npm run check (có fixture format tạm)",
+          "exit_code": 1,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:25+07:00",
+          "result": "expected fail: lint pass, format:check fail, typecheck không chạy (dừng sớm); fixture đã xóa sau đó"
+        },
+        {
+          "kind": "command",
+          "command": "npm run check (sau khi xóa fixture)",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:27+07:00",
+          "result": "pass"
+        },
+        {
+          "kind": "command",
+          "command": "npm run build",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:29+07:00",
+          "result": "pass (hồi quy ứng dụng): Next.js 16.4.6, / và /_not-found prerender tĩnh"
+        },
+        {
+          "kind": "command",
+          "command": "bash docs/evidence/LL-001-T02.artifacts/fixture-matrix.sh docs/evidence/LL-001-T02.artifacts/fixture-matrix.txt",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/fixture-matrix.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:20:02+07:00",
+          "result": "pass: ma trận 4 fixture x 3 script, mỗi fixture chỉ làm đúng một công cụ fail (type: typecheck 2; lint: lint 1; format: format:check 1; warn: lint 1 do --max-warnings 0, eslint trần 0); sau khi xóa fixture cả ba exit 0, không fixture sót"
+        },
+        {
+          "kind": "command",
+          "command": "npx eslint src/tmp-fixture-plugins.tsx --max-warnings 0 (qua plugin-smoke.sh; fixture tạm đã xóa)",
+          "exit_code": 1,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/plugin-smoke.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:19:35+07:00",
+          "result": "pass (exit 1 là kỳ vọng, không crash): 7 rule id xuất hiện từ 5 plugin dưới ESLint 10.14.0: react-hooks/rules-of-hooks, react-hooks/exhaustive-deps, react/jsx-key, react/display-name, jsx-a11y/alt-text, @next/next/no-img-element, import/no-anonymous-default-export"
+        },
+        {
+          "kind": "command",
+          "command": "npm audit --omit=dev",
+          "exit_code": 0,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-audit-omit-dev.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:20:39+07:00",
+          "result": "pass: found 0 vulnerabilities (chỉ phụ thuộc production)"
+        },
+        {
+          "kind": "command",
+          "command": "npm ls --all",
+          "exit_code": 1,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:31+07:00",
+          "result": "informational: ELSPROBLEMS (exit 1) do 3 plugin có peer range ≤ ESLint 9; npm ls độ sâu 0 thoát 0 (npm-ls-default.txt)"
+        },
+        {
+          "kind": "command",
+          "command": "npm audit",
+          "exit_code": 1,
+          "artifact": "docs/evidence/LL-001-T02.artifacts/npm-ci-scripts-build.txt",
+          "revision": "HEAD c8f53f06828e250b66361408025df26c078af6ae + uncommitted working tree (package.json 448c758a67057dd6, package-lock.json d29c97e4a5eaf6f2, eslint.config.mjs e6616467ad552abc, .prettierrc.json 37055c9804322813)",
+          "recorded_at": "2026-11-12T07:18:32+07:00",
+          "result": "informational: 10 moderate, một advisory minimatch GHSA-g3hv-75wg-m249 (chuỗi eslint-config-next > typescript-eslint > typescript-estree > minimatch@10.2.6); chỉ công cụ dev; chưa xử lý, chờ người dùng quyết (evidence O3)"
+        }
+      ],
       "sprint_id": "SP-00"
     },
     {

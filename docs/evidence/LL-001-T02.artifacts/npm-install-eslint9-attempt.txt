@@ -1,0 +1,19 @@
+# pre-install hashes
+7b55db394b340aca  package.json
+8a85d1d60242015e  package-lock.json
+
+$ npm install --save-dev --save-exact --no-fund eslint@9.39.5 eslint-config-next@16.4.6 prettier@3.10.0
+npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 320 packages, and audited 351 packages in 59s
+
+8 moderate severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+install exit=0
