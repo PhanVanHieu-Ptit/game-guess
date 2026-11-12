@@ -351,7 +351,7 @@ python3 docs/ai-planning/verify_plan.py
 
 ### LL-001-T01 — Khởi tạo ứng dụng và khóa runtime
 
-Epic E1 → Feature F-001 → Story LL-001. **P0 · XS · 1 SP** · SP-00 (đã nhận) · `in_review` / `ready`.
+Epic E1 → Feature F-001 → Story LL-001. **P0 · XS · 1 SP** · SP-00 (đã nhận) · `done` / `ready`.
 
 **Description:** Chọn phiên bản tương thích ở thời điểm thực thi, pin Node/package manager và Next.js; sinh lockfile. Phạm vi chỉ gồm các file/khối trách nhiệm được liệt kê; file hiện chưa tồn tại là đường dẫn dự kiến.
 
@@ -380,13 +380,13 @@ npm run build
 
 ### LL-001-T02 — Thiết lập lint, format và typecheck
 
-Epic E1 → Feature F-001 → Story LL-001. **P0 · XS · 1 SP** · SP-00 (ứng viên) · `todo` / `dependency_blocked`.
+Epic E1 → Feature F-001 → Story LL-001. **P0 · XS · 1 SP** · SP-00 (đã nhận) · `in_review` / `ready`.
 
 **Description:** Thêm lint, format:check, typecheck và scripts chạy không tương tác. Phạm vi chỉ gồm các file/khối trách nhiệm được liệt kê; file hiện chưa tồn tại là đường dẫn dự kiến.
 
 **Dependencies:** [LL-001-T01](BACKLOG.md#ll-001-t01). **Decision/evidence gates:** Không có gate riêng; vẫn áp dụng DoD.
 
-**Affected files (dự kiến):** `package.json`, `eslint.config.mjs`, `.prettierrc.json`.
+**Affected files (dự kiến):** `package.json`, `eslint.config.mjs`, `.prettierrc.json`, `package-lock.json`.
 
 **Implementation steps / subtasks:**
 

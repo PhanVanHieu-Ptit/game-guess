@@ -1,0 +1,9 @@
+$ npm run format:check   # 2026-11-12 07:14:08 +0700
+
+> game-guess@0.1.0 format:check
+> prettier --check . "!docs/**" "!scrum/**"
+
+Checking formatting...
+[warn] README.md
+[warn] Code style issues found in the above file. Run Prettier with --write to fix.
+exit=1
