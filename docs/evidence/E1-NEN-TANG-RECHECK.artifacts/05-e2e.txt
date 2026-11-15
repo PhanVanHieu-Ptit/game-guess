@@ -1,0 +1,159 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test
+
+[WebServer] (node:51703) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:51741) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:51744) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:51743) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:51745) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:51740) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:51742) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:51746) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:51771) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 102 tests using 5 workers
+
+(node:51778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51777) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51775) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51774) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘    2 [iphone-se] › tests/e2e/gates.spec.ts:14:3 › cổng console và mạng (fixture guard) › console.error làm test thất bại (1.0s)
+  ✘    1 [iphone-se] › tests/e2e/gates.spec.ts:39:3 › cổng console và mạng (fixture guard) › yêu cầu mạng trả mã ≥ 400 làm test thất bại (1.0s)
+  ✘    5 [iphone-se] › tests/e2e/gates.spec.ts:28:3 › cổng console và mạng (fixture guard) › lỗi chưa bắt (pageerror) làm test thất bại (1.1s)
+  ✘    4 [iphone-se] › tests/e2e/gates.spec.ts:21:3 › cổng console và mạng (fixture guard) › console.warn làm test thất bại (1.1s)
+  ✓    9 [iphone-se] › tests/e2e/gates.spec.ts:90:3 › cổng bố cục (findLayoutProblems) › bắt cuộn ngang, vùng chạm nhỏ và chữ nhỏ (287ms)
+  ✘    8 [iphone-se] › tests/e2e/gates.spec.ts:76:3 › cổng console và mạng (fixture guard) › sự kiện đo lường sai cấu trúc làm test thất bại (384ms)
+  ✓    6 [iphone-se] › tests/e2e/gates.spec.ts:52:3 › cổng console và mạng (fixture guard) › pageerror do WebKit hủy yêu cầu nạp trước (?_rsc=) không làm test thất bại (405ms)
+  ✓    7 [iphone-se] › tests/e2e/gates.spec.ts:66:3 › cổng console và mạng (fixture guard) › lỗi được cho phép bằng guard.allow thì không làm test thất bại (398ms)
+  ✓   10 [iphone-se] › tests/e2e/gates.spec.ts:103:3 › cổng bố cục (findLayoutProblems) › bắt chữ tràn khỏi mép màn hình (249ms)
+  ✓   13 [iphone-se] › tests/e2e/gates.spec.ts:158:3 › cổng sự kiện đo lường (findEventProblems) › bắt trường lạ, thiếu trường và sai kiểu (229ms)
+  ✓   11 [iphone-se] › tests/e2e/gates.spec.ts:152:3 › cổng sự kiện đo lường (findEventProblems) › chuỗi hợp lệ không có vi phạm (232ms)
+  ✓   12 [iphone-se] › tests/e2e/gates.spec.ts:115:3 › cổng bố cục (findLayoutProblems) › trang đạt chuẩn thì không báo gì (241ms)
+  ✓   14 [iphone-se] › tests/e2e/gates.spec.ts:180:3 › cổng sự kiện đo lường (findEventProblems) › bắt vi phạm luồng bắt đầu → đúng một kết thúc (211ms)
+  ✓   15 [iphone-se] › tests/e2e/gates.spec.ts:200:3 › cổng sự kiện đo lường (findEventProblems) › bắt eventId trùng và tên sự kiện lạ (211ms)
+  ✓    3 [iphone-se] › tests/e2e/errors.spec.ts:14:1 › nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về chọn màn, chưa ghi level_start; mạng phục hồi rồi Thử lại thì chơi được (2.3s)
+  ✓   18 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:128:1 › chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đầu lượt mới (979ms)
+  ✓   17 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:61:1 › xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn mở màn kế (1.2s)
+  ✓   16 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:12:1 › gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm (1.2s)
+  ✓   19 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:164:1 › chơi lại từ màn kết quả bắt đầu lượt mới và đếm lại gợi ý từ 0 (979ms)
+  ✓   20 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:199:1 › màn chưa mở không vào được và chỉ đường về màn đang chơi (665ms)
+  ✓   21 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:217:1 › mã màn không có hiện trang "không tìm thấy", không sập (664ms)
+  ✓   22 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:245:3 › nút Gợi ý khi người chơi bí › sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút (872ms)
+  ✓   23 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:273:5 › nút Gợi ý khi người chơi bí › khi người dùng chọn giảm chuyển động › nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý (1.0s)
+  ✓   27 [iphone-se] › tests/e2e/sample-flow.spec.ts:176:1 › chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn (748ms)
+  ✓   28 [iphone-se] › tests/e2e/sample-flow.spec.ts:198:1 › đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về (655ms)
+  ✓   26 [iphone-se] › tests/e2e/sample-flow.spec.ts:157:1 › Chơi tiếp đưa về màn chưa xong đầu tiên (1.1s)
+  ✓   25 [iphone-se] › tests/e2e/sample-flow.spec.ts:14:1 › trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ (2.0s)
+  ✓   24 [iphone-se] › tests/e2e/navigation-recovery.spec.ts:12:1 › Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được (2.1s)
+  ✓   30 [iphone-se] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi localStorage đầy dung lượng, có một dòng báo, không lỗi console (1.0s)
+  ✓   31 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu không phải JSON: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.1s)
+  ✓   29 [iphone-se] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi trình duyệt chặn truy cập localStorage, có một dòng báo, không lỗi console (1.2s)
+  ✓   32 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu đúng JSON nhưng sai kiểu: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (975ms)
+  ✓   33 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu phiên bản lạ: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (946ms)
+(node:51872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51874) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51878) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   38 [pixel-5] › tests/e2e/gates.spec.ts:21:3 › cổng console và mạng (fixture guard) › console.warn làm test thất bại (322ms)
+  ✘   35 [pixel-5] › tests/e2e/gates.spec.ts:14:3 › cổng console và mạng (fixture guard) › console.error làm test thất bại (364ms)
+  ✘   37 [pixel-5] › tests/e2e/gates.spec.ts:28:3 › cổng console và mạng (fixture guard) › lỗi chưa bắt (pageerror) làm test thất bại (398ms)
+  ✘   39 [pixel-5] › tests/e2e/gates.spec.ts:39:3 › cổng console và mạng (fixture guard) › yêu cầu mạng trả mã ≥ 400 làm test thất bại (168ms)
+  ✓   34 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu giá trị rỗng: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.4s)
+  ✓   41 [pixel-5] › tests/e2e/gates.spec.ts:66:3 › cổng console và mạng (fixture guard) › lỗi được cho phép bằng guard.allow thì không làm test thất bại (215ms)
+  ✓   40 [pixel-5] › tests/e2e/gates.spec.ts:52:3 › cổng console và mạng (fixture guard) › pageerror do WebKit hủy yêu cầu nạp trước (?_rsc=) không làm test thất bại (252ms)
+  ✘   42 [pixel-5] › tests/e2e/gates.spec.ts:76:3 › cổng console và mạng (fixture guard) › sự kiện đo lường sai cấu trúc làm test thất bại (213ms)
+  ✓   43 [pixel-5] › tests/e2e/gates.spec.ts:103:3 › cổng bố cục (findLayoutProblems) › bắt chữ tràn khỏi mép màn hình (138ms)
+  ✓   44 [pixel-5] › tests/e2e/gates.spec.ts:115:3 › cổng bố cục (findLayoutProblems) › trang đạt chuẩn thì không báo gì (138ms)
+  ✓   46 [pixel-5] › tests/e2e/gates.spec.ts:158:3 › cổng sự kiện đo lường (findEventProblems) › bắt trường lạ, thiếu trường và sai kiểu (114ms)
+  ✓   45 [pixel-5] › tests/e2e/gates.spec.ts:152:3 › cổng sự kiện đo lường (findEventProblems) › chuỗi hợp lệ không có vi phạm (144ms)
+  ✓   47 [pixel-5] › tests/e2e/gates.spec.ts:180:3 › cổng sự kiện đo lường (findEventProblems) › bắt vi phạm luồng bắt đầu → đúng một kết thúc (116ms)
+(node:51912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   48 [pixel-5] › tests/e2e/gates.spec.ts:200:3 › cổng sự kiện đo lường (findEventProblems) › bắt eventId trùng và tên sự kiện lạ (148ms)
+  ✓   52 [pixel-5] › tests/e2e/gates.spec.ts:90:3 › cổng bố cục (findLayoutProblems) › bắt cuộn ngang, vùng chạm nhỏ và chữ nhỏ (157ms)
+  ✓   36 [pixel-5] › tests/e2e/errors.spec.ts:14:1 › nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về chọn màn, chưa ghi level_start; mạng phục hồi rồi Thử lại thì chơi được (1.7s)
+  ✓   51 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:128:1 › chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đầu lượt mới (855ms)
+  ✓   49 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:61:1 › xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn mở màn kế (1.1s)
+  ✓   50 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:12:1 › gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm (1.1s)
+  ✓   53 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:164:1 › chơi lại từ màn kết quả bắt đầu lượt mới và đếm lại gợi ý từ 0 (906ms)
+  ✓   54 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:199:1 › màn chưa mở không vào được và chỉ đường về màn đang chơi (698ms)
+  ✓   55 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:217:1 › mã màn không có hiện trang "không tìm thấy", không sập (514ms)
+  ✓   56 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:245:3 › nút Gợi ý khi người chơi bí › sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút (794ms)
+  ✓   57 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:273:5 › nút Gợi ý khi người chơi bí › khi người dùng chọn giảm chuyển động › nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý (893ms)
+  ✓   61 [pixel-5] › tests/e2e/sample-flow.spec.ts:176:1 › chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn (393ms)
+  ✓   60 [pixel-5] › tests/e2e/sample-flow.spec.ts:157:1 › Chơi tiếp đưa về màn chưa xong đầu tiên (755ms)
+  ✓   62 [pixel-5] › tests/e2e/sample-flow.spec.ts:198:1 › đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về (400ms)
+  ✓   59 [pixel-5] › tests/e2e/sample-flow.spec.ts:14:1 › trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ (1.5s)
+  ✓   63 [pixel-5] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi trình duyệt chặn truy cập localStorage, có một dòng báo, không lỗi console (900ms)
+  ✓   64 [pixel-5] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi localStorage đầy dung lượng, có một dòng báo, không lỗi console (904ms)
+  ✓   58 [pixel-5] › tests/e2e/navigation-recovery.spec.ts:12:1 › Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được (2.1s)
+  ✓   65 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu không phải JSON: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.1s)
+(node:51946) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51947) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   70 [mobile-360] › tests/e2e/gates.spec.ts:14:3 › cổng console và mạng (fixture guard) › console.error làm test thất bại (199ms)
+  ✓   66 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu đúng JSON nhưng sai kiểu: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.1s)
+  ✘   71 [mobile-360] › tests/e2e/gates.spec.ts:21:3 › cổng console và mạng (fixture guard) › console.warn làm test thất bại (154ms)
+(node:51957) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   67 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu phiên bản lạ: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓   68 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu giá trị rỗng: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.1s)
+  ✘   72 [mobile-360] › tests/e2e/gates.spec.ts:39:3 › cổng console và mạng (fixture guard) › yêu cầu mạng trả mã ≥ 400 làm test thất bại (129ms)
+  ✘   74 [mobile-360] › tests/e2e/gates.spec.ts:76:3 › cổng console và mạng (fixture guard) › sự kiện đo lường sai cấu trúc làm test thất bại (165ms)
+(node:51962) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51959) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   75 [mobile-360] › tests/e2e/gates.spec.ts:90:3 › cổng bố cục (findLayoutProblems) › bắt cuộn ngang, vùng chạm nhỏ và chữ nhỏ (91ms)
+  ✘   73 [mobile-360] › tests/e2e/gates.spec.ts:28:3 › cổng console và mạng (fixture guard) › lỗi chưa bắt (pageerror) làm test thất bại (254ms)
+  ✓   76 [mobile-360] › tests/e2e/gates.spec.ts:103:3 › cổng bố cục (findLayoutProblems) › bắt chữ tràn khỏi mép màn hình (115ms)
+  ✓   79 [mobile-360] › tests/e2e/gates.spec.ts:115:3 › cổng bố cục (findLayoutProblems) › trang đạt chuẩn thì không báo gì (162ms)
+  ✓   80 [mobile-360] › tests/e2e/gates.spec.ts:152:3 › cổng sự kiện đo lường (findEventProblems) › chuỗi hợp lệ không có vi phạm (151ms)
+  ✓   78 [mobile-360] › tests/e2e/gates.spec.ts:66:3 › cổng console và mạng (fixture guard) › lỗi được cho phép bằng guard.allow thì không làm test thất bại (223ms)
+  ✓   82 [mobile-360] › tests/e2e/gates.spec.ts:180:3 › cổng sự kiện đo lường (findEventProblems) › bắt vi phạm luồng bắt đầu → đúng một kết thúc (76ms)
+  ✓   81 [mobile-360] › tests/e2e/gates.spec.ts:158:3 › cổng sự kiện đo lường (findEventProblems) › bắt trường lạ, thiếu trường và sai kiểu (110ms)
+  ✓   77 [mobile-360] › tests/e2e/gates.spec.ts:52:3 › cổng console và mạng (fixture guard) › pageerror do WebKit hủy yêu cầu nạp trước (?_rsc=) không làm test thất bại (274ms)
+  ✓   83 [mobile-360] › tests/e2e/gates.spec.ts:200:3 › cổng sự kiện đo lường (findEventProblems) › bắt eventId trùng và tên sự kiện lạ (105ms)
+  ✓   69 [mobile-360] › tests/e2e/errors.spec.ts:14:1 › nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về chọn màn, chưa ghi level_start; mạng phục hồi rồi Thử lại thì chơi được (2.0s)
+  ✓   86 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:128:1 › chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đầu lượt mới (867ms)
+  ✓   87 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:164:1 › chơi lại từ màn kết quả bắt đầu lượt mới và đếm lại gợi ý từ 0 (946ms)
+  ✓   85 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:61:1 › xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn mở màn kế (1.1s)
+  ✓   84 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:12:1 › gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm (1.1s)
+  ✓   89 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:217:1 › mã màn không có hiện trang "không tìm thấy", không sập (553ms)
+  ✓   88 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:199:1 › màn chưa mở không vào được và chỉ đường về màn đang chơi (709ms)
+  ✓   90 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:245:3 › nút Gợi ý khi người chơi bí › sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút (767ms)
+  ✓   91 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:273:5 › nút Gợi ý khi người chơi bí › khi người dùng chọn giảm chuyển động › nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý (934ms)
+  ✓   95 [mobile-360] › tests/e2e/sample-flow.spec.ts:176:1 › chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn (434ms)
+  ✓   94 [mobile-360] › tests/e2e/sample-flow.spec.ts:157:1 › Chơi tiếp đưa về màn chưa xong đầu tiên (830ms)
+  ✓   96 [mobile-360] › tests/e2e/sample-flow.spec.ts:198:1 › đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về (447ms)
+  ✓   92 [mobile-360] › tests/e2e/navigation-recovery.spec.ts:12:1 › Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được (2.3s)
+  ✓   99 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu không phải JSON: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (882ms)
+  ✓   93 [mobile-360] › tests/e2e/sample-flow.spec.ts:14:1 › trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ (1.8s)
+  ✓   98 [mobile-360] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi localStorage đầy dung lượng, có một dòng báo, không lỗi console (1.2s)
+  ✓   97 [mobile-360] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi trình duyệt chặn truy cập localStorage, có một dòng báo, không lỗi console (1.4s)
+  ✓  100 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu đúng JSON nhưng sai kiểu: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.1s)
+  ✓  102 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu giá trị rỗng: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.0s)
+  ✓  101 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu phiên bản lạ: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.1s)
+
+  102 passed (21.9s)

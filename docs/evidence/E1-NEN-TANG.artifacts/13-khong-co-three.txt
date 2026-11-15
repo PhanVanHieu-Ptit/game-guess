@@ -1,0 +1,4 @@
+import three/R3F/drei trong src/ và tests/:
+  (không có)
+chunk đã build chứa dấu vết three.js:
+  (không có)

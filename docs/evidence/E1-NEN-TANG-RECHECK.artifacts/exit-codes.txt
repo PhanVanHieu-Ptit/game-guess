@@ -1,0 +1,5 @@
+01-verify-plan: exit 0 (python3 docs/ai-planning/verify_plan.py)
+02-check: exit 0 (npm run check)
+03-unit: exit 0 (npm run test)
+04-build: exit 0 (npm run build)
+05-e2e: exit 0 (npm run test:e2e)

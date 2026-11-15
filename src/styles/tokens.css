@@ -1,0 +1,54 @@
+/*
+ * Design token (docs/TECH.md mục 2: CSS Modules + biến CSS). Phong cách tươi, hình khối phẳng viền đậm; phông và
+ * bảng màu cuối cùng chờ chủ dự án chốt (câu hỏi H5, docs/GDD.md mục 13.2), nên mọi giá trị nằm ở đây để đổi một chỗ.
+ * Mọi cặp chữ/nền dùng trong game đạt tương phản ≥ 4,5:1 (đã tính theo công thức WCAG).
+ */
+:root {
+  /* Màu */
+  --c-bg: #fff6e5;
+  --c-surface: #ffffff;
+  --c-ink: #231f3f;
+  --c-muted: #5a5575;
+  --c-line: #e6d8ba;
+  --c-primary: #ffc53d;
+  --c-on-primary: #231f3f;
+  --c-accent: #c62f3b;
+  --c-on-accent: #ffffff;
+  --c-teal: #0b7a72;
+  --c-success: #14753f;
+  --c-success-bg: #d8f2e0;
+  --c-danger: #b3261e;
+  --c-danger-bg: #fde1e0;
+  --c-locked-bg: #efe6d2;
+  --c-focus: #2457c5;
+  --c-scrim: rgba(35, 31, 63, 0.55);
+
+  /* Phông: bộ phông hệ thống đều có chữ tiếng Việt có dấu đầy đủ. Phông tự host chờ H5. */
+  --font-sans:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+
+  /* Cỡ chữ: chữ đọc không nhỏ hơn 16 px (docs/GDD.md mục 12.2). */
+  --fs-sm: 1rem;
+  --fs-base: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2.5rem;
+  --lh: 1.45;
+
+  /* Khoảng cách và bo góc */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  /* Vùng chạm thiết kế (≥ 44 px theo docs/GDD.md mục 4 và 12.2). */
+  --touch: 48px;
+
+  /* Bề rộng tối đa của cột nội dung: máy tính hiện một cột giữa như điện thoại. */
+  --column: 480px;
+}

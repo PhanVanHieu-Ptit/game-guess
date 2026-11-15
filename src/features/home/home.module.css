@@ -1,0 +1,96 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.home > :first-child {
+  margin-top: auto;
+}
+
+.home > :last-child {
+  margin-bottom: auto;
+}
+
+.hero {
+  display: grid;
+  justify-items: center;
+  gap: var(--sp-3);
+  text-align: center;
+}
+
+.logo {
+  display: block;
+}
+
+.title {
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  max-width: 22em;
+  color: var(--c-muted);
+}
+
+.menu {
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.stack {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+
+.sub {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+/* Chỗ giữ cho nút Chơi/Chơi tiếp trong lúc chờ nạp tiến trình: cùng kích thước nên không làm trang nhảy. */
+.skeleton {
+  min-height: 64px;
+  border: 2px solid var(--c-line);
+  border-radius: var(--radius-md);
+  background: var(--c-locked-bg);
+}
+
+.daily {
+  display: grid;
+  gap: 2px;
+  min-height: 64px;
+  align-content: center;
+  padding: var(--sp-3) var(--sp-5);
+  border: 2px solid var(--c-ink);
+  border-radius: var(--radius-md);
+  background: var(--c-surface);
+  color: var(--c-ink);
+  text-decoration: none;
+  box-shadow: 0 3px 0 var(--c-ink);
+}
+
+.daily:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.dailyTitle {
+  font-size: var(--fs-base);
+  font-weight: 800;
+}
+
+.dailyHint {
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+}
+
+.allDone {
+  text-align: center;
+  color: var(--c-muted);
+}

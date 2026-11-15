@@ -1,0 +1,72 @@
+.scene {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  height: 100%;
+  min-height: 0;
+}
+
+/* Hình vẽ giữ tỉ lệ khai báo (aspect-ratio đặt ở JSX) và co lại khi màn hình thấp để các lựa chọn luôn nằm gọn. */
+.art {
+  flex: 0 1 auto;
+  min-height: 88px;
+}
+
+/* Nhóm hình + lựa chọn canh giữa theo chiều dọc kiểu "an toàn": tràn thì cuộn được từ đầu. */
+.art {
+  margin-top: auto;
+}
+
+.options {
+  margin-bottom: auto;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-2);
+  flex: none;
+}
+
+.option {
+  min-height: 56px;
+  padding: var(--sp-2) var(--sp-3);
+  border: 2px solid var(--c-ink);
+  border-radius: var(--radius-md);
+  background: var(--c-surface);
+  color: var(--c-ink);
+  font: inherit;
+  font-size: var(--fs-base);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--c-ink);
+}
+
+.option:active:not([aria-disabled='true']) {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* Không dựa vào màu đơn thuần (GDD mục 11, quy tắc 6): trạng thái còn có dấu hiệu bằng chữ gạch ngang và ký hiệu. */
+.option[data-state='wrong'] {
+  background: var(--c-danger-bg);
+  color: var(--c-danger);
+  border-color: var(--c-danger);
+  box-shadow: none;
+  text-decoration: line-through;
+  cursor: default;
+}
+
+.option[data-state='correct'] {
+  background: var(--c-success-bg);
+  color: var(--c-success);
+  border-color: var(--c-success);
+  box-shadow: none;
+  cursor: default;
+}
+
+.option[data-state='correct']::before {
+  content: '✓ ';
+}

@@ -1,12 +1,21 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
+import '@/styles/tokens.css';
+import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'Lắt Léo',
-  description: 'Game đố mẹo hack não kiểu Việt.',
+  title: { default: 'Lắt Léo', template: '%s · Lắt Léo' },
+  description:
+    'Game đố mẹo hack não kiểu Việt. Mở link là chơi, không cần đăng nhập.',
   // Chưa có biểu tượng thương hiệu (phong cách hình ảnh do LL-023 chốt). Icon rỗng khiến trình duyệt
   // không gọi /favicon.ico (404 ghi lỗi vào console); thay bằng src/app/icon.* khi có thiết kế.
   icons: { icon: 'data:,' },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#fff6e5',
+  // Cho phép nội dung tràn xuống vùng an toàn của iPhone; mã CSS tự chừa chỗ bằng env(safe-area-inset-*).
+  viewportFit: 'cover',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

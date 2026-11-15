@@ -1,15 +1,17 @@
 # Sprint hiện tại — Sprint 1
 
-> Cập nhật gần nhất: 2026-11-12 (Thứ Năm). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); chốt bằng `/sprint` sau khi bạn trả lời 5 câu ở [HO_SO.md](HO_SO.md) mục 6.
+> Cập nhật gần nhất: 2026-11-14 (Thứ Bảy). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); phạm vi Nền tảng giao ngày 14/11 được ghi riêng bên dưới.
 
 | | |
 |---|---|
-| Thời gian | Thứ Hai 16/11 → thứ Sáu 20/11/2026 (giả định G2). Hôm nay Thứ Tư 11/11 là **tiền sprint**: còn 2 ngày làm việc (12–13/11) trước khi Sprint 1 bắt đầu |
+| Thời gian | Thứ Hai 16/11 → thứ Sáu 20/11/2026 (giả định G2). Ngày cập nhật 14/11 vẫn là **tiền sprint** |
 | Năng lực / cam kết | 20 điểm (giả định G1, chưa có velocity) / **18 điểm (90%)**, dự phòng 2 điểm |
 | Điểm xong | **0 / 18** |
 | Họp | Daily 09:00 (15') · kiểm tra giữa sprint thứ Tư 16:30 · Sprint Review thứ Sáu 15:00 (45') · Retro thứ Sáu 16:00 (30') · làm mịn Sprint 2 thứ Sáu 16:30 |
 
 ## Mục tiêu sprint
+
+**Cập nhật phạm vi ngày 14/11:** người dùng giao trọn epic Nền tảng theo bảy mục cụ thể và `docs/TECH.md`. Phần triển khai đang **Chờ duyệt**, gồm giao diện dọc, lưu localStorage, `track`, hai màn mẫu và công cụ kiểm thử. `npm run check`, `npm run build`, 145 unit test và 102 ca Playwright đã đạt; luồng mẫu chạy trên iPhone SE, Pixel 5 và 360×640. Bằng chứng: [E1-NEN-TANG-RECHECK.md](../docs/evidence/E1-NEN-TANG-RECHECK.md). Không cộng velocity khi chưa được duyệt; mục tiêu, 18 điểm và các story PostgreSQL bên dưới vẫn là baseline cũ cần đối soát với thiết kế mới.
 
 Đến 17:00 thứ Sáu 20/11/2026, nhóm có:
 
@@ -133,3 +135,10 @@ Ghi bởi `/daily` (3 câu: hôm qua, hôm nay, vướng mắc). Mục mới nh�
 - **Tiếp theo:** bạn đọc `docs/evidence/LL-001-T02.md` (mục "Điểm cần người duyệt xem kỹ") và xác nhận *Xong*; sau đó nhận LL-001-T03 (README + clone sạch), task cuối của story LL-001.
 - **Vướng mắc:** 4 điểm cần bạn quyết trong evidence T02: advisory `minimatch` ở công cụ dev (chấp nhận hay thêm `overrides`), phạm vi Prettier bỏ `*.md`, script `check` + `--max-warnings 0`, 4 file `.log` bằng chứng T01 chưa vào git. Còn 1 ngày làm việc (13/11) trước Sprint 1: T03 cần thêm một lần duyệt nữa.
 - **Thay đổi file:** `package.json`, `package-lock.json`, `eslint.config.mjs`, `.prettierrc.json`, `docs/evidence/LL-001-T02.md` + `.artifacts/`, `docs/ai-planning/{tasks.json,BACKLOG.md,PROGRESS.md}`; `scrum/HO_SO.md`, `scrum/SPRINT.md`. Không sửa `README.md`, `docs/backlog.md`, `docs/sprint-1.md`, `src/`.
+
+### 2026-11-14 (Thứ Bảy) — tiền sprint · epic Nền tảng
+
+- **Đã làm:** hoàn thiện phạm vi bảy mục được giao trên khung hiện có; tách `levels/load-scene.ts` khỏi siêu dữ liệu để lỗi tải một cảnh không chặn hydration của route. Chuyển kịch bản E2E chỉ ghi log thành kiểm thử hồi quy có assertion, kiểm được Màn tiếp → lỗi nạp → Thử lại → giải xong.
+- **Kiểm chứng:** `verify_plan.py`, `check`, `build`, 145 unit test, 102 ca E2E đạt trên ba cấu hình cảm ứng; log và ảnh mới nằm trong `docs/evidence/E1-NEN-TANG-RECHECK.artifacts/`.
+- **Bàn giao:** epic ở `in_review`, chưa commit theo `CLAUDE.md`. Đề xuất commit: `feat: hoàn thiện nền tảng game Lắt Léo`. Giữ nguyên trạng thái task cũ và điểm sprint; README vẫn chỉ đọc, nội dung ngày và 25 màn thật làm sau.
+- **Theo dõi:** đối soát PostgreSQL/hosting trong kế hoạch gốc với phạm vi localStorage hiện tại khi cập nhật backlog; việc này không chặn bảy mục vừa nghiệm thu.

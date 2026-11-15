@@ -1,0 +1,13 @@
+01-verify-plan: exit 0  (python3 docs/ai-planning/verify_plan.py)
+02-npm-ci-dry-run: exit 0  (npm ci --dry-run)
+03-check: exit 0  (npm run check)
+04-unit: exit 0  (npx vitest run --reporter=verbose)
+05-build: exit 0  (npm run build)
+06-e2e-prod: exit 0  (npx playwright test --reporter=list)
+07-e2e-prod-lap-3: exit 0  (npx playwright test --repeat-each=3 --reporter=dot)
+08-e2e-dev: exit 0  (env E2E_DEV=1 npx playwright test --workers=2 --reporter=list)
+09-audit-prod: exit 0  (npm audit --omit=dev)
+10-audit-tat-ca: exit 1  (npm audit)
+11-npm-ls: exit 1  (npm ls --all)
+12-perf: exit 0  (node docs/evidence/E1-NEN-TANG.artifacts/perf-measure.mjs)
+13-khong-co-three: xong
