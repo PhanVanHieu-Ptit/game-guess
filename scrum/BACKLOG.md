@@ -2,7 +2,7 @@
 
 Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/backlog.md](../docs/backlog.md) v2.1 (cập nhật 2026-11-10, sha256 `3dda35d427a0`). File gốc giữ nguyên, không sửa; khi nó đổi, `/docmoi` so hash và đề xuất cập nhật ở đây. Mã story giữ ổn định: LL-001…LL-051 (story mới từ LL-052).
 
-- **Cập nhật gần nhất:** 2026-11-11 (khởi tạo; LL-001 chuyển *Đang làm*).
+- **Cập nhật gần nhất:** 2026-11-14 (epic Nền tảng theo yêu cầu trực tiếp đã triển khai, chờ duyệt; xem phạm vi dưới).
 - **Trạng thái story:** Chưa làm → Đang làm → Chờ duyệt → Xong (hoặc Chặn). *Xong* theo DoD tạm ở [HO_SO.md](HO_SO.md) mục 2.
 - **Sẵn sàng = Có** khi đủ 4 điều kiện: mô tả rõ, có tiêu chí nghiệm thu kiểm tra được, đã ước lượng, không bị câu hỏi mở chặn. Thứ tự bảng là thứ tự làm, từ trên xuống.
 - **Điểm:** 1-2-3-5-8-13, trên 8 phải chia nhỏ (hiện không story nào vượt 8). Thang tương đối, tạm quy 1 điểm ≈ ½ ngày công một người (giả định).
@@ -27,9 +27,27 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 
 ## 1. Bảng backlog
 
+### Phạm vi Nền tảng được giao ngày 14/11/2026
+
+**Trạng thái: Chờ duyệt (`in_review`).** Bảy mục người dùng giao là phạm vi nghiệm thu của lượt này. Theo yêu cầu trực tiếp và `docs/TECH.md`, dùng localStorage, React Three Fiber + drei và Zustand. PostgreSQL/triển khai hosting của E1 gốc nằm ngoài lượt này; các story và điểm gốc bên dưới được giữ để đối soát, chưa được tính *Xong*.
+
+| Hạng mục | Kết quả |
+|---|---|
+| Next.js, TypeScript strict, ESLint, Prettier, Vitest, Playwright; R3F, drei, Zustand | Đã có và kiểm tra được bằng các script trong `package.json` |
+| Cấu trúc theo TECH | Đủ các tầng và thư mục chờ; siêu dữ liệu màn tách khỏi bộ nạp cảnh phía trình duyệt |
+| Trang chủ, chọn màn, màn chơi, kết quả | Giao diện dọc, chữ ≥ 16 px, vùng chạm ≥ 44 px; kiểm bố cục ở 320/360/393 px |
+| Lưu tiến trình | localStorage có try/catch; dữ liệu hỏng/bị chặn/đầy dung lượng vẫn chơi được |
+| Đo lường | `track(name, data)` có kiểu dữ liệu; console ở dev, thay dịch vụ qua `AnalyticsSink` |
+| Luồng mẫu | Hai màn mẫu: vào màn → giải → kết quả → màn tiếp; tải lại vẫn nhớ tiến trình |
+| Nghiệm thu | `check`, `build`, 145 unit test và 102 ca E2E đạt trên iPhone SE, Pixel 5, mobile 360 |
+
+**Bằng chứng mới nhất:** [E1-NEN-TANG-RECHECK.md](../docs/evidence/E1-NEN-TANG-RECHECK.md). Đố mẹo mỗi ngày hiện có lối vào và trạng thái kho trống; nội dung ngày, 25 màn thật và dịch vụ nhận sự kiện là việc sau. Phần triển khai này bao phủ một phần LL-001/004/005/006/007/024/025/048/049 và công cụ kiểm thử; không coi các story gốc đã đạt toàn bộ AC. Giữ nguyên 147 task của kế hoạch AI cho tới khi đối soát thiết kế mới.
+
+### Baseline 51 story
+
 | Mã | Epic | User Story | Điểm | Ưu tiên | Phụ thuộc | Trạng thái | Sẵn sàng |
 |---|---|---|---|---|---|---|---|
-| [LL-001] | E1 Nền tảng | Là lập trình viên, tôi muốn có khung dự án Next.js chạy được kèm quy ước chung để cả nhóm bắt đầu làm tính năng ngay. | 2 | Must | — | Đang làm (T01 chờ duyệt) | Có |
+| [LL-001] | E1 Nền tảng | Là lập trình viên, tôi muốn có khung dự án Next.js chạy được kèm quy ước chung để cả nhóm bắt đầu làm tính năng ngay. | 2 | Must | — | Đang làm (T01 Xong; T02 chờ duyệt; khung epic có bằng chứng 14/11) | Có |
 | [LL-028] | E6 Nội dung | Là trưởng nhóm sản phẩm, tôi muốn có danh sách 25 màn (loại, ý tưởng mẹo, độ khó, thứ tự) để cả nhóm thống nhất khối lượng trước khi làm. | 3 | Must | — | Chưa làm | Có |
 | [LL-008] | E3 2D | Là lập trình viên, tôi muốn thử nhanh và chốt cách dựng màn 2D để không phải làm lại khi đã dựng nhiều màn. | 2 | Must | LL-001 | Chưa làm | Có |
 | [LL-014] | E4 3D | Là lập trình viên, tôi muốn có khung cảnh 3D Three.js chạy ổn định trên một trang riêng, chưa cần vòng chơi, để kiểm chứng rủi ro 3D sớm. | 5 | Must | LL-001 | Chưa làm | Có |

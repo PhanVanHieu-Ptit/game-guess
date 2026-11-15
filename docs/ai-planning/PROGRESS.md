@@ -8,10 +8,11 @@ Ngày khảo sát: **2026-11-10**, múi giờ Asia/Ho_Chi_Minh. Kế hoạch đ�
 
 - Planning: tài liệu và JSON đã đồng bộ với nguồn hiện tại (SRC-CHG-001, 2026-11-11); kế hoạch còn proposed, quyết định sản phẩm chưa được xác nhận.
 - Business implementation: **bắt đầu 2026-11-11** theo yêu cầu người dùng chạy Sprint đầu tiên đủ điều kiện. **1/147 task done** (LL-001-T01, người dùng duyệt 2026-11-12), 0 in_progress, 1 in_review (LL-001-T02: nhận 2026-11-12 07:10, có bằng chứng 07:24, chờ người dùng duyệt), 0 blocked theo workflow; 145 task `todo`. “Decision/dependency blocked” trong readiness là lý do chưa được nhận, không đồng nghĩa workflow status đã blocked.
-- Product: 0/51 story implementation completed, 51 MISSING; không có BUG runtime được xác nhận. Hai story enabler cũng chưa triển khai.
+- **Epic Nền tảng (yêu cầu trực tiếp của người dùng 2026-11-14):** khung chạy được theo `docs/TECH.md` đã dựng trong working tree (trang chủ, chọn màn, màn chơi, kết quả, lưu tiến trình bằng localStorage, đo lường `track`, hai màn mẫu, unit test, Playwright trên iPhone SE/Pixel 5/360 px), dừng ở `in_review` kèm `docs/evidence/E1-NEN-TANG.md`. **Không đổi trạng thái task nào trong `tasks.json`**: phạm vi này không khớp 1-1 với 147 task (vốn dựa trên PostgreSQL và Three.js trực tiếp), xem quyết định mở OPS-5.
+- Product: 0/51 story được duyệt completed theo baseline cũ. Khung Nền tảng đã triển khai một phần các story liên quan và có bằng chứng; không còn coi toàn bộ source là MISSING. Bằng chứng mới nhất: `docs/evidence/E1-NEN-TANG-RECHECK.md` (145 unit test, 102 ca E2E). Hai enabler cũ chưa được đổi trạng thái trong kế hoạch.
 - Sprint: SP-00 in_progress (chỉ các task đủ điều kiện nhận); 11 sprint còn lại planned/conditional; 0 completed. Không có ngày bắt đầu/kết thúc cam kết.
 - Estimation: 201 SP task mới; 211 SP source tách biệt. Không bao gồm defect chưa xác nhận hoặc thêm cơ chế sau script.
-- Source: nhánh `init`, HEAD `c8f53f06828e250b66361408025df26c078af6ae` (người dùng commit `feat: init` 2026-11-11 21:13, gồm `docs/` với hai nguồn, khung Next.js và `next.config.ts`; trước đó là `666c413` trên `main`). Khi kiểm tra 2026-11-12 06:20, working tree chỉ có `scrum/` chưa theo dõi. Agent không tự commit, tag hay thêm git index; thay đổi mới nằm ở working tree để người dùng review.
+- Source: nhánh `init`, HEAD `c8f53f06828e250b66361408025df26c078af6ae` (người dùng commit `feat: init` 2026-11-11 21:13, gồm `docs/` với hai nguồn, khung Next.js và `next.config.ts`; trước đó là `666c413` trên `main`). Khi kiểm tra 2026-11-12 06:20, working tree chỉ có `scrum/` chưa theo dõi. Agent không tự commit, tag hay thêm git index; thay đổi mới nằm ở working tree để người dùng review. **Cập nhật 2026-11-14:** HEAD hiện là `4a36256` (người dùng commit `feat: init` 2026-11-13 06:21, gồm LL-001-T02 và `scrum/`); mã epic Nền tảng nằm ở working tree, chưa commit.
 
 ## Nhật ký thực thi
 
@@ -87,6 +88,26 @@ Mục mới nhất ở cuối. Mỗi mục theo “Mẫu cập nhật mỗi lầ
 - Ảnh hưởng DAG/sprint/estimate: không đổi; `affected_files` của T02 thêm `package-lock.json`. LL-001-T03 vẫn `dependency_blocked` cho tới khi người dùng xác nhận LL-001-T02 `done`.
 - Giới hạn: ESLint không type-aware; chỉ chạy trên 3 file mã thật cộng fixture; chỉ macOS arm64/Node 22.22.3, chưa chạy Linux/CI (AI-T08); chưa có review độc lập.
 
+### 2026-11-14 16:05 (UTC+7) — Epic Nền tảng: dựng khung chạy được, kiểm chứng, chuyển `in_review`
+
+- Ngày/giờ: 2026-11-14, Asia/Ho_Chi_Minh (phần lớn mã đã có sẵn trong working tree khi tôi bắt đầu, sửa lúc 07:46–08:09, không kèm bằng chứng hay E2E; lượt này rà soát, sửa lỗi, viết bộ E2E và kiểm chứng).
+- Task ID và phạm vi đã được yêu cầu: **không có task ID riêng.** Người dùng yêu cầu trực tiếp "Làm epic Nền tảng" kèm 7 mục (khởi tạo công cụ và thư viện, cấu trúc thư mục theo `docs/TECH.md`, ba màn hình, lưu tiến trình bằng localStorage, module đo lường `track`, một màn mẫu, các script) và tiêu chí hoàn thành (build không lỗi, kiểm thử qua, Playwright đi hết luồng màn mẫu trên iPhone SE và Pixel 5). Phạm vi này chạm các story LL-001, LL-004, LL-005, LL-006, LL-007, LL-024, LL-048, LL-049 (một phần) và hai enabler AI-T07, AI-T08 nhưng **theo thiết kế mới của `docs/TECH.md`** (localStorage thay PostgreSQL, R3F/drei/Zustand), tức lệch với `tasks.json` (`docs/GDD.md` mục 13.3).
+- Status trước → sau: không đổi (`done: 1, in_review: 1, todo: 145`).
+- Dependencies đã done / gates: LL-001-T02 vẫn `in_review` (chưa được duyệt `done`). OPS-3 nói task phụ thuộc chỉ được nhận sau khi người dùng đặt `done`; ở đây yêu cầu trực tiếp mới của người dùng đứng trên quyết định cũ (thứ tự ưu tiên nguồn, `docs/ai-planning/REQUIREMENTS.md:9`) nên tôi làm trọn epic, nhưng **không đặt `done` cho bất cứ thứ gì** và dừng ở `in_review`. Gate quyết định (Q1–Q11, H1–H5) không bị đụng tới.
+- Files/diff/revision: nhánh `init`, HEAD `4a36256` + working tree chưa commit (117 file thuộc phạm vi: 6 file đã theo dõi bị sửa, 111 file mới; danh sách và sha256 ở `docs/evidence/E1-NEN-TANG.artifacts/files.sha256`). Sửa `docs/TECH.md` và `CLAUDE.md` cho khớp mã (quy tắc "lệch thì sửa cùng thay đổi"); **không** sửa `docs/GDD.md`, `README.md`, `docs/backlog.md`, `docs/sprint-1.md`.
+- Commands + exit code + report: `docs/evidence/E1-NEN-TANG.md` mục 3 và `docs/evidence/E1-NEN-TANG.artifacts/exit-codes.txt`. Gồm `npm run check`, `npm run test` (145 ca), `npm run build`, `npm run test:e2e` (96 ca = 32 test × 3 thiết bị; lặp 3 lần = 288 ca; chạy trên `next dev` = 96 ca), `npm audit`, `python3 docs/ai-planning/verify_plan.py`.
+- Manual review/thiết bị: ảnh chụp 10 màn hình × 3 thiết bị **giả lập** (`E1-NEN-TANG.artifacts/screenshots/`), tôi đã xem bằng mắt. **Không có thiết bị thật**, WebKit tự động hóa không phải Safari thật (EXECUTION_RULES bước 7).
+- AC/DoD đạt hoặc thiếu: chi tiết ở evidence mục 5. Đạt: 7 mục yêu cầu và 3 tiêu chí hoàn thành. Thiếu để `done` theo DoD tạm: người dùng duyệt và mã được commit. Chưa làm: README (file chỉ đọc), test thành phần bằng Testing Library, `/api/events`, màn thật.
+- Blocker/defect/task phát sinh: tìm và sửa 3 lỗi của mã có sẵn khi kiểm chứng (evidence mục 6): mã màn lạ hiện trang 404 gốc thay vì "không tìm thấy màn"; `panelRef` của hộp thoại chưa gắn vào phần tử; hộp xác nhận "xem đáp án" nằm dưới mép màn hình ở iPhone SE; và bổ sung test cho một khoảng trống (sổ đăng ký màn). Có một ngoại lệ có chủ đích trong cổng console E2E (evidence mục 6, O5). Một tiến trình `next start -p 3101` còn sót (pid 85422, không rõ ai khởi động) chạy từ 08:08; hệ thống từ chối cho tôi dừng nên để nguyên.
+- Ảnh hưởng DAG/sprint/estimates và bước tiếp theo: không đổi `tasks.json`; cần người dùng quyết OPS-5. Bước tiếp: người dùng đọc evidence, quyết OPS-5, rồi `/docmoi` để đối soát backlog và kế hoạch AI với GDD/LEVELS/TECH.
+
+### 2026-11-14 — Hoàn thiện nghiệm thu epic Nền tảng và cập nhật Scrum
+
+- Phạm vi: bảy mục yêu cầu trực tiếp; hoàn thiện trên working tree có sẵn, HEAD `4a36256`. Giữ `in_review`, không tự commit; không thay task ID, DAG, estimate hoặc trạng thái `tasks.json`.
+- Sửa lỗi thực: tách siêu dữ liệu màn khỏi bộ nạp cảnh phía client. Trước sửa, lỗi tải cảnh màn 2 có thể chặn hydration khi mở màn 1; sau sửa, cảnh tải riêng, khung chơi hiện Thử lại và phục hồi được. Thay kịch bản tạm chỉ ghi log bằng E2E có assertion; thu hẹp locator báo lỗi và ngoại lệ console cho lỗi JS được test chủ động gây ra. Cập nhật TECH và giữ thư mục `domain/daily` bằng `.gitkeep`.
+- Kiểm chứng cuối: `check`/`build` exit 0; Vitest 145 ca; Playwright **102 ca** trên iPhone SE, Pixel 5 và 360 px; `verify_plan.py` PASS. Log, ảnh và hash nguồn: `docs/evidence/E1-NEN-TANG-RECHECK.artifacts/`; báo cáo mới nhất: `docs/evidence/E1-NEN-TANG-RECHECK.md`.
+- Đã cập nhật đủ bốn file `scrum/`: phạm vi epic, kết quả, trạng thái Chờ duyệt, điểm lệch với PostgreSQL/hosting cũ và đề xuất commit. Không tính velocity, không nhận là 25 màn thật hoặc nội dung ngày đã triển khai. Chưa kiểm máy thật, audit, hiệu năng hay clone sạch trong lượt này.
+
 ## Công việc planning đã thực hiện
 
 | Mục | Bằng chứng | Phạm vi kết luận |
@@ -117,10 +138,11 @@ Kết quả ghi theo thời điểm chạy:
 | 2026-11-12 06:20, HEAD `c8f53f0`, trước khi cập nhật file này | `python3 docs/ai-planning/verify_plan.py` | 0 | `PASS`, statuses `{in_review: 1, todo: 146}`; hash nguồn không đổi; 8/8 hash file LL-001-T01 khớp bằng chứng |
 | 2026-11-12 07:10, sau khi LL-001-T01 `done` và nhận LL-001-T02 | `python3 docs/ai-planning/verify_plan.py` | 0 | `PASS`, statuses `{done: 1, in_progress: 1, todo: 145}` |
 | 2026-11-12 07:24, sau khi LL-001-T02 `in_review` | `python3 docs/ai-planning/verify_plan.py` | 0 | `PASS`, statuses `{done: 1, in_review: 1, todo: 145}`; hash nguồn không đổi |
+| 2026-11-14 16:05, sau epic Nền tảng (không đổi task) | `python3 docs/ai-planning/verify_plan.py` | 0 | `PASS`, statuses `{done: 1, in_review: 1, todo: 145}`; hash nguồn không đổi |
 
 Verifier chỉ kiểm metadata/DAG/Markdown của kế hoạch, không phải test của game. `python3 -m json.tool` được dùng để kiểm cú pháp JSON; `git diff --check` không áp dụng ý nghĩa vì `docs/` và các file scaffold đều untracked.
 
-Kết quả của ứng dụng: LL-001-T01 (`npm ci`, `npm run build`, kiểm tra Chrome production/dev, `npm audit`; xem `docs/evidence/LL-001-T01.md`) và LL-001-T02 (`lint`, `format:check`, `typecheck`, `check`, `build`, ma trận fixture; xem `docs/evidence/LL-001-T02.md`) có kết quả thật. Chưa có `npm test`, DB integration, E2E, deployment: runner và DB chưa tồn tại (thuộc AI-T07, AI-T08, LL-002). Coverage là UNKNOWN, không ghi 0% hay pass. Không có FPS/performance/thiết bị thật.
+Kết quả của ứng dụng: LL-001-T01 (`npm ci`, `npm run build`, kiểm tra Chrome production/dev, `npm audit`; xem `docs/evidence/LL-001-T01.md`) và LL-001-T02 (`lint`, `format:check`, `typecheck`, `check`, `build`, ma trận fixture; xem `docs/evidence/LL-001-T02.md`) có kết quả thật. Epic Nền tảng (2026-11-14) cũng có kết quả thật: `npm run check`, `npm run test` (145 ca), `npm run build`, `npm run test:e2e` (96 ca trên 3 thiết bị giả lập), `npm audit` (xem `docs/evidence/E1-NEN-TANG.md`). Chưa có DB integration, deployment và CI (DB và CI chưa tồn tại: LL-002, AI-T08). Coverage là UNKNOWN, không ghi 0% hay pass. Không có FPS/thiết bị thật; hiệu năng chỉ là số đo xấp xỉ bằng CDP.
 
 ## Task tiếp theo
 
@@ -150,6 +172,7 @@ Quyết định phát sinh khi thực thi (chưa phải gate trong `tasks.json.d
 - OPS-1 — **Đã quyết (2026-11-11):** tắt `AGENTS.md` do `next dev` tự sinh bằng `agentRules: false` trong `next.config.ts` (file thuộc phạm vi LL-001-T01). Next chỉ sinh file khi `next dev` phát hiện AI coding agent. Đảo ngược: xóa `next.config.ts`.
 - OPS-3 — **Đã quyết (2026-11-11):** người dùng duyệt từng task. Mỗi task kỹ thuật dừng ở `in_review`; chỉ người dùng xác nhận `done`; dependent chỉ được nhận sau đó. Không thay cho Q11 (DoD và người review chính thức vẫn chưa được nêu).
 - OPS-4 — **Đã quyết (2026-11-12):** dùng DoD tạm (`scrum/HO_SO.md` mục 6, Câu 1) cho tới Retro 20/11/2026. *Done* = mọi tiêu chí nghiệm thu đạt + bằng chứng ở `docs/evidence/` + không bí mật, không đổi ngoài phạm vi + người dùng duyệt + mã đã commit. Người duyệt là người dùng; lỗi mức cao chỉ hoãn khi người dùng ghi bằng văn bản; agent chỉ ghi vào PROGRESS.md, tasks.json, docs/evidence/ và file thuộc phạm vi task (README.md, docs/backlog.md, docs/sprint-1.md chỉ đọc). Không thay cho Q11 chính thức.
+- OPS-5 — **Mở (2026-11-14):** ghi epic Nền tảng vào kế hoạch AI thế nào? (A) tạo story mới LL-052 cùng các task trong `tasks.json`; (B) ánh xạ vào task hiện có (LL-001-T03, AI-T07, AI-T08, LL-004/005/006/007/048/049) và sửa chúng theo TECH.md; (C) để ở mức epic, chưa sửa `tasks.json` tới khi duyệt GDD/LEVELS/TECH rồi `/docmoi`. Khuyến nghị C: `tasks.json` còn PostgreSQL và Three.js trực tiếp nên sửa từng task bây giờ sẽ phải sửa lại.
 - OPS-2 — Pin Node: `.nvmrc` đang `22.22.3` (bản đã kiểm chứng); nodejs.org có 22.23.4 (2026-10-20). Có nâng sau khi kiểm chứng không?
 
 Các gate còn lại (model/script/catalog/renderer/budget/thiết bị/credentials/release) trong tasks.json.decisions đều unresolved, evidence rỗng. Không có task được tự đánh dấu completed chỉ vì đã lập kế hoạch.
