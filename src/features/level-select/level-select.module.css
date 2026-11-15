@@ -1,0 +1,73 @@
+.header {
+  display: grid;
+  grid-template-columns: var(--touch) minmax(0, 1fr) var(--touch);
+  align-items: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-5);
+}
+
+.title {
+  text-align: center;
+  font-size: var(--fs-xl);
+  font-weight: 800;
+}
+
+.grid {
+  list-style: none;
+  margin: 0 0 var(--sp-4);
+  padding: 0;
+  display: grid;
+  /* Lưới 5 cột: ở 320 px mỗi ô vẫn rộng ≥ 51 px (≥ 44 px theo docs/GDD.md mục 4). */
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--sp-2);
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  aspect-ratio: 1;
+  min-height: 52px;
+  border: 2px solid var(--c-ink);
+  border-radius: var(--radius-md);
+  background: var(--c-surface);
+  color: var(--c-ink);
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 3px 0 var(--c-ink);
+}
+
+a.cell:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.cell[data-state='solved'] {
+  background: var(--c-success-bg);
+  border-color: var(--c-success);
+}
+
+.cell[data-state='revealed'] {
+  background: var(--c-primary);
+}
+
+.cell[data-state='locked'] {
+  background: var(--c-locked-bg);
+  border-color: var(--c-muted);
+  color: var(--c-muted);
+  box-shadow: none;
+}
+
+.mark {
+  display: inline-flex;
+  height: 16px;
+}
+
+.legend {
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+}

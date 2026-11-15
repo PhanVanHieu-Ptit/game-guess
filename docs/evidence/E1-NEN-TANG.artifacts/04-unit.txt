@@ -1,0 +1,157 @@
+
+ RUN  v5.1.0 /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess
+
+ ✓ tests/unit/domain/unlock.test.ts > isUnlocked (mở tuần tự) > người chơi mới: chỉ màn đầu mở 3ms
+ ✓ tests/unit/domain/unlock.test.ts > isUnlocked (mở tuần tự) > có kết quả màn n thì mở màn n+1, chưa mở màn n+2 1ms
+ ✓ tests/unit/domain/unlock.test.ts > isUnlocked (mở tuần tự) > xem đáp án (revealed) vẫn mở màn kế 0ms
+ ✓ tests/unit/domain/unlock.test.ts > isUnlocked (mở tuần tự) > unlockAll mở hết 0ms
+ ✓ tests/unit/domain/unlock.test.ts > isUnlocked (mở tuần tự) > mã màn không có trong danh sách thì không mở, kể cả khi unlockAll 1ms
+ ✓ tests/unit/domain/unlock.test.ts > nextPlayable (đích của "Chơi tiếp") > chưa chơi gì: màn đầu 1ms
+ ✓ tests/unit/domain/unlock.test.ts > nextPlayable (đích của "Chơi tiếp") > bỏ qua các màn đã có kết quả 0ms
+ ✓ tests/unit/domain/unlock.test.ts > nextPlayable (đích của "Chơi tiếp") > xong hết thì null 0ms
+ ✓ tests/unit/domain/unlock.test.ts > nextPlayable (đích của "Chơi tiếp") > danh sách rỗng thì null 0ms
+ ✓ tests/unit/domain/unlock.test.ts > levelAfter > trả về màn đứng ngay sau 1ms
+ ✓ tests/unit/domain/unlock.test.ts > levelAfter > màn cuối hoặc mã lạ thì null 0ms
+ ✓ tests/unit/domain/unlock.test.ts > countCompleted > đếm số màn đã có kết quả 0ms
+ ✓ tests/unit/services/safe-storage.test.ts > createSafeStorage > ổ thật hoạt động: đọc/ghi/xóa qua ổ thật, chế độ local 3ms
+ ✓ tests/unit/services/safe-storage.test.ts > createSafeStorage > ghi lỗi (đầy dung lượng): không ném lỗi, giữ giá trị trong bộ nhớ, báo chế độ memory 2ms
+ ✓ tests/unit/services/safe-storage.test.ts > createSafeStorage > đọc lỗi (bị chặn): trả về null và rơi về bộ nhớ, không ném lỗi 1ms
+ ✓ tests/unit/services/safe-storage.test.ts > createSafeStorage > chính việc truy cập window.localStorage ném lỗi (một số trình duyệt chặn): vẫn chạy 1ms
+ ✓ tests/unit/services/safe-storage.test.ts > createSafeStorage > không có ổ lưu trữ (máy chủ, không có window): dùng bộ nhớ 0ms
+ ✓ tests/unit/services/safe-storage.test.ts > createSafeStorage > xóa lỗi: không ném lỗi và vẫn xóa khỏi bộ nhớ 0ms
+ ✓ tests/unit/services/safe-storage.test.ts > createSafeStorage > người nghe ném lỗi không làm hỏng việc lưu; hủy đăng ký thì không được gọi nữa 1ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > danh sách hợp lệ thì không có lỗi 2ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > nêu mã màn và tên trường khi id trùng 1ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > bắt id sai dạng (viết hoa, thiếu tiền tố) 0ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > bắt kind không khớp tiền tố của id 1ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > bắt thứ tự (ordinal) không liên tục từ 1 1ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > bắt độ khó ngoài 1–5 1ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > đề bài đúng 120 ký tự thì được, 121 thì lỗi 1ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > đếm ký tự có dấu theo cách người đọc thấy (NFD không bị tính thừa) 1ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > bắt tiêu đề, đề bài, giải thích để trống 3ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > giải thích quá 140 ký tự 0ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > bắt số gợi ý khác 3, gợi ý trống và gợi ý quá dài 0ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > phản hồi sai quá 60 ký tự 0ms
+ ✓ tests/unit/domain/validate-levels.test.ts > validateLevelMetas > màn lắc bắt buộc có cách thay bằng chạm 0ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > ghi rồi đọc lại đúng giá trị 4ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > chưa có dữ liệu thì trả về null 0ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > JSON hỏng: coi như chưa có dữ liệu, không ném lỗi 2ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > không phải JSON: coi như chưa có dữ liệu, không ném lỗi 0ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > số: coi như chưa có dữ liệu, không ném lỗi 1ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > null: coi như chưa có dữ liệu, không ném lỗi 1ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > mảng: coi như chưa có dữ liệu, không ném lỗi 0ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > đối tượng thiếu state: coi như chưa có dữ liệu, không ném lỗi 0ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > giá trị không tuần tự hóa được (vòng tham chiếu): không ném lỗi 1ms
+ ✓ tests/unit/services/persist-storage.test.ts > createPersistStorage > removeItem xóa dữ liệu 0ms
+ ✓ tests/unit/services/analytics.test.ts > track > điền đủ trường chung và giữ nguyên dữ liệu riêng của sự kiện 4ms
+ ✓ tests/unit/services/analytics.test.ts > track > mỗi sự kiện một eventId khác nhau, cùng một sessionId trong một lần mở trang 1ms
+ ✓ tests/unit/services/analytics.test.ts > track > không ghi trường định danh nào ngoài mã ẩn danh 0ms
+ ✓ tests/unit/services/analytics.test.ts > track > sink ném lỗi: track nuốt lỗi, không ném ra ngoài 1ms
+ ✓ tests/unit/services/analytics.test.ts > track > nhà cung cấp ngữ cảnh ném lỗi: track vẫn không ném lỗi 1ms
+ ✓ tests/unit/services/analytics.test.ts > track > thay được sink bằng dịch vụ khác mà mã gọi track không đổi 1ms
+ ✓ tests/unit/services/analytics.test.ts > consoleSink / noopSink > consoleSink in một dòng JSON có tiền tố [track] bằng console.info (không phải console.error) 1ms
+ ✓ tests/unit/services/analytics.test.ts > consoleSink / noopSink > noopSink không in gì 1ms
+ ✓ tests/unit/services/analytics.test.ts > generateId > trả về UUID v4 hợp lệ và không trùng 1ms
+ ✓ tests/unit/services/analytics.test.ts > generateId > vẫn sinh được mã khi không có crypto.randomUUID (điện thoại mở qua http, không phải HTTPS) 0ms
+ ✓ tests/unit/services/analytics.test.ts > generateId > vẫn sinh được mã khi không có crypto 0ms
+ ✓ tests/unit/services/analytics.test.ts > detectDeviceKind > Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) (điểm chạm 0) → ios 0ms
+ ✓ tests/unit/services/analytics.test.ts > detectDeviceKind > Mozilla/5.0 (Linux; Android 14; Pixel 7) Chrome/120 (điểm chạm 5) → android 0ms
+ ✓ tests/unit/services/analytics.test.ts > detectDeviceKind > Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120 (điểm chạm 0) → desktop 0ms
+ ✓ tests/unit/services/analytics.test.ts > detectDeviceKind > Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Safari/605 (điểm chạm 0) → desktop 0ms
+ ✓ tests/unit/services/analytics.test.ts > detectDeviceKind > Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Safari/605 (điểm chạm 5) → ios 0ms
+ ✓ tests/unit/services/analytics.test.ts > detectDeviceKind > Mozilla/5.0 (X11; Linux x86_64) Firefox/120 (điểm chạm 0) → desktop 0ms
+ ✓ tests/unit/services/analytics.test.ts > detectDeviceKind > trình duyệt lạ (điểm chạm 0) → other 0ms
+ ✓ tests/unit/levels/registry.test.ts > sổ đăng ký màn (LEVEL_METAS) > có ít nhất một màn và mọi màn đều hợp lệ theo validateLevelMetas 3ms
+ ✓ tests/unit/levels/registry.test.ts > sổ đăng ký màn (LEVEL_METAS) > mọi màn đã đăng ký đều nạp được cảnh, và cảnh là một component mặc định 75ms
+ ✓ tests/unit/levels/registry.test.ts > sổ đăng ký màn (LEVEL_METAS) > findLevel trả đúng màn theo mã và undefined khi mã lạ 1ms
+ ✓ tests/unit/levels/registry.test.ts > sổ đăng ký màn (LEVEL_METAS) > nạp cảnh của mã chưa đăng ký thì từ chối (để khung chơi hiện lỗi Thử lại, không treo) 3ms
+ ✓ tests/unit/levels/registry.test.ts > sổ đăng ký màn (LEVEL_METAS) > phản hồi sai riêng của mỗi màn: không có khóa rỗng và không có câu phản hồi rỗng 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: bắt đầu và kết thúc > chưa có cảnh sẵn sàng thì chưa phát sự kiện nào, và thao tác bị bỏ qua 5ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: bắt đầu và kết thúc > sceneReady phát level_start đúng một lần 2ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: bắt đầu và kết thúc > giải đúng: level_complete một lần, ghi tiến trình, gọi solve nhiều lần cũng chỉ tính một 3ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: bắt đầu và kết thúc > sau khi xong, wrong bị bỏ qua và rời màn không ghi bỏ cuộc 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: bắt đầu và kết thúc > rời màn khi đang chơi dở: đúng một level_abandon kèm số sai và số gợi ý 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: bắt đầu và kết thúc > onOutcome ném lỗi: vẫn báo xong bình thường 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: gợi ý > hint_used chỉ ghi lần đầu mở mỗi cấp, kèm thời gian đã chơi 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: gợi ý > không nhảy cóc cấp gợi ý 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: gợi ý > xem đáp án (cấp 3): hint_used cấp 3 rồi level_complete revealed, màn kế vẫn mở nhờ onOutcome 2ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: gợi ý > chưa mở cấp 2 thì không xem đáp án được 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: gợi ý > giải đúng sau khi dùng gợi ý 1–2: hintsUsed là cấp cao nhất đã mở 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: phản hồi sai và nút Gợi ý nhấp nháy > dùng phản hồi riêng của màn khi có, không thì phản hồi chung xoay vòng 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: phản hồi sai và nút Gợi ý nhấp nháy > mỗi lần sai là một phản hồi mới (id tăng) dù chữ giống nhau 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: phản hồi sai và nút Gợi ý nhấp nháy > sai 3 lần liền: nút Gợi ý nhấp nháy và phản hồi nhắc tới nút đó; progress() hết nhấp nháy 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: phản hồi sai và nút Gợi ý nhấp nháy > 20 giây không có thao tác tiến triển thì nhấp nháy; mở gợi ý thì hết 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: phản hồi sai và nút Gợi ý nhấp nháy > progress() đặt lại bộ đếm 20 giây 1ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: chơi lại > đang chơi dở: ghi bỏ cuộc lượt cũ, bắt đầu lượt mới (restart = true), đếm lại từ đầu và dựng lại cảnh 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: chơi lại > sau khi đã giải: chơi lại không ghi bỏ cuộc, bắt đầu lượt mới, gợi ý đếm lại từ 0 2ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: chơi lại > chưa có cảnh sẵn sàng thì Chơi lại không làm gì 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: chỉ tính thời gian lúc tab hiện > tab ẩn thì tạm dừng đồng hồ 2ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: chỉ tính thời gian lúc tab hiện > tab ẩn từ 5 phút (hẹn giờ chạy được): ghi bỏ cuộc; người chơi làm tiếp thì là lượt mới 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: chỉ tính thời gian lúc tab hiện > tab ẩn từ 5 phút nhưng hẹn giờ không chạy (điện thoại đóng băng tab nền): bỏ cuộc khi hiện lại 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: chỉ tính thời gian lúc tab hiện > tab ẩn dưới 5 phút rồi hiện lại: không bỏ cuộc 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: chỉ tính thời gian lúc tab hiện > bộ đếm 20 giây không chạy khi tab ẩn 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: chỉ tính thời gian lúc tab hiện > pagehide (đóng tab, rời trang) ghi bỏ cuộc 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: gắn vào trang (StrictMode) > StrictMode giả lập gỡ rồi gắn lại ngay: không bị tính là bỏ cuộc 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: gắn vào trang (StrictMode) > gỡ thật khi đang chơi dở: ghi bỏ cuộc đúng một lần 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: gắn vào trang (StrictMode) > gỡ thật sau khi đã giải: không ghi bỏ cuộc 0ms
+ ✓ tests/unit/features/level-run.test.ts > LevelRun: đăng ký nghe > thông báo khi trạng thái đổi và giữ nguyên tham chiếu snapshot khi không đổi 0ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > dữ liệu hợp lệ được giữ nguyên 5ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > đầu vào null: trả về tiến trình trống 0ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > đầu vào undefined: trả về tiến trình trống 0ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > đầu vào chuỗi: trả về tiến trình trống 1ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > đầu vào số: trả về tiến trình trống 0ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > đầu vào mảng: trả về tiến trình trống 0ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > bỏ từng kết quả màn hỏng, giữ phần còn lại 0ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > khởi tạo lại phần hỏng của daily và attempts nhưng giữ phần levels 1ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > bỏ kết quả ngày sai khóa hoặc sai giá trị 1ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > bestStreak không bao giờ nhỏ hơn streak 0ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > mã ẩn danh sai dạng được thay bằng mã mới; mã hợp lệ được giữ 0ms
+ ✓ tests/unit/domain/migrate.test.ts > sanitizeProgress (dữ liệu hỏng không bao giờ ném lỗi) > số lượt chơi phải là số nguyên dương 1ms
+ ✓ tests/unit/domain/migrate.test.ts > migrateProgress > phiên bản hiện tại: làm sạch như bình thường 0ms
+ ✓ tests/unit/domain/migrate.test.ts > migrateProgress > phiên bản lạ (tương lai hoặc không rõ): bắt đầu lại, không ném lỗi 1ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > chưa nạp thì chưa có mã ẩn danh và hydrated = false 27ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > người chơi mới: nạp xong có mã ẩn danh UUID và được ghi xuống ngay 2ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > mở lại trang: giữ nguyên mã ẩn danh và tiến trình đã lưu 2ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > gọi ensureProgressHydrated nhiều lần không nạp lại 2ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > recordAttempt đếm lượt chơi tăng dần theo từng màn và lưu lại 1ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > recordResult giữ kết quả tốt nhất và lưu lại 1ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > chỉ lưu dữ liệu, không lưu cờ hydrated hay hàm 0ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > JSON hỏng: nạp được, bắt đầu lại phần hỏng, không ném lỗi 1ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > không phải JSON: nạp được, bắt đầu lại phần hỏng, không ném lỗi 3ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > null: nạp được, bắt đầu lại phần hỏng, không ném lỗi 1ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > dữ liệu sai kiểu hoàn toàn: nạp được, bắt đầu lại phần hỏng, không ném lỗi 1ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > phiên bản lạ: nạp được, bắt đầu lại phần hỏng, không ném lỗi 1ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > dữ liệu hỏng từng phần: giữ phần tốt, bỏ phần xấu 1ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > không ghi được (đầy dung lượng): game vẫn chạy, tiến trình giữ trong phiên, báo chế độ memory 1ms
+ ✓ tests/unit/stores/progress.test.ts > useProgress > không đọc được (localStorage bị chặn): nạp vẫn xong, game bắt đầu từ trống 0ms
+ ✓ tests/unit/domain/apply-result.test.ts > applyResult (giữ kết quả tốt nhất) > lần đầu: lấy đúng kết quả của lượt chơi 1ms
+ ✓ tests/unit/domain/apply-result.test.ts > applyResult (giữ kết quả tốt nhất) > làm tròn và không để thời gian âm 1ms
+ ✓ tests/unit/domain/apply-result.test.ts > applyResult (giữ kết quả tốt nhất) > cùng đã giải: giữ thời gian ngắn nhất và số gợi ý ít nhất, cập nhật lần gần nhất 0ms
+ ✓ tests/unit/domain/apply-result.test.ts > applyResult (giữ kết quả tốt nhất) > đã tự giải rồi lần sau xem đáp án thì kết quả không tệ đi 1ms
+ ✓ tests/unit/domain/apply-result.test.ts > applyResult (giữ kết quả tốt nhất) > đã xem đáp án rồi lần sau tự giải thì thành đã giải 0ms
+ ✓ tests/unit/domain/apply-result.test.ts > applyResult (giữ kết quả tốt nhất) > cùng xem đáp án: vẫn là xem đáp án 0ms
+ ✓ tests/unit/domain/hint-machine.test.ts > hint-machine > mở tuần tự: cấp kế tiếp đi từ 1 đến 3 rồi hết 1ms
+ ✓ tests/unit/domain/hint-machine.test.ts > hint-machine > mở cấp kế tiếp lần đầu thì báo firstTime và nâng cấp cao nhất 1ms
+ ✓ tests/unit/domain/hint-machine.test.ts > hint-machine > mở lại cấp đã xem không tính thêm và không đổi trạng thái 1ms
+ ✓ tests/unit/domain/hint-machine.test.ts > hint-machine > từ chối nhảy cóc cấp 1ms
+ ✓ tests/unit/domain/hint-machine.test.ts > hint-machine > chỉ cấp 3 (xem đáp án) cần xác nhận 0ms
+ ✓ tests/unit/domain/hint-machine.test.ts > hint-machine > phân mức tự giải: 0 gợi ý, có gợi ý, xem đáp án 0ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > 0 ms → 0:00 1ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > 48000 ms → 0:48 1ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > 48400 ms → 0:48 0ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > 48500 ms → 0:49 1ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > 65000 ms → 1:05 0ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > 600000 ms → 10:00 0ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > 3600000 ms → 60:00 0ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > -5 ms → 0:00 0ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > NaN ms → 0:00 1ms
+ ✓ tests/unit/domain/format-duration.test.ts > formatDuration > Infinity ms → 0:00 0ms
+
+ Test Files  12 passed (12)
+      Tests  145 passed (145)
+   Start at  15:53:45
+   Duration  1.77s (environment 71%, setup 23%, transform 3%, tests 2%, import 1%)
+
+    Isolate  12 workers spawned · ~761ms startup each (spawn + environment, per file)
+             at least ~254ms faster with isolate: false — reuses workers across files instead of one per file
+

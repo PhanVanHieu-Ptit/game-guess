@@ -1,0 +1,145 @@
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: eslint-plugin-import@2.32.0
+npm warn Found: eslint@10.14.0
+npm warn node_modules/eslint
+npm warn   dev eslint@"10.14.0" from the root project
+npm warn   10 more (@eslint-community/eslint-utils, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer eslint@"^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8 || ^9" from eslint-plugin-import@2.32.0
+npm warn node_modules/eslint-config-next/node_modules/eslint-plugin-import
+npm warn   eslint-plugin-import@"^2.32.0" from eslint-config-next@16.4.6
+npm warn   node_modules/eslint-config-next
+npm warn   1 more (eslint-import-resolver-typescript)
+npm warn
+npm warn Conflicting peer dependency: eslint@9.39.5
+npm warn node_modules/eslint
+npm warn   peer eslint@"^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8 || ^9" from eslint-plugin-import@2.32.0
+npm warn   node_modules/eslint-config-next/node_modules/eslint-plugin-import
+npm warn     eslint-plugin-import@"^2.32.0" from eslint-config-next@16.4.6
+npm warn     node_modules/eslint-config-next
+npm warn     1 more (eslint-import-resolver-typescript)
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: eslint-plugin-jsx-a11y@6.10.2
+npm warn Found: eslint@10.14.0
+npm warn node_modules/eslint
+npm warn   dev eslint@"10.14.0" from the root project
+npm warn   10 more (@eslint-community/eslint-utils, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer eslint@"^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9" from eslint-plugin-jsx-a11y@6.10.2
+npm warn node_modules/eslint-config-next/node_modules/eslint-plugin-jsx-a11y
+npm warn   eslint-plugin-jsx-a11y@"^6.10.0" from eslint-config-next@16.4.6
+npm warn   node_modules/eslint-config-next
+npm warn
+npm warn Conflicting peer dependency: eslint@9.39.5
+npm warn node_modules/eslint
+npm warn   peer eslint@"^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9" from eslint-plugin-jsx-a11y@6.10.2
+npm warn   node_modules/eslint-config-next/node_modules/eslint-plugin-jsx-a11y
+npm warn     eslint-plugin-jsx-a11y@"^6.10.0" from eslint-config-next@16.4.6
+npm warn     node_modules/eslint-config-next
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: eslint-plugin-react@7.37.5
+npm warn Found: eslint@10.14.0
+npm warn node_modules/eslint
+npm warn   dev eslint@"10.14.0" from the root project
+npm warn   10 more (@eslint-community/eslint-utils, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer eslint@"^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7" from eslint-plugin-react@7.37.5
+npm warn node_modules/eslint-config-next/node_modules/eslint-plugin-react
+npm warn   eslint-plugin-react@"^7.37.0" from eslint-config-next@16.4.6
+npm warn   node_modules/eslint-config-next
+npm warn
+npm warn Conflicting peer dependency: eslint@9.39.5
+npm warn node_modules/eslint
+npm warn   peer eslint@"^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7" from eslint-plugin-react@7.37.5
+npm warn   node_modules/eslint-config-next/node_modules/eslint-plugin-react
+npm warn     eslint-plugin-react@"^7.37.0" from eslint-config-next@16.4.6
+npm warn     node_modules/eslint-config-next
+add lightningcss-win32-x64-msvc 1.33.0
+add lightningcss-win32-arm64-msvc 1.33.0
+add lightningcss-linux-x64-musl 1.33.0
+add lightningcss-linux-x64-gnu 1.33.0
+add lightningcss-linux-arm64-musl 1.33.0
+add lightningcss-linux-arm64-gnu 1.33.0
+add lightningcss-linux-arm-gnueabihf 1.33.0
+add lightningcss-freebsd-x64 1.33.0
+add lightningcss-darwin-x64 1.33.0
+add lightningcss-android-arm64 1.33.0
+add fsevents 2.3.3
+add @unrs/resolver-binding-win32-x64-msvc 1.13.0
+add @unrs/resolver-binding-win32-ia32-msvc 1.13.0
+add @unrs/resolver-binding-win32-arm64-msvc 1.13.0
+add @unrs/resolver-binding-openharmony-arm64 1.13.0
+add @unrs/resolver-binding-linux-x64-musl 1.13.0
+add @unrs/resolver-binding-linux-x64-gnu 1.13.0
+add @unrs/resolver-binding-linux-s390x-gnu 1.13.0
+add @unrs/resolver-binding-linux-riscv64-musl 1.13.0
+add @unrs/resolver-binding-linux-riscv64-gnu 1.13.0
+add @unrs/resolver-binding-linux-ppc64-gnu 1.13.0
+add @unrs/resolver-binding-linux-loong64-musl 1.13.0
+add @unrs/resolver-binding-linux-loong64-gnu 1.13.0
+add @unrs/resolver-binding-linux-arm64-musl 1.13.0
+add @unrs/resolver-binding-linux-arm64-gnu 1.13.0
+add @unrs/resolver-binding-linux-arm-musleabihf 1.13.0
+add @unrs/resolver-binding-linux-arm-gnueabihf 1.13.0
+add @unrs/resolver-binding-freebsd-x64 1.13.0
+add @unrs/resolver-binding-darwin-x64 1.13.0
+add @unrs/resolver-binding-android-arm64 1.13.0
+add @unrs/resolver-binding-android-arm-eabi 1.13.0
+add @tybys/wasm-util 0.10.4
+add @rolldown/binding-win32-x64-msvc 1.2.19
+add @rolldown/binding-win32-arm64-msvc 1.2.19
+add @rolldown/binding-wasm32-wasi 1.2.19
+add @emnapi/runtime 2.0.0-beta.2
+add @rolldown/binding-openharmony-arm64 1.2.19
+add @rolldown/binding-linux-x64-musl 1.2.19
+add @rolldown/binding-linux-x64-gnu 1.2.19
+add @rolldown/binding-linux-s390x-gnu 1.2.19
+add @rolldown/binding-linux-ppc64-gnu 1.2.19
+add @rolldown/binding-linux-arm64-musl 1.2.19
+add @rolldown/binding-linux-arm64-gnu 1.2.19
+add @rolldown/binding-linux-arm-gnueabihf 1.2.19
+add @rolldown/binding-freebsd-x64 1.2.19
+add @rolldown/binding-darwin-x64 1.2.19
+add @rolldown/binding-android-arm64 1.2.19
+add @rolldown/binding-android-arm-eabi 1.2.19
+add @next/swc-win32-x64-msvc 16.4.6
+add @next/swc-win32-arm64-msvc 16.4.6
+add @next/swc-linux-x64-musl 16.4.6
+add @next/swc-linux-x64-gnu 16.4.6
+add @next/swc-linux-arm64-musl 16.4.6
+add @next/swc-linux-arm64-gnu 16.4.6
+add @next/swc-darwin-x64 16.4.6
+add @napi-rs/wasm-runtime 1.2.6
+add @img/sharp-win32-x64 0.35.5
+add @img/sharp-win32-ia32 0.35.5
+add @img/sharp-win32-arm64 0.35.5
+add @img/sharp-webcontainers-wasm32 0.35.5
+add @img/sharp-linuxmusl-x64 0.35.5
+add @img/sharp-linuxmusl-arm64 0.35.5
+add @img/sharp-linux-x64 0.35.5
+add @img/sharp-linux-s390x 0.35.5
+add @img/sharp-linux-riscv64 0.35.5
+add @img/sharp-linux-ppc64 0.35.5
+add @img/sharp-linux-arm64 0.35.5
+add @img/sharp-linux-arm 0.35.5
+add @img/sharp-libvips-linuxmusl-x64 1.3.4
+add @img/sharp-libvips-linuxmusl-arm64 1.3.4
+add @img/sharp-libvips-linux-x64 1.3.4
+add @img/sharp-libvips-linux-s390x 1.3.4
+add @img/sharp-libvips-linux-riscv64 1.3.4
+add @img/sharp-libvips-linux-ppc64 1.3.4
+add @img/sharp-libvips-linux-arm64 1.3.4
+add @img/sharp-libvips-linux-arm 1.3.4
+add @img/sharp-libvips-darwin-x64 1.3.4
+add @img/sharp-freebsd-wasm32 0.35.5
+add @img/sharp-darwin-x64 0.35.5
+add @emnapi/wasi-threads 2.2.0
+add @emnapi/core 2.0.0-beta.2
+
+added 81 packages in 434ms
+
+190 packages are looking for funding
+  run `npm fund` for details

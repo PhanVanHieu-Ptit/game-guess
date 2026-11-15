@@ -1,0 +1,63 @@
+.topBar {
+  display: grid;
+  grid-template-columns: var(--touch) minmax(0, 1fr) var(--touch);
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.title {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  text-align: center;
+}
+
+.bottomBar {
+  display: flex;
+}
+
+/* Nút Gợi ý nhấp nháy nhẹ khi người chơi bí (docs/GDD.md mục 3.1, quy tắc 6); không có hộp thoại ép buộc. */
+.hintButton[data-nudge='true'] {
+  animation: nudge 1.1s ease-in-out infinite;
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* Lớp phản hồi nằm đè lên phần hình vẽ nên không đẩy bố cục; không chặn thao tác bên dưới. */
+.toastLayer {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.toast {
+  margin: var(--sp-2) 0 0;
+  padding: var(--sp-3) var(--sp-4);
+  border: 2px solid var(--c-danger);
+  border-radius: var(--radius-md);
+  background: var(--c-danger-bg);
+  color: var(--c-ink);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  line-height: 1.35;
+  animation: pop 160ms ease-out;
+}
+
+@keyframes pop {
+  from {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

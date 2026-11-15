@@ -1,0 +1,21 @@
+.messagePage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.title {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+}
+
+/* Canh giữa theo chiều dọc kiểu "an toàn" (xem modal.module.css). */
+.messagePage > :first-child {
+  margin-top: auto;
+}
+
+.messagePage > :last-child {
+  margin-bottom: auto;
+}

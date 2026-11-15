@@ -1,0 +1,56 @@
+.play {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  width: 100%;
+  max-width: var(--column);
+  height: 100vh;
+  height: 100dvh;
+  margin: 0 auto;
+  padding: max(var(--sp-3), env(safe-area-inset-top))
+    max(var(--sp-4), env(safe-area-inset-right))
+    max(var(--sp-3), env(safe-area-inset-bottom))
+    max(var(--sp-4), env(safe-area-inset-left));
+}
+
+.prompt {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Sân chơi chiếm phần còn lại; nếu màn hình quá thấp thì cuộn bên trong thay vì tràn khỏi trang. */
+.stage {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 4px;
+}
+
+/* Khung báo lỗi nạp màn nằm trong sân chơi nên chỉ chiếm vùng sân, không phủ cả màn hình. */
+.errorBox {
+  display: grid;
+  align-content: center;
+  gap: var(--sp-3);
+  height: 100%;
+}
+
+.loading {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 120px;
+  color: var(--c-muted);
+}
+
+.notice {
+  padding: var(--sp-2) var(--sp-3);
+  border: 2px solid var(--c-ink);
+  border-radius: var(--radius-md);
+  background: var(--c-primary);
+  color: var(--c-on-primary);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  line-height: 1.3;
+}
