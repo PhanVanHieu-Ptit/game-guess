@@ -1,22 +1,18 @@
 'use client';
-
 import type { LevelId } from '@/domain/levels/types';
-import type { LevelScene } from '@/engine/scene';
+import type { Level, SceneModule } from '@/engine/scene';
+import { findLevel } from './index';
+import { SCENES } from './scenes.generated';
 
-interface SceneModule {
-  default: LevelScene;
+/** Ghép dữ liệu và component mà không làm Server Component nhập bộ nạp cảnh. */
+export function findPlayableLevel(id: string): Level | undefined {
+  const meta = findLevel(id);
+  const component = SCENES[id];
+  return meta && component ? { ...meta, component } : undefined;
 }
-
-// Tách khỏi index.ts vì các Server Component cũng đọc siêu dữ liệu ở đó. Nếu cùng module, Next có thể đưa mọi
-// cảnh vào gói khởi tạo của route, khiến một cảnh lỗi tải chặn cả hydration thay vì tới SceneBoundary.
-const SCENES: Readonly<Record<string, () => Promise<SceneModule>>> = {
-  '2d-sample-01': () => import('./2d-sample-01/scene'),
-  '2d-sample-02': () => import('./2d-sample-02/scene'),
-};
-
 export function loadScene(id: LevelId): Promise<SceneModule> {
-  const load = SCENES[id];
-  return load
-    ? load()
+  const level = findPlayableLevel(id);
+  return level
+    ? level.component()
     : Promise.reject(new Error(`Không có cảnh cho màn ${id}`));
 }

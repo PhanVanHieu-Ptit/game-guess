@@ -9,10 +9,16 @@ export interface BottomBarProps {
   /** Nút Gợi ý nhấp nháy (người chơi đang bí). */
   nudge: boolean;
   onOpenHints: () => void;
+  onRestart: () => void;
 }
 
 /** Thanh dưới của màn chơi: nút Gợi ý (kèm số gợi ý đã mở). */
-export function BottomBar({ hintTier, nudge, onOpenHints }: BottomBarProps) {
+export function BottomBar({
+  hintTier,
+  nudge,
+  onOpenHints,
+  onRestart,
+}: BottomBarProps) {
   return (
     <footer className={styles.bottomBar}>
       <Button
@@ -25,6 +31,7 @@ export function BottomBar({ hintTier, nudge, onOpenHints }: BottomBarProps) {
       >
         {strings.play.hint(hintTier)}
       </Button>
+      <Button onClick={onRestart}>{strings.play.restart}</Button>
     </footer>
   );
 }

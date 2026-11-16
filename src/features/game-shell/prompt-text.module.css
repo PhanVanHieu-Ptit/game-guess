@@ -1,0 +1,17 @@
+.word {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 4px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.word:focus-visible {
+  outline: 3px solid var(--c-ink);
+}

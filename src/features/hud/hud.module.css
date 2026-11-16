@@ -13,6 +13,7 @@
 
 .bottomBar {
   display: flex;
+  gap: var(--sp-2);
 }
 
 /* Nút Gợi ý nhấp nháy nhẹ khi người chơi bí (docs/GDD.md mục 3.1, quy tắc 6); không có hộp thoại ép buộc. */

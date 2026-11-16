@@ -1,6 +1,6 @@
 # Hồ sơ dự án — Lắt Léo
 
-> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-14.
+> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-15.
 > Đây là bộ nhớ của dự án: mục tiêu, giả định, điểm lệch, câu hỏi chờ, quyết định. Backlog: [BACKLOG.md](BACKLOG.md) · Sprint: [SPRINT.md](SPRINT.md) · Lịch sử: [LICH_SU.md](LICH_SU.md).
 
 ## 1. Nguồn đã đọc (chỉ đọc, không sửa)
@@ -27,7 +27,9 @@
 
 ## 2. Hồ sơ dự án
 
-**Phạm vi hiện hành được giao ngày 14/11/2026:** triển khai epic Nền tảng theo bảy mục trong yêu cầu trực tiếp và cấu trúc `docs/TECH.md`: Next.js + TypeScript strict, công cụ kiểm thử, R3F/drei/Zustand, các màn chính, localStorage an toàn, `track` và luồng hai màn mẫu. Yêu cầu mới xác định phạm vi thực thi của lượt này; không chờ từng task cũ để hoàn thiện bảy mục. Kết quả **Chờ duyệt**, chưa commit theo `CLAUDE.md`; [bằng chứng kiểm chứng lại](../docs/evidence/E1-NEN-TANG-RECHECK.md). Các dòng về PostgreSQL và phạm vi cũ bên dưới là baseline cần đối soát, chưa phải mô tả implementation hiện tại.
+**Phạm vi hiện hành được giao ngày 15/11/2026 — Bộ máy màn chơi:** thực hiện tám mục trong yêu cầu trực tiếp: hợp đồng Level/onSolved, LevelShell, đề chạm chữ, bốn hook thao tác có đường chạm, Scene3D thích ứng, kiểm tra góc nhìn, hướng dẫn thêm màn, chuyển hai màn mẫu và kiểm thử. Trạng thái **Chờ duyệt (`in_review`)**; hướng dẫn [HOW_TO_ADD_LEVEL.md](../docs/HOW_TO_ADD_LEVEL.md), [bằng chứng](../docs/evidence/E2-BO-MAY-MAN-CHOI.md). Thêm màn chỉ tạo `meta.ts` + `scene.tsx`; catalog sinh trước dev/build/test/typecheck, cảnh tách chunk khỏi metadata. Không đổi 147 task baseline hoặc tự đánh dấu story cũ Xong.
+
+**Phạm vi Nền tảng được giao ngày 14/11/2026:** triển khai epic Nền tảng theo bảy mục trong yêu cầu trực tiếp và cấu trúc `docs/TECH.md`: Next.js + TypeScript strict, công cụ kiểm thử, R3F/drei/Zustand, các màn chính, localStorage an toàn, `track` và luồng hai màn mẫu. Yêu cầu mới xác định phạm vi thực thi của lượt này; không chờ từng task cũ để hoàn thiện bảy mục. Kết quả **Chờ duyệt**, chưa commit theo `CLAUDE.md`; [bằng chứng kiểm chứng lại](../docs/evidence/E1-NEN-TANG-RECHECK.md). Các dòng về PostgreSQL và phạm vi cũ bên dưới là baseline cần đối soát, chưa phải mô tả implementation hiện tại.
 
 | Mục | Nội dung | Nguồn / giả định |
 |---|---|---|
@@ -36,7 +38,7 @@
 | Ngoài phạm vi | **Won't:** chế độ nhiều người, thanh toán, ứng dụng tải về. **Chưa làm, chờ bạn duyệt:** gợi ý từng màn, phản hồi trong game, màn hướng dẫn, âm thanh, test tự động/CI, chia sẻ mạng xã hội, tài khoản/đồng bộ. **Có điều kiện:** khóa màn tuần tự (≈ 2 điểm, nếu Q7), adapter PostgreSQL cho nội dung màn (≈ 3 điểm, nếu Q8). | docs/backlog.md:12, 597–614 |
 | Người dùng | Học sinh, sinh viên, dân văn phòng 15–35 tuổi. Pháp lý với nhóm 15–17 tuổi chưa chốt (Q5). | docs/backlog.md:11, 587 |
 | Nhóm | Chưa có tên/giờ làm (Q2). Mã vai trò: FE, BE, DEV3D, LD, ART2D, ART3D, QA, PO; một người có thể kiêm nhiều vai. | docs/backlog.md:19; docs/sprint-1.md:11. **Giả định G3** |
-| Công nghệ | Node 22.22.3, npm 10.9.8, Next.js 16.4.6, React 19.3.1, TypeScript strict 5.9.3, ESLint 10.14.0, Prettier 3.10.0; R3F 9.8.2, drei 10.7.9, three 0.187.0, Zustand 5.1.0, Vitest 5.1.0, Playwright 1.65.0. Các gói được ghim phiên bản. Tiến trình lưu localStorage theo yêu cầu mới; PostgreSQL chưa dựng. | package.json; docs/TECH.md; docs/evidence/E1-NEN-TANG-RECHECK.md |
+| Công nghệ | Node 22.22.3, npm 10.9.8, Next.js 16.4.6, React 19.3.1, TypeScript strict 5.9.3, ESLint 10.14.0, Prettier 3.10.0; R3F 9.8.2, drei 10.7.9, three 0.182.0, Zustand 5.1.0, Vitest 5.1.0, Playwright 1.65.0. Các gói được ghim phiên bản. Tiến trình lưu localStorage theo yêu cầu mới; PostgreSQL chưa dựng. | package.json; docs/TECH.md; docs/evidence/E1-NEN-TANG-RECHECK.md |
 | Ràng buộc | Tiếng Việt có dấu đúng; chữ đề ≥ 16 px, tương phản ≥ 4,5:1 (LL-023). Vùng chạm ≥ 44×44 px, bố cục 360–1920 px (LL-025). Màn 3D: heap tăng ≤ 10% sau 20 lần mở–thoát (LL-014). Phản hồi đúng/sai ≤ 1 giây (LL-005). Ngưỡng tạm chờ Q3: ≥ 30 FPS (LL-008, LL-050); tải ≤ 3 giây và ≤ 1 MB trên 4G giả lập (LL-041). **Chưa có:** hạn chót (Q1), ngân sách hosting/DB (Q4), pháp lý và bản quyền (Q5), thiết bị tối thiểu (Q3). | docs/backlog.md (các story nêu ở từng ngưỡng), 581–595 |
 | Definition of Done | **Chưa có chính thức (Q11).** Tạm hiểu: tiêu chí nghiệm thu đạt + PO duyệt + mã đã vào nhánh chính. Kế hoạch AI thêm quy tắc bằng chứng cho từng task (D1–D4): bằng chứng ở `docs/evidence/<TASK>.md`; kiểm tra đạt, không bí mật, không đổi ngoài phạm vi; README/ADR liên quan cập nhật; chỉ *Xong* khi review theo DoD. | docs/backlog.md:18; docs/sprint-1.md:12; docs/ai-planning/EXECUTION_RULES.md:38–40. **Giả định G6**, chờ Câu 1 |
 | Ước lượng và nhịp | Điểm 1-2-3-5-8-13 (trên 8 chia nhỏ), 1 điểm ≈ ½ ngày công; MoSCoW; mỗi story 2–4 tiêu chí nghiệm thu; mỗi task ≤ 1 ngày; sprint 1 tuần (thứ Hai → thứ Sáu); năng lực tạm 20 điểm, cam kết ≤ 90%. | docs/backlog.md:15–17; docs/sprint-1.md:10. Trùng mặc định của Scrum Master → **G1, G2, G5** |
@@ -106,3 +108,4 @@
 | 2026-11-12 | Bạn đặt **LL-001-T01 *Xong*** (07:10) và chọn **DoD tạm** (Câu 1) cho tới Retro 20/11/2026; người duyệt là bạn (OPS-4). Q11 chính thức vẫn mở. | PROGRESS.md (mục 07:10) |
 | 2026-11-12 | LL-001-T02 (lint, format, typecheck) làm xong lúc 07:24, trạng thái *Chờ duyệt*. Đổi công cụ giữa chừng: ESLint 9.39.5 bị npm đánh dấu deprecated nên dùng ESLint 10.14.0. Phát sinh cần bạn quyết: advisory `minimatch` ở công cụ dev, phạm vi Prettier (bỏ `*.md`), script `check`, và 4 file `.log` bằng chứng T01 chưa vào git. | docs/evidence/LL-001-T02.md; PROGRESS.md (mục 07:24) |
 | 2026-11-14 | Người dùng giao epic Nền tảng kèm bảy mục và nghiệm thu build/test/E2E trên iPhone SE, Pixel 5. Hoàn thiện trên working tree sẵn có; tách bộ nạp cảnh để phục hồi khi tải lỗi; 145 unit test và 102 ca E2E đạt (thêm cấu hình 360 px). Cập nhật đủ bốn file scrum, bàn giao `in_review`, không tự commit hoặc đặt story cũ *Xong*. | Yêu cầu trực tiếp; docs/evidence/E1-NEN-TANG-RECHECK.md |
+| 2026-11-15 | Người dùng giao trọn epic Bộ máy màn chơi; giữ phần sửa domain đã có trong working tree, ghép với LevelShell/hook/Scene3D và catalog tự sinh. Đổi `three` + `@types/three` từ 0.187.0 xuống **0.182.0**: R3F 9.8.2 còn tạo Clock, bị Three ≥183 cảnh báo deprecated; không che cảnh báo ứng dụng. Kiểm 214 unit/component, 9 ca ví dụ production, 9 ca dev/StrictMode và 102 ca hồi quy; bàn giao `in_review`, chưa commit. | Yêu cầu trực tiếp; [E2-BO-MAY-MAN-CHOI.md](../docs/evidence/E2-BO-MAY-MAN-CHOI.md) |

@@ -1,3 +1,4 @@
+import { promptText } from '@/domain/levels/prompt';
 import { strings } from '@/features/strings';
 import { expect, test } from './fixtures';
 import { typesOf } from './helpers/events';
@@ -48,7 +49,7 @@ test('nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về
     alert.getByRole('link', { name: strings.play.back }),
   ).toHaveAttribute('href', '/levels');
   await expect(play.heading(page, 1)).toBeVisible();
-  await expect(play.prompt(page)).toHaveText(sample01.meta.prompt);
+  await expect(play.prompt(page)).toHaveText(promptText(sample01.meta.prompt));
   await expectLayoutOk(page, 'lỗi nạp cảnh');
 
   // Cảnh chưa dựng được nên chưa có lượt chơi nào: không có sự kiện đo lường.

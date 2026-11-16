@@ -1,3 +1,4 @@
+import { promptText } from '@/domain/levels/prompt';
 import { strings } from '@/features/strings';
 import { expect, test } from './fixtures';
 import { typesOf } from './helpers/events';
@@ -31,7 +32,7 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
   await home.play(page).tap();
   await expect(page).toHaveURL(/\/play\/2d-sample-01$/);
   await expect(play.heading(page, 1)).toBeVisible();
-  await expect(play.prompt(page)).toHaveText(sample01.meta.prompt);
+  await expect(play.prompt(page)).toHaveText(promptText(sample01.meta.prompt));
   await expect(
     page.getByRole('button', { name: '2 quả', exact: true }),
   ).toBeVisible();
@@ -96,7 +97,7 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
   await result.next(page).tap();
   await expect(page).toHaveURL(/\/play\/2d-sample-02$/);
   await expect(play.heading(page, 2)).toBeVisible();
-  await expect(play.prompt(page)).toHaveText(sample02.meta.prompt);
+  await expect(play.prompt(page)).toHaveText(promptText(sample02.meta.prompt));
   await expectLayoutOk(page, 'màn 2');
   await expect
     .poll(() => typesOf(events))

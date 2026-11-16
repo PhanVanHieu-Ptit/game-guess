@@ -12,10 +12,10 @@ const OPTIONS: readonly ChooseOption[] = [
   { id: 'all', label: 'Cả 12 tháng' },
 ];
 
-export default function Scene({ session }: SceneProps) {
+export default function Scene(props: SceneProps) {
   return (
     <ChooseScene
-      session={session}
+      {...props}
       options={OPTIONS}
       correctId="all"
       art={<Art />}

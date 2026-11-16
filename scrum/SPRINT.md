@@ -1,15 +1,17 @@
 # Sprint hiện tại — Sprint 1
 
-> Cập nhật gần nhất: 2026-11-14 (Thứ Bảy). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); phạm vi Nền tảng giao ngày 14/11 được ghi riêng bên dưới.
+> Cập nhật gần nhất: 2026-11-15 (Chủ Nhật). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); phạm vi Nền tảng giao ngày 14/11 được ghi riêng bên dưới.
 
 | | |
 |---|---|
-| Thời gian | Thứ Hai 16/11 → thứ Sáu 20/11/2026 (giả định G2). Ngày cập nhật 14/11 vẫn là **tiền sprint** |
+| Thời gian | Thứ Hai 16/11 → thứ Sáu 20/11/2026 (giả định G2). Ngày cập nhật 15/11 vẫn là **tiền sprint** |
 | Năng lực / cam kết | 20 điểm (giả định G1, chưa có velocity) / **18 điểm (90%)**, dự phòng 2 điểm |
 | Điểm xong | **0 / 18** |
 | Họp | Daily 09:00 (15') · kiểm tra giữa sprint thứ Tư 16:30 · Sprint Review thứ Sáu 15:00 (45') · Retro thứ Sáu 16:00 (30') · làm mịn Sprint 2 thứ Sáu 16:30 |
 
 ## Mục tiêu sprint
+
+**Phạm vi mới ngày 15/11 — Bộ máy màn chơi: Chờ duyệt (`in_review`).** Đã có LevelShell, đề chạm chữ, bốn hook có đường chạm, Scene3D thích ứng và hàm kiểm góc; thêm màn bằng đúng `meta.ts` + `scene.tsx`, tự sinh catalog. Hai màn mẫu đã chuyển; có hai ví dụ tách riêng cùng kiểm thử. Kiểm 214 unit/component và 9 ca ví dụ qua ba cấu hình trình duyệt (đạt cả production và dev/StrictMode); [bằng chứng nghiệm thu](../docs/evidence/E2-BO-MAY-MAN-CHOI.md) ghi cả check/build/hồi quy. Không thay đổi 18 điểm cam kết hoặc cộng velocity; không tự đặt các story nền tảng/3D cũ Xong. Còn kiểm máy thật cho các story có AC thiết bị.
 
 **Cập nhật phạm vi ngày 14/11:** người dùng giao trọn epic Nền tảng theo bảy mục cụ thể và `docs/TECH.md`. Phần triển khai đang **Chờ duyệt**, gồm giao diện dọc, lưu localStorage, `track`, hai màn mẫu và công cụ kiểm thử. `npm run check`, `npm run build`, 145 unit test và 102 ca Playwright đã đạt; luồng mẫu chạy trên iPhone SE, Pixel 5 và 360×640. Bằng chứng: [E1-NEN-TANG-RECHECK.md](../docs/evidence/E1-NEN-TANG-RECHECK.md). Không cộng velocity khi chưa được duyệt; mục tiêu, 18 điểm và các story PostgreSQL bên dưới vẫn là baseline cũ cần đối soát với thiết kế mới.
 

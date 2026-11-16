@@ -1,3 +1,4 @@
+import { isPromptWord, promptParts, promptText, wordId } from './prompt';
 import type { LevelMeta } from './types';
 
 // Giới hạn độ dài chữ hiển thị (docs/GDD.md mục 10.2).
@@ -7,12 +8,64 @@ export const MAX_EXPLANATION_LENGTH = 140;
 export const MAX_WRONG_LENGTH = 60;
 
 const ID_PATTERN = /^(2d|3d)-[a-z0-9]+(-[a-z0-9]+)*$/;
+// Mã của chữ chạm được trong đề: cùng dạng với mã màn nhưng không cần tiền tố.
+const WORD_ID_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 // Đếm theo ký tự người đọc thấy: chuẩn hóa NFC trước để "ế" luôn là một ký tự dù gõ kiểu nào.
 const lengthOf = (text: string): number =>
   Array.from(text.normalize('NFC')).length;
 const isBlank = (text: unknown): boolean =>
   typeof text !== 'string' || text.trim() === '';
+
+/** Đề bài: không trống, đủ ngắn, và nếu có chữ chạm được thì mỗi chữ có mã hợp lệ, không trùng. */
+function validatePrompt(meta: LevelMeta, at: string): string[] {
+  const problems: string[] = [];
+  const prompt: unknown = meta.prompt;
+  if (typeof prompt !== 'string' && !Array.isArray(prompt)) {
+    return [`${at} prompt: phải là chữ hoặc danh sách đoạn`];
+  }
+
+  const parts = promptParts(meta.prompt);
+  const malformed = parts.findIndex(
+    (part) =>
+      typeof part !== 'string' &&
+      (typeof part !== 'object' ||
+        part === null ||
+        typeof part.word !== 'string'),
+  );
+  if (malformed >= 0) {
+    return [
+      `${at} prompt: đoạn thứ ${malformed + 1} sai dạng (chữ thường hoặc word('…'))`,
+    ];
+  }
+
+  const text = promptText(meta.prompt);
+  if (isBlank(text)) problems.push(`${at} prompt: không được để trống`);
+  else if (lengthOf(text) > MAX_PROMPT_LENGTH) {
+    problems.push(`${at} prompt: dài quá ${MAX_PROMPT_LENGTH} ký tự`);
+  }
+
+  const seen = new Set<string>();
+  parts.filter(isPromptWord).forEach((part, index) => {
+    const label = `chữ chạm được thứ ${index + 1} ("${part.word}")`;
+    if (isBlank(part.word)) {
+      problems.push(`${at} prompt: ${label} bị trống`);
+      return;
+    }
+    const id = wordId(part);
+    if (!WORD_ID_PATTERN.test(id)) {
+      problems.push(
+        `${at} prompt: ${label} có mã "${id}" không hợp lệ (chỉ a–z, 0–9 và dấu gạch ngang); đặt \`id\` riêng`,
+      );
+    } else if (seen.has(id)) {
+      problems.push(
+        `${at} prompt: ${label} trùng mã "${id}"; đặt \`id\` riêng cho từng chữ`,
+      );
+    }
+    seen.add(id);
+  });
+  return problems;
+}
 
 /**
  * Kiểm danh sách màn có đúng cấu trúc không. Trả về danh sách lỗi (rỗng nghĩa là hợp lệ);
@@ -53,11 +106,7 @@ export function validateLevelMetas(metas: readonly LevelMeta[]): string[] {
     }
 
     if (isBlank(meta.title)) problems.push(`${at} title: không được để trống`);
-    if (isBlank(meta.prompt))
-      problems.push(`${at} prompt: không được để trống`);
-    else if (lengthOf(meta.prompt) > MAX_PROMPT_LENGTH) {
-      problems.push(`${at} prompt: dài quá ${MAX_PROMPT_LENGTH} ký tự`);
-    }
+    problems.push(...validatePrompt(meta, at));
     if (isBlank(meta.explanation))
       problems.push(`${at} explanation: không được để trống`);
     else if (lengthOf(meta.explanation) > MAX_EXPLANATION_LENGTH) {
@@ -89,9 +138,12 @@ export function validateLevelMetas(metas: readonly LevelMeta[]): string[] {
     }
 
     // Thao tác cảm biến luôn phải có cách thay bằng chạm (docs/GDD.md mục 11, quy tắc 5).
-    if (meta.input === 'shake' && isBlank(meta.sensors?.shake?.touchFallback)) {
+    if (
+      (meta.input === 'shake' || meta.input === 'tilt') &&
+      isBlank(meta.sensors?.[meta.input]?.touchFallback)
+    ) {
       problems.push(
-        `${at} sensors.shake.touchFallback: màn có thao tác lắc phải mô tả cách thay bằng chạm`,
+        `${at} sensors.${meta.input}.touchFallback: màn có cảm biến phải mô tả cách thay bằng chạm`,
       );
     }
   });
