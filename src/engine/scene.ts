@@ -1,11 +1,17 @@
 import type { ComponentType } from 'react';
-import type { LevelSession } from '@/domain/levels/types';
+import type { LevelMeta } from '@/domain/levels/types';
 
-// Phần của hợp đồng màn có phụ thuộc React (docs/TECH.md mục 5.1). Đặt ở engine/ thay vì domain/ để domain/ giữ thuần.
-
+/** Hợp đồng duy nhất từ cảnh tới khung chơi; cảnh không gọi đo lường hay lưu tiến trình. */
 export interface SceneProps {
-  /** Cầu nối duy nhất tới khung chơi: báo đúng, báo sai, báo có tiến triển. Cảnh không tự gọi đo lường. */
-  session: LevelSession;
+  onSolved(): void;
+  onWrong(code?: string): void;
+  onProgress(): void;
 }
-
 export type LevelScene = ComponentType<SceneProps>;
+export interface SceneModule {
+  default: LevelScene;
+}
+/** Dữ liệu nhỏ và bộ nạp component; chỉ ghép hai phần ở phía trình duyệt. */
+export interface Level extends LevelMeta {
+  component: () => Promise<SceneModule>;
+}

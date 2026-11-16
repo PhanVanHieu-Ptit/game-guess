@@ -9,7 +9,7 @@ import styles from './choose.module.css';
 // các lựa chọn, lựa chọn đúng và hình vẽ. Theo GDD mục 11 quy tắc 2, màn chỉ dựa vào chọn đáp án phải có ≥ 4 lựa chọn.
 
 export interface ChooseOption {
-  /** Khóa của lựa chọn; truyền vào `session.wrong(id)` để tra phản hồi riêng trong `meta.wrong`. */
+  /** Khóa của lựa chọn; truyền vào `onWrong(id)` để tra phản hồi riêng trong `meta.wrong`. */
   id: string;
   label: string;
 }
@@ -28,7 +28,8 @@ export interface ChooseSceneProps extends SceneProps {
 }
 
 export function ChooseScene({
-  session,
+  onSolved,
+  onWrong,
   options,
   correctId,
   art,
@@ -47,10 +48,10 @@ export function ChooseScene({
     if (pickedId !== null || eliminated.has(id)) return;
     if (id === correctId) {
       setPickedId(id);
-      session.solve();
+      onSolved();
     } else {
       setEliminated((previous) => new Set(previous).add(id));
-      session.wrong(id);
+      onWrong(id);
     }
   };
 

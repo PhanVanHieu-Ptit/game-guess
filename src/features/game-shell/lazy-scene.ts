@@ -1,6 +1,6 @@
 import { lazy, type LazyExoticComponent } from 'react';
 import type { LevelId } from '@/domain/levels/types';
-import type { LevelScene } from '@/engine/scene';
+import type { Level, LevelScene } from '@/engine/scene';
 import { SCENE_LOAD_TIMEOUT_MS } from '@/features/config';
 import { loadScene } from '@/levels/load-scene';
 
@@ -11,13 +11,16 @@ const cache = new Map<LevelId, LazyExoticComponent<LevelScene>>();
 type SceneModule = Awaited<ReturnType<typeof loadScene>>;
 
 /** Nạp cảnh nhưng từ chối sau `SCENE_LOAD_TIMEOUT_MS` (xem features/config.ts) để lỗi nạp luôn đến được SceneBoundary. */
-function loadSceneWithTimeout(id: LevelId): Promise<SceneModule> {
+function loadSceneWithTimeout(
+  id: LevelId,
+  component: Level['component'] = () => loadScene(id),
+): Promise<SceneModule> {
   return new Promise<SceneModule>((resolve, reject) => {
     const timer = setTimeout(
       () => reject(new Error(`Hết thời gian nạp cảnh của màn ${id}`)),
       SCENE_LOAD_TIMEOUT_MS,
     );
-    loadScene(id).then(
+    component().then(
       (loaded) => {
         clearTimeout(timer);
         resolve(loaded);
@@ -31,10 +34,13 @@ function loadSceneWithTimeout(id: LevelId): Promise<SceneModule> {
 }
 
 /** Cảnh nạp lười của màn, nhớ theo mã màn để các lần render dùng chung một lần nạp. */
-export function getLazyScene(id: LevelId): LazyExoticComponent<LevelScene> {
+export function getLazyScene(
+  id: LevelId,
+  component?: Level['component'],
+): LazyExoticComponent<LevelScene> {
   let scene = cache.get(id);
   if (!scene) {
-    scene = lazy(() => loadSceneWithTimeout(id));
+    scene = lazy(() => loadSceneWithTimeout(id, component));
     cache.set(id, scene);
   }
   return scene;

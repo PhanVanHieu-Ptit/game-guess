@@ -1,0 +1,9 @@
+npm run check: 0
+npm run test: 0
+npm run build: 0
+npm run test:examples: 0
+npm run test:e2e: 0
+E2E_DEV=1 npm run test:examples: 0
+python3 docs/ai-planning/verify_plan.py: 0
+npm audit --json: 1 (10 moderate trong công cụ dev)
+npm audit --omit=dev --json: 0

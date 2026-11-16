@@ -1,0 +1,28 @@
+.scene {
+  display: grid;
+  gap: 12px;
+}
+.canvas {
+  width: 100%;
+  height: clamp(180px, 38dvh, 420px);
+  touch-action: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e3f4f2;
+}
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.toolbar button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 2px solid var(--c-ink);
+  border-radius: 10px;
+  color: var(--c-ink);
+  background: white;
+  font: inherit;
+  cursor: pointer;
+}

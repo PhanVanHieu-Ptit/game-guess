@@ -1,0 +1,22 @@
+.controls {
+  display: grid;
+  gap: 12px;
+}
+.button,
+.input {
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 10px 14px;
+  border: 2px solid var(--c-ink);
+  border-radius: 12px;
+  background: var(--c-surface, white);
+  color: var(--c-ink);
+  font: inherit;
+}
+.button {
+  cursor: pointer;
+}
+.input {
+  width: 100%;
+}

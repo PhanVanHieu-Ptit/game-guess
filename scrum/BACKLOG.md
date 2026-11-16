@@ -2,7 +2,7 @@
 
 Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/backlog.md](../docs/backlog.md) v2.1 (cập nhật 2026-11-10, sha256 `3dda35d427a0`). File gốc giữ nguyên, không sửa; khi nó đổi, `/docmoi` so hash và đề xuất cập nhật ở đây. Mã story giữ ổn định: LL-001…LL-051 (story mới từ LL-052).
 
-- **Cập nhật gần nhất:** 2026-11-14 (epic Nền tảng theo yêu cầu trực tiếp đã triển khai, chờ duyệt; xem phạm vi dưới).
+- **Cập nhật gần nhất:** 2026-11-15 (epic Bộ máy màn chơi theo yêu cầu trực tiếp: chờ duyệt; xem phạm vi dưới).
 - **Trạng thái story:** Chưa làm → Đang làm → Chờ duyệt → Xong (hoặc Chặn). *Xong* theo DoD tạm ở [HO_SO.md](HO_SO.md) mục 2.
 - **Sẵn sàng = Có** khi đủ 4 điều kiện: mô tả rõ, có tiêu chí nghiệm thu kiểm tra được, đã ước lượng, không bị câu hỏi mở chặn. Thứ tự bảng là thứ tự làm, từ trên xuống.
 - **Điểm:** 1-2-3-5-8-13, trên 8 phải chia nhỏ (hiện không story nào vượt 8). Thang tương đối, tạm quy 1 điểm ≈ ½ ngày công một người (giả định).
@@ -26,6 +26,22 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 - **E7 Chất lượng** — giấy phép, kiểm thử, sửa lỗi, tối ưu tải, đo lường, ghi công (8 · 28)
 
 ## 1. Bảng backlog
+
+### Phạm vi Bộ máy màn chơi được giao ngày 15/11/2026
+
+**Trạng thái: Chờ duyệt (`in_review`).** Phạm vi tám mục người dùng giao, dựa trên TECH và nền tảng hiện có. Không thay đổi ID, điểm hoặc phụ thuộc của baseline 51 story/147 task; không tự nhận toàn bộ LL-004/005/009/014/015/022/043 đã Xong.
+
+| Hạng mục | Kết quả triển khai |
+|---|---|
+| Hợp đồng màn | LevelMeta thuần dữ liệu + Level.component nạp lười; SceneProps báo `onSolved()`; tự phát hiện `meta.ts` + `scene.tsx`, không sửa registry bằng tay |
+| LevelShell | Đề trên, sân giữa, gợi ý/chơi lại dưới; ba cấp gợi ý, đồng hồ tab hiện, sự kiện và tiến trình dùng chung; dựng lại cảnh khi chơi lại |
+| Đề chạm được | `word`, `tappableWords`, `usePromptWordTap`; mã riêng cho chữ lặp, nút ≥44 px; khóa chạm trước khi cảnh sẵn sàng |
+| Thao tác | `useShake`, `useTilt` xin quyền sau chạm, có giải thích và nút thay; `useDrag` quy đổi CTM, chọn vật/chạm đích; `useAnswerInput` hỗ trợ nhiều đáp án, không dấu/hoa thường, IME |
+| 3D và góc nhìn | Scene3D tải lười, giới hạn camera, nút xoay/zoom/reset, ánh sáng; demand rendering, DPR/bóng tự hạ; hàm thuần kiểm hướng và góc quỹ đạo có dung sai |
+| Tài liệu và ví dụ | HOW_TO_ADD_LEVEL.md; hai màn mẫu chuyển sang callback; hai ví dụ chạm chữ/3D mỗi ví dụ đúng hai file |
+| Kiểm chứng | 214 ca unit/component, 9 ca ví dụ production + 9 ca dev/StrictMode; kiểm tra mã/build và bộ hồi quy có log trong evidence |
+
+**Bằng chứng:** [E2-BO-MAY-MAN-CHOI.md](../docs/evidence/E2-BO-MAY-MAN-CHOI.md). Chưa đo cảm biến/FPS trên điện thoại thật. Three và kiểu tương ứng ghim 0.182.0 để tương thích R3F 9.8.2; các thư viện khác giữ phiên bản. Không cộng điểm hoàn thành trước khi chủ dự án duyệt.
 
 ### Phạm vi Nền tảng được giao ngày 14/11/2026
 
