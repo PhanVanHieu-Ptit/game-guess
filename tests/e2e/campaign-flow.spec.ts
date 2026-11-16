@@ -9,8 +9,9 @@ import { solution as level02 } from './solutions/2d-02';
 import { solution as level03 } from './solutions/2d-03';
 import { solution as level04 } from './solutions/2d-04';
 import { solution as level05 } from './solutions/2d-05';
+import { solution as level3d01 } from './solutions/3d-01';
 
-// Luồng năm màn thật: vào màn → giải → kết quả → màn tiếp. Chạy trên mọi dự án trong
+// Luồng các màn thật: vào màn → giải → kết quả → màn tiếp. Chạy trên mọi dự án trong
 // playwright.config.ts (iPhone SE, Pixel 5, 360×640 có cảm ứng). Chỉ dùng chạm (`tap`), không chuột, không phím tắt.
 
 const PROGRESS_KEY = 'latleo:v1';
@@ -18,7 +19,12 @@ const PROGRESS_KEY = 'latleo:v1';
 test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ', async ({
   page,
   events,
+  guard,
+  browserName,
 }, testInfo) => {
+  // Chromium headless báo khi chụp framebuffer của cảnh 3D.
+  if (browserName === 'chromium')
+    guard.allow(/GL Driver Message .*GPU stall due to ReadPixels/);
   // ---- Trang chủ của người chơi mới ----
   await page.goto('/');
   await expect(home.play(page)).toBeVisible();
@@ -118,7 +124,7 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
   await level02.solve(page);
   await expect(result.dialog(page)).toBeVisible({ timeout: 1000 });
   await expect(result.dialog(page)).toContainText(level02.meta.explanation);
-  for (const level of [level03, level04, level05]) {
+  for (const level of [level03, level04, level05, level3d01]) {
     await result.next(page).tap();
     await expect(page).toHaveURL(`/play/${level.meta.id}`);
     await expect(play.heading(page, level.meta.ordinal)).toBeVisible();
@@ -133,7 +139,7 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
   await expect(result.backToLevels(page)).toBeVisible();
   await expectLayoutOk(page, 'kết quả màn cuối');
 
-  // ---- Chọn màn: cả năm màn đã giải ----
+  // ---- Chọn màn: mọi màn hiện có đã giải ----
   await result.backToLevels(page).tap();
   await expect(page).toHaveURL(/\/levels$/);
   for (let ordinal = 1; ordinal <= TOTAL_LEVELS; ordinal++)

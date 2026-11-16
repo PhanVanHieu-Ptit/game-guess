@@ -1,0 +1,774 @@
+{
+  "browser": "chromium",
+  "project": "mobile-360",
+  "resources": [
+    {
+      "url": "/_next/static/chunks/src_features_0hgqxv2l3ngv4._.css",
+      "encodedBytes": 2107,
+      "transferBytes": 2407,
+      "decodedBytes": 10285
+    },
+    {
+      "url": "/_next/static/chunks/_0x7v_-hzn0uui._.js",
+      "encodedBytes": 715,
+      "transferBytes": 1015,
+      "decodedBytes": 1870
+    },
+    {
+      "url": "/_next/static/chunks/_0z-k90-6mxj6l._.js",
+      "encodedBytes": 15298,
+      "transferBytes": 15598,
+      "decodedBytes": 68161
+    },
+    {
+      "url": "/_next/static/chunks/src_levels_0n_x6a7otzex1._.js",
+      "encodedBytes": 915,
+      "transferBytes": 1215,
+      "decodedBytes": 6344
+    },
+    {
+      "url": "/_next/static/chunks/node_modules_0bsr2dlzvhjkp._.js",
+      "encodedBytes": 18688,
+      "transferBytes": 18988,
+      "decodedBytes": 81059
+    },
+    {
+      "url": "/_next/static/chunks/src_0kgx1w7729a90._.js",
+      "encodedBytes": 29437,
+      "transferBytes": 29737,
+      "decodedBytes": 217202
+    },
+    {
+      "url": "/_next/static/chunks/src_engine_stage3d_canvas-3d_tsx_0j05zzd_aj_jq._.js",
+      "encodedBytes": 517,
+      "transferBytes": 817,
+      "decodedBytes": 1120
+    },
+    {
+      "url": "/_next/static/chunks/node_modules_three_build_three_core_18d0oq6so9l-t.js",
+      "encodedBytes": 284176,
+      "transferBytes": 284476,
+      "decodedBytes": 1533986
+    },
+    {
+      "url": "/_next/static/chunks/node_modules_three_build_three_module_03rsyo66totzs.js",
+      "encodedBytes": 127480,
+      "transferBytes": 127780,
+      "decodedBytes": 804047
+    },
+    {
+      "url": "/_next/static/chunks/node_modules_%40react-three_fiber_dist_events-e51d7528_esm_1hbog6r82s10g.js",
+      "encodedBytes": 168467,
+      "transferBytes": 168767,
+      "decodedBytes": 878106
+    },
+    {
+      "url": "/_next/static/chunks/node_modules_1omm2ik3yx4hw._.js",
+      "encodedBytes": 10724,
+      "transferBytes": 11024,
+      "decodedBytes": 57013
+    },
+    {
+      "url": "/_next/static/chunks/src_1phaph9tzjd5l._.js",
+      "encodedBytes": 7999,
+      "transferBytes": 8299,
+      "decodedBytes": 69058
+    },
+    {
+      "url": "/_next/static/chunks/src_18pu3t4333ebl._.css",
+      "encodedBytes": 604,
+      "transferBytes": 904,
+      "decodedBytes": 1544
+    },
+    {
+      "url": "/_next/static/chunks/node_modules_three_build_three_module_1_wgwg8fdd16a.js",
+      "encodedBytes": 4484,
+      "transferBytes": 4784,
+      "decodedBytes": 87197
+    },
+    {
+      "url": "/_next/static/chunks/node_modules_%40react-three_fiber_dist_1s13xc4nn8q5g._.js",
+      "encodedBytes": 170627,
+      "transferBytes": 170927,
+      "decodedBytes": 895823
+    },
+    {
+      "url": "/_next/static/chunks/node_modules_138dku5h0iwc3._.js",
+      "encodedBytes": 17480,
+      "transferBytes": 17780,
+      "decodedBytes": 106759
+    },
+    {
+      "url": "/_next/static/chunks/src_engine_stage3d_scene-3d_module_0-b688egux8e2.css",
+      "encodedBytes": 711,
+      "transferBytes": 1011,
+      "decodedBytes": 1622
+    },
+    {
+      "url": "/_next/static/chunks/src_0pn6-1qkt6v2f._.js",
+      "encodedBytes": 6482,
+      "transferBytes": 6782,
+      "decodedBytes": 38911
+    },
+    {
+      "url": "/play/3d-01",
+      "encodedBytes": 3864,
+      "transferBytes": 4164,
+      "decodedBytes": 15683
+    }
+  ],
+  "encodedBytes": 870775,
+  "transferBytes": 876475,
+  "maxDrawCalls": 28,
+  "maxTriangles": 1408,
+  "samples": [
+    {
+      "azimuth": "-170.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-160.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-150.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-140.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-130.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-120.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-110.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-100.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-90.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-80.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-70.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-60.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-50.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-40.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-30.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-20.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-10.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "0.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "10.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "20.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "30.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "40.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "50.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "60.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "70.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "80.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "90.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "100.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "110.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "120.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "130.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "140.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "150.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "160.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "170.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "180.00",
+      "polar": "71.75",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-170.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-160.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-150.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-140.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-130.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-120.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-110.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-100.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-90.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-80.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-70.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-60.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-50.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-40.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-30.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-20.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-10.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "0.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "10.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "20.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "30.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "40.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "50.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "60.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "70.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "80.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "90.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "100.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "110.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "120.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "130.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "140.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "150.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "160.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "170.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "180.00",
+      "polar": "47.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-170.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-160.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-150.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-140.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-130.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-120.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-110.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-100.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-90.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-80.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-70.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-60.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-50.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-40.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-30.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-20.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "-10.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "0.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "10.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "20.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "30.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "40.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "50.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "60.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "70.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "80.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "90.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "100.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "110.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "120.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "130.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "140.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "150.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "160.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "170.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    },
+    {
+      "azimuth": "180.00",
+      "polar": "83.00",
+      "calls": 28,
+      "triangles": 1408
+    }
+  ]
+}

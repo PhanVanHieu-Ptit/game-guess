@@ -1,0 +1,2 @@
+PASS: {"dependency_edges": 485, "source_points": 211, "source_stories": 51, "sprints": 12, "statuses": {"done": 1, "in_review": 1, "todo": 145}, "task_points": 201, "tasks": 147}
+Checked metadata, DAG, waves, source hashes and Markdown; application was not tested.

@@ -1,0 +1,51 @@
+.pad {
+  border: 2px solid var(--c-ink);
+  border-radius: 12px;
+  background: var(--c-surface);
+}
+.pad summary {
+  min-height: 44px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.pad form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 0 12px 12px;
+  align-items: center;
+}
+.value {
+  min-width: 80px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: var(--c-bg);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(44px, 1fr));
+  gap: 8px;
+  grid-column: 1 / -1;
+}
+.keys button {
+  min-height: 44px;
+  border: 2px solid var(--c-ink);
+  border-radius: 8px;
+  color: var(--c-ink);
+  background: var(--c-bg);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.keys button[type='submit'] {
+  background: var(--c-primary);
+}
+.keys button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

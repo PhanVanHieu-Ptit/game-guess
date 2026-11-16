@@ -17,6 +17,8 @@ export interface Scene3DProps {
   label?: string;
   preset?: CameraPreset;
   controlsEnabled?: boolean;
+  /** Bật cho hai màn 3D đầu: hướng dẫn kéo trong 5 giây sau khi cảnh sẵn sàng. */
+  showDragHint?: boolean;
   onViewChange?(view: CameraView): void;
 }
 export const DEFAULT_CAMERA: CameraPreset = {

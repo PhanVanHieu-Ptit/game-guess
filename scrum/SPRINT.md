@@ -1,15 +1,17 @@
 # Sprint hiện tại — Sprint 1
 
-> Cập nhật gần nhất: 2026-11-15 (Chủ Nhật). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); phạm vi Nền tảng giao ngày 14/11 được ghi riêng bên dưới.
+> Cập nhật gần nhất: 2026-11-16 (Thứ Hai). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); các phạm vi giao trực tiếp được ghi riêng bên dưới.
 
 | | |
 |---|---|
-| Thời gian | Thứ Hai 16/11 → thứ Sáu 20/11/2026 (giả định G2). Ngày cập nhật 15/11 vẫn là **tiền sprint** |
+| Thời gian | Thứ Hai 16/11 → thứ Sáu 20/11/2026 (giả định G2), chưa xác nhận cam kết sprint |
 | Năng lực / cam kết | 20 điểm (giả định G1, chưa có velocity) / **18 điểm (90%)**, dự phòng 2 điểm |
 | Điểm xong | **0 / 18** |
 | Họp | Daily 09:00 (15') · kiểm tra giữa sprint thứ Tư 16:30 · Sprint Review thứ Sáu 15:00 (45') · Retro thứ Sáu 16:00 (30') · làm mịn Sprint 2 thứ Sáu 16:30 |
 
 ## Mục tiêu sprint
+
+**Phạm vi giao trực tiếp ngày 16/11 — chỉ 3D-01: Chờ duyệt (`in_review`).** Phương án cảnh đã trình và người dùng trả lời “tiếp tục”. Hoàn thiện nhà ống/bồn nước/chậu cây bằng hình khối, dùng chung Scene3D và bàn phím số; hướng dẫn kéo 5 giây, góc đầu che số, reset và tự hạ chất lượng. 239 unit/component và 153 ca Playwright production đạt; số đo/nghiệm thu bổ sung trong [E4-3D-01.md](../docs/evidence/E4-3D-01.md). LL-033/034/017 ở Chờ duyệt, không thêm điểm vào 18 điểm cam kết hoặc cộng velocity. Chưa đo điện thoại thật.
 
 **Phạm vi mới ngày 15/11 — Bộ máy màn chơi: Chờ duyệt (`in_review`).** Đã có LevelShell, đề chạm chữ, bốn hook có đường chạm, Scene3D thích ứng và hàm kiểm góc; thêm màn bằng đúng `meta.ts` + `scene.tsx`, tự sinh catalog. Hai màn mẫu đã chuyển; có hai ví dụ tách riêng cùng kiểm thử. Kiểm 214 unit/component và 9 ca ví dụ qua ba cấu hình trình duyệt (đạt cả production và dev/StrictMode); [bằng chứng nghiệm thu](../docs/evidence/E2-BO-MAY-MAN-CHOI.md) ghi cả check/build/hồi quy. Không thay đổi 18 điểm cam kết hoặc cộng velocity; không tự đặt các story nền tảng/3D cũ Xong. Còn kiểm máy thật cho các story có AC thiết bị.
 
@@ -114,6 +116,13 @@ Rủi ro 1–8 rút gọn từ sprint-1.md; 9–11 do Scrum Master thêm.
 | [LL-029], [LL-010] | 5 + 5 | "Chưa": chờ Q6, Q10; còn phụ thuộc LL-028, LL-023, LL-009 | Sprint 3, sau khi Q6 và Q10 có trả lời |
 
 ## Nhật ký hằng ngày
+
+### 2026-11-16 (Thứ Hai) — phạm vi trực tiếp 3D-01
+
+- **Đã làm:** trình phương án rồi nhận “tiếp tục”; triển khai riêng 3D-01, ba mô hình dùng chung và bàn phím số chạm; tích hợp hướng dẫn kéo/kiểm góc/chỉ số renderer vào Scene3D. Mã màn ổn định, thứ tự 6/6 của bản hiện có được ghi rõ so với #8 trong thiết kế đủ 25 màn.
+- **Kiểm chứng:** 239 unit/component, 153 ca Playwright production đạt; có thêm kiểm dev/StrictMode, ví dụ bộ máy và số đo trong [bằng chứng](../docs/evidence/E4-3D-01.md).
+- **Bàn giao:** LL-033/034/017 Chờ duyệt; chưa tự commit hoặc đặt Xong. Chưa thử máy thật/độ khó với người chơi; các màn 3D khác chưa nhận.
+- **Thay đổi scrum:** cập nhật phạm vi/nguồn duyệt trong HO_SO, trạng thái/tổng trong BACKLOG, ghi phạm vi riêng tại SPRINT và kết quả tại LICH_SU; giữ cam kết 18 điểm.
 
 Ghi bởi `/daily` (3 câu: hôm qua, hôm nay, vướng mắc). Mục mới nhất ở cuối.
 
