@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode, Ref } from 'react';
 import styles from './stage-2d.module.css';
 
 // Sân chơi 2D bằng SVG (docs/TECH.md mục 7.1). Toạ độ trong cảnh là toạ độ logic (mặc định 360×480, tỉ lệ 3:4),
@@ -9,6 +9,7 @@ export const STAGE_WIDTH = 360;
 export const STAGE_HEIGHT = 480;
 
 export interface Stage2DProps {
+  ref?: Ref<SVGSVGElement>;
   /** Mô tả bằng chữ của hình vẽ cho người dùng trình đọc màn hình. */
   label: string;
   width?: number;
@@ -17,6 +18,7 @@ export interface Stage2DProps {
 }
 
 export function Stage2D({
+  ref,
   label,
   width = STAGE_WIDTH,
   height = STAGE_HEIGHT,
@@ -24,6 +26,7 @@ export function Stage2D({
 }: Stage2DProps) {
   return (
     <svg
+      ref={ref}
       className={styles.stage}
       viewBox={`0 0 ${width} ${height}`}
       preserveAspectRatio="xMidYMid meet"

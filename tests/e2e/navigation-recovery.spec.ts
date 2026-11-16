@@ -3,11 +3,11 @@ import { expect, test } from './fixtures';
 import { typesOf } from './helpers/events';
 import { expectLayoutOk } from './helpers/layout';
 import { play, result } from './helpers/ui';
-import { solution as sample01 } from './solutions/2d-sample-01';
-import { solution as sample02 } from './solutions/2d-sample-02';
+import { solution as level01 } from './solutions/2d-01';
+import { solution as level02 } from './solutions/2d-02';
 
 // Chặn riêng gói cảnh màn 2, kể cả lần tải trước khi người chơi đang xem kết quả màn 1.
-const SCENE_MARKER = 'Tờ lịch ghi số 28';
+const SCENE_MARKER = 'Góc ao với dấu hỏi';
 
 test('Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được', async ({
   page,
@@ -31,14 +31,14 @@ test('Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại
     }
   });
 
-  await page.goto(`/play/${sample01.meta.id}`);
+  await page.goto(`/play/${level01.meta.id}`);
   await expect(play.heading(page, 1)).toBeVisible();
-  await sample01.solve(page);
+  await level01.solve(page);
   await expect(result.dialog(page)).toBeVisible();
   await result.next(page).tap();
 
   // Điều hướng phải rời hộp kết quả cũ dù cảnh tiếp theo chưa nạp được.
-  await expect(page).toHaveURL(`/play/${sample02.meta.id}`);
+  await expect(page).toHaveURL(`/play/${level02.meta.id}`);
   await expect(play.heading(page, 2)).toBeVisible();
   await expect(result.dialog(page)).not.toBeVisible();
   const alert = page.getByRole('main').getByRole('alert');
@@ -54,10 +54,10 @@ test('Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại
   networkDown = false;
   await alert.getByRole('button', { name: strings.play.retry }).tap();
   await expect(
-    page.getByRole('button', { name: 'Cả 12 tháng', exact: true }),
+    page.getByRole('textbox', { name: 'Đáp án của bạn', exact: true }),
   ).toBeVisible();
   await expect(alert).toHaveCount(0);
-  await sample02.solve(page);
+  await level02.solve(page);
   await expect(result.dialog(page)).toBeVisible();
   await expect
     .poll(() => typesOf(events))

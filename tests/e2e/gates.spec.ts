@@ -56,7 +56,7 @@ test.describe('cổng console và mạng (fixture guard)', () => {
     await page.evaluate(() => {
       setTimeout(() => {
         throw new Error(
-          '/localhost:3100/play/2d-sample-01?_rsc=abc123 due to access control checks.',
+          '/localhost:3100/play/2d-01?_rsc=abc123 due to access control checks.',
         );
       }, 0);
     });
@@ -131,7 +131,7 @@ const VALID_START: TrackedEvent = {
   ts: '2026-11-14T08:00:00.000Z',
   appVersion: '0.1.0',
   device: { kind: 'android', w: 393, h: 727, quality: 'medium' },
-  levelId: '2d-sample-01',
+  levelId: '2d-01',
   mode: 'campaign',
   attemptNo: 1,
   restart: false,
@@ -151,7 +151,7 @@ delete (VALID_COMPLETE as Record<string, unknown>).restart;
 test.describe('cổng sự kiện đo lường (findEventProblems)', () => {
   test('chuỗi hợp lệ không có vi phạm', () => {
     expect(findEventProblems([VALID_START, VALID_COMPLETE])).toEqual([]);
-    expect(openRuns([VALID_START])).toEqual(['2d-sample-01']);
+    expect(openRuns([VALID_START])).toEqual(['2d-01']);
     expect(openRuns([VALID_START, VALID_COMPLETE])).toEqual([]);
   });
 

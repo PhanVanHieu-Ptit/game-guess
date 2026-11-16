@@ -1,12 +1,18 @@
 import { test, expect } from '../e2e/fixtures';
 import { expectLayoutOk } from '../e2e/helpers/layout';
+import { LEVEL_METAS } from '@/levels';
 
 test('hai file của màn chữ: tự vào catalog, chạm chữ, đo lường, chơi lại ở thanh dưới', async ({
   page,
   events,
 }) => {
   await page.goto('/play/2d-word');
-  await expect(page.getByRole('heading', { name: 'Màn 3 / 4' })).toBeVisible();
+  const ordinal = LEVEL_METAS.find((meta) => meta.id === '2d-word')?.ordinal;
+  await expect(
+    page.getByRole('heading', {
+      name: `Màn ${ordinal} / ${LEVEL_METAS.length}`,
+    }),
+  ).toBeVisible();
   const words = page
     .getByTestId('prompt')
     .getByRole('button', { name: 'Tết', exact: true });
