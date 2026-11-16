@@ -27,6 +27,8 @@
 
 ## 2. Hồ sơ dự án
 
+**Phạm vi mới ngày 16/11/2026 — chỉ 3D-01 “Nhà số mấy?”:** đã trình lại đề/cơ chế/lời giải và phương án cảnh, người dùng trả lời **“tiếp tục”** để duyệt triển khai. Thêm nhà ống, bồn nước và chậu cây low-poly bằng code vào thư viện dùng chung; dùng Scene3D, bàn phím số chạm, hướng dẫn kéo 5 giây và kiểm góc quan sát. Điều kiện thắng là nhập **36**, không buộc giữ camera ở một góc hẹp. LL-033/034/017 bàn giao **Chờ duyệt (`in_review`)** với [bằng chứng](../docs/evidence/E4-3D-01.md); chưa tự commit hoặc cộng velocity. Catalog hiện có 5 màn nên `3d-01.ordinal=6` để giữ hợp đồng thứ tự liên tục; vị trí thiết kế vẫn là #8 trong LEVELS, cập nhật ordinal khi có 2D-06/07. Mã tiến trình ổn định là `3d-01`.
+
 **Phạm vi hiện hành ngày 16/11/2026 — năm màn 2D đầu tiên:** người dùng yêu cầu làm lần lượt năm màn chưa có theo LEVELS, SVG tự vẽ cùng phong cách, dùng lại bộ máy, sai không phạt, đúng ba gợi ý/giải thích, Playwright đúng/sai và chạy qua từng màn trước khi làm màn kế. Kho trước lượt này chỉ có mẫu kỹ thuật nên lô là **2D-01…05**. Đã thay hai mẫu bằng năm màn thật, chuyển hồi quy sang nội dung thật; LL-010/LL-029 và từng màn ở **Chờ duyệt (`in_review`)**, chi tiết/rủi ro trong [BACKLOG.md](BACKLOG.md), [bằng chứng](../docs/evidence/E3-2D-01-05.md). Không đổi GDD/LEVELS/TECH hoặc 147 task baseline; không tự commit, không tính velocity.
 
 **Phạm vi hiện hành được giao ngày 15/11/2026 — Bộ máy màn chơi:** thực hiện tám mục trong yêu cầu trực tiếp: hợp đồng Level/onSolved, LevelShell, đề chạm chữ, bốn hook thao tác có đường chạm, Scene3D thích ứng, kiểm tra góc nhìn, hướng dẫn thêm màn, chuyển hai màn mẫu và kiểm thử. Trạng thái **Chờ duyệt (`in_review`)**; hướng dẫn [HOW_TO_ADD_LEVEL.md](../docs/HOW_TO_ADD_LEVEL.md), [bằng chứng](../docs/evidence/E2-BO-MAY-MAN-CHOI.md). Thêm màn chỉ tạo `meta.ts` + `scene.tsx`; catalog sinh trước dev/build/test/typecheck, cảnh tách chunk khỏi metadata. Không đổi 147 task baseline hoặc tự đánh dấu story cũ Xong.
@@ -98,6 +100,7 @@
 
 | Ngày | Quyết định / sự kiện | Nguồn |
 |---|---|---|
+| 2026-11-16 | Người dùng yêu cầu chỉ làm màn 3D tiếp theo, duyệt phương án bằng “tiếp tục”. Thực hiện riêng 3D-01; mô hình bằng hình khối trong code thay tài nguyên glTF của baseline cũ. Ngân sách của lượt này: <50 draw call/frame và <1 MB tải thêm, gồm gói 3D chung ở lần đầu. Đo ở trình duyệt tự động; chưa có số đo điện thoại thật. | Yêu cầu trực tiếp; [E4-3D-01.md](../docs/evidence/E4-3D-01.md) |
 | 2026-11-09 | Lập backlog v1 (41 story, 194 điểm). Các mục Q1–Q11 để trống, đã hỏi lại. | docs/backlog.md:618 |
 | 2026-11-10 | Làm mịn backlog v2 (51 story, 211 điểm) và v2.1 (LL-014 thêm task đo FPS trên điện thoại thật). Lập docs/sprint-1.md đề xuất 16–20/11, cam kết 18/20. | docs/backlog.md:620–639; docs/sprint-1.md |
 | 2026-11-10 | Lập kế hoạch kỹ thuật cho agent AI: 147 task, 12 sprint, 201 điểm task (211 điểm story, hai số không cộng nhau). | docs/ai-planning/PROJECT_ANALYSIS.md; tasks.json |

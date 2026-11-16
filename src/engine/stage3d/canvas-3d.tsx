@@ -12,6 +12,8 @@ import { OrbitControls } from '@react-three/drei/core/OrbitControls';
 import { orbitAngles, positionFromOrbit } from '@/domain/view/view-check';
 import { DEFAULT_CAMERA, type CameraPreset, type Scene3DProps } from './types';
 import { InteractionQuality } from './quality';
+import { DragHint } from './drag-hint';
+import { observeRenderer } from './renderer-diagnostics';
 import styles from './scene-3d.module.css';
 
 type Command = {
@@ -43,16 +45,31 @@ function Rig({
   const quality = useRef(new InteractionQuality());
   const report = () => {
     const target = controls.current?.target;
-    if (target)
-      onViewChange?.({
+    if (target) {
+      const view = {
         position: [camera.position.x, camera.position.y, camera.position.z],
         target: [target.x, target.y, target.z],
-      });
+      } as const;
+      const angles = orbitAngles(view);
+      if (angles) {
+        gl.domElement.setAttribute(
+          'data-azimuth',
+          angles.azimuthDeg.toFixed(2),
+        );
+        gl.domElement.setAttribute('data-polar', angles.polarDeg.toFixed(2));
+        gl.domElement.setAttribute(
+          'data-distance',
+          camera.position.distanceTo(target).toFixed(2),
+        );
+      }
+      onViewChange?.(view);
+    }
   };
   const reportInitial = useEffectEvent(report);
   useEffect(() => {
     onReady();
   }, [onReady]);
+  useEffect(() => observeRenderer(gl), [gl]);
   // Cùng đường điều khiển cho reset và nút chạm, luôn áp giới hạn như OrbitControls.
   useEffect(() => {
     const orbit = controls.current;
@@ -127,6 +144,7 @@ function Rig({
     return () => canvas.removeEventListener('webglcontextlost', lost);
   }, [gl, onLost]);
   useFrame(() => {
+    gl.info.reset();
     if (quality.current.sample(performance.now(), active.current)) onSlow();
   });
   return (
@@ -159,17 +177,21 @@ export default function Canvas3D({
   preset = DEFAULT_CAMERA,
   controlsEnabled = true,
   onViewChange,
+  showDragHint = false,
 }: Scene3DProps) {
   const [low, setLow] = useState(false);
   const [ready, setReady] = useState(false);
   const markReady = useCallback(() => setReady(true), []);
   const [lost, setLost] = useState(false);
+  const [interacted, setInteracted] = useState(false);
   const [command, setCommand] = useState<Command>({
     sequence: 0,
     action: 'reset',
   });
-  const send = (action: Command['action']) =>
+  const send = (action: Command['action']) => {
+    setInteracted(true);
     setCommand((c) => ({ sequence: c.sequence + 1, action }));
+  };
   return (
     <div className={styles.scene} data-quality={low ? 'low' : 'high'}>
       {lost ? (
@@ -180,6 +202,7 @@ export default function Canvas3D({
           role="group"
           aria-label={label}
           aria-busy={!ready}
+          onPointerDown={() => setInteracted(true)}
         >
           <Canvas
             frameloop="demand"
@@ -211,6 +234,7 @@ export default function Canvas3D({
             />
             {children}
           </Canvas>
+          <DragHint active={showDragHint && ready && !interacted} />
         </div>
       )}
       <div

@@ -1,0 +1,55 @@
+
+> game-guess@0.1.0 test:examples
+> node scripts/test-engine-examples.mjs
+
+[WebServer] (node:35761) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35794) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35811) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35809) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35808) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35810) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35812) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35813) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35814) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35851) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 5 workers
+
+(node:35853) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35854) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35856) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35855) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [pixel-5] › tests/examples/engine.spec.ts:5:1 › hai file của màn chữ: tự vào catalog, chạm chữ, đo lường, chơi lại ở thanh dưới (1.5s)
+  ✓  5 [iphone-se] › tests/examples/engine.spec.ts:5:1 › hai file của màn chữ: tự vào catalog, chạm chữ, đo lường, chơi lại ở thanh dưới (1.9s)
+(node:35899) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [iphone-se] › tests/examples/engine.spec.ts:40:1 › hai file của màn 3D: WebGL thật, nút chạm đổi góc, reset và giải theo hướng nhìn (2.9s)
+  ✓  2 [pixel-5] › tests/examples/engine.spec.ts:40:1 › hai file của màn 3D: WebGL thật, nút chạm đổi góc, reset và giải theo hướng nhìn (3.0s)
+  ✓  7 [mobile-360] › tests/examples/engine.spec.ts:5:1 › hai file của màn chữ: tự vào catalog, chạm chữ, đo lường, chơi lại ở thanh dưới (773ms)
+(node:35904) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35907) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  8 [mobile-360] › tests/examples/engine.spec.ts:40:1 › hai file của màn 3D: WebGL thật, nút chạm đổi góc, reset và giải theo hướng nhìn (1.6s)
+  ✓  1 [iphone-se] › tests/examples/engine.spec.ts:107:1 › tự hạ DPR và bóng khi FPS thấp trong lúc xoay (5.7s)
+  ✓  6 [pixel-5] › tests/examples/engine.spec.ts:107:1 › tự hạ DPR và bóng khi FPS thấp trong lúc xoay (4.8s)
+  ✓  9 [mobile-360] › tests/examples/engine.spec.ts:107:1 › tự hạ DPR và bóng khi FPS thấp trong lúc xoay (4.9s)
+
+  9 passed (15.7s)
+Đã nhận 6 màn (meta.ts + scene.tsx).

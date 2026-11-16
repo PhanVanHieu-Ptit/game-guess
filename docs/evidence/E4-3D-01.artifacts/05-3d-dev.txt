@@ -1,0 +1,70 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test --workers=2 tests/e2e/level-3d-01.spec.ts
+
+[WebServer] (node:35354) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35378) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35379) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 2 workers
+
+(node:35389) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35390) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35415) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [iphone-se] › tests/e2e/level-3d-01.spec.ts:43:1 › 3D-01: kéo đổi camera, giới hạn góc/zoom, reset khôi phục đúng góc ban đầu (3.5s)
+[WebServer] (node:35418) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [iphone-se] › tests/e2e/level-3d-01.spec.ts:17:1 › 3D-01: tải WebGL thật, góc đầu che số và hướng dẫn tự ẩn sau 5 giây (6.9s)
+[WebServer] (node:35427) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [iphone-se] › tests/e2e/level-3d-01.spec.ts:93:1 › 3D-01: sai có phản hồi, xoay ra sau và nhập 36 thắng chỉ bằng chạm; chơi lại giải được (8.2s)
+[WebServer] (node:35431) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [iphone-se] › tests/e2e/level-3d-01.spec.ts:238:1 › 3D-01: máy chậm tự hạ chất lượng và hướng dẫn tôn trọng giảm chuyển động (4.9s)
+(node:35437) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [iphone-se] › tests/e2e/level-3d-01.spec.ts:151:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ (10.4s)
+[WebServer] (node:35445) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:35446) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35451) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [pixel-5] › tests/e2e/level-3d-01.spec.ts:43:1 › 3D-01: kéo đổi camera, giới hạn góc/zoom, reset khôi phục đúng góc ban đầu (3.3s)
+[WebServer] (node:35453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [pixel-5] › tests/e2e/level-3d-01.spec.ts:17:1 › 3D-01: tải WebGL thật, góc đầu che số và hướng dẫn tự ẩn sau 5 giây (6.2s)
+[WebServer] (node:35456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [pixel-5] › tests/e2e/level-3d-01.spec.ts:93:1 › 3D-01: sai có phản hồi, xoay ra sau và nhập 36 thắng chỉ bằng chạm; chơi lại giải được (9.3s)
+[WebServer] (node:35470) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [pixel-5] › tests/e2e/level-3d-01.spec.ts:238:1 › 3D-01: máy chậm tự hạ chất lượng và hướng dẫn tôn trọng giảm chuyển động (5.4s)
+(node:35472) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35477) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [pixel-5] › tests/e2e/level-3d-01.spec.ts:151:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ (13.2s)
+(node:35478) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:35486) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 [mobile-360] › tests/e2e/level-3d-01.spec.ts:43:1 › 3D-01: kéo đổi camera, giới hạn góc/zoom, reset khôi phục đúng góc ban đầu (3.4s)
+[WebServer] (node:35488) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [mobile-360] › tests/e2e/level-3d-01.spec.ts:17:1 › 3D-01: tải WebGL thật, góc đầu che số và hướng dẫn tự ẩn sau 5 giây (6.1s)
+[WebServer] (node:35492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 [mobile-360] › tests/e2e/level-3d-01.spec.ts:93:1 › 3D-01: sai có phản hồi, xoay ra sau và nhập 36 thắng chỉ bằng chạm; chơi lại giải được (9.1s)
+[WebServer] (node:35498) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [mobile-360] › tests/e2e/level-3d-01.spec.ts:238:1 › 3D-01: máy chậm tự hạ chất lượng và hướng dẫn tôn trọng giảm chuyển động (5.5s)
+  ✓  14 [mobile-360] › tests/e2e/level-3d-01.spec.ts:151:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ (13.2s)
+
+  15 passed (57.8s)

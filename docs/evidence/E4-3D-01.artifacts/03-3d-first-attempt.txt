@@ -1,0 +1,172 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test --workers=2 tests/e2e/level-3d-01.spec.ts
+
+[WebServer] (node:34249) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34273) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34287) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34283) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34286) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34284) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34289) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34314) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 2 workers
+
+(node:34315) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [iphone-se] › tests/e2e/level-3d-01.spec.ts:43:1 › 3D-01: kéo đổi camera, giới hạn góc/zoom, reset khôi phục đúng góc ban đầu (2.8s)
+  ✓   1 [iphone-se] › tests/e2e/level-3d-01.spec.ts:17:1 › 3D-01: tải WebGL thật, góc đầu che số và hướng dẫn tự ẩn sau 5 giây (6.4s)
+  ✓   3 [iphone-se] › tests/e2e/level-3d-01.spec.ts:93:1 › 3D-01: sai có phản hồi, xoay ra sau và nhập 36 thắng chỉ bằng chạm; chơi lại giải được (3.6s)
+  ✓   5 [iphone-se] › tests/e2e/level-3d-01.spec.ts:221:1 › 3D-01: máy chậm tự hạ chất lượng và hướng dẫn tôn trọng giảm chuyển động (4.7s)
+(node:34368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 [iphone-se] › tests/e2e/level-3d-01.spec.ts:146:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ (5.8s)
+(node:34373) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [pixel-5] › tests/e2e/level-3d-01.spec.ts:43:1 › 3D-01: kéo đổi camera, giới hạn góc/zoom, reset khôi phục đúng góc ban đầu (3.2s)
+  ✓   6 [pixel-5] › tests/e2e/level-3d-01.spec.ts:17:1 › 3D-01: tải WebGL thật, góc đầu che số và hướng dẫn tự ẩn sau 5 giây (6.0s)
+  ✓   8 [pixel-5] › tests/e2e/level-3d-01.spec.ts:93:1 › 3D-01: sai có phản hồi, xoay ra sau và nhập 36 thắng chỉ bằng chạm; chơi lại giải được (5.0s)
+  ✘   9 [pixel-5] › tests/e2e/level-3d-01.spec.ts:146:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ (5.7s)
+(node:34393) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [pixel-5] › tests/e2e/level-3d-01.spec.ts:221:1 › 3D-01: máy chậm tự hạ chất lượng và hướng dẫn tôn trọng giảm chuyển động (5.4s)
+(node:34402) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [mobile-360] › tests/e2e/level-3d-01.spec.ts:17:1 › 3D-01: tải WebGL thật, góc đầu che số và hướng dẫn tự ẩn sau 5 giây (5.9s)
+  ✓  12 [mobile-360] › tests/e2e/level-3d-01.spec.ts:43:1 › 3D-01: kéo đổi camera, giới hạn góc/zoom, reset khôi phục đúng góc ban đầu (3.1s)
+  ✓  13 [mobile-360] › tests/e2e/level-3d-01.spec.ts:93:1 › 3D-01: sai có phản hồi, xoay ra sau và nhập 36 thắng chỉ bằng chạm; chơi lại giải được (5.0s)
+  ✘  14 [mobile-360] › tests/e2e/level-3d-01.spec.ts:146:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ (5.7s)
+  ✓  15 [mobile-360] › tests/e2e/level-3d-01.spec.ts:221:1 › 3D-01: máy chậm tự hạ chất lượng và hướng dẫn tôn trọng giảm chuyển động (5.4s)
+
+
+  1) [iphone-se] › tests/e2e/level-3d-01.spec.ts:146:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: 'Về góc ban đầu' })
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Về góc ban đầu' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Về góc ban đầu' })
+
+
+      156 |   await expect(
+      157 |     page.getByRole('button', { name: 'Về góc ban đầu' }),
+    > 158 |   ).toBeEnabled();
+          |     ^
+      159 |   await page.waitForLoadState('networkidle');
+      160 |   const resources = await page.evaluate(
+      161 |     (known) =>
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-3d-01.spec.ts:158:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [pixel-5] › tests/e2e/level-3d-01.spec.ts:146:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: 'Về góc ban đầu' })
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Về góc ban đầu' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Về góc ban đầu' })
+
+
+      156 |   await expect(
+      157 |     page.getByRole('button', { name: 'Về góc ban đầu' }),
+    > 158 |   ).toBeEnabled();
+          |     ^
+      159 |   await page.waitForLoadState('networkidle');
+      160 |   const resources = await page.evaluate(
+      161 |     (known) =>
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-3d-01.spec.ts:158:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-360] › tests/e2e/level-3d-01.spec.ts:146:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: 'Về góc ban đầu' })
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Về góc ban đầu' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Về góc ban đầu' })
+
+
+      156 |   await expect(
+      157 |     page.getByRole('button', { name: 'Về góc ban đầu' }),
+    > 158 |   ).toBeEnabled();
+          |     ^
+      159 |   await page.waitForLoadState('networkidle');
+      160 |   const resources = await page.evaluate(
+      161 |     (known) =>
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-3d-01.spec.ts:158:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-01-3D-01-đo-ngân--66091-i-3D-đầu-tiên-sau-trang-chủ-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [iphone-se] › tests/e2e/level-3d-01.spec.ts:146:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ 
+    [pixel-5] › tests/e2e/level-3d-01.spec.ts:146:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ 
+    [mobile-360] › tests/e2e/level-3d-01.spec.ts:146:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ 
+  12 passed (43.4s)
