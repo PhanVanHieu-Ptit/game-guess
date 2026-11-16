@@ -2,7 +2,7 @@
 
 Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/backlog.md](../docs/backlog.md) v2.1 (cập nhật 2026-11-10, sha256 `3dda35d427a0`). File gốc giữ nguyên, không sửa; khi nó đổi, `/docmoi` so hash và đề xuất cập nhật ở đây. Mã story giữ ổn định: LL-001…LL-051 (story mới từ LL-052).
 
-- **Cập nhật gần nhất:** 2026-11-15 (epic Bộ máy màn chơi theo yêu cầu trực tiếp: chờ duyệt; xem phạm vi dưới).
+- **Cập nhật gần nhất:** 2026-11-16 (lô 2D-01…05 theo yêu cầu trực tiếp: Chờ duyệt; xem bảng từng màn bên dưới).
 - **Trạng thái story:** Chưa làm → Đang làm → Chờ duyệt → Xong (hoặc Chặn). *Xong* theo DoD tạm ở [HO_SO.md](HO_SO.md) mục 2.
 - **Sẵn sàng = Có** khi đủ 4 điều kiện: mô tả rõ, có tiêu chí nghiệm thu kiểm tra được, đã ước lượng, không bị câu hỏi mở chặn. Thứ tự bảng là thứ tự làm, từ trên xuống.
 - **Điểm:** 1-2-3-5-8-13, trên 8 phải chia nhỏ (hiện không story nào vượt 8). Thang tương đối, tạm quy 1 điểm ≈ ½ ngày công một người (giả định).
@@ -11,8 +11,8 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 ## Tóm tắt
 
 - **51 story · 211 điểm** · Must 44 (192 đ) · Should 6 (17 đ) · Could 1 (2 đ) · Won't 0 (đã chốt, không ước lượng).
-- **Sẵn sàng:** 25 story "Có" (81 đ) · 26 story "Chưa" (130 đ). Nguyên nhân "Chưa": Q6 hoặc Q10 chặn 18 story (102 đ ≈ 48,3% tổng); Q3 chặn 3 (11 đ); Q5 chặn 3 (9 đ); Q4 chặn 1 (3 đ); Q11 chặn 1 (5 đ).
-- **Tiến độ:** Chưa làm 50 · Đang làm 1 · Chờ duyệt 0 · Xong 0 → **0 / 211 điểm xong**.
+- **Sẵn sàng:** 27 story "Có" (91 đ) · 24 story "Chưa" (120 đ). Nguyên nhân "Chưa": Q6 hoặc Q10 chặn 16 story (92 đ ≈ 43,6% tổng); Q3 chặn 3 (11 đ); Q5 chặn 3 (9 đ); Q4 chặn 1 (3 đ); Q11 chặn 1 (5 đ).
+- **Tiến độ:** Chưa làm 48 · Đang làm 1 · Chờ duyệt 2 · Xong 0 → **0 / 211 điểm xong**.
 - **Dự báo thô (giả định, chưa có hạn chót — Q1):** 211 điểm ÷ 20 điểm/sprint ≈ 10,6 sprint; ÷ 18 điểm (cam kết 90%) ≈ 11,7 sprint. Nếu Sprint 1 bắt đầu thứ Hai 16/11/2026 thì xong sau 11–12 sprint, tức khoảng **29/01–05/02/2027**, chưa trừ nghỉ lễ và chưa tính lỗi phát sinh.
 
 ## Epic
@@ -26,6 +26,30 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 - **E7 Chất lượng** — giấy phép, kiểm thử, sửa lỗi, tối ưu tải, đo lường, ghi công (8 · 28)
 
 ## 1. Bảng backlog
+
+### Lô 2D-01…05 được giao ngày 16/11/2026
+
+**Trạng thái: Chờ duyệt (`in_review`).** Yêu cầu trực tiếp dùng `docs/LEVELS.md`, SVG nét tròn/màu tươi và bộ máy hiện có là phạm vi thực thi của lô này. LL-010 (dựng màn) và LL-029 (kịch bản/đồ họa lô 1) chuyển sang Chờ duyệt; không cộng điểm hoàn thành hoặc thay đổi phụ thuộc của baseline.
+
+| Mã | Tên | Trạng thái | Kiểm chứng hành vi |
+|---|---|---|---|
+| 2D-01 | Lì xì cho đứa nhỏ nhất | Chờ duyệt | Kéo/chạm dời bao rồi chạm bé ẩn mới thắng; chọn bé khác chưa thắng; kéo sai trả bao về, chơi lại che bé |
+| 2D-02 | Con gì càng to càng nhỏ? | Chờ duyệt | Nhận cua/con cua/cua bể/cua đồng, không dấu và hoa/thường; cá/tôm/chạm nước chưa thắng |
+| 2D-03 | Qua đường an toàn | Chờ duyệt | Chạm đèn → xe dừng → bé qua vạch; chạm bé/xe trước đó chưa thắng |
+| 2D-04 | Hái xoài cho bé | Chờ duyệt | Ba chạm trong 2 giây; từ chối cảm biến vẫn giải được; hai chạm hoặc chạm thưa chưa thắng; kiểm thêm mẫu cảm biến giả lập |
+| 2D-05 | Gà trống đẻ trứng | Chờ duyệt | Ba hướng lăn đều sai và có câu đùa riêng; chọn gà trống không đẻ trứng thì thắng |
+
+Mỗi màn đã được làm và kiểm riêng trước khi sang màn tiếp theo. SVG tự vẽ trong mã, dùng lại Stage2D/LevelShell, useDrag, useAnswerInput, useShake/SensorControls và ChooseScene. Đã thay hai màn mẫu bằng năm màn thật trong catalog và chuyển các ca hồi quy sang nội dung thật. Ba gợi ý, đề và giải thích được kiểm tự động với bảng LEVELS. Bằng chứng và kết quả chạy: [E3-2D-01-05.md](../docs/evidence/E3-2D-01-05.md).
+
+**Cần xem khi duyệt độ khó/nội dung:**
+
+- **2D-02 dễ gây tranh luận nhất:** câu “càng to càng nhỏ” dựa vào nghĩa của “càng”, không phải quy luật lớn lên của con vật; cần hai người khác tác giả đọc soát theo GDD. Chưa có thử với người thật để chốt mức 1.
+- **2D-01 có thể khó hơn mức 1** nếu người chơi chưa quen kéo vật che; vùng trống nét đứt và đường chạm hai bước là manh mối sẵn có.
+- **2D-04 có thể khó với thao tác chậm:** cửa sổ ba chạm/2 giây giữ đúng thiết kế; cần thử với người thật trước khi điều chỉnh. Cảm biến và quyền Safari chưa đo trên điện thoại thật.
+- **2D-03 cần đọc soát thông điệp giao thông:** đèn trong câu đố là điều khiển giả lập; lời giải thích giữ nguyên LEVELS. Cần kiểm người chơi hiểu việc qua đường ngoài đời theo tín hiệu dành cho người đi bộ.
+- **2D-05 có thể quá dễ** với người đã biết câu đố dân gian; phù hợp vai trò làm quen của lô đầu. Không đổi lời giải hoặc tăng độ khó trong lượt này.
+
+Đề xuất commit: `feat: thêm 5 màn 2D đầu tiên của Lắt Léo`. Chưa tự commit hoặc đặt Xong; lô 2D-06…10 và các màn 3D chưa làm.
 
 ### Phạm vi Bộ máy màn chơi được giao ngày 15/11/2026
 
@@ -76,8 +100,8 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 | [LL-042] | E3 2D | Là lập trình viên, tôi muốn có sân chơi 2D tự co giãn theo màn hình và quy đổi đúng vị trí chạm/chuột để mọi màn 2D chạy giống nhau trên điện thoại lẫn máy tính. | 3 | Must | LL-008 | Chưa làm | Có |
 | [LL-043] | E3 2D | Là người chơi, tôi muốn gõ đáp án tiếng Việt theo cách mình quen (hoa/thường, có/không dấu, "hòa"/"hoà") để không bị tính sai vì cách gõ. | 3 | Must | LL-005, LL-008 | Chưa làm | Có |
 | [LL-009] | E3 2D | Là lập trình viên, tôi muốn có các cơ chế tương tác 2D dùng chung (chạm, kéo-thả, chọn đáp án) để dựng nhanh 20 màn. | 3 | Must | LL-005, LL-028, LL-042 | Chưa làm | Có |
-| [LL-029] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 1 để dựng màn mà không phải đoán ý. [CẦN LÀM RÕ: Q6, Q10] | 5 | Must | LL-023, LL-028 | Chưa làm | Chưa |
-| [LL-010] | E3 2D | Là người chơi, tôi muốn chơi lô 1 (2D-01…05) để làm quen với lối đố mẹo qua các màn dễ. [CẦN LÀM RÕ: Q6] | 5 | Must | LL-009, LL-029, LL-043 | Chưa làm | Chưa |
+| [LL-029] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 1 để dựng màn mà không phải đoán ý. | 5 | Must | LL-023, LL-028 | Chờ duyệt (lô 1, bằng chứng 16/11) | Có |
+| [LL-010] | E3 2D | Là người chơi, tôi muốn chơi lô 1 (2D-01…05) để làm quen với lối đố mẹo qua các màn dễ. | 5 | Must | LL-009, LL-029, LL-043 | Chờ duyệt (lô 1, bằng chứng 16/11) | Có |
 | [LL-016] | E4 3D | Là lập trình viên 3D, tôi muốn có trình nạp tài nguyên, màn hình chờ và ngân sách hiệu năng/tài nguyên bằng số để mọi màn và mô hình 3D bám cùng một chuẩn. | 3 | Must | LL-014 | Chưa làm | Có |
 | [LL-033] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có kịch bản chi tiết màn 3D-01 để dựng lát cắt 3D đầu tiên và ước lượng lại chính xác. | 2 | Must | LL-028 | Chưa làm | Có |
 | [LL-034] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-01 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 3 | Must | LL-016, LL-033 | Chưa làm | Chưa |
@@ -673,3 +697,4 @@ Chưa có mã story, chưa tính vào 51 story/211 điểm và chưa vào cam k�
 Lịch sử v1 → v2.1 của backlog gốc xem [docs/backlog.md](../docs/backlog.md) mục 7. Từ đây ghi mọi thay đổi do Scrum Master thực hiện:
 
 - **2026-11-11** — Khởi tạo bản làm việc từ v2.1: giữ nguyên 51 story, điểm, ưu tiên, phụ thuộc, tiêu chí nghiệm thu, task (script đối chiếu khớp mọi tổng của nguồn). Đổi trạng thái LL-001: Chưa làm → Đang làm (LL-001-T01 làm xong lượt 2 lúc 20:40, chờ bạn duyệt). Thêm mục 6 "Phát sinh từ kế hoạch kỹ thuật của AI" và cột thời hạn cần trả lời ở mục 4. Chưa đổi điểm hay ưu tiên nào.
+- **2026-11-16** — Theo yêu cầu trực tiếp, làm và kiểm riêng lần lượt 2D-01…05. LL-010/LL-029: Chưa làm → Chờ duyệt; Sẵn sàng → Có trong phạm vi lô 1. Cập nhật tổng 27 story sẵn sàng/24 chưa, 48 chưa làm/1 đang làm/2 chờ duyệt, vẫn 0 điểm Xong. Thay hai mẫu bằng nội dung thật; `check`, 219 unit/component, 138 ca Playwright production và 9 ca ví dụ đạt. Bằng chứng: [E3-2D-01-05.md](../docs/evidence/E3-2D-01-05.md). Ghi điểm cần thử/đọc soát, chưa đổi độ khó hoặc nội dung LEVELS, chưa commit.

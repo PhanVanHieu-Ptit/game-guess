@@ -4,13 +4,13 @@ import { expect, test } from './fixtures';
 import { typesOf } from './helpers/events';
 import { expectLayoutOk } from './helpers/layout';
 import { play, result } from './helpers/ui';
-import { solution as sample01 } from './solutions/2d-sample-01';
+import { solution as level01 } from './solutions/2d-01';
 
 // "Không sập" (docs/TECH.md mục 1, nguyên tắc 6): lỗi của một màn không kéo sập khung chơi. Kịch bản thật: mạng làm
 // hỏng đúng gói JS của cảnh, rồi mạng phục hồi và người chơi bấm "Thử lại".
 
-// Chữ chỉ có trong gói JS của cảnh màn mẫu 1 (nhãn tranh ở src/levels/2d-sample-01/scene.tsx); gói chính không có.
-const SCENE_MARKER = 'Ba quả táo đặt trên bàn';
+// Chữ chỉ có trong gói JS của cảnh màn 1; gói chính không có.
+const SCENE_MARKER = 'Bốn bé và bao lì xì khổng lồ';
 
 test('nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về chọn màn, chưa ghi level_start; mạng phục hồi rồi Thử lại thì chơi được', async ({
   page,
@@ -35,7 +35,7 @@ test('nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về
     }
   });
 
-  await page.goto(`/play/${sample01.meta.id}`);
+  await page.goto(`/play/${level01.meta.id}`);
 
   // Khung chơi vẫn đứng vững; chỉ phần cảnh báo lỗi, có hai lối ra.
   const alert = page.getByRole('main').getByRole('alert');
@@ -49,7 +49,7 @@ test('nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về
     alert.getByRole('link', { name: strings.play.back }),
   ).toHaveAttribute('href', '/levels');
   await expect(play.heading(page, 1)).toBeVisible();
-  await expect(play.prompt(page)).toHaveText(promptText(sample01.meta.prompt));
+  await expect(play.prompt(page)).toHaveText(promptText(level01.meta.prompt));
   await expectLayoutOk(page, 'lỗi nạp cảnh');
 
   // Cảnh chưa dựng được nên chưa có lượt chơi nào: không có sự kiện đo lường.
@@ -59,12 +59,12 @@ test('nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về
   networkDown = false;
   await retry.tap();
   await expect(
-    page.getByRole('button', { name: '2 quả', exact: true }),
+    page.getByRole('button', { name: 'Bao lì xì', exact: true }),
   ).toBeVisible();
   await expect(alert).toHaveCount(0);
   await expect.poll(() => typesOf(events)).toEqual(['level_start']);
 
-  await sample01.solve(page);
+  await level01.solve(page);
   await expect(result.dialog(page)).toBeVisible({ timeout: 1000 });
   await expect
     .poll(() => typesOf(events))

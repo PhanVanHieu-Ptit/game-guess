@@ -1,0 +1,61 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test level-2d-02 --workers=3
+
+[WebServer] (node:98592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:98619) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:98622) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 3 workers
+
+(node:98643) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:98641) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:98642) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:98677) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [iphone-se] › tests/e2e/level-2d-02.spec.ts:39:3 › 2D-02: chấp nhận " CON CUA " bằng ô nhập dùng bàn phím ảo (2.1s)
+  ✓   1 [iphone-se] › tests/e2e/level-2d-02.spec.ts:39:3 › 2D-02: chấp nhận "CUA BE" bằng ô nhập dùng bàn phím ảo (2.1s)
+(node:98689) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:98690) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [iphone-se] › tests/e2e/level-2d-02.spec.ts:6:1 › 2D-02: cá, tôm và mặt nước chưa thắng; nhập cua thì thắng (2.7s)
+(node:98702) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:98704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [iphone-se] › tests/e2e/level-2d-02.spec.ts:39:3 › 2D-02: chấp nhận "cua đồng" bằng ô nhập dùng bàn phím ảo (1.5s)
+[WebServer] (node:98709) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:98711) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [pixel-5] › tests/e2e/level-2d-02.spec.ts:39:3 › 2D-02: chấp nhận " CON CUA " bằng ô nhập dùng bàn phím ảo (942ms)
+  ✓   5 [pixel-5] › tests/e2e/level-2d-02.spec.ts:6:1 › 2D-02: cá, tôm và mặt nước chưa thắng; nhập cua thì thắng (1.8s)
+[WebServer] (node:98717) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:98719) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [pixel-5] › tests/e2e/level-2d-02.spec.ts:39:3 › 2D-02: chấp nhận "CUA BE" bằng ô nhập dùng bàn phím ảo (969ms)
+[WebServer] (node:98726) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:98727) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [pixel-5] › tests/e2e/level-2d-02.spec.ts:39:3 › 2D-02: chấp nhận "cua đồng" bằng ô nhập dùng bàn phím ảo (1.3s)
+[WebServer] (node:98733) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:98732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:98738) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [mobile-360] › tests/e2e/level-2d-02.spec.ts:39:3 › 2D-02: chấp nhận " CON CUA " bằng ô nhập dùng bàn phím ảo (832ms)
+  ✓   9 [mobile-360] › tests/e2e/level-2d-02.spec.ts:6:1 › 2D-02: cá, tôm và mặt nước chưa thắng; nhập cua thì thắng (1.5s)
+  ✓  11 [mobile-360] › tests/e2e/level-2d-02.spec.ts:39:3 › 2D-02: chấp nhận "CUA BE" bằng ô nhập dùng bàn phím ảo (1.3s)
+  ✓  12 [mobile-360] › tests/e2e/level-2d-02.spec.ts:39:3 › 2D-02: chấp nhận "cua đồng" bằng ô nhập dùng bàn phím ảo (1.2s)
+
+  12 passed (12.0s)

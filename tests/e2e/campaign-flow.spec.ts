@@ -3,11 +3,14 @@ import { strings } from '@/features/strings';
 import { expect, test } from './fixtures';
 import { typesOf } from './helpers/events';
 import { expectLayoutOk } from './helpers/layout';
-import { home, levelCell, play, result } from './helpers/ui';
-import { solution as sample01 } from './solutions/2d-sample-01';
-import { solution as sample02 } from './solutions/2d-sample-02';
+import { home, levelCell, play, result, TOTAL_LEVELS } from './helpers/ui';
+import { solution as level01 } from './solutions/2d-01';
+import { solution as level02 } from './solutions/2d-02';
+import { solution as level03 } from './solutions/2d-03';
+import { solution as level04 } from './solutions/2d-04';
+import { solution as level05 } from './solutions/2d-05';
 
-// Luồng màn mẫu của epic Nền tảng: vào màn → giải → màn kết quả → sang màn tiếp. Chạy trên mọi dự án trong
+// Luồng năm màn thật: vào màn → giải → kết quả → màn tiếp. Chạy trên mọi dự án trong
 // playwright.config.ts (iPhone SE, Pixel 5, 360×640 có cảm ứng). Chỉ dùng chạm (`tap`), không chuột, không phím tắt.
 
 const PROGRESS_KEY = 'latleo:v1';
@@ -30,11 +33,11 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
 
   // ---- Vào màn 1 ----
   await home.play(page).tap();
-  await expect(page).toHaveURL(/\/play\/2d-sample-01$/);
+  await expect(page).toHaveURL(/\/play\/2d-01$/);
   await expect(play.heading(page, 1)).toBeVisible();
-  await expect(play.prompt(page)).toHaveText(promptText(sample01.meta.prompt));
+  await expect(play.prompt(page)).toHaveText(promptText(level01.meta.prompt));
   await expect(
-    page.getByRole('button', { name: '2 quả', exact: true }),
+    page.getByRole('button', { name: 'Bao lì xì', exact: true }),
   ).toBeVisible();
   await expectLayoutOk(page, 'màn 1');
   await page.screenshot({
@@ -43,22 +46,22 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
   });
   await expect.poll(() => typesOf(events)).toEqual(['level_start']);
   expect(events[0]).toMatchObject({
-    levelId: sample01.meta.id,
+    levelId: level01.meta.id,
     mode: 'campaign',
     attemptNo: 1,
     restart: false,
   });
 
   // ---- Sai: mỗi thao tác sai đều có phản hồi riêng và cho thử lại ngay, không tải lại trang ----
-  for (const mistake of sample01.mistakes.slice(0, 2)) {
+  for (const mistake of level01.mistakes.slice(0, 2)) {
     await mistake.tap(page);
     await expect(play.feedback(page)).toContainText(mistake.feedback);
   }
-  await expect(page).toHaveURL(/\/play\/2d-sample-01$/);
+  await expect(page).toHaveURL(/\/play\/2d-01$/);
   await expectLayoutOk(page, 'màn 1 sau khi chọn sai');
 
   // ---- Đúng: trạng thái thắng hiện trong ≤ 1 giây (docs/GDD.md mục 3.1, quy tắc 4) ----
-  await sample01.solve(page);
+  await level01.solve(page);
   await expect(result.dialog(page)).toBeVisible({ timeout: 1000 });
   const dialog = result.dialog(page);
   // Hộp thoại mở bằng thao tác chạm: nét nằm ở khung hộp, không đặt vòng lấy nét lên nút đầu tiên.
@@ -72,7 +75,7 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
   await expect(
     dialog.getByRole('heading', { name: strings.result.solvedTitle }),
   ).toBeVisible();
-  await expect(dialog).toContainText(sample01.meta.explanation);
+  await expect(dialog).toContainText(level01.meta.explanation);
   await expect(dialog.getByTestId('result-level')).toHaveText(
     strings.result.solveLevel.self,
   );
@@ -86,7 +89,7 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
     .poll(() => typesOf(events))
     .toEqual(['level_start', 'level_complete']);
   expect(events[1]).toMatchObject({
-    levelId: sample01.meta.id,
+    levelId: level01.meta.id,
     mode: 'campaign',
     result: 'solved',
     hintsUsed: 0,
@@ -95,37 +98,46 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
 
   // ---- Màn tiếp ----
   await result.next(page).tap();
-  await expect(page).toHaveURL(/\/play\/2d-sample-02$/);
+  await expect(page).toHaveURL(/\/play\/2d-02$/);
   await expect(play.heading(page, 2)).toBeVisible();
-  await expect(play.prompt(page)).toHaveText(promptText(sample02.meta.prompt));
+  await expect(play.prompt(page)).toHaveText(promptText(level02.meta.prompt));
   await expectLayoutOk(page, 'màn 2');
   await expect
     .poll(() => typesOf(events))
     .toEqual(['level_start', 'level_complete', 'level_start']);
   expect(events[2]).toMatchObject({
-    levelId: sample02.meta.id,
+    levelId: level02.meta.id,
     mode: 'campaign',
     attemptNo: 1,
     restart: false,
   });
 
-  // ---- Màn cuối: giải xong thì không còn "Màn tiếp", nút chính thành "Về chọn màn" (docs/backlog.md LL-005) ----
-  await sample02.mistakes[0].tap(page);
-  await expect(play.feedback(page)).toContainText(
-    sample02.mistakes[0].feedback,
-  );
-  await sample02.solve(page);
+  // ---- Giải lần lượt các màn còn lại; chỉ màn cuối không có "Màn tiếp" ----
+  await level02.mistakes[0].tap(page);
+  await expect(play.feedback(page)).toContainText(level02.mistakes[0].feedback);
+  await level02.solve(page);
   await expect(result.dialog(page)).toBeVisible({ timeout: 1000 });
+  await expect(result.dialog(page)).toContainText(level02.meta.explanation);
+  for (const level of [level03, level04, level05]) {
+    await result.next(page).tap();
+    await expect(page).toHaveURL(`/play/${level.meta.id}`);
+    await expect(play.heading(page, level.meta.ordinal)).toBeVisible();
+    await level.mistakes[0].tap(page);
+    await expect(play.feedback(page)).toContainText(level.mistakes[0].feedback);
+    await expectLayoutOk(page, level.meta.id);
+    await level.solve(page);
+    await expect(result.dialog(page)).toBeVisible({ timeout: 1000 });
+    await expect(result.dialog(page)).toContainText(level.meta.explanation);
+  }
   await expect(result.next(page)).toHaveCount(0);
   await expect(result.backToLevels(page)).toBeVisible();
-  await expect(result.dialog(page)).toContainText(sample02.meta.explanation);
   await expectLayoutOk(page, 'kết quả màn cuối');
 
-  // ---- Chọn màn: cả hai màn đã giải ----
+  // ---- Chọn màn: cả năm màn đã giải ----
   await result.backToLevels(page).tap();
   await expect(page).toHaveURL(/\/levels$/);
-  await expect(levelCell(page, 1, 'solved')).toBeVisible();
-  await expect(levelCell(page, 2, 'solved')).toBeVisible();
+  for (let ordinal = 1; ordinal <= TOTAL_LEVELS; ordinal++)
+    await expect(levelCell(page, ordinal, 'solved')).toBeVisible();
   await expectLayoutOk(page, 'chọn màn');
 
   // ---- Tiến trình nằm trong localStorage và còn nguyên sau khi tải lại trang ----
@@ -137,8 +149,8 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
   const { state } = JSON.parse(stored ?? 'null') as {
     state: { levels: Record<string, { status: string }> };
   };
-  expect(state.levels[sample01.meta.id]?.status).toBe('solved');
-  expect(state.levels[sample02.meta.id]?.status).toBe('solved');
+  expect(state.levels[level01.meta.id]?.status).toBe('solved');
+  expect(state.levels[level02.meta.id]?.status).toBe('solved');
 
   await page.reload();
   await expect(levelCell(page, 1, 'solved')).toBeVisible();
@@ -156,21 +168,21 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
 });
 
 test('Chơi tiếp đưa về màn chưa xong đầu tiên', async ({ page }) => {
-  await page.goto(`/play/${sample01.meta.id}`);
+  await page.goto(`/play/${level01.meta.id}`);
   await expect(play.heading(page, 1)).toBeVisible();
-  await sample01.solve(page);
+  await level01.solve(page);
   await expect(result.dialog(page)).toBeVisible();
 
   // Về trang chủ bằng tải trang mới: tiến trình phải đọc lại từ localStorage.
   await page.goto('/');
   await expect(home.playContinue(page)).toBeVisible();
   await expect(home.playContinue(page)).toContainText(
-    strings.home.continueTo(2, 2),
+    strings.home.continueTo(2, TOTAL_LEVELS),
   );
   await expectLayoutOk(page, 'trang chủ có nút Chơi tiếp');
 
   await home.playContinue(page).tap();
-  await expect(page).toHaveURL(/\/play\/2d-sample-02$/);
+  await expect(page).toHaveURL(/\/play\/2d-02$/);
   await expect(play.heading(page, 2)).toBeVisible();
 });
 
@@ -183,17 +195,17 @@ test('chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, khôn
 
   const first = levelCell(page, 1, 'open');
   await expect(first).toBeVisible();
-  await expect(first).toHaveAttribute('href', `/play/${sample01.meta.id}`);
+  await expect(first).toHaveAttribute('href', `/play/${level01.meta.id}`);
 
   const locked = levelCell(page, 2, 'locked');
   await expect(locked).toBeVisible();
   await expect(locked).toHaveText('2');
   await expect(locked).not.toHaveAttribute('href', /.*/);
-  await expect(page.getByText(sample02.meta.title)).toHaveCount(0);
+  await expect(page.getByText(level02.meta.title)).toHaveCount(0);
   await expectLayoutOk(page, 'chọn màn của người chơi mới');
 
   await first.tap();
-  await expect(page).toHaveURL(/\/play\/2d-sample-01$/);
+  await expect(page).toHaveURL(/\/play\/2d-01$/);
 });
 
 test('đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về', async ({

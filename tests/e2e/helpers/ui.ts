@@ -1,10 +1,11 @@
 import type { Locator, Page } from '@playwright/test';
 import { strings } from '@/features/strings';
+import { LEVEL_METAS } from '@/levels';
 
 // Cách tìm các phần tử giao diện dùng chung giữa các spec. Chữ lấy từ `strings` (nguồn duy nhất của chữ hiển thị)
 // nên sửa câu chữ không làm vỡ test; test kiểm hành vi chứ không kiểm chính tả của câu chữ.
 
-export const TOTAL_LEVELS = 2; // số màn mẫu hiện có (src/levels/index.ts)
+export const TOTAL_LEVELS = LEVEL_METAS.length;
 
 export const home = {
   play: (page: Page): Locator =>

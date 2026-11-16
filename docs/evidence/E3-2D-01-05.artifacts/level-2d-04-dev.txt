@@ -1,0 +1,56 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test level-2d-04 --workers=3
+
+[WebServer] (node:99909) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:99933) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:99938) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 3 workers
+
+(node:99951) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:99949) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:99950) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:99982) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [iphone-se] › tests/e2e/level-2d-04.spec.ts:72:1 › 2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm (2.5s)
+(node:99986) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:99992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [iphone-se] › tests/e2e/level-2d-04.spec.ts:13:1 › 2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn giải bằng chạm cây (4.2s)
+(node:99993) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:99998) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [iphone-se] › tests/e2e/level-2d-04.spec.ts:50:1 › 2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng dồn; đủ ba chạm nhanh thì thắng (5.4s)
+(node:100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:106) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [pixel-5] › tests/e2e/level-2d-04.spec.ts:13:1 › 2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn giải bằng chạm cây (4.1s)
+(node:109) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:114) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 [pixel-5] › tests/e2e/level-2d-04.spec.ts:72:1 › 2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm (2.1s)
+(node:115) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [pixel-5] › tests/e2e/level-2d-04.spec.ts:50:1 › 2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng dồn; đủ ba chạm nhanh thì thắng (5.2s)
+(node:124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:129) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [mobile-360] › tests/e2e/level-2d-04.spec.ts:13:1 › 2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn giải bằng chạm cây (4.1s)
+  ✓  9 [mobile-360] › tests/e2e/level-2d-04.spec.ts:72:1 › 2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm (2.0s)
+  ✓  8 [mobile-360] › tests/e2e/level-2d-04.spec.ts:50:1 › 2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng dồn; đủ ba chạm nhanh thì thắng (5.2s)
+
+  9 passed (16.2s)

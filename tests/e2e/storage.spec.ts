@@ -3,8 +3,8 @@ import { expect, test } from './fixtures';
 import { typesOf } from './helpers/events';
 import { expectLayoutOk } from './helpers/layout';
 import { home, play, result } from './helpers/ui';
-import { solution as sample01 } from './solutions/2d-sample-01';
-import { solution as sample02 } from './solutions/2d-sample-02';
+import { solution as level01 } from './solutions/2d-01';
+import { solution as level02 } from './solutions/2d-02';
 
 // Lưu tiến trình bằng localStorage phải không bao giờ làm hỏng game (docs/GDD.md mục 6, docs/TECH.md mục 6):
 // không lưu được thì vẫn chơi, dữ liệu hỏng thì bắt đầu lại phần hỏng, tất cả không có lỗi console.
@@ -58,13 +58,13 @@ for (const failure of STORAGE_FAILURES) {
     );
     await expectLayoutOk(page, 'màn chơi có dòng báo không lưu được');
 
-    await sample01.solve(page);
+    await level01.solve(page);
     await expect(result.dialog(page)).toBeVisible({ timeout: 1000 });
 
     // Tiến trình giữ trong phiên: màn 2 vẫn mở dù không ghi được xuống máy.
     await result.next(page).tap();
     await expect(play.heading(page, 2)).toBeVisible();
-    await sample02.solve(page);
+    await level02.solve(page);
     await expect(result.dialog(page)).toBeVisible({ timeout: 1000 });
     await expect
       .poll(() => typesOf(events))
@@ -92,7 +92,7 @@ const CORRUPT_DATA: ReadonlyArray<{ name: string; raw: string }> = [
       version: 1,
       state: {
         installId: 42,
-        levels: { '2d-sample-01': { status: 'hacked', bestMs: 'x' } },
+        levels: { '2d-01': { status: 'hacked', bestMs: 'x' } },
         attempts: 'nhiều',
         daily: null,
       },
@@ -105,7 +105,7 @@ const CORRUPT_DATA: ReadonlyArray<{ name: string; raw: string }> = [
       state: {
         installId: '11111111-1111-4111-8111-111111111111',
         levels: {
-          '2d-sample-01': {
+          '2d-01': {
             status: 'solved',
             bestMs: 1000,
             bestHints: 0,
@@ -138,7 +138,7 @@ for (const corrupt of CORRUPT_DATA) {
 
     await home.play(page).tap();
     await expect(play.heading(page, 1)).toBeVisible();
-    await sample01.solve(page);
+    await level01.solve(page);
     await expect(result.dialog(page)).toBeVisible();
     await expect
       .poll(() => typesOf(events))
@@ -159,8 +159,8 @@ for (const corrupt of CORRUPT_DATA) {
     };
     expect(saved.version).toBe(1);
     expect(saved.state.installId).toMatch(/^[0-9a-f-]{36}$/);
-    expect(Object.keys(saved.state.levels)).toEqual([sample01.meta.id]);
-    expect(saved.state.levels[sample01.meta.id].status).toBe('solved');
-    expect(saved.state.attempts[sample01.meta.id]).toBe(1);
+    expect(Object.keys(saved.state.levels)).toEqual([level01.meta.id]);
+    expect(saved.state.levels[level01.meta.id].status).toBe('solved');
+    expect(saved.state.attempts[level01.meta.id]).toBe(1);
   });
 }

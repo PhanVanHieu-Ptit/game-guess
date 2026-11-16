@@ -1,6 +1,6 @@
 # Hồ sơ dự án — Lắt Léo
 
-> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-15.
+> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-16.
 > Đây là bộ nhớ của dự án: mục tiêu, giả định, điểm lệch, câu hỏi chờ, quyết định. Backlog: [BACKLOG.md](BACKLOG.md) · Sprint: [SPRINT.md](SPRINT.md) · Lịch sử: [LICH_SU.md](LICH_SU.md).
 
 ## 1. Nguồn đã đọc (chỉ đọc, không sửa)
@@ -26,6 +26,8 @@
 | Bằng chứng | [docs/evidence/LL-001-T02.md](../docs/evidence/LL-001-T02.md) | `4d126b7c76bf` | bằng chứng task thứ hai (đang chờ bạn duyệt) |
 
 ## 2. Hồ sơ dự án
+
+**Phạm vi hiện hành ngày 16/11/2026 — năm màn 2D đầu tiên:** người dùng yêu cầu làm lần lượt năm màn chưa có theo LEVELS, SVG tự vẽ cùng phong cách, dùng lại bộ máy, sai không phạt, đúng ba gợi ý/giải thích, Playwright đúng/sai và chạy qua từng màn trước khi làm màn kế. Kho trước lượt này chỉ có mẫu kỹ thuật nên lô là **2D-01…05**. Đã thay hai mẫu bằng năm màn thật, chuyển hồi quy sang nội dung thật; LL-010/LL-029 và từng màn ở **Chờ duyệt (`in_review`)**, chi tiết/rủi ro trong [BACKLOG.md](BACKLOG.md), [bằng chứng](../docs/evidence/E3-2D-01-05.md). Không đổi GDD/LEVELS/TECH hoặc 147 task baseline; không tự commit, không tính velocity.
 
 **Phạm vi hiện hành được giao ngày 15/11/2026 — Bộ máy màn chơi:** thực hiện tám mục trong yêu cầu trực tiếp: hợp đồng Level/onSolved, LevelShell, đề chạm chữ, bốn hook thao tác có đường chạm, Scene3D thích ứng, kiểm tra góc nhìn, hướng dẫn thêm màn, chuyển hai màn mẫu và kiểm thử. Trạng thái **Chờ duyệt (`in_review`)**; hướng dẫn [HOW_TO_ADD_LEVEL.md](../docs/HOW_TO_ADD_LEVEL.md), [bằng chứng](../docs/evidence/E2-BO-MAY-MAN-CHOI.md). Thêm màn chỉ tạo `meta.ts` + `scene.tsx`; catalog sinh trước dev/build/test/typecheck, cảnh tách chunk khỏi metadata. Không đổi 147 task baseline hoặc tự đánh dấu story cũ Xong.
 

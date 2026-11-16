@@ -3,17 +3,17 @@ import { expect, test } from './fixtures';
 import { openRuns, typesOf } from './helpers/events';
 import { expectLayoutOk } from './helpers/layout';
 import { hints, home, levelCell, play, result } from './helpers/ui';
-import { solution as sample01 } from './solutions/2d-sample-01';
-import { solution as sample02 } from './solutions/2d-sample-02';
+import { solution as level01 } from './solutions/2d-01';
+import { solution as level02 } from './solutions/2d-02';
 
 // Gợi ý ba cấp, xem đáp án, chơi lại, rời màn giữa chừng, màn chưa mở, mã màn sai: những chỗ khung chơi phải
-// bảo đảm cho mọi màn (docs/TECH.md mục 5.4), kiểm trên màn mẫu bằng thao tác chạm.
+// bảo đảm cho mọi màn (docs/TECH.md mục 5.4), kiểm trên màn thật bằng thao tác chạm.
 
 test('gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm', async ({
   page,
   events,
 }) => {
-  await page.goto(`/play/${sample01.meta.id}`);
+  await page.goto(`/play/${level01.meta.id}`);
   await expect(play.heading(page, 1)).toBeVisible();
   await expect(play.hintButton(page)).toHaveText('Gợi ý (0/3)');
 
@@ -25,13 +25,13 @@ test('gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không t�
   await expectLayoutOk(page, 'hộp gợi ý, chưa mở cấp nào');
 
   await hints.open(page, 1).tap();
-  await expect(hints.sheet(page)).toContainText(sample01.meta.hints[0]);
+  await expect(hints.sheet(page)).toContainText(level01.meta.hints[0]);
   await expect(hints.open(page, 2)).toBeVisible();
   await expect
     .poll(() => typesOf(events))
     .toEqual(['level_start', 'hint_used']);
   expect(events[1]).toMatchObject({
-    levelId: sample01.meta.id,
+    levelId: level01.meta.id,
     mode: 'campaign',
     tier: 1,
   });
@@ -42,12 +42,12 @@ test('gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không t�
 
   // Mở lại hộp: gợi ý đã xem vẫn hiện và không ghi thêm sự kiện.
   await play.hintButton(page).tap();
-  await expect(hints.sheet(page)).toContainText(sample01.meta.hints[0]);
+  await expect(hints.sheet(page)).toContainText(level01.meta.hints[0]);
   await hints.close(page).tap();
   expect(typesOf(events)).toEqual(['level_start', 'hint_used']);
 
   // Giải xong sau khi dùng gợi ý: mức là "Có gợi ý".
-  await sample01.solve(page);
+  await level01.solve(page);
   await expect(result.dialog(page)).toBeVisible({ timeout: 1000 });
   await expect(result.dialog(page).getByTestId('result-level')).toHaveText(
     strings.result.solveLevel.hinted,
@@ -62,13 +62,13 @@ test('xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn
   page,
   events,
 }) => {
-  await page.goto(`/play/${sample01.meta.id}`);
+  await page.goto(`/play/${level01.meta.id}`);
   await expect(play.heading(page, 1)).toBeVisible();
 
   await play.hintButton(page).tap();
   await hints.open(page, 1).tap();
   await hints.open(page, 2).tap();
-  await expect(hints.sheet(page)).toContainText(sample01.meta.hints[1]);
+  await expect(hints.sheet(page)).toContainText(level01.meta.hints[1]);
 
   // Cấp 3 là xem đáp án: có hộp xác nhận, bấm "Thôi" thì chưa xem.
   await hints.open(page, 3).tap();
@@ -99,7 +99,7 @@ test('xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn
       .dialog(page)
       .getByRole('heading', { name: strings.result.revealedTitle }),
   ).toBeVisible();
-  await expect(result.dialog(page)).toContainText(sample01.meta.hints[2]);
+  await expect(result.dialog(page)).toContainText(level01.meta.hints[2]);
   await expect(result.dialog(page).getByTestId('result-level')).toHaveText(
     strings.result.solveLevel.revealed,
   );
@@ -118,7 +118,7 @@ test('xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn
 
   // Xem đáp án vẫn mở màn kế (docs/GDD.md mục 5), và chọn màn đánh dấu "đã xem đáp án".
   await result.next(page).tap();
-  await expect(page).toHaveURL(/\/play\/2d-sample-02$/);
+  await expect(page).toHaveURL(/\/play\/2d-02$/);
   await expect(play.heading(page, 2)).toBeVisible();
   await page.goto('/levels');
   await expect(levelCell(page, 1, 'revealed')).toBeVisible();
@@ -129,28 +129,27 @@ test('chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đ�
   page,
   events,
 }) => {
-  await page.goto(`/play/${sample01.meta.id}`);
+  await page.goto(`/play/${level01.meta.id}`);
   await expect(play.heading(page, 1)).toBeVisible();
   await expect.poll(() => typesOf(events)).toEqual(['level_start']);
 
-  await sample01.mistakes[0].tap(page);
-  await expect(play.feedback(page)).toContainText(
-    sample01.mistakes[0].feedback,
-  );
+  await level01.mistakes[0].tap(page);
+  await expect(play.feedback(page)).toContainText(level01.mistakes[0].feedback);
 
   // Chơi lại: lượt dở bị ghi bỏ cuộc, lượt mới bắt đầu và cảnh được dựng lại từ đầu.
   await play.restart(page).tap();
   await expect
     .poll(() => typesOf(events))
     .toEqual(['level_start', 'level_abandon', 'level_start']);
-  expect(events[1]).toMatchObject({ levelId: sample01.meta.id, wrongCount: 1 });
+  expect(events[1]).toMatchObject({ levelId: level01.meta.id, wrongCount: 1 });
   expect(events[2]).toMatchObject({ attemptNo: 2, restart: true });
   await expect(play.feedback(page)).toHaveCount(0);
-  for (const label of ['0 quả', '1 quả', '2 quả', '3 quả']) {
-    await expect(
-      page.getByRole('button', { name: label, exact: true }),
-    ).toHaveAttribute('data-state', 'idle');
-  }
+  await expect(
+    page.getByRole('button', { name: 'Bao lì xì', exact: true }),
+  ).toHaveAttribute('aria-pressed', 'false');
+  await expect(
+    page.getByRole('button', { name: 'Bé nhỏ nhất', exact: true }),
+  ).toHaveCount(0);
 
   // Rời màn khi chưa giải cũng là bỏ cuộc.
   await play.back(page).tap();
@@ -165,18 +164,18 @@ test('chơi lại từ màn kết quả bắt đầu lượt mới và đếm l�
   page,
   events,
 }) => {
-  await page.goto(`/play/${sample01.meta.id}`);
+  await page.goto(`/play/${level01.meta.id}`);
   await expect(play.heading(page, 1)).toBeVisible();
   await play.hintButton(page).tap();
   await hints.open(page, 1).tap();
   await hints.close(page).tap();
-  await sample01.solve(page);
+  await level01.solve(page);
   await expect(result.dialog(page)).toBeVisible();
 
   await result.restart(page).tap();
   await expect(result.dialog(page)).toBeHidden();
   await expect(play.hintButton(page)).toHaveText('Gợi ý (0/3)');
-  await sample01.solve(page);
+  await level01.solve(page);
   await expect(result.dialog(page).getByTestId('result-level')).toHaveText(
     strings.result.solveLevel.self,
   );
@@ -200,18 +199,18 @@ test('màn chưa mở không vào được và chỉ đường về màn đang c
   page,
   events,
 }) => {
-  await page.goto(`/play/${sample02.meta.id}`);
+  await page.goto(`/play/${level02.meta.id}`);
   await expect(
     page.getByRole('heading', { name: strings.play.locked.title }),
   ).toBeVisible();
   await expectLayoutOk(page, 'màn chưa mở');
 
   await page.getByRole('link', { name: strings.play.locked.goOn }).tap();
-  await expect(page).toHaveURL(/\/play\/2d-sample-01$/);
+  await expect(page).toHaveURL(/\/play\/2d-01$/);
   await expect(play.heading(page, 1)).toBeVisible();
   // Màn bị khóa không phát sự kiện nào; sự kiện đầu tiên là của màn 1.
   await expect.poll(() => typesOf(events)).toEqual(['level_start']);
-  expect(events[0]).toMatchObject({ levelId: sample01.meta.id });
+  expect(events[0]).toMatchObject({ levelId: level01.meta.id });
 });
 
 test('mã màn không có hiện trang "không tìm thấy", không sập', async ({
@@ -245,15 +244,14 @@ test.describe('nút Gợi ý khi người chơi bí', () => {
   test('sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút', async ({
     page,
   }) => {
-    await page.goto(`/play/${sample01.meta.id}`);
+    await page.goto(`/play/${level01.meta.id}`);
     await expect(play.heading(page, 1)).toBeVisible();
     await expect(play.hintButton(page)).toHaveAttribute('data-nudge', 'false');
 
-    for (const mistake of sample01.mistakes.slice(0, 2))
-      await mistake.tap(page);
+    for (const mistake of level01.mistakes.slice(0, 2)) await mistake.tap(page);
     await expect(play.hintButton(page)).toHaveAttribute('data-nudge', 'false');
 
-    await sample01.mistakes[2].tap(page);
+    await level01.mistakes[2].tap(page);
     await expect(play.hintButton(page)).toHaveAttribute('data-nudge', 'true');
     await expect(play.hintButton(page)).toHaveCSS(
       'animation-iteration-count',
@@ -273,9 +271,9 @@ test.describe('nút Gợi ý khi người chơi bí', () => {
     test('nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý', async ({
       page,
     }) => {
-      await page.goto(`/play/${sample01.meta.id}`);
+      await page.goto(`/play/${level01.meta.id}`);
       await expect(play.heading(page, 1)).toBeVisible();
-      for (const mistake of sample01.mistakes) await mistake.tap(page);
+      for (const mistake of level01.mistakes) await mistake.tap(page);
       await expect(play.hintButton(page)).toHaveAttribute('data-nudge', 'true');
       await expect(play.hintButton(page)).toHaveCSS(
         'animation-iteration-count',

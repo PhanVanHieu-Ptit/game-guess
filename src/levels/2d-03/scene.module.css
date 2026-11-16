@@ -1,0 +1,35 @@
+.cars {
+  animation: drive 700ms ease-in-out infinite alternate;
+}
+.stopped {
+  animation-play-state: paused;
+}
+.crossing {
+  transform: translateY(-215px);
+  transition: transform 650ms ease-in-out;
+}
+.retreat {
+  animation: retreat 300ms ease-out;
+}
+@keyframes drive {
+  from {
+    transform: translateX(-7px);
+  }
+  to {
+    transform: translateX(7px);
+  }
+}
+@keyframes retreat {
+  50% {
+    transform: translateY(9px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cars,
+  .retreat {
+    animation: none;
+  }
+  .crossing {
+    transition: none;
+  }
+}

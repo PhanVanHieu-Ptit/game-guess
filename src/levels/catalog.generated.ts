@@ -1,11 +1,17 @@
 // Tự sinh bởi npm run levels:generate; không sửa tay.
 import type { LevelMeta } from '@/domain/levels/types';
-import { meta as m0 } from './2d-sample-01/meta';
-import { meta as m1 } from './2d-sample-02/meta';
+import { meta as m0 } from './2d-01/meta';
+import { meta as m1 } from './2d-02/meta';
+import { meta as m2 } from './2d-03/meta';
+import { meta as m3 } from './2d-04/meta';
+import { meta as m4 } from './2d-05/meta';
 
 const entries = [
-  { directory: '2d-sample-01', meta: m0 },
-  { directory: '2d-sample-02', meta: m1 },
+  { directory: '2d-01', meta: m0 },
+  { directory: '2d-02', meta: m1 },
+  { directory: '2d-03', meta: m2 },
+  { directory: '2d-04', meta: m3 },
+  { directory: '2d-05', meta: m4 },
 ];
 for (const { directory, meta } of entries) {
   if (directory !== meta.id)

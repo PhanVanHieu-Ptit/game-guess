@@ -1,0 +1,11 @@
+level-2d-01-dev=0
+level-2d-02-dev=0
+level-2d-03-dev=0
+level-2d-04-dev=0
+level-2d-05-dev=0
+check=0
+unit=0
+e2e-production=0
+examples-production=0
+verify-plan=0
+2d-04-screenshots-production=0

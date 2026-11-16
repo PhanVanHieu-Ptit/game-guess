@@ -1,0 +1,26 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test level-2d-03 --workers=3
+
+[WebServer] (node:99521) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:99545) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:99547) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 3 workers
+
+(node:99559) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:99561) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:99560) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:99584) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [mobile-360] › tests/e2e/level-2d-03.spec.ts:6:1 › 2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qua đường (3.4s)
+  ✓  3 [pixel-5] › tests/e2e/level-2d-03.spec.ts:6:1 › 2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qua đường (3.4s)
+  ✓  2 [iphone-se] › tests/e2e/level-2d-03.spec.ts:6:1 › 2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qua đường (3.5s)
+
+  3 passed (6.4s)

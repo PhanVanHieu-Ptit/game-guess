@@ -27,7 +27,7 @@ const isAborted = (errorText: string | undefined): boolean =>
 // Ngoại lệ DUY NHẤT cho `pageerror`, có lý do: khi test điều hướng cứng ngay sau khi trang tải xong (trong vài chục
 // mili giây), Next đang nạp trước các liên kết (`?_rsc=`) và trình duyệt hủy chúng. Chromium báo `requestfailed` (đã
 // được bỏ qua ở trên), còn WebKit không có `requestfailed` mà ném một lỗi chưa bắt dạng
-// "…/play/2d-sample-01?_rsc=… due to access control checks". Người chơi thật không rời trang nhanh đến vậy và chính
+// "…/play/2d-01?_rsc=… due to access control checks". Người chơi thật không rời trang nhanh đến vậy và chính
 // trình duyệt chủ động hủy, nên đây là nhiễu của tự động hóa. Mẫu này chỉ khớp lỗi về yêu cầu `_rsc`; mọi pageerror
 // khác vẫn làm test thất bại (xem tests/e2e/gates.spec.ts). Phát hiện ở phiên 2026-11-14, tái hiện được: delay 0 ms
 // có lỗi, từ 50 ms trở lên không.

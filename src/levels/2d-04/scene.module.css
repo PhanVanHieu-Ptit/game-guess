@@ -1,0 +1,33 @@
+.sway {
+  transform-origin: 175px 310px;
+  animation: sway 220ms ease-out;
+}
+.fall {
+  transform: translate(29px, 168px) rotate(20deg);
+  transition: transform 450ms ease-in;
+}
+.jump {
+  animation: jump 280ms ease-out;
+}
+@keyframes sway {
+  30% {
+    transform: rotate(-2deg);
+  }
+  70% {
+    transform: rotate(2deg);
+  }
+}
+@keyframes jump {
+  50% {
+    transform: translateY(-14px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sway,
+  .jump {
+    animation: none;
+  }
+  .fall {
+    transition: none;
+  }
+}
