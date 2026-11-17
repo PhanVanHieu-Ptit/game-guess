@@ -1,0 +1,9 @@
+.puzzle {
+  display: grid;
+  gap: 10px;
+}
+.caption {
+  color: var(--c-ink);
+  font-size: 1rem;
+  line-height: 1.4;
+}

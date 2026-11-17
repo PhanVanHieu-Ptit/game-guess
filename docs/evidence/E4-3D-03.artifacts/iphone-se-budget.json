@@ -1,0 +1,1059 @@
+{
+  "project": "iphone-se",
+  "transferBytes": 260485,
+  "encodedBytes": 258085,
+  "maxDrawCalls": 34,
+  "maxTriangles": 912,
+  "resources": [
+    {
+      "url": "/play/3d-03",
+      "encodedBytes": 2179,
+      "transferBytes": 2479
+    },
+    {
+      "url": "/_next/static/chunks/23n_vypcsfymq.js",
+      "encodedBytes": 6473,
+      "transferBytes": 6773
+    },
+    {
+      "url": "/_next/static/chunks/0h_m95nvanxg8.css",
+      "encodedBytes": 549,
+      "transferBytes": 849
+    },
+    {
+      "url": "/_next/static/chunks/0uqu49wpby30n.js",
+      "encodedBytes": 234181,
+      "transferBytes": 234481
+    },
+    {
+      "url": "/levels",
+      "encodedBytes": 214,
+      "transferBytes": 514
+    },
+    {
+      "url": "/levels",
+      "encodedBytes": 1326,
+      "transferBytes": 1626
+    },
+    {
+      "url": "/_next/static/chunks/3p90ms7ujyp1o.css",
+      "encodedBytes": 1014,
+      "transferBytes": 1314
+    },
+    {
+      "url": "/_next/static/chunks/41qim4bne6hn1.js",
+      "encodedBytes": 12149,
+      "transferBytes": 12449
+    }
+  ],
+  "samples": [
+    {
+      "phase": "closed",
+      "azimuth": "-30.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-20.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-10.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "0.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "10.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "20.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "30.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-30.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-20.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-10.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "0.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "10.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "20.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "30.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-30.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-20.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-10.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "0.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "10.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "20.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "30.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-30.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-20.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-10.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "0.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "10.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "20.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "30.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-30.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-20.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-10.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "0.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "10.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "20.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "30.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-30.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-20.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "-10.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "0.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "10.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "20.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "closed",
+      "azimuth": "30.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-30.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-20.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-10.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "0.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "10.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "20.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "30.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-30.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-20.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-10.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "0.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "10.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "20.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "30.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-30.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-20.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-10.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "0.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "10.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "20.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "30.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-30.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-20.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-10.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "0.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "10.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "20.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "30.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-30.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-20.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-10.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "0.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "10.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "20.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "30.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-30.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-20.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "-10.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "0.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "10.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "20.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "open",
+      "azimuth": "30.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-30.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-20.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-10.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "0.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "10.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "20.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "30.00",
+      "polar": "29.37",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-30.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-20.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-10.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "0.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "10.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "20.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "30.00",
+      "polar": "29.37",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-30.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-20.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-10.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "0.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "10.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "20.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "30.00",
+      "polar": "25.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-30.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-20.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-10.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "0.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "10.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "20.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "30.00",
+      "polar": "25.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-30.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-20.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-10.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "0.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "10.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "20.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "30.00",
+      "polar": "31.00",
+      "distance": "6.50",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-30.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-20.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "-10.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "0.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "10.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "20.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    },
+    {
+      "phase": "tilted",
+      "azimuth": "30.00",
+      "polar": "31.00",
+      "distance": "9.00",
+      "calls": 34,
+      "triangles": 912
+    }
+  ]
+}

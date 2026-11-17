@@ -1,0 +1,59 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test --workers=2 tests/e2e/level-3d-02.spec.ts
+
+[WebServer] (node:49061) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49085) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49103) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49101) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49102) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49099) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49105) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 2 workers
+
+(node:49133) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:49134) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [iphone-se] › tests/e2e/level-3d-02.spec.ts:44:1 › 3D-02: kéo qua dép không lật, camera có giới hạn và reset đúng góc đầu (2.9s)
+  ✓   1 [iphone-se] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (6.2s)
+  ✓   4 [iphone-se] › tests/e2e/level-3d-02.spec.ts:147:1 › 3D-02: chạm lệch tâm 20 px vẫn tìm được vật khi gần và xa (1.7s)
+  ✓   3 [iphone-se] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (5.9s)
+  ✓   5 [iphone-se] › tests/e2e/level-3d-02.spec.ts:175:1 › 3D-02: máy chậm tự hạ chất lượng, giảm chuyển động và vẫn giải được (4.1s)
+(node:49177) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [pixel-5] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (6.0s)
+  ✓   6 [iphone-se] › tests/e2e/level-3d-02.spec.ts:221:1 › 3D-02: đo tải 3D lần đầu và draw call trước/sau lật qua các góc (10.8s)
+(node:49201) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [pixel-5] › tests/e2e/level-3d-02.spec.ts:44:1 › 3D-02: kéo qua dép không lật, camera có giới hạn và reset đúng góc đầu (3.6s)
+  ✓  10 [pixel-5] › tests/e2e/level-3d-02.spec.ts:147:1 › 3D-02: chạm lệch tâm 20 px vẫn tìm được vật khi gần và xa (2.2s)
+  ✓   9 [pixel-5] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (6.8s)
+  ✓  11 [pixel-5] › tests/e2e/level-3d-02.spec.ts:175:1 › 3D-02: máy chậm tự hạ chất lượng, giảm chuyển động và vẫn giải được (4.7s)
+(node:49214) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 [mobile-360] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (5.9s)
+  ✓  14 [mobile-360] › tests/e2e/level-3d-02.spec.ts:44:1 › 3D-02: kéo qua dép không lật, camera có giới hạn và reset đúng góc đầu (3.5s)
+  ✓  12 [pixel-5] › tests/e2e/level-3d-02.spec.ts:221:1 › 3D-02: đo tải 3D lần đầu và draw call trước/sau lật qua các góc (14.4s)
+(node:49229) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  16 [mobile-360] › tests/e2e/level-3d-02.spec.ts:147:1 › 3D-02: chạm lệch tâm 20 px vẫn tìm được vật khi gần và xa (2.2s)
+  ✓  15 [mobile-360] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (6.7s)
+  ✓  17 [mobile-360] › tests/e2e/level-3d-02.spec.ts:175:1 › 3D-02: máy chậm tự hạ chất lượng, giảm chuyển động và vẫn giải được (4.7s)
+  ✓  18 [mobile-360] › tests/e2e/level-3d-02.spec.ts:221:1 › 3D-02: đo tải 3D lần đầu và draw call trước/sau lật qua các góc (14.4s)
+
+  18 passed (1.1m)

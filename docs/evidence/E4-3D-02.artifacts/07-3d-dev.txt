@@ -1,0 +1,284 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test --workers=2 tests/e2e/level-3d-02.spec.ts --grep tải WebGL|ba chỗ sai
+
+[WebServer] (node:49947) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49971) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 2 workers
+
+(node:49983) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:49982) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:50008) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [iphone-se] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (6.8s)
+(node:50009) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [iphone-se] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (7.2s)
+[WebServer] (node:50015) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+(node:50014) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:50020) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 [pixel-5] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (6.2s)
+(node:50030) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:50035) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 [pixel-5] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (7.2s)
+(node:50038) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:50043) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 [mobile-360] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (6.2s)
+  ✘  6 [mobile-360] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (7.2s)
+
+
+  1) [iphone-se] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn 
+
+    Error: Trang có lỗi console hoặc lỗi mạng
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "console.warning: The resource http://localhost:3100/_next/static/chunks/src_features_ui_0iu2g4wnmnt6h._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+    + ]
+
+       at fixtures.ts:87
+
+      85 |       await provide({ allow: (pattern) => allowed.push(pattern) });
+      86 |
+    > 87 |       expect(problems, 'Trang có lỗi console hoặc lỗi mạng').toEqual([]);
+         |                                                              ^
+      88 |     },
+      89 |     { auto: true },
+      90 |   ],
+        at Object.exports.test._test.test.extend.guard.auto (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/fixtures.ts:87:62)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [iphone-se] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa 
+
+    Error: Trang có lỗi console hoặc lỗi mạng
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "console.warning: The resource http://localhost:3100/_next/static/chunks/src_features_ui_0iu2g4wnmnt6h._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+    + ]
+
+       at fixtures.ts:87
+
+      85 |       await provide({ allow: (pattern) => allowed.push(pattern) });
+      86 |
+    > 87 |       expect(problems, 'Trang có lỗi console hoặc lỗi mạng').toEqual([]);
+         |                                                              ^
+      88 |     },
+      89 |     { auto: true },
+      90 |   ],
+        at Object.exports.test._test.test.extend.guard.auto (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/fixtures.ts:87:62)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [pixel-5] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn 
+
+    Error: Trang có lỗi console hoặc lỗi mạng
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "console.warning: The resource http://localhost:3100/_next/static/chunks/src_features_ui_0iu2g4wnmnt6h._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    + ]
+
+       at fixtures.ts:87
+
+      85 |       await provide({ allow: (pattern) => allowed.push(pattern) });
+      86 |
+    > 87 |       expect(problems, 'Trang có lỗi console hoặc lỗi mạng').toEqual([]);
+         |                                                              ^
+      88 |     },
+      89 |     { auto: true },
+      90 |   ],
+        at Object.exports.test._test.test.extend.guard.auto (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/fixtures.ts:87:62)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [pixel-5] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa 
+
+    Error: Trang có lỗi console hoặc lỗi mạng
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "console.warning: The resource http://localhost:3100/_next/static/chunks/src_features_ui_0iu2g4wnmnt6h._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    + ]
+
+       at fixtures.ts:87
+
+      85 |       await provide({ allow: (pattern) => allowed.push(pattern) });
+      86 |
+    > 87 |       expect(problems, 'Trang có lỗi console hoặc lỗi mạng').toEqual([]);
+         |                                                              ^
+      88 |     },
+      89 |     { auto: true },
+      90 |   ],
+        at Object.exports.test._test.test.extend.guard.auto (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/fixtures.ts:87:62)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [mobile-360] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn 
+
+    Error: Trang có lỗi console hoặc lỗi mạng
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "console.warning: The resource http://localhost:3100/_next/static/chunks/src_features_ui_0iu2g4wnmnt6h._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    + ]
+
+       at fixtures.ts:87
+
+      85 |       await provide({ allow: (pattern) => allowed.push(pattern) });
+      86 |
+    > 87 |       expect(problems, 'Trang có lỗi console hoặc lỗi mạng').toEqual([]);
+         |                                                              ^
+      88 |     },
+      89 |     { auto: true },
+      90 |   ],
+        at Object.exports.test._test.test.extend.guard.auto (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/fixtures.ts:87:62)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-02-3D-02-tải-WebG-7e244-ấu-chìa-hướng-dẫn-kéo-tự-ẩn-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [mobile-360] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa 
+
+    Error: Trang có lỗi console hoặc lỗi mạng
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "console.warning: The resource http://localhost:3100/_next/static/chunks/src_features_ui_0iu2g4wnmnt6h._.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    + ]
+
+       at fixtures.ts:87
+
+      85 |       await provide({ allow: (pattern) => allowed.push(pattern) });
+      86 |
+    > 87 |       expect(problems, 'Trang có lỗi console hoặc lỗi mạng').toEqual([]);
+         |                                                              ^
+      88 |     },
+      89 |     { auto: true },
+      90 |   ],
+        at Object.exports.test._test.test.extend.guard.auto (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/fixtures.ts:87:62)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-02-3D-02-ba-chỗ-s-e07ec-ới-thắng-chơi-lại-giấu-chìa-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6 failed
+    [iphone-se] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn 
+    [iphone-se] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa 
+    [pixel-5] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn 
+    [pixel-5] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa 
+    [mobile-360] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn 
+    [mobile-360] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa 

@@ -1,6 +1,6 @@
 # Lịch sử sprint — Lắt Léo
 
-> Cập nhật gần nhất: 2026-11-16. File này ghi kết quả review, retro, năng lực và các phạm vi được giao trực tiếp. Sprint hiện tại ở [SPRINT.md](SPRINT.md).
+> Cập nhật gần nhất: 2026-11-17. File này ghi kết quả review, retro, năng lực và các phạm vi được giao trực tiếp. Sprint hiện tại ở [SPRINT.md](SPRINT.md).
 
 **Chưa có sprint nào kết thúc.** Sprint 1 (đề xuất 16–20/11/2026) chưa được xác nhận cam kết.
 
@@ -21,6 +21,10 @@
 - **2026-11-15** — Epic Bộ máy màn chơi theo tám mục được giao: LevelShell, đề chạm được, hook lắc/nghiêng/kéo/nhập, Scene3D thích ứng, kiểm góc, tài liệu và ví dụ hai file. Chuyển hai màn mẫu; 214 unit/component, 102 ca hồi quy, 9 ca ví dụ production và 9 ca dev/StrictMode đạt; bằng chứng check/build/hồi quy tại [E2-BO-MAY-MAN-CHOI.md](../docs/evidence/E2-BO-MAY-MAN-CHOI.md). Đã phát hiện/sửa thao tác chạm đề trước khi cảnh sẵn sàng; ghim Three/kiểu 0.182.0 để bỏ cảnh báo tương thích với R3F 9.8.2. Trạng thái `in_review`, chưa duyệt hoặc commit; không tính velocity.
 
 ## Phạm vi giao trực tiếp (không tính velocity)
+
+**Ngày 17/11/2026 — riêng 3D-03:** người dùng duyệt phương án bằng “oke”. Thêm nồi/nắp, bánh chưng, bệ gạch và cơ chế kéo vật 3D dùng chung; mở nắp thấy bốn, nghiêng nhìn bánh dưới rồi nhập 5. Scene3D giữ camera/reset/tự hạ chất lượng; hai màn 3D trước giữ hướng dẫn bàn tay. Đo cao nhất 34 draw call/frame, 260.485 byte tải thêm; 254 unit/component, 9 ca dev và 15 ca riêng màn đạt. Hồi quy cuối 185/186, ca máy chậm cũ 3D-02 đạt khi kiểm lại riêng; [log/ảnh và giới hạn kiểm chứng](../docs/evidence/E4-3D-03.md). LL-046/019 Chờ duyệt; LL-044 mới có kịch bản 3D-02/03. Chưa tự commit, đặt Xong hoặc đo điện thoại thật; không tính velocity.
+
+**Ngày 17/11/2026 — riêng 3D-02:** người dùng duyệt phương án bằng “oke”. Thêm phòng nhà ống và đồ đạc low-poly bằng code dùng chung; chạm dép để lật, rồi chạm chìa dính kẹo cao su dưới đế. Camera/reset/hướng dẫn kéo/tự hạ chất lượng dùng Scene3D; vùng chạm ≥44 px và kiểm vật che. Số đo cao nhất 29 draw call/frame, 258.110 byte tải 3D đầu tiên gồm gói chung; kiểm thử/ảnh/log ở [E4-3D-02.md](../docs/evidence/E4-3D-02.md). LL-045/018 Chờ duyệt, LL-044 Đang làm một phần; chưa tự commit hoặc đặt Xong, chưa đo điện thoại thật. Giữ nguyên cam kết 18 điểm và không tính velocity.
 
 **Ghi nhận phạm vi trực tiếp ngày 16/11/2026 — không tính velocity:** người dùng duyệt phương án bằng “tiếp tục”; thêm duy nhất 3D-01 “Nhà số mấy?”, thư viện nhà ống/bồn nước/chậu cây, bàn phím số và hướng dẫn kéo dùng chung. 239 unit/component, 153 ca Playwright production đạt. Đo draw call gồm lượt bóng và tải thêm của lần mở 3D đầu tiên; log, ảnh mặt tiền/mặt sau, kiểm dev và ví dụ bộ máy ở [E4-3D-01.md](../docs/evidence/E4-3D-01.md). LL-033/034/017 Chờ duyệt, chưa commit hoặc đặt Xong, chưa có số đo điện thoại thật; không đổi 18 điểm cam kết.
 

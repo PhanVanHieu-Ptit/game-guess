@@ -6,6 +6,8 @@ import { meta as m2 } from './2d-03/meta';
 import { meta as m3 } from './2d-04/meta';
 import { meta as m4 } from './2d-05/meta';
 import { meta as m5 } from './3d-01/meta';
+import { meta as m6 } from './3d-02/meta';
+import { meta as m7 } from './3d-03/meta';
 
 const entries = [
   { directory: '2d-01', meta: m0 },
@@ -14,6 +16,8 @@ const entries = [
   { directory: '2d-04', meta: m3 },
   { directory: '2d-05', meta: m4 },
   { directory: '3d-01', meta: m5 },
+  { directory: '3d-02', meta: m6 },
+  { directory: '3d-03', meta: m7 },
 ];
 for (const { directory, meta } of entries) {
   if (directory !== meta.id)

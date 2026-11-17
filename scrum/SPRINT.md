@@ -1,6 +1,6 @@
 # Sprint hiện tại — Sprint 1
 
-> Cập nhật gần nhất: 2026-11-16 (Thứ Hai). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); các phạm vi giao trực tiếp được ghi riêng bên dưới.
+> Cập nhật gần nhất: 2026-11-17 (Thứ Ba). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); các phạm vi giao trực tiếp được ghi riêng bên dưới.
 
 | | |
 |---|---|
@@ -10,6 +10,10 @@
 | Họp | Daily 09:00 (15') · kiểm tra giữa sprint thứ Tư 16:30 · Sprint Review thứ Sáu 15:00 (45') · Retro thứ Sáu 16:00 (30') · làm mịn Sprint 2 thứ Sáu 16:30 |
 
 ## Mục tiêu sprint
+
+**Phạm vi giao trực tiếp duyệt ngày 17/11 — chỉ 3D-03: Chờ duyệt (`in_review`).** Người dùng trả lời “oke” sau phương án. Nồi/nắp, bánh chưng và bệ gạch bằng code dùng chung; mở nắp thấy bốn, nghiêng nồi thấy bánh thứ năm và nhập 5. Dùng Scene3D cùng DragObject3D, vùng chạm ≥44 px và bàn phím số đổi nhãn. LL-046/019 Chờ duyệt; LL-044 mới có kịch bản 3D-02/03. Ngân sách 34 draw call/frame, khoảng 0,260 MB tải thêm lần đầu; [bằng chứng](../docs/evidence/E4-3D-03.md). Giữ nguyên cam kết 18 điểm và không tính velocity; chưa đo điện thoại thật.
+
+**Phạm vi giao trực tiếp duyệt ngày 17/11 — chỉ 3D-02: Chờ duyệt (`in_review`).** Người dùng trả lời “oke” sau phương án. Dựng phòng nhà ống cắt mở, đồ đạc và đôi dép; lật dép rồi chạm chìa mới thắng. Thư viện mô hình và vùng chạm 3D dùng chung, Scene3D lo camera/reset/hướng dẫn/tự hạ chất lượng. LL-045/018 Chờ duyệt; LL-044 Đang làm một phần vì còn kịch bản 3D-03…05. Số đo cao nhất 29 draw call/frame và 258.110 byte tải thêm lần đầu; kiểm chứng ở [E4-3D-02.md](../docs/evidence/E4-3D-02.md). Không đổi 18 điểm cam kết hoặc cộng velocity; chưa đo điện thoại thật.
 
 **Phạm vi giao trực tiếp ngày 16/11 — chỉ 3D-01: Chờ duyệt (`in_review`).** Phương án cảnh đã trình và người dùng trả lời “tiếp tục”. Hoàn thiện nhà ống/bồn nước/chậu cây bằng hình khối, dùng chung Scene3D và bàn phím số; hướng dẫn kéo 5 giây, góc đầu che số, reset và tự hạ chất lượng. 239 unit/component và 153 ca Playwright production đạt; số đo/nghiệm thu bổ sung trong [E4-3D-01.md](../docs/evidence/E4-3D-01.md). LL-033/034/017 ở Chờ duyệt, không thêm điểm vào 18 điểm cam kết hoặc cộng velocity. Chưa đo điện thoại thật.
 
@@ -116,6 +120,20 @@ Rủi ro 1–8 rút gọn từ sprint-1.md; 9–11 do Scrum Master thêm.
 | [LL-029], [LL-010] | 5 + 5 | "Chưa": chờ Q6, Q10; còn phụ thuộc LL-028, LL-023, LL-009 | Sprint 3, sau khi Q6 và Q10 có trả lời |
 
 ## Nhật ký hằng ngày
+
+### 2026-11-17 (Thứ Ba) — phạm vi trực tiếp 3D-03
+
+- **Đã làm:** nhận “oke”, chỉ dựng 3D-03; chạm nắp, kéo/chạm nghiêng nồi, nhập đáp án. Mô hình bằng code dùng chung; drag/cancel tách khỏi camera và dọn listener khi tháo. NumberPad nhận nhãn “Số bánh”.
+- **Kiểm chứng:** check, 254 unit/component, 9 ca dev/StrictMode và 15 ca production riêng màn đạt. Hồi quy cuối 185/186; ca máy chậm 3D-02 còn lại đạt khi kiểm riêng, ghi rõ dao động kiểm thử. E2E kiểm hình học 0→4→5, giới hạn/reset, kéo/hủy, sai/đúng/chơi lại, máy chậm và ngân sách ba trạng thái. [Log/ảnh](../docs/evidence/E4-3D-03.md).
+- **Phát hiện/sửa:** bỏ nhận bóng trên thành nồi mỏng để hết sọc; tách bốn bánh bằng khe và lá lót; chỉnh lá lót che cả lạt bánh dưới ở mọi góc/zoom đã quét. Sửa race đọc vị trí vùng chạm trong helper E2E.
+- **Bàn giao:** LL-046/019 Chờ duyệt; LL-044 mới có hai kịch bản, còn 3D-04/05. Cập nhật đủ bốn file scrum; không đổi 51 story/211 điểm, cam kết 18 điểm hoặc tự commit.
+
+### 2026-11-17 (Thứ Ba) — phạm vi trực tiếp 3D-02
+
+- **Đã làm:** nhận “oke” duyệt phương án; chỉ thêm 3D-02 với ba chỗ tìm sai có phản hồi và hai bước lật dép/nhặt chìa. Thêm bảy mô hình trong sáu file và TapTarget3D dùng chung. Camera đầu giấu chìa, có manh mối ở cửa và hướng dẫn kéo 5 giây.
+- **Kiểm chứng:** check/build đạt, 247 unit/component, 171 ca Playwright production và 6 ca dev/StrictMode đạt. Có tải WebGL, giới hạn/reset camera, kéo không thành chạm, ba lỗi điển hình, giải bằng chạm/chơi lại, chạm lệch tâm và hạ chất lượng. Ảnh render đã xem; số đo và log ở [bằng chứng](../docs/evidence/E4-3D-02.md).
+- **Bàn giao:** LL-045/018 Chờ duyệt; LL-044 chỉ có phần 3D-02. Không tự đặt Xong hoặc commit, không nhận màn khác.
+- **Thay đổi scrum:** cập nhật đủ HO_SO/BACKLOG/SPRINT/LICH_SU; 51 story/211 điểm giữ nguyên, không tính velocity.
 
 ### 2026-11-16 (Thứ Hai) — phạm vi trực tiếp 3D-01
 

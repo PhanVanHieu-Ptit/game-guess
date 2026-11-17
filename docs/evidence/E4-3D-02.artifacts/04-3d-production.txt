@@ -1,0 +1,53 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test --workers=2 tests/e2e/level-3d-02.spec.ts
+
+[WebServer] (node:48670) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48694) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48707) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48706) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48705) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48709) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48710) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48735) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 2 workers
+
+(node:48737) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:48736) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [iphone-se] › tests/e2e/level-3d-02.spec.ts:44:1 › 3D-02: kéo qua dép không lật, camera có giới hạn và reset đúng góc đầu (3.0s)
+  ✓   1 [iphone-se] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (6.3s)
+  ✓   3 [iphone-se] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (6.3s)
+(node:48781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [pixel-5] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (6.1s)
+  ✓   4 [iphone-se] › tests/e2e/level-3d-02.spec.ts:145:1 › 3D-02: đo tải 3D lần đầu và draw call trước/sau lật qua các góc (10.9s)
+(node:48801) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [pixel-5] › tests/e2e/level-3d-02.spec.ts:44:1 › 3D-02: kéo qua dép không lật, camera có giới hạn và reset đúng góc đầu (3.5s)
+  ✓   7 [pixel-5] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (6.7s)
+(node:48809) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [mobile-360] › tests/e2e/level-3d-02.spec.ts:14:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (5.9s)
+  ✓   8 [pixel-5] › tests/e2e/level-3d-02.spec.ts:145:1 › 3D-02: đo tải 3D lần đầu và draw call trước/sau lật qua các góc (14.4s)
+  ✓  10 [mobile-360] › tests/e2e/level-3d-02.spec.ts:44:1 › 3D-02: kéo qua dép không lật, camera có giới hạn và reset đúng góc đầu (3.5s)
+(node:48825) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 [mobile-360] › tests/e2e/level-3d-02.spec.ts:87:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (6.7s)
+  ✓  11 [mobile-360] › tests/e2e/level-3d-02.spec.ts:145:1 › 3D-02: đo tải 3D lần đầu và draw call trước/sau lật qua các góc (14.4s)
+
+  12 passed (51.8s)

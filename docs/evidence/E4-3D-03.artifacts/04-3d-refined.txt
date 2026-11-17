@@ -1,0 +1,50 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test --workers=2 tests/e2e/level-3d-03.spec.ts
+
+[WebServer] (node:54155) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:54179) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:54192) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:54191) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:54196) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:54194) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:54195) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:54193) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:54197) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:54222) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 2 workers
+
+(node:54223) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [iphone-se] › tests/e2e/level-3d-03.spec.ts:55:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng (1.4s)
+  ✓  2 [iphone-se] › tests/e2e/level-3d-03.spec.ts:18:1 › 3D-03: nắp đóng giấu bánh; mở nắp chỉ thấy bốn; nghiêng thấy đủ năm (1.8s)
+(node:54249) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [iphone-se] › tests/e2e/level-3d-03.spec.ts:120:1 › 3D-03: nhập bốn sai; chọn quai/nghiêng/nhập năm thắng bằng chạm; chơi lại đóng nắp (1.6s)
+(node:54258) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [pixel-5] › tests/e2e/level-3d-03.spec.ts:18:1 › 3D-03: nắp đóng giấu bánh; mở nắp chỉ thấy bốn; nghiêng thấy đủ năm (2.0s)
+  ✓  5 [pixel-5] › tests/e2e/level-3d-03.spec.ts:55:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng (2.1s)
+(node:54267) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 [pixel-5] › tests/e2e/level-3d-03.spec.ts:120:1 › 3D-03: nhập bốn sai; chọn quai/nghiêng/nhập năm thắng bằng chạm; chơi lại đóng nắp (2.8s)
+(node:54272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [mobile-360] › tests/e2e/level-3d-03.spec.ts:18:1 › 3D-03: nắp đóng giấu bánh; mở nắp chỉ thấy bốn; nghiêng thấy đủ năm (1.7s)
+  ✓  8 [mobile-360] › tests/e2e/level-3d-03.spec.ts:55:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng (2.0s)
+  ✓  9 [mobile-360] › tests/e2e/level-3d-03.spec.ts:120:1 › 3D-03: nhập bốn sai; chọn quai/nghiêng/nhập năm thắng bằng chạm; chơi lại đóng nắp (2.8s)
+
+  9 passed (14.6s)

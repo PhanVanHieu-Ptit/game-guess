@@ -44,3 +44,22 @@ it('khóa nhập và gửi sau khi màn đã thắng', () => {
     expect(button).toBeDisabled();
   expect(onSubmit).not.toHaveBeenCalled();
 });
+
+it('dùng nhãn số bánh riêng và nhập một chữ số cho màn đếm bánh', () => {
+  const onSubmit = vi.fn();
+  render(
+    <NumberPad
+      label="Nhập số bánh"
+      valueLabel="Số bánh"
+      maxDigits={1}
+      onSubmit={onSubmit}
+      onProgress={() => {}}
+    />,
+  );
+  fireEvent.click(screen.getByText('Nhập số bánh'));
+  expect(screen.getByLabelText('Số bánh')).toHaveTextContent('—');
+  fireEvent.click(screen.getByRole('button', { name: '5' }));
+  expect(screen.getByRole('button', { name: '4' })).toBeDisabled();
+  fireEvent.click(screen.getByRole('button', { name: 'Gửi' }));
+  expect(onSubmit).toHaveBeenCalledWith('5');
+});
