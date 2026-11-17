@@ -1,0 +1,18 @@
+01-check: 0
+02-unit: 0 (254 tests / 26 files)
+03-3d-first: 1 (8 passed; one test-helper attribute-read race)
+04-3d-refined: 0 (9 tests)
+05-3d-dev: 0 (9 tests)
+06-check-final: 0
+07-unit-final: 0 (254 tests / 26 files)
+08-e2e-production: 1 (183 passed; three tests detected lower-cake binding above leaf liner)
+09-budget-recheck: 0 (1 test / 126 samples on iPhone SE)
+10-e2e-final-production: 1 (174 passed; 12 timeouts)
+11-timeout-recheck: 1 (11 passed; one test stalled awaiting requestAnimationFrame)
+12-3d-final-production: 0 (15 tests)
+13-check-end: 0
+14-unit-end: 0 (254 tests / 26 files)
+15-e2e-end: 1 (185 passed; one existing 3D-02 Pixel 5 low-quality test failed)
+16-verify-plan: 0
+17-diff-check: 0
+18-quality-recheck: 0 (one last-failed 3D-02 test passed without code/threshold changes)

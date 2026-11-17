@@ -6,12 +6,14 @@ import styles from './number-pad.module.css';
 /** Bàn phím số bằng DOM: chạm hoàn toàn, không bật bàn phím hệ thống che cảnh. */
 export function NumberPad({
   label,
+  valueLabel = 'Số nhà',
   maxDigits,
   disabled = false,
   onSubmit,
   onProgress,
 }: {
   label: string;
+  valueLabel?: string;
   maxDigits: number;
   disabled?: boolean;
   onSubmit(value: string): void;
@@ -28,9 +30,9 @@ export function NumberPad({
           if (value && !disabled) onSubmit(value);
         }}
       >
-        <label htmlFor={id}>Số nhà</label>
+        <label htmlFor={id}>{valueLabel}</label>
         <output id={id} aria-live="polite" className={styles.value}>
-          {value || '— —'}
+          {value || (maxDigits === 1 ? '—' : '— —')}
         </output>
         <div className={styles.keys} role="group" aria-label="Bàn phím số">
           {['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].map((digit) => (

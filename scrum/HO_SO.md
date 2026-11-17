@@ -1,6 +1,6 @@
 # Hồ sơ dự án — Lắt Léo
 
-> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-16.
+> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-17.
 > Đây là bộ nhớ của dự án: mục tiêu, giả định, điểm lệch, câu hỏi chờ, quyết định. Backlog: [BACKLOG.md](BACKLOG.md) · Sprint: [SPRINT.md](SPRINT.md) · Lịch sử: [LICH_SU.md](LICH_SU.md).
 
 ## 1. Nguồn đã đọc (chỉ đọc, không sửa)
@@ -26,6 +26,10 @@
 | Bằng chứng | [docs/evidence/LL-001-T02.md](../docs/evidence/LL-001-T02.md) | `4d126b7c76bf` | bằng chứng task thứ hai (đang chờ bạn duyệt) |
 
 ## 2. Hồ sơ dự án
+
+**Phạm vi mới ngày 17/11/2026 — chỉ 3D-03 “Nồi bánh chưng có mấy cái?”:** người dùng xem lại đề/cơ chế/lời giải và phương án cảnh, trả lời **“oke”** để duyệt. Thêm nồi/nắp, bánh chưng và bệ gạch low-poly vào thư viện chung; chạm mở nắp thấy bốn bánh, kéo nghiêng nồi thấy bánh thứ năm có sẵn dưới đáy, nhập **5** thắng. Dùng Scene3D, vùng chạm ≥44 px, kiểm góc nhìn, bàn phím số đổi nhãn và cơ chế kéo vật tách khỏi camera. LL-046/019 bàn giao **Chờ duyệt (`in_review`)**; LL-044 mới có kịch bản 3D-02/03, còn 3D-04/05. Catalog tám màn dùng `3d-03.ordinal=8`, thiết kế đầy đủ vẫn #17, mã tiến trình `3d-03` giữ nguyên. [Bằng chứng](../docs/evidence/E4-3D-03.md). Giữ phần 3D-02 chưa commit của lượt trước; không tự commit, đặt Xong hoặc cộng velocity.
+
+**Phạm vi mới ngày 17/11/2026 — chỉ 3D-02 “Tìm chìa khóa xe máy”:** người dùng đã xem đề/cơ chế/cách giải và phương án cảnh, trả lời **“oke”** để duyệt triển khai. Dựng phòng nhà ống cắt mở, sofa/gối, bàn, giỏ, dép và chìa bằng hình khối trong thư viện dùng chung. Thắng qua hai bước: chạm dép để lật, rồi chạm chìa nhìn thấy dưới đế; xoay hoặc lật dép chưa thắng. Dùng Scene3D, hướng dẫn kéo 5 giây cho màn 3D thứ hai, vùng chạm ≥44 px và raycast vật che. Kết quả/kiểm thử/số đo ở [E4-3D-02.md](../docs/evidence/E4-3D-02.md). LL-045/018 bàn giao **Chờ duyệt (`in_review`)**; LL-044 **Đang làm một phần** vì chỉ có kịch bản 3D-02, ba màn còn lại chưa làm. Catalog liên tục hiện có bảy màn nên `3d-02.ordinal=7`; vị trí thiết kế vẫn #13, độ khó 3 và mã tiến trình `3d-02` giữ nguyên. Không tự commit hoặc cộng velocity.
 
 **Phạm vi mới ngày 16/11/2026 — chỉ 3D-01 “Nhà số mấy?”:** đã trình lại đề/cơ chế/lời giải và phương án cảnh, người dùng trả lời **“tiếp tục”** để duyệt triển khai. Thêm nhà ống, bồn nước và chậu cây low-poly bằng code vào thư viện dùng chung; dùng Scene3D, bàn phím số chạm, hướng dẫn kéo 5 giây và kiểm góc quan sát. Điều kiện thắng là nhập **36**, không buộc giữ camera ở một góc hẹp. LL-033/034/017 bàn giao **Chờ duyệt (`in_review`)** với [bằng chứng](../docs/evidence/E4-3D-01.md); chưa tự commit hoặc cộng velocity. Catalog hiện có 5 màn nên `3d-01.ordinal=6` để giữ hợp đồng thứ tự liên tục; vị trí thiết kế vẫn là #8 trong LEVELS, cập nhật ordinal khi có 2D-06/07. Mã tiến trình ổn định là `3d-01`.
 
@@ -100,6 +104,8 @@
 
 | Ngày | Quyết định / sự kiện | Nguồn |
 |---|---|---|
+| 2026-11-17 | Người dùng duyệt phương án 3D-03 bằng “oke”; chỉ dựng màn này. Nghiêng nồi bằng kéo trên màn hình hoặc chọn quai/chạm nút, không dùng cảm biến; thắng bằng nhập 5. Mô hình bằng code và cơ chế kéo dùng chung. LL-044 mới có 2/4 kịch bản, còn 3D-04/05. Ngân sách <50 draw call/frame, <1 MB tải thêm gồm gói 3D chung; đo bằng trình duyệt tự động. | Yêu cầu trực tiếp; [E4-3D-03.md](../docs/evidence/E4-3D-03.md) |
+| 2026-11-17 | Người dùng duyệt phương án 3D-02 bằng “oke”; chỉ triển khai màn này, mô hình bằng code dùng chung, hai bước lật dép/nhặt chìa. Ngân sách <50 draw call/frame, <1 MB tải thêm; số đo trình duyệt tự động, chưa đo điện thoại thật. LL-044 chỉ có phần 3D-02, không coi cả bốn kịch bản đã xong. | Yêu cầu trực tiếp; [E4-3D-02.md](../docs/evidence/E4-3D-02.md) |
 | 2026-11-16 | Người dùng yêu cầu chỉ làm màn 3D tiếp theo, duyệt phương án bằng “tiếp tục”. Thực hiện riêng 3D-01; mô hình bằng hình khối trong code thay tài nguyên glTF của baseline cũ. Ngân sách của lượt này: <50 draw call/frame và <1 MB tải thêm, gồm gói 3D chung ở lần đầu. Đo ở trình duyệt tự động; chưa có số đo điện thoại thật. | Yêu cầu trực tiếp; [E4-3D-01.md](../docs/evidence/E4-3D-01.md) |
 | 2026-11-09 | Lập backlog v1 (41 story, 194 điểm). Các mục Q1–Q11 để trống, đã hỏi lại. | docs/backlog.md:618 |
 | 2026-11-10 | Làm mịn backlog v2 (51 story, 211 điểm) và v2.1 (LL-014 thêm task đo FPS trên điện thoại thật). Lập docs/sprint-1.md đề xuất 16–20/11, cam kết 18/20. | docs/backlog.md:620–639; docs/sprint-1.md |

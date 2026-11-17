@@ -1,0 +1,25 @@
+.puzzle {
+  display: grid;
+  gap: 10px;
+}
+.caption {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--c-ink);
+}
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tools button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  font: inherit;
+  color: var(--c-ink);
+  background: white;
+  border: 2px solid var(--c-ink);
+  border-radius: 10px;
+  cursor: pointer;
+}

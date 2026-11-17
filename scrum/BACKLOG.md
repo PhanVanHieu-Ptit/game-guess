@@ -2,7 +2,7 @@
 
 Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/backlog.md](../docs/backlog.md) v2.1 (cập nhật 2026-11-10, sha256 `3dda35d427a0`). File gốc giữ nguyên, không sửa; khi nó đổi, `/docmoi` so hash và đề xuất cập nhật ở đây. Mã story giữ ổn định: LL-001…LL-051 (story mới từ LL-052).
 
-- **Cập nhật gần nhất:** 2026-11-16 (3D-01 và lô 2D-01…05 theo yêu cầu trực tiếp: Chờ duyệt).
+- **Cập nhật gần nhất:** 2026-11-17 (riêng 3D-03: Chờ duyệt; LL-044 có kịch bản 3D-02/03).
 - **Trạng thái story:** Chưa làm → Đang làm → Chờ duyệt → Xong (hoặc Chặn). *Xong* theo DoD tạm ở [HO_SO.md](HO_SO.md) mục 2.
 - **Sẵn sàng = Có** khi đủ 4 điều kiện: mô tả rõ, có tiêu chí nghiệm thu kiểm tra được, đã ước lượng, không bị câu hỏi mở chặn. Thứ tự bảng là thứ tự làm, từ trên xuống.
 - **Điểm:** 1-2-3-5-8-13, trên 8 phải chia nhỏ (hiện không story nào vượt 8). Thang tương đối, tạm quy 1 điểm ≈ ½ ngày công một người (giả định).
@@ -11,8 +11,8 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 ## Tóm tắt
 
 - **51 story · 211 điểm** · Must 44 (192 đ) · Should 6 (17 đ) · Could 1 (2 đ) · Won't 0 (đã chốt, không ước lượng).
-- **Sẵn sàng:** 29 story "Có" (102 đ) · 22 story "Chưa" (109 đ). Nguyên nhân "Chưa": Q6 hoặc Q10 chặn 14 story (81 đ ≈ 38,4% tổng); Q3 chặn 3 (11 đ); Q5 chặn 3 (9 đ); Q4 chặn 1 (3 đ); Q11 chặn 1 (5 đ). Q6/Q10 đã có phạm vi cụ thể cho riêng 3D-01.
-- **Tiến độ:** Chưa làm 45 · Đang làm 1 · Chờ duyệt 5 · Xong 0 → **0 / 211 điểm xong**.
+- **Sẵn sàng:** 33 story "Có" (123 đ) · 18 story "Chưa" (88 đ). Nguyên nhân "Chưa": Q6 hoặc Q10 chặn 10 story (60 đ ≈ 28,4% tổng); Q3 chặn 3 (11 đ); Q5 chặn 3 (9 đ); Q4 chặn 1 (3 đ); Q11 chặn 1 (5 đ). Q6/Q10 đã có phạm vi cụ thể cho riêng 3D-01…03.
+- **Tiến độ:** Chưa làm 40 · Đang làm 2 · Chờ duyệt 9 · Xong 0 → **0 / 211 điểm xong**.
 - **Dự báo thô (giả định, chưa có hạn chót — Q1):** 211 điểm ÷ 20 điểm/sprint ≈ 10,6 sprint; ÷ 18 điểm (cam kết 90%) ≈ 11,7 sprint. Nếu Sprint 1 bắt đầu thứ Hai 16/11/2026 thì xong sau 11–12 sprint, tức khoảng **29/01–05/02/2027**, chưa trừ nghỉ lễ và chưa tính lỗi phát sinh.
 
 ## Epic
@@ -26,6 +26,36 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 - **E7 Chất lượng** — giấy phép, kiểm thử, sửa lỗi, tối ưu tải, đo lường, ghi công (8 · 28)
 
 ## 1. Bảng backlog
+
+### Riêng 3D-03 được duyệt ngày 17/11/2026
+
+**Trạng thái: Chờ duyệt (`in_review`).** Người dùng trả lời **“oke”** sau phương án; chỉ thêm 3D-03. LL-046 (mô hình bằng code) và LL-019 (màn chơi) Chờ duyệt; LL-044 Đang làm một phần, đã có kịch bản 3D-02/03, còn 3D-04/05.
+
+| Hạng mục | Kết quả |
+|---|---|
+| Đề / cách giải | Nồi bánh chưng ngày Tết; chạm mở nắp thấy bốn, kéo nghiêng thấy bánh thứ năm dưới đáy, nhập 5; nhập 4 báo “Nhìn kỹ lại tầng dưới” |
+| Mô hình chung | CookingPot/PotLid, BanhChung, BrickBase; trụ 12 cạnh, hộp, vòng và chi tiết lạt/quai instancing bằng code |
+| Camera / manh mối | Góc đầu cao khoảng 61°, nắp kín; núm nắp và quai rõ. Bánh dưới và lá lót tồn tại từ đầu, dùng vật che thật; không sinh bánh theo trạng thái |
+| Bộ máy | Scene3D giới hạn/reset/tự hạ chất lượng; DragObject3D khóa camera khi kéo và phục hồi khi hủy/mất capture; TapTarget3D ≥44 px; NumberPad thêm nhãn Số bánh |
+| Kiểm chứng | 254 unit/component, 9 ca dev và 15 ca production riêng màn đạt; hồi quy cuối 185/186, ca máy chậm 3D-02 còn lại đạt khi kiểm riêng. Hình học 0→4→5, kéo/hủy/reset, sai/đúng/chơi lại và quét góc có log/ảnh ở [E4-3D-03.md](../docs/evidence/E4-3D-03.md) |
+| Ngân sách | 34 draw call/frame gồm bóng; cao nhất **260.485 byte ≈0,260 MB** tải 3D đầu tiên gồm gói chung; 126 mẫu/cấu hình |
+
+Mã `3d-03`, thứ tự tạm 8/8 của bản hiện có; thiết kế đủ 25 màn vẫn #17 và độ khó 3. Chưa đo điện thoại thật hoặc thử độ khó với người chơi. Đề xuất commit: `feat: thêm màn 3D-03 Nồi bánh chưng`. Không tự đặt Xong hoặc commit.
+
+### Riêng 3D-02 được duyệt ngày 17/11/2026
+
+**Trạng thái: Chờ duyệt (`in_review`).** Người dùng trả lời **“oke”** sau phương án cảnh. LL-045 (mô hình bằng code) và LL-018 (màn chơi) chuyển sang Chờ duyệt; LL-044 Đang làm một phần, chỉ kịch bản 3D-02. Không nhận 3D-03…05 hoặc thay ID, điểm, phụ thuộc của baseline.
+
+| Hạng mục | Kết quả |
+|---|---|
+| Đề / cách giải | “Sắp trễ giờ! Chìa khóa xe máy đâu rồi?”; xoay khám phá, chạm đôi dép ở cửa để lật rồi chạm chìa dính kẹo cao su dưới đế |
+| Mô hình chung | TownhouseRoom, Sofa/Cushion, LowTable, Basket, Slipper, MotorbikeKey trong `engine/stage3d/models/`; hình khối bằng code, chi tiết hộp dùng instancing |
+| Camera / manh mối | Góc trước-trái nhìn phòng cắt mở và dép lệch ở ngưỡng cửa; chìa dưới đế bị che; hướng dẫn kéo 5 giây và lời nhắc chạm đồ vật |
+| Bộ máy | Scene3D giới hạn xoay/zoom, reset, kiểm góc, demand rendering và tự hạ chất lượng; TapTarget3D mở rộng vùng chạm ≥44 px, kiểm vật che, kéo qua dép không lật |
+| Nghiệm thu | 247 unit/component, 171 ca Playwright production và 6 ca dev/StrictMode đạt; tải/reset/sai/đúng/chơi lại/chạm lệch tâm/máy chậm có log và ảnh ở [E4-3D-02.md](../docs/evidence/E4-3D-02.md) |
+| Hiệu năng | Cao nhất **29 draw call/frame** gồm bóng, **258.110 byte ≈0,258 MB** tải 3D đầu tiên gồm HTML và gói Three/R3F/drei; 96 mẫu mỗi trình duyệt qua hai trạng thái và ba độ cao camera |
+
+Mã `3d-02`, thứ tự tạm 7/7 của bản đang có; thiết kế đủ 25 màn vẫn #13, độ khó 3. Chưa đo điện thoại thật hoặc thử độ khó với người chơi. Đề xuất commit: `feat: thêm màn 3D-02 Tìm chìa khóa xe máy`. Chưa tự commit hoặc đặt Xong.
 
 ### Riêng 3D-01 được giao ngày 16/11/2026
 
@@ -128,13 +158,13 @@ Mỗi màn đã được làm và kiểm riêng trước khi sang màn tiếp th
 | [LL-025] | E5 Giao diện | Là người chơi, tôi muốn trang chọn màn và khung chơi dùng thoải mái trên cả điện thoại lẫn máy tính để chơi ở bất cứ đâu. | 3 | Must | LL-005, LL-006, LL-023 | Chưa làm | Có |
 | [LL-030] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 2 để dựng màn mà không phải đoán ý. [CẦN LÀM RÕ: Q6, Q10] | 5 | Must | LL-023, LL-028 | Chưa làm | Chưa |
 | [LL-011] | E3 2D | Là người chơi, tôi muốn chơi lô 2 (2D-06…10) để gặp những mẹo khó dần, buộc phải nghĩ lệch hướng. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-009, LL-030, LL-043 | Chưa làm | Chưa |
-| [LL-044] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có kịch bản chi tiết 4 màn 3D còn lại (3D-02…05) để dựng đúng và ước lượng lại chính xác. | 3 | Must | LL-028 | Chưa làm | Có |
-| [LL-045] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-02 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 3 | Must | LL-016, LL-044 | Chưa làm | Chưa |
-| [LL-018] | E4 3D | Là người chơi, tôi muốn chơi màn 3D-02 để giải một câu đố hack não trong không gian 3D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-015, LL-016, LL-045 | Chưa làm | Chưa |
+| [LL-044] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có kịch bản chi tiết 4 màn 3D còn lại (3D-02…05) để dựng đúng và ước lượng lại chính xác. | 3 | Must | LL-028 | Đang làm (3D-02/03; 3D-04/05 chưa làm) | Có |
+| [LL-045] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-02 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 3 | Must | LL-016, LL-044 | Chờ duyệt (mô hình bằng code, 17/11) | Có |
+| [LL-018] | E4 3D | Là người chơi, tôi muốn chơi màn 3D-02 để giải một câu đố hack não trong không gian 3D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-015, LL-016, LL-045 | Chờ duyệt (3D-02, bằng chứng 17/11) | Có |
 | [LL-031] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 3 để dựng màn mà không phải đoán ý. [CẦN LÀM RÕ: Q6, Q10] | 5 | Must | LL-023, LL-028 | Chưa làm | Chưa |
 | [LL-012] | E3 2D | Là người chơi, tôi muốn chơi lô 3 (2D-11…15) để tiếp tục được thử thách bằng những mẹo mới, không lặp lại. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-009, LL-031, LL-043 | Chưa làm | Chưa |
-| [LL-046] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-03 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 2 | Must | LL-016, LL-044 | Chưa làm | Chưa |
-| [LL-019] | E4 3D | Là người chơi, tôi muốn chơi màn 3D-03 để giải một câu đố hack não trong không gian 3D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-015, LL-016, LL-046 | Chưa làm | Chưa |
+| [LL-046] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-03 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 2 | Must | LL-016, LL-044 | Chờ duyệt (mô hình bằng code, 17/11) | Có |
+| [LL-019] | E4 3D | Là người chơi, tôi muốn chơi màn 3D-03 để giải một câu đố hack não trong không gian 3D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-015, LL-016, LL-046 | Chờ duyệt (3D-03, bằng chứng 17/11) | Có |
 | [LL-032] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 4 để dựng màn mà không phải đoán ý. [CẦN LÀM RÕ: Q6, Q10] | 5 | Must | LL-023, LL-028 | Chưa làm | Chưa |
 | [LL-013] | E3 2D | Là người chơi, tôi muốn chơi lô 4 (2D-16…20) để hoàn thành trọn bộ 20 màn 2D với những mẹo khó nhất phần 2D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-009, LL-032, LL-043 | Chưa làm | Chưa |
 | [LL-035] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-04 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 3 | Must | LL-016, LL-044 | Chưa làm | Chưa |
@@ -708,6 +738,10 @@ Chưa có mã story, chưa tính vào 51 story/211 điểm và chưa vào cam k�
 - **Ghi quyết định có truy vết** (AI-T01…AI-T06, 6 task × 1 điểm): ghi câu trả lời Q1–Q11 thành tệp `docs/decisions/*.md`. Scrum Master đã ghi quyết định ở [HO_SO.md](HO_SO.md) mục 7 nên chỉ cần story riêng nếu bạn muốn có các tệp đó trong `docs/`.
 
 ## 7. Nhật ký thay đổi (scrum/)
+
+Ngày **2026-11-17**, người dùng duyệt “oke” phương án 3D-03: thêm riêng màn nồi bánh chưng, mô hình và cơ chế kéo 3D dùng chung. LL-046/019 → Chờ duyệt; LL-044 đã có 2/4 kịch bản. Tổng 33 story sẵn sàng/123 điểm; 40 chưa làm/2 đang làm/9 chờ duyệt, vẫn 0 điểm Xong. [Bằng chứng](../docs/evidence/E4-3D-03.md). Không đổi cam kết sprint hoặc tự commit.
+
+Ngày **2026-11-17**, người dùng duyệt “oke”: thực hiện riêng 3D-02, thêm mô hình phòng/đồ đạc/dép/chìa và vùng chạm 3D dùng chung. LL-045/018 → Chờ duyệt; LL-044 → Đang làm một phần. Tổng 31 story sẵn sàng/113 điểm; 42 chưa làm/2 đang làm/7 chờ duyệt; vẫn 0 điểm Xong. [Bằng chứng](../docs/evidence/E4-3D-02.md). Giữ nguyên cam kết sprint và không tự commit.
 
 Ngày **2026-11-16**, theo yêu cầu chỉ làm một màn 3D và phương án đã được duyệt bằng “tiếp tục”: thêm riêng 3D-01, thư viện ba mô hình, hướng dẫn kéo và bàn phím số dùng chung. LL-033/034/017 → Chờ duyệt; tổng 29 story sẵn sàng, 45 chưa làm/1 đang làm/5 chờ duyệt, vẫn 0 điểm Xong. [Bằng chứng](../docs/evidence/E4-3D-01.md). Không thay đổi cam kết sprint hoặc tự commit.
 

@@ -1,0 +1,722 @@
+{
+  "project": "iphone-se",
+  "transferBytes": 258110,
+  "encodedBytes": 255710,
+  "maxDrawCalls": 29,
+  "resources": [
+    {
+      "name": "http://localhost:3100/play/3d-02",
+      "encodedBodySize": 2181,
+      "transferSize": 2481
+    },
+    {
+      "name": "http://localhost:3100/_next/static/chunks/16oribktd3g-k.js",
+      "encodedBodySize": 4592,
+      "transferSize": 4892
+    },
+    {
+      "name": "http://localhost:3100/_next/static/chunks/1tc-nt5j0d1t3.css",
+      "encodedBodySize": 104,
+      "transferSize": 404
+    },
+    {
+      "name": "http://localhost:3100/_next/static/chunks/0uqu49wpby30n.js",
+      "encodedBodySize": 234181,
+      "transferSize": 234481
+    },
+    {
+      "name": "http://localhost:3100/levels?_rsc=txTCtd8szOtD0HD4",
+      "encodedBodySize": 211,
+      "transferSize": 511
+    },
+    {
+      "name": "http://localhost:3100/levels?_rsc=-BC2Ch5l6wSjH2bb",
+      "encodedBodySize": 1327,
+      "transferSize": 1627
+    },
+    {
+      "name": "http://localhost:3100/_next/static/chunks/3p90ms7ujyp1o.css",
+      "encodedBodySize": 1014,
+      "transferSize": 1314
+    },
+    {
+      "name": "http://localhost:3100/_next/static/chunks/37nulnjw-70ae.js",
+      "encodedBodySize": 12100,
+      "transferSize": 12400
+    }
+  ],
+  "samples": [
+    {
+      "phase": "searching",
+      "azimuth": "-75.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-65.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-55.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-45.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-35.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-25.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-15.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-5.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "5.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "15.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "25.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "35.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "45.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "55.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "65.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "75.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-75.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-65.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-55.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-45.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-35.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-25.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-15.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-5.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "5.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "15.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "25.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "35.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "45.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "55.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "65.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "75.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-75.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-65.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-55.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-45.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-35.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-25.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-15.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "-5.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "5.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "15.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "25.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "35.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "45.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "55.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "65.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "searching",
+      "azimuth": "75.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-75.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-65.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-55.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-45.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-35.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-25.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-15.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-5.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "5.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "15.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "25.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "35.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "45.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "55.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "65.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "75.00",
+      "polar": "60.14",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-75.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-65.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-55.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-45.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-35.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-25.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-15.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-5.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "5.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "15.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "25.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "35.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "45.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "55.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "65.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "75.00",
+      "polar": "35.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-75.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-65.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-55.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-45.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-35.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-25.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-15.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "-5.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "5.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "15.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "25.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "35.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "45.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "55.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "65.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    },
+    {
+      "phase": "flipped",
+      "azimuth": "75.00",
+      "polar": "76.00",
+      "drawCalls": 29,
+      "triangles": 956
+    }
+  ]
+}

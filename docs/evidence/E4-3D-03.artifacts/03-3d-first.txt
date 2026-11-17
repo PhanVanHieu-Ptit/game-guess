@@ -1,0 +1,86 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test --workers=2 tests/e2e/level-3d-03.spec.ts
+
+[WebServer] (node:53762) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:53786) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:53802) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:53800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:53801) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:53803) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:53799) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:53804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:53805) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:53833) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 2 workers
+
+(node:53835) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:53834) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [iphone-se] › tests/e2e/level-3d-03.spec.ts:55:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng (1.3s)
+(node:53865) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [iphone-se] › tests/e2e/level-3d-03.spec.ts:18:1 › 3D-03: nắp đóng giấu bánh; mở nắp chỉ thấy bốn; nghiêng thấy đủ năm (1.8s)
+(node:53878) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [iphone-se] › tests/e2e/level-3d-03.spec.ts:120:1 › 3D-03: nhập bốn sai; chọn quai/nghiêng/nhập năm thắng bằng chạm; chơi lại đóng nắp (1.8s)
+(node:53889) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [pixel-5] › tests/e2e/level-3d-03.spec.ts:18:1 › 3D-03: nắp đóng giấu bánh; mở nắp chỉ thấy bốn; nghiêng thấy đủ năm (2.0s)
+  ✓  5 [pixel-5] › tests/e2e/level-3d-03.spec.ts:55:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng (2.0s)
+(node:53895) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 [pixel-5] › tests/e2e/level-3d-03.spec.ts:120:1 › 3D-03: nhập bốn sai; chọn quai/nghiêng/nhập năm thắng bằng chạm; chơi lại đóng nắp (2.8s)
+(node:53900) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [mobile-360] › tests/e2e/level-3d-03.spec.ts:18:1 › 3D-03: nắp đóng giấu bánh; mở nắp chỉ thấy bốn; nghiêng thấy đủ năm (1.7s)
+  ✓  8 [mobile-360] › tests/e2e/level-3d-03.spec.ts:55:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng (2.0s)
+  ✓  9 [mobile-360] › tests/e2e/level-3d-03.spec.ts:120:1 › 3D-03: nhập bốn sai; chọn quai/nghiêng/nhập năm thắng bằng chạm; chơi lại đóng nắp (2.9s)
+
+
+  1) [iphone-se] › tests/e2e/level-3d-03.spec.ts:55:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng 
+
+    TypeError: Cannot read properties of null (reading 'minSize')
+
+       at helpers/scene-3d.ts:14
+
+      12 |     minSize: number;
+      13 |   };
+    > 14 |   expect(target.minSize).toBeGreaterThanOrEqual(44);
+         |                 ^
+      15 |   const rect = await canvas.boundingBox();
+      16 |   if (!rect) throw new Error('Canvas chưa có kích thước');
+      17 |   return { x: rect.x + target.x, y: rect.y + target.y };
+        at sceneTarget (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/helpers/scene-3d.ts:14:17)
+        at tapSceneTarget (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/helpers/scene-3d.ts:21:17)
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-3d-03.spec.ts:59:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-03-3D-03-kéo-nồi--f3217--hồi-xoay-nền-và-reset-đúng-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-03-3D-03-kéo-nồi--f3217--hồi-xoay-nền-và-reset-đúng-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-03-3D-03-kéo-nồi--f3217--hồi-xoay-nền-và-reset-đúng-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-03-3D-03-kéo-nồi--f3217--hồi-xoay-nền-và-reset-đúng-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [iphone-se] › tests/e2e/level-3d-03.spec.ts:55:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng 
+  8 passed (17.5s)

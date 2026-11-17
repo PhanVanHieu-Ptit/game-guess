@@ -9,4 +9,6 @@ export const SCENES: Readonly<Partial<Record<string, Level['component']>>> = {
   '2d-04': () => import('./2d-04/scene'),
   '2d-05': () => import('./2d-05/scene'),
   '3d-01': () => import('./3d-01/scene'),
+  '3d-02': () => import('./3d-02/scene'),
+  '3d-03': () => import('./3d-03/scene'),
 };

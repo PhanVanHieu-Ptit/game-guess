@@ -1,0 +1,14 @@
+{
+  "stories": 51,
+  "points": 211,
+  "statuses": {
+    "Đang làm": 2,
+    "Chưa làm": 40,
+    "Chờ duyệt": 9
+  },
+  "ready": {
+    "Có": 33,
+    "Chưa": 18
+  },
+  "readyPoints": 123
+}

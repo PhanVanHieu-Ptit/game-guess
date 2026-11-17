@@ -10,6 +10,8 @@ import { solution as level03 } from './solutions/2d-03';
 import { solution as level04 } from './solutions/2d-04';
 import { solution as level05 } from './solutions/2d-05';
 import { solution as level3d01 } from './solutions/3d-01';
+import { solution as level3d02 } from './solutions/3d-02';
+import { solution as level3d03 } from './solutions/3d-03';
 
 // Luồng các màn thật: vào màn → giải → kết quả → màn tiếp. Chạy trên mọi dự án trong
 // playwright.config.ts (iPhone SE, Pixel 5, 360×640 có cảm ứng). Chỉ dùng chạm (`tap`), không chuột, không phím tắt.
@@ -124,7 +126,14 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
   await level02.solve(page);
   await expect(result.dialog(page)).toBeVisible({ timeout: 1000 });
   await expect(result.dialog(page)).toContainText(level02.meta.explanation);
-  for (const level of [level03, level04, level05, level3d01]) {
+  for (const level of [
+    level03,
+    level04,
+    level05,
+    level3d01,
+    level3d02,
+    level3d03,
+  ]) {
     await result.next(page).tap();
     await expect(page).toHaveURL(`/play/${level.meta.id}`);
     await expect(play.heading(page, level.meta.ordinal)).toBeVisible();

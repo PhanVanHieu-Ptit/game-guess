@@ -1,0 +1,349 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test --workers=2
+
+[WebServer] (node:55070) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:55094) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:55107) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:55109) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:55104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:55106) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:55108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:55105) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:55110) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:55135) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 186 tests using 2 workers
+
+(node:55137) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    1 [iphone-se] › tests/e2e/campaign-flow.spec.ts:185:1 › Chơi tiếp đưa về màn chưa xong đầu tiên (1.1s)
+  ✓    3 [iphone-se] › tests/e2e/campaign-flow.spec.ts:204:1 › chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn (320ms)
+  ✓    4 [iphone-se] › tests/e2e/campaign-flow.spec.ts:226:1 › đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về (286ms)
+  ✓    5 [iphone-se] › tests/e2e/errors.spec.ts:15:1 › nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về chọn màn, chưa ghi level_start; mạng phục hồi rồi Thử lại thì chơi được (2.0s)
+  ✘    6 [iphone-se] › tests/e2e/gates.spec.ts:14:3 › cổng console và mạng (fixture guard) › console.error làm test thất bại (207ms)
+  ✘    7 [iphone-se] › tests/e2e/gates.spec.ts:21:3 › cổng console và mạng (fixture guard) › console.warn làm test thất bại (200ms)
+  ✘    8 [iphone-se] › tests/e2e/gates.spec.ts:28:3 › cổng console và mạng (fixture guard) › lỗi chưa bắt (pageerror) làm test thất bại (267ms)
+  ✘    9 [iphone-se] › tests/e2e/gates.spec.ts:39:3 › cổng console và mạng (fixture guard) › yêu cầu mạng trả mã ≥ 400 làm test thất bại (176ms)
+  ✓   10 [iphone-se] › tests/e2e/gates.spec.ts:52:3 › cổng console và mạng (fixture guard) › pageerror do WebKit hủy yêu cầu nạp trước (?_rsc=) không làm test thất bại (317ms)
+  ✓   11 [iphone-se] › tests/e2e/gates.spec.ts:66:3 › cổng console và mạng (fixture guard) › lỗi được cho phép bằng guard.allow thì không làm test thất bại (233ms)
+  ✘   12 [iphone-se] › tests/e2e/gates.spec.ts:76:3 › cổng console và mạng (fixture guard) › sự kiện đo lường sai cấu trúc làm test thất bại (222ms)
+  ✓   13 [iphone-se] › tests/e2e/gates.spec.ts:90:3 › cổng bố cục (findLayoutProblems) › bắt cuộn ngang, vùng chạm nhỏ và chữ nhỏ (158ms)
+  ✓   14 [iphone-se] › tests/e2e/gates.spec.ts:103:3 › cổng bố cục (findLayoutProblems) › bắt chữ tràn khỏi mép màn hình (156ms)
+  ✓   15 [iphone-se] › tests/e2e/gates.spec.ts:115:3 › cổng bố cục (findLayoutProblems) › trang đạt chuẩn thì không báo gì (146ms)
+  ✓   16 [iphone-se] › tests/e2e/gates.spec.ts:152:3 › cổng sự kiện đo lường (findEventProblems) › chuỗi hợp lệ không có vi phạm (140ms)
+  ✓   17 [iphone-se] › tests/e2e/gates.spec.ts:158:3 › cổng sự kiện đo lường (findEventProblems) › bắt trường lạ, thiếu trường và sai kiểu (137ms)
+  ✓   18 [iphone-se] › tests/e2e/gates.spec.ts:180:3 › cổng sự kiện đo lường (findEventProblems) › bắt vi phạm luồng bắt đầu → đúng một kết thúc (142ms)
+  ✓   19 [iphone-se] › tests/e2e/gates.spec.ts:200:3 › cổng sự kiện đo lường (findEventProblems) › bắt eventId trùng và tên sự kiện lạ (138ms)
+  ✓    2 [iphone-se] › tests/e2e/campaign-flow.spec.ts:21:1 › trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ (7.3s)
+  ✓   20 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:12:1 › gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm (924ms)
+  ✓   22 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:128:1 › chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đầu lượt mới (700ms)
+  ✓   21 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:61:1 › xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn mở màn kế (873ms)
+  ✓   24 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:198:1 › màn chưa mở không vào được và chỉ đường về màn đang chơi (625ms)
+  ✓   23 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:163:1 › chơi lại từ màn kết quả bắt đầu lượt mới và đếm lại gợi ý từ 0 (820ms)
+  ✓   25 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:216:1 › mã màn không có hiện trang "không tìm thấy", không sập (406ms)
+  ✓   27 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:271:5 › nút Gợi ý khi người chơi bí › khi người dùng chọn giảm chuyển động › nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý (801ms)
+  ✓   26 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:244:3 › nút Gợi ý khi người chơi bí › sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút (1.3s)
+  ✓   29 [iphone-se] › tests/e2e/level-2d-01.spec.ts:51:1 › 2D-01: kéo sai trả bao về; kéo đúng chưa thắng; chơi lại che bé và vẫn giải được (1.4s)
+  ✓   28 [iphone-se] › tests/e2e/level-2d-01.spec.ts:5:1 › 2D-01: bé khác chưa thắng; dời bao rồi chạm bé ẩn mới thắng bằng chạm (1.8s)
+  ✓   30 [iphone-se] › tests/e2e/level-2d-02.spec.ts:6:1 › 2D-02: cá, tôm và mặt nước chưa thắng; nhập cua thì thắng (1.1s)
+  ✓   31 [iphone-se] › tests/e2e/level-2d-02.spec.ts:42:3 › 2D-02: chấp nhận " CON CUA " bằng ô nhập dùng bàn phím ảo (1.1s)
+  ✓   32 [iphone-se] › tests/e2e/level-2d-02.spec.ts:42:3 › 2D-02: chấp nhận "CUA BE" bằng ô nhập dùng bàn phím ảo (1.1s)
+  ✓   33 [iphone-se] › tests/e2e/level-2d-02.spec.ts:42:3 › 2D-02: chấp nhận "cua đồng" bằng ô nhập dùng bàn phím ảo (1.1s)
+  ✓   34 [iphone-se] › tests/e2e/level-2d-03.spec.ts:6:1 › 2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qua đường (2.5s)
+  ✓   35 [iphone-se] › tests/e2e/level-2d-04.spec.ts:13:1 › 2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn giải bằng chạm cây (3.3s)
+  ✓   36 [iphone-se] › tests/e2e/level-2d-04.spec.ts:60:1 › 2D-04: bật cảm biến rồi mẫu lắc làm xoài rụng (1.9s)
+  ✓   38 [iphone-se] › tests/e2e/level-2d-04.spec.ts:108:1 › 2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm (1.9s)
+  ✓   39 [iphone-se] › tests/e2e/level-2d-05.spec.ts:6:1 › 2D-05: ba hướng đều chưa thắng; gà trống không đẻ trứng mới thắng (1.3s)
+  ✓   37 [iphone-se] › tests/e2e/level-2d-04.spec.ts:86:1 › 2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng dồn; đủ ba chạm nhanh thì thắng (4.8s)
+  ✓   41 [iphone-se] › tests/e2e/level-3d-01.spec.ts:43:1 › 3D-01: kéo đổi camera, giới hạn góc/zoom, reset khôi phục đúng góc ban đầu (2.3s)
+  ✓   40 [iphone-se] › tests/e2e/level-3d-01.spec.ts:17:1 › 3D-01: tải WebGL thật, góc đầu che số và hướng dẫn tự ẩn sau 5 giây (5.9s)
+  ✓   42 [iphone-se] › tests/e2e/level-3d-01.spec.ts:93:1 › 3D-01: sai có phản hồi, xoay ra sau và nhập 36 thắng chỉ bằng chạm; chơi lại giải được (8.0s)
+  ✓   43 [iphone-se] › tests/e2e/level-3d-01.spec.ts:151:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ (9.4s)
+  ✓   44 [iphone-se] › tests/e2e/level-3d-01.spec.ts:238:1 › 3D-01: máy chậm tự hạ chất lượng và hướng dẫn tôn trọng giảm chuyển động (4.5s)
+  ✓   46 [iphone-se] › tests/e2e/level-3d-02.spec.ts:49:1 › 3D-02: kéo qua dép không lật, camera có giới hạn và reset đúng góc đầu (2.7s)
+  ✓   45 [iphone-se] › tests/e2e/level-3d-02.spec.ts:19:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (5.9s)
+  ✓   48 [iphone-se] › tests/e2e/level-3d-02.spec.ts:152:1 › 3D-02: chạm lệch tâm 20 px vẫn tìm được vật khi gần và xa (2.1s)
+  ✓   47 [iphone-se] › tests/e2e/level-3d-02.spec.ts:92:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (6.4s)
+  ✓   49 [iphone-se] › tests/e2e/level-3d-02.spec.ts:180:1 › 3D-02: máy chậm tự hạ chất lượng, giảm chuyển động và vẫn giải được (4.4s)
+  ✓   51 [iphone-se] › tests/e2e/level-3d-03.spec.ts:19:1 › 3D-03: nắp đóng giấu bánh; mở nắp chỉ thấy bốn; nghiêng thấy đủ năm (1.4s)
+  ✓   52 [iphone-se] › tests/e2e/level-3d-03.spec.ts:56:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng (1.4s)
+  ✓   53 [iphone-se] › tests/e2e/level-3d-03.spec.ts:121:1 › 3D-03: nhập bốn sai; chọn quai/nghiêng/nhập năm thắng bằng chạm; chơi lại đóng nắp (1.6s)
+  ✓   50 [iphone-se] › tests/e2e/level-3d-02.spec.ts:224:1 › 3D-02: đo tải 3D lần đầu và draw call trước/sau lật qua các góc (10.8s)
+  ✓   54 [iphone-se] › tests/e2e/level-3d-03.spec.ts:164:1 › 3D-03: tự hạ chất lượng vẫn giấu tầng dưới trước khi nghiêng và giải được (4.9s)
+  ✓   56 [iphone-se] › tests/e2e/navigation-recovery.spec.ts:12:1 › Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được (2.3s)
+  ✓   57 [iphone-se] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi trình duyệt chặn truy cập localStorage, có một dòng báo, không lỗi console (846ms)
+  ✓   58 [iphone-se] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi localStorage đầy dung lượng, có một dòng báo, không lỗi console (832ms)
+  ✓   59 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu không phải JSON: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓   60 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu đúng JSON nhưng sai kiểu: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓   61 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu phiên bản lạ: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓   62 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu giá trị rỗng: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+(node:55313) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   55 [iphone-se] › tests/e2e/level-3d-03.spec.ts:206:1 › 3D-03: đo tải 3D lần đầu và draw call qua ba trạng thái, các góc và khoảng cách (12.1s)
+(node:55318) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   64 [pixel-5] › tests/e2e/campaign-flow.spec.ts:185:1 › Chơi tiếp đưa về màn chưa xong đầu tiên (751ms)
+  ✓   65 [pixel-5] › tests/e2e/campaign-flow.spec.ts:204:1 › chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn (334ms)
+  ✓   66 [pixel-5] › tests/e2e/campaign-flow.spec.ts:226:1 › đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về (298ms)
+  ✓   67 [pixel-5] › tests/e2e/errors.spec.ts:15:1 › nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về chọn màn, chưa ghi level_start; mạng phục hồi rồi Thử lại thì chơi được (2.0s)
+  ✘   68 [pixel-5] › tests/e2e/gates.spec.ts:14:3 › cổng console và mạng (fixture guard) › console.error làm test thất bại (189ms)
+  ✘   69 [pixel-5] › tests/e2e/gates.spec.ts:21:3 › cổng console và mạng (fixture guard) › console.warn làm test thất bại (196ms)
+  ✘   70 [pixel-5] › tests/e2e/gates.spec.ts:28:3 › cổng console và mạng (fixture guard) › lỗi chưa bắt (pageerror) làm test thất bại (208ms)
+  ✘   71 [pixel-5] › tests/e2e/gates.spec.ts:39:3 › cổng console và mạng (fixture guard) › yêu cầu mạng trả mã ≥ 400 làm test thất bại (99ms)
+  ✓   72 [pixel-5] › tests/e2e/gates.spec.ts:52:3 › cổng console và mạng (fixture guard) › pageerror do WebKit hủy yêu cầu nạp trước (?_rsc=) không làm test thất bại (193ms)
+  ✓   73 [pixel-5] › tests/e2e/gates.spec.ts:66:3 › cổng console và mạng (fixture guard) › lỗi được cho phép bằng guard.allow thì không làm test thất bại (128ms)
+  ✘   74 [pixel-5] › tests/e2e/gates.spec.ts:76:3 › cổng console và mạng (fixture guard) › sự kiện đo lường sai cấu trúc làm test thất bại (136ms)
+  ✓   75 [pixel-5] › tests/e2e/gates.spec.ts:90:3 › cổng bố cục (findLayoutProblems) › bắt cuộn ngang, vùng chạm nhỏ và chữ nhỏ (92ms)
+  ✓   76 [pixel-5] › tests/e2e/gates.spec.ts:103:3 › cổng bố cục (findLayoutProblems) › bắt chữ tràn khỏi mép màn hình (91ms)
+  ✓   77 [pixel-5] › tests/e2e/gates.spec.ts:115:3 › cổng bố cục (findLayoutProblems) › trang đạt chuẩn thì không báo gì (91ms)
+  ✓   78 [pixel-5] › tests/e2e/gates.spec.ts:152:3 › cổng sự kiện đo lường (findEventProblems) › chuỗi hợp lệ không có vi phạm (73ms)
+  ✓   79 [pixel-5] › tests/e2e/gates.spec.ts:158:3 › cổng sự kiện đo lường (findEventProblems) › bắt trường lạ, thiếu trường và sai kiểu (74ms)
+  ✓   80 [pixel-5] › tests/e2e/gates.spec.ts:180:3 › cổng sự kiện đo lường (findEventProblems) › bắt vi phạm luồng bắt đầu → đúng một kết thúc (73ms)
+  ✓   81 [pixel-5] › tests/e2e/gates.spec.ts:200:3 › cổng sự kiện đo lường (findEventProblems) › bắt eventId trùng và tên sự kiện lạ (74ms)
+  ✓   82 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:12:1 › gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm (1.0s)
+  ✓   83 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:61:1 › xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn mở màn kế (886ms)
+  ✓   84 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:128:1 › chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đầu lượt mới (664ms)
+  ✓   85 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:163:1 › chơi lại từ màn kết quả bắt đầu lượt mới và đếm lại gợi ý từ 0 (907ms)
+  ✓   63 [pixel-5] › tests/e2e/campaign-flow.spec.ts:21:1 › trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ (10.2s)
+  ✓   87 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:216:1 › mã màn không có hiện trang "không tìm thấy", không sập (321ms)
+  ✓   86 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:198:1 › màn chưa mở không vào được và chỉ đường về màn đang chơi (619ms)
+  ✓   89 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:271:5 › nút Gợi ý khi người chơi bí › khi người dùng chọn giảm chuyển động › nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý (1.3s)
+  ✓   88 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:244:3 › nút Gợi ý khi người chơi bí › sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút (1.8s)
+  ✓   91 [pixel-5] › tests/e2e/level-2d-01.spec.ts:51:1 › 2D-01: kéo sai trả bao về; kéo đúng chưa thắng; chơi lại che bé và vẫn giải được (1.5s)
+  ✓   90 [pixel-5] › tests/e2e/level-2d-01.spec.ts:5:1 › 2D-01: bé khác chưa thắng; dời bao rồi chạm bé ẩn mới thắng bằng chạm (2.3s)
+  ✓   93 [pixel-5] › tests/e2e/level-2d-02.spec.ts:42:3 › 2D-02: chấp nhận " CON CUA " bằng ô nhập dùng bàn phím ảo (1.0s)
+  ✓   92 [pixel-5] › tests/e2e/level-2d-02.spec.ts:6:1 › 2D-02: cá, tôm và mặt nước chưa thắng; nhập cua thì thắng (1.6s)
+  ✓   94 [pixel-5] › tests/e2e/level-2d-02.spec.ts:42:3 › 2D-02: chấp nhận "CUA BE" bằng ô nhập dùng bàn phím ảo (1.1s)
+  ✓   95 [pixel-5] › tests/e2e/level-2d-02.spec.ts:42:3 › 2D-02: chấp nhận "cua đồng" bằng ô nhập dùng bàn phím ảo (1.1s)
+  ✓   96 [pixel-5] › tests/e2e/level-2d-03.spec.ts:6:1 › 2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qua đường (2.6s)
+  ✓   97 [pixel-5] › tests/e2e/level-2d-04.spec.ts:13:1 › 2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn giải bằng chạm cây (3.9s)
+  ✓   98 [pixel-5] › tests/e2e/level-2d-04.spec.ts:60:1 › 2D-04: bật cảm biến rồi mẫu lắc làm xoài rụng (1.8s)
+  ✓  100 [pixel-5] › tests/e2e/level-2d-04.spec.ts:108:1 › 2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm (1.9s)
+  ✓  101 [pixel-5] › tests/e2e/level-2d-05.spec.ts:6:1 › 2D-05: ba hướng đều chưa thắng; gà trống không đẻ trứng mới thắng (1.3s)
+  ✓   99 [pixel-5] › tests/e2e/level-2d-04.spec.ts:86:1 › 2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng dồn; đủ ba chạm nhanh thì thắng (5.1s)
+  ✓  103 [pixel-5] › tests/e2e/level-3d-01.spec.ts:43:1 › 3D-01: kéo đổi camera, giới hạn góc/zoom, reset khôi phục đúng góc ban đầu (3.1s)
+  ✓  102 [pixel-5] › tests/e2e/level-3d-01.spec.ts:17:1 › 3D-01: tải WebGL thật, góc đầu che số và hướng dẫn tự ẩn sau 5 giây (5.9s)
+  ✓  104 [pixel-5] › tests/e2e/level-3d-01.spec.ts:93:1 › 3D-01: sai có phản hồi, xoay ra sau và nhập 36 thắng chỉ bằng chạm; chơi lại giải được (8.9s)
+  ✓  105 [pixel-5] › tests/e2e/level-3d-01.spec.ts:151:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ (13.0s)
+  ✓  106 [pixel-5] › tests/e2e/level-3d-01.spec.ts:238:1 › 3D-01: máy chậm tự hạ chất lượng và hướng dẫn tôn trọng giảm chuyển động (5.5s)
+  ✓  108 [pixel-5] › tests/e2e/level-3d-02.spec.ts:49:1 › 3D-02: kéo qua dép không lật, camera có giới hạn và reset đúng góc đầu (3.5s)
+  ✓  107 [pixel-5] › tests/e2e/level-3d-02.spec.ts:19:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (5.9s)
+  ✓  110 [pixel-5] › tests/e2e/level-3d-02.spec.ts:152:1 › 3D-02: chạm lệch tâm 20 px vẫn tìm được vật khi gần và xa (2.2s)
+  ✓  109 [pixel-5] › tests/e2e/level-3d-02.spec.ts:92:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (6.7s)
+  ✓  111 [pixel-5] › tests/e2e/level-3d-02.spec.ts:180:1 › 3D-02: máy chậm tự hạ chất lượng, giảm chuyển động và vẫn giải được (4.8s)
+  ✓  113 [pixel-5] › tests/e2e/level-3d-03.spec.ts:19:1 › 3D-03: nắp đóng giấu bánh; mở nắp chỉ thấy bốn; nghiêng thấy đủ năm (1.7s)
+  ✓  114 [pixel-5] › tests/e2e/level-3d-03.spec.ts:56:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng (2.2s)
+  ✓  115 [pixel-5] › tests/e2e/level-3d-03.spec.ts:121:1 › 3D-03: nhập bốn sai; chọn quai/nghiêng/nhập năm thắng bằng chạm; chơi lại đóng nắp (2.8s)
+  ✓  112 [pixel-5] › tests/e2e/level-3d-02.spec.ts:224:1 › 3D-02: đo tải 3D lần đầu và draw call trước/sau lật qua các góc (14.5s)
+  ✓  116 [pixel-5] › tests/e2e/level-3d-03.spec.ts:164:1 › 3D-03: tự hạ chất lượng vẫn giấu tầng dưới trước khi nghiêng và giải được (5.5s)
+  ✓  118 [pixel-5] › tests/e2e/navigation-recovery.spec.ts:12:1 › Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được (2.8s)
+  ✓  119 [pixel-5] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi trình duyệt chặn truy cập localStorage, có một dòng báo, không lỗi console (903ms)
+  ✓  120 [pixel-5] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi localStorage đầy dung lượng, có một dòng báo, không lỗi console (896ms)
+  ✓  121 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu không phải JSON: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓  122 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu đúng JSON nhưng sai kiểu: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓  123 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu phiên bản lạ: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓  124 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu giá trị rỗng: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+(node:55490) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  117 [pixel-5] › tests/e2e/level-3d-03.spec.ts:206:1 › 3D-03: đo tải 3D lần đầu và draw call qua ba trạng thái, các góc và khoảng cách (14.8s)
+(node:55503) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  126 [mobile-360] › tests/e2e/campaign-flow.spec.ts:185:1 › Chơi tiếp đưa về màn chưa xong đầu tiên (794ms)
+  ✓  127 [mobile-360] › tests/e2e/campaign-flow.spec.ts:204:1 › chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn (292ms)
+  ✓  128 [mobile-360] › tests/e2e/campaign-flow.spec.ts:226:1 › đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về (291ms)
+  ✓  129 [mobile-360] › tests/e2e/errors.spec.ts:15:1 › nạp cảnh của màn thất bại: báo lỗi kèm Thử lại và Về chọn màn, chưa ghi level_start; mạng phục hồi rồi Thử lại thì chơi được (1.9s)
+  ✘  130 [mobile-360] › tests/e2e/gates.spec.ts:14:3 › cổng console và mạng (fixture guard) › console.error làm test thất bại (136ms)
+  ✘  131 [mobile-360] › tests/e2e/gates.spec.ts:21:3 › cổng console và mạng (fixture guard) › console.warn làm test thất bại (131ms)
+  ✘  132 [mobile-360] › tests/e2e/gates.spec.ts:28:3 › cổng console và mạng (fixture guard) › lỗi chưa bắt (pageerror) làm test thất bại (180ms)
+  ✘  133 [mobile-360] › tests/e2e/gates.spec.ts:39:3 › cổng console và mạng (fixture guard) › yêu cầu mạng trả mã ≥ 400 làm test thất bại (95ms)
+  ✓  134 [mobile-360] › tests/e2e/gates.spec.ts:52:3 › cổng console và mạng (fixture guard) › pageerror do WebKit hủy yêu cầu nạp trước (?_rsc=) không làm test thất bại (188ms)
+  ✓  135 [mobile-360] › tests/e2e/gates.spec.ts:66:3 › cổng console và mạng (fixture guard) › lỗi được cho phép bằng guard.allow thì không làm test thất bại (148ms)
+  ✘  136 [mobile-360] › tests/e2e/gates.spec.ts:76:3 › cổng console và mạng (fixture guard) › sự kiện đo lường sai cấu trúc làm test thất bại (143ms)
+  ✓  137 [mobile-360] › tests/e2e/gates.spec.ts:90:3 › cổng bố cục (findLayoutProblems) › bắt cuộn ngang, vùng chạm nhỏ và chữ nhỏ (87ms)
+  ✓  138 [mobile-360] › tests/e2e/gates.spec.ts:103:3 › cổng bố cục (findLayoutProblems) › bắt chữ tràn khỏi mép màn hình (87ms)
+  ✓  139 [mobile-360] › tests/e2e/gates.spec.ts:115:3 › cổng bố cục (findLayoutProblems) › trang đạt chuẩn thì không báo gì (87ms)
+  ✓  140 [mobile-360] › tests/e2e/gates.spec.ts:152:3 › cổng sự kiện đo lường (findEventProblems) › chuỗi hợp lệ không có vi phạm (72ms)
+  ✓  141 [mobile-360] › tests/e2e/gates.spec.ts:158:3 › cổng sự kiện đo lường (findEventProblems) › bắt trường lạ, thiếu trường và sai kiểu (105ms)
+  ✓  125 [mobile-360] › tests/e2e/campaign-flow.spec.ts:21:1 › trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ (10.1s)
+  ✓  143 [mobile-360] › tests/e2e/gates.spec.ts:200:3 › cổng sự kiện đo lường (findEventProblems) › bắt eventId trùng và tên sự kiện lạ (70ms)
+  ✓  142 [mobile-360] › tests/e2e/gates.spec.ts:180:3 › cổng sự kiện đo lường (findEventProblems) › bắt vi phạm luồng bắt đầu → đúng một kết thúc (103ms)
+  ✓  145 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:61:1 › xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn mở màn kế (894ms)
+  ✓  144 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:12:1 › gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm (1.0s)
+  ✓  146 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:128:1 › chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đầu lượt mới (672ms)
+  ✓  147 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:163:1 › chơi lại từ màn kết quả bắt đầu lượt mới và đếm lại gợi ý từ 0 (899ms)
+  ✓  148 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:198:1 › màn chưa mở không vào được và chỉ đường về màn đang chơi (602ms)
+  ✓  149 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:216:1 › mã màn không có hiện trang "không tìm thấy", không sập (324ms)
+  ✓  150 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:244:3 › nút Gợi ý khi người chơi bí › sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút (1.3s)
+  ✓  151 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:271:5 › nút Gợi ý khi người chơi bí › khi người dùng chọn giảm chuyển động › nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý (1.3s)
+  ✓  153 [mobile-360] › tests/e2e/level-2d-01.spec.ts:51:1 › 2D-01: kéo sai trả bao về; kéo đúng chưa thắng; chơi lại che bé và vẫn giải được (1.4s)
+  ✓  152 [mobile-360] › tests/e2e/level-2d-01.spec.ts:5:1 › 2D-01: bé khác chưa thắng; dời bao rồi chạm bé ẩn mới thắng bằng chạm (1.9s)
+  ✓  155 [mobile-360] › tests/e2e/level-2d-02.spec.ts:42:3 › 2D-02: chấp nhận " CON CUA " bằng ô nhập dùng bàn phím ảo (1.0s)
+  ✓  154 [mobile-360] › tests/e2e/level-2d-02.spec.ts:6:1 › 2D-02: cá, tôm và mặt nước chưa thắng; nhập cua thì thắng (1.5s)
+  ✓  156 [mobile-360] › tests/e2e/level-2d-02.spec.ts:42:3 › 2D-02: chấp nhận "CUA BE" bằng ô nhập dùng bàn phím ảo (1.0s)
+  ✓  157 [mobile-360] › tests/e2e/level-2d-02.spec.ts:42:3 › 2D-02: chấp nhận "cua đồng" bằng ô nhập dùng bàn phím ảo (1.0s)
+  ✓  158 [mobile-360] › tests/e2e/level-2d-03.spec.ts:6:1 › 2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qua đường (2.6s)
+  ✓  159 [mobile-360] › tests/e2e/level-2d-04.spec.ts:13:1 › 2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn giải bằng chạm cây (3.9s)
+  ✓  160 [mobile-360] › tests/e2e/level-2d-04.spec.ts:60:1 › 2D-04: bật cảm biến rồi mẫu lắc làm xoài rụng (1.8s)
+  ✓  162 [mobile-360] › tests/e2e/level-2d-04.spec.ts:108:1 › 2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm (1.9s)
+  ✓  163 [mobile-360] › tests/e2e/level-2d-05.spec.ts:6:1 › 2D-05: ba hướng đều chưa thắng; gà trống không đẻ trứng mới thắng (1.3s)
+  ✓  161 [mobile-360] › tests/e2e/level-2d-04.spec.ts:86:1 › 2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng dồn; đủ ba chạm nhanh thì thắng (5.1s)
+  ✓  165 [mobile-360] › tests/e2e/level-3d-01.spec.ts:43:1 › 3D-01: kéo đổi camera, giới hạn góc/zoom, reset khôi phục đúng góc ban đầu (3.1s)
+  ✓  164 [mobile-360] › tests/e2e/level-3d-01.spec.ts:17:1 › 3D-01: tải WebGL thật, góc đầu che số và hướng dẫn tự ẩn sau 5 giây (5.8s)
+  ✓  166 [mobile-360] › tests/e2e/level-3d-01.spec.ts:93:1 › 3D-01: sai có phản hồi, xoay ra sau và nhập 36 thắng chỉ bằng chạm; chơi lại giải được (9.1s)
+  ✓  167 [mobile-360] › tests/e2e/level-3d-01.spec.ts:151:1 › 3D-01: đo ngân sách toàn bộ lượt vẽ và tải 3D đầu tiên sau trang chủ (13.0s)
+  ✓  168 [mobile-360] › tests/e2e/level-3d-01.spec.ts:238:1 › 3D-01: máy chậm tự hạ chất lượng và hướng dẫn tôn trọng giảm chuyển động (5.5s)
+  ✓  170 [mobile-360] › tests/e2e/level-3d-02.spec.ts:49:1 › 3D-02: kéo qua dép không lật, camera có giới hạn và reset đúng góc đầu (3.5s)
+  ✓  169 [mobile-360] › tests/e2e/level-3d-02.spec.ts:19:1 › 3D-02: tải WebGL, góc đầu giấu chìa, hướng dẫn kéo tự ẩn (5.9s)
+  ✓  172 [mobile-360] › tests/e2e/level-3d-02.spec.ts:152:1 › 3D-02: chạm lệch tâm 20 px vẫn tìm được vật khi gần và xa (2.3s)
+  ✓  171 [mobile-360] › tests/e2e/level-3d-02.spec.ts:92:1 › 3D-02: ba chỗ sai có phản hồi, lật dép rồi chạm chìa mới thắng; chơi lại giấu chìa (6.7s)
+  ✓  173 [mobile-360] › tests/e2e/level-3d-02.spec.ts:180:1 › 3D-02: máy chậm tự hạ chất lượng, giảm chuyển động và vẫn giải được (4.8s)
+  ✓  175 [mobile-360] › tests/e2e/level-3d-03.spec.ts:19:1 › 3D-03: nắp đóng giấu bánh; mở nắp chỉ thấy bốn; nghiêng thấy đủ năm (1.6s)
+  ✓  176 [mobile-360] › tests/e2e/level-3d-03.spec.ts:56:1 › 3D-03: kéo nồi không xoay camera, hủy kéo phục hồi; xoay nền và reset đúng (1.9s)
+  ✓  177 [mobile-360] › tests/e2e/level-3d-03.spec.ts:121:1 › 3D-03: nhập bốn sai; chọn quai/nghiêng/nhập năm thắng bằng chạm; chơi lại đóng nắp (2.7s)
+  ✓  178 [mobile-360] › tests/e2e/level-3d-03.spec.ts:164:1 › 3D-03: tự hạ chất lượng vẫn giấu tầng dưới trước khi nghiêng và giải được (5.4s)
+  ✓  174 [mobile-360] › tests/e2e/level-3d-02.spec.ts:224:1 › 3D-02: đo tải 3D lần đầu và draw call trước/sau lật qua các góc (14.4s)
+  ✓  180 [mobile-360] › tests/e2e/navigation-recovery.spec.ts:12:1 › Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được (2.4s)
+  ✓  181 [mobile-360] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi trình duyệt chặn truy cập localStorage, có một dòng báo, không lỗi console (896ms)
+  ✓  182 [mobile-360] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi localStorage đầy dung lượng, có một dòng báo, không lỗi console (888ms)
+  ✓  183 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu không phải JSON: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓  184 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu đúng JSON nhưng sai kiểu: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓  185 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu phiên bản lạ: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓  186 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu giá trị rỗng: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✘  179 [mobile-360] › tests/e2e/level-3d-03.spec.ts:206:1 › 3D-03: đo tải 3D lần đầu và draw call qua ba trạng thái, các góc và khoảng cách (14.6s)
+
+
+  1) [iphone-se] › tests/e2e/level-3d-03.spec.ts:206:1 › 3D-03: đo tải 3D lần đầu và draw call qua ba trạng thái, các góc và khoảng cách 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('canvas')
+    Expected: "false"
+    Received: "true"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('canvas') with timeout 5000ms
+      - waiting for locator('canvas')
+        14 × locator resolved to <canvas width="504" height="377" data-polar="29.37" data-distance="6.50" data-draw-calls="34" data-triangles="912" data-azimuth="-10.00" data-bottom-visible="true" data-engine="three.js r182" data-visible-cakes="cake-1,cake-2,cake-3,cake-4,cake-5" data-target-lid="{"x":8.733632206423989,"y":34.80580719768648,"minSize":44}" data-target-pot-handle="{"x":253.15481623033605,"y":86.27593753428809,"minSize":44}">…</canvas>
+           - unexpected value "true"
+
+
+      298 |           });
+      299 |           if (phase === 'open')
+    > 300 |             await expect(canvas).toHaveAttribute(
+          |                                  ^
+      301 |               'data-bottom-visible',
+      302 |               'false',
+      303 |             );
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-3d-03.spec.ts:300:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [pixel-5] › tests/e2e/level-3d-03.spec.ts:206:1 › 3D-03: đo tải 3D lần đầu và draw call qua ba trạng thái, các góc và khoảng cách 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('canvas')
+    Expected: "false"
+    Received: "true"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('canvas') with timeout 5000ms
+      - waiting for locator('canvas')
+        14 × locator resolved to <canvas width="631" height="483" data-polar="29.37" data-distance="6.50" data-draw-calls="34" data-triangles="912" data-azimuth="-10.00" data-bottom-visible="true" data-engine="three.js r182" data-visible-cakes="cake-1,cake-2,cake-3,cake-4,cake-5" data-target-lid="{"x":7.365316543080913,"y":44.54982054985141,"minSize":44}" data-target-pot-handle="{"x":320.2131072867836,"y":110.42920260669041,"minSize":44}">…</canvas>
+           - unexpected value "true"
+
+
+      298 |           });
+      299 |           if (phase === 'open')
+    > 300 |             await expect(canvas).toHaveAttribute(
+          |                                  ^
+      301 |               'data-bottom-visible',
+      302 |               'false',
+      303 |             );
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-3d-03.spec.ts:300:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-360] › tests/e2e/level-3d-03.spec.ts:206:1 › 3D-03: đo tải 3D lần đầu và draw call qua ba trạng thái, các góc và khoảng cách 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('canvas')
+    Expected: "false"
+    Received: "true"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('canvas') with timeout 5000ms
+      - waiting for locator('canvas')
+        14 × locator resolved to <canvas width="574" height="425" data-polar="29.37" data-distance="6.50" data-draw-calls="34" data-triangles="912" data-azimuth="-10.00" data-bottom-visible="true" data-engine="three.js r182" data-visible-cakes="cake-1,cake-2,cake-3,cake-4,cake-5" data-target-lid="{"x":11.58663951790221,"y":39.21795288675834,"minSize":44}" data-target-pot-handle="{"x":286.99178743277713,"y":97.21267586937384,"minSize":44}">…</canvas>
+           - unexpected value "true"
+
+
+      298 |           });
+      299 |           if (phase === 'open')
+    > 300 |             await expect(canvas).toHaveAttribute(
+          |                                  ^
+      301 |               'data-bottom-visible',
+      302 |               'false',
+      303 |             );
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-3d-03.spec.ts:300:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-3d-03-3D-03-đo-tải-3-56679-thái-các-góc-và-khoảng-cách-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [iphone-se] › tests/e2e/level-3d-03.spec.ts:206:1 › 3D-03: đo tải 3D lần đầu và draw call qua ba trạng thái, các góc và khoảng cách 
+    [pixel-5] › tests/e2e/level-3d-03.spec.ts:206:1 › 3D-03: đo tải 3D lần đầu và draw call qua ba trạng thái, các góc và khoảng cách 
+    [mobile-360] › tests/e2e/level-3d-03.spec.ts:206:1 › 3D-03: đo tải 3D lần đầu và draw call qua ba trạng thái, các góc và khoảng cách 
+  183 passed (3.9m)

@@ -5,7 +5,16 @@ import { findLevel } from '@/levels';
 const source = readFileSync('docs/LEVELS.md', 'utf8');
 
 describe('nội dung màn sản phẩm khớp tài liệu thiết kế', () => {
-  for (const id of ['2d-01', '2d-02', '2d-03', '2d-04', '2d-05', '3d-01']) {
+  for (const id of [
+    '2d-01',
+    '2d-02',
+    '2d-03',
+    '2d-04',
+    '2d-05',
+    '3d-01',
+    '3d-02',
+    '3d-03',
+  ]) {
     it(`${id}: đúng đề, ba gợi ý, giải thích và độ khó`, () => {
       const row = source
         .split('\n')
