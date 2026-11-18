@@ -1,0 +1,13 @@
+.slip {
+  animation: slip 350ms ease-out;
+}
+@keyframes slip {
+  40% {
+    transform: translate(14px, -5px) rotate(3deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slip {
+    animation: none;
+  }
+}
