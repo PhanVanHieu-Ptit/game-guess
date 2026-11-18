@@ -10,9 +10,13 @@ import { meta as m6 } from './2d-07/meta';
 import { meta as m7 } from './2d-08/meta';
 import { meta as m8 } from './2d-09/meta';
 import { meta as m9 } from './2d-10/meta';
-import { meta as m10 } from './3d-01/meta';
-import { meta as m11 } from './3d-02/meta';
-import { meta as m12 } from './3d-03/meta';
+import { meta as m10 } from './2d-11/meta';
+import { meta as m11 } from './2d-12/meta';
+import { meta as m12 } from './2d-13/meta';
+import { meta as m13 } from './2d-14/meta';
+import { meta as m14 } from './3d-01/meta';
+import { meta as m15 } from './3d-02/meta';
+import { meta as m16 } from './3d-03/meta';
 
 const entries = [
   { directory: '2d-01', meta: m0 },
@@ -25,9 +29,13 @@ const entries = [
   { directory: '2d-08', meta: m7 },
   { directory: '2d-09', meta: m8 },
   { directory: '2d-10', meta: m9 },
-  { directory: '3d-01', meta: m10 },
-  { directory: '3d-02', meta: m11 },
-  { directory: '3d-03', meta: m12 },
+  { directory: '2d-11', meta: m10 },
+  { directory: '2d-12', meta: m11 },
+  { directory: '2d-13', meta: m12 },
+  { directory: '2d-14', meta: m13 },
+  { directory: '3d-01', meta: m14 },
+  { directory: '3d-02', meta: m15 },
+  { directory: '3d-03', meta: m16 },
 ];
 for (const { directory, meta } of entries) {
   if (directory !== meta.id)
