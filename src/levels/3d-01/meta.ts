@@ -2,8 +2,8 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '3d-01',
-  // Màn thứ 6 trong bản đang có; vị trí #8 của bộ đủ 25 màn sau khi thêm 2D-06/07.
-  ordinal: 6,
+  // Vị trí #8 chính thức của bộ đủ 25 màn sau khi có 2D-06 và 2D-07.
+  ordinal: 8,
   kind: '3d',
   title: 'Nhà số mấy?',
   prompt: 'Shipper đang tìm nhà, mặt tiền không thấy số. Nhà số mấy?',
