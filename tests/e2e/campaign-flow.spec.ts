@@ -9,6 +9,11 @@ import { solution as level02 } from './solutions/2d-02';
 import { solution as level03 } from './solutions/2d-03';
 import { solution as level04 } from './solutions/2d-04';
 import { solution as level05 } from './solutions/2d-05';
+import { solution as level06 } from './solutions/2d-06';
+import { solution as level07 } from './solutions/2d-07';
+import { solution as level08 } from './solutions/2d-08';
+import { solution as level09 } from './solutions/2d-09';
+import { solution as level10 } from './solutions/2d-10';
 import { solution as level3d01 } from './solutions/3d-01';
 import { solution as level3d02 } from './solutions/3d-02';
 import { solution as level3d03 } from './solutions/3d-03';
@@ -130,7 +135,12 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
     level03,
     level04,
     level05,
+    level06,
+    level07,
     level3d01,
+    level08,
+    level09,
+    level10,
     level3d02,
     level3d03,
   ]) {

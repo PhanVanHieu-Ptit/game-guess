@@ -2,8 +2,8 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '3d-03',
-  // Màn thứ 8 trong bản hiện có; vị trí #17 khi đủ các màn 2D xen kẽ.
-  ordinal: 8,
+  // Màn thứ 13 trong bản hiện có; vị trí #17 khi đủ các màn 2D xen kẽ.
+  ordinal: 13,
   kind: '3d',
   title: 'Nồi bánh chưng có mấy cái?',
   prompt: 'Nồi bánh chưng ngày Tết. Trong nồi có mấy cái bánh?',

@@ -2,7 +2,7 @@
 
 Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/backlog.md](../docs/backlog.md) v2.1 (cập nhật 2026-11-10, sha256 `3dda35d427a0`). File gốc giữ nguyên, không sửa; khi nó đổi, `/docmoi` so hash và đề xuất cập nhật ở đây. Mã story giữ ổn định: LL-001…LL-051 (story mới từ LL-052).
 
-- **Cập nhật gần nhất:** 2026-11-17 (riêng 3D-03: Chờ duyệt; LL-044 có kịch bản 3D-02/03).
+- **Cập nhật gần nhất:** 2026-11-18 (lô 2D-06…10: Chờ duyệt; 3D-01…03 và 2D-01…05 trước đó).
 - **Trạng thái story:** Chưa làm → Đang làm → Chờ duyệt → Xong (hoặc Chặn). *Xong* theo DoD tạm ở [HO_SO.md](HO_SO.md) mục 2.
 - **Sẵn sàng = Có** khi đủ 4 điều kiện: mô tả rõ, có tiêu chí nghiệm thu kiểm tra được, đã ước lượng, không bị câu hỏi mở chặn. Thứ tự bảng là thứ tự làm, từ trên xuống.
 - **Điểm:** 1-2-3-5-8-13, trên 8 phải chia nhỏ (hiện không story nào vượt 8). Thang tương đối, tạm quy 1 điểm ≈ ½ ngày công một người (giả định).
@@ -11,8 +11,8 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 ## Tóm tắt
 
 - **51 story · 211 điểm** · Must 44 (192 đ) · Should 6 (17 đ) · Could 1 (2 đ) · Won't 0 (đã chốt, không ước lượng).
-- **Sẵn sàng:** 33 story "Có" (123 đ) · 18 story "Chưa" (88 đ). Nguyên nhân "Chưa": Q6 hoặc Q10 chặn 10 story (60 đ ≈ 28,4% tổng); Q3 chặn 3 (11 đ); Q5 chặn 3 (9 đ); Q4 chặn 1 (3 đ); Q11 chặn 1 (5 đ). Q6/Q10 đã có phạm vi cụ thể cho riêng 3D-01…03.
-- **Tiến độ:** Chưa làm 40 · Đang làm 2 · Chờ duyệt 9 · Xong 0 → **0 / 211 điểm xong**.
+- **Sẵn sàng:** 35 story "Có" (136 đ) · 16 story "Chưa" (75 đ).
+- **Tiến độ:** Chưa làm 38 · Đang làm 2 · Chờ duyệt 11 · Xong 0 → **0 / 211 điểm xong**.
 - **Dự báo thô (giả định, chưa có hạn chót — Q1):** 211 điểm ÷ 20 điểm/sprint ≈ 10,6 sprint; ÷ 18 điểm (cam kết 90%) ≈ 11,7 sprint. Nếu Sprint 1 bắt đầu thứ Hai 16/11/2026 thì xong sau 11–12 sprint, tức khoảng **29/01–05/02/2027**, chưa trừ nghỉ lễ và chưa tính lỗi phát sinh.
 
 ## Epic
@@ -26,6 +26,29 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 - **E7 Chất lượng** — giấy phép, kiểm thử, sửa lỗi, tối ưu tải, đo lường, ghi công (8 · 28)
 
 ## 1. Bảng backlog
+
+### Lô 2D-06…10 được giao ngày 18/11/2026
+
+**Trạng thái: Chờ duyệt (`in_review`).** Thực hiện 5 màn 2D tiếp theo theo `docs/LEVELS.md`, vẽ SVG trong code với phong cách nét tròn, màu tươi đồng bộ với các màn trước, dùng lại khung màn chơi và hook thao tác có sẵn. LL-011 (dựng màn lô 2) và LL-030 (kịch bản/đồ họa lô 2) chuyển sang Chờ duyệt; không tự cộng điểm hoàn thành hoặc đổi baseline.
+
+| Mã | Tên | Trạng thái | Kiểm chứng hành vi |
+|---|---|---|---|
+| 2D-06 | Chạm vào con cá | Chờ duyệt | Chạm ao/sen/cần câu không thắng và có phản hồi riêng; chạm chữ "các" ở dòng đề thì thắng |
+| 2D-07 | Hai quả cam | Chờ duyệt | Chọn quả trái/phải/không biết chưa thắng; kéo chồng quả trái lên quả phải vừa khít, chọn Bằng nhau thì thắng |
+| 2D-08 | Bật mí bí mật | Chờ duyệt | Gõ bí mật/mật bí hoặc chạm rương chưa thắng; gõ bật mí (chấp nhận không dấu, hoa/thường) thì thắng |
+| 2D-09 | Bài kiểm tra 5 phút | Chờ duyệt | Điền câu 1-6 rồi nộp bị báo làm thừa và làm lại; chạm Nộp bài ngay khi chưa điền gì thì thắng |
+| 2D-10 | Đàn vịt | Chờ duyệt | Gõ 6 báo đếm trùng, gõ số khác hoặc chạm vịt chưa thắng; gõ 4 (hoặc bốn/4 con) thì thắng |
+
+Đã làm và kiểm thử riêng từng màn với Playwright trên iPhone SE (WebKit 320×568), Pixel 5 và mobile 360 trước khi chuyển màn tiếp theo. Mọi đề bài, 3 gợi ý và câu giải thích khớp 100% với `docs/LEVELS.md`. Bộ hồi quy chiến dịch (`campaign-flow.spec.ts`) đã cập nhật và chạy thông suốt cả 13 màn hiện có.
+
+**Đánh giá độ khó và điểm cần lưu ý:**
+- **2D-06 (Chạm vào con cá) dễ gây tranh cãi nhất:** Trong tranh không có cá, đáp án nằm ở chữ "các" trên dòng đề bài (chữ "cá" nằm trong chữ "các"). Người chơi có thể cảm thấy bất ngờ hoặc "bị lừa" vì tương tác nằm ngoài khung tranh; tuy nhiên đây là màn chơi chữ/đố mẹo phá vỡ quy ước kinh điển ("đề bài cũng là một phần của sân chơi").
+- **2D-09 (Bài kiểm tra 5 phút) có thể gây ức chế nếu không đọc kỹ:** Đòi hỏi người chơi kiềm chế thói quen làm bài ngay từ câu đầu; ai vội vàng điền đáp án sẽ bị báo "Làm thừa rồi!". Rất đúng với tinh thần "đọc kỹ đề".
+- **2D-07 (Hai quả cam):** Dựa trên ảo giác Ebbinghaus nổi tiếng. Việc cho phép kéo chồng quả trái lên quả phải để thấy vừa khít giúp người chơi tự kiểm chứng trước khi chọn "Bằng nhau".
+- **2D-08 (Bật mí bí mật):** Nói lái dân gian thân thuộc, ô nhập chữ hỗ trợ không dấu, hoa/thường và khoảng trắng.
+- **2D-10 (Đàn vịt):** Câu đố dân gian quen thuộc, người đã biết sẽ giải được ngay; người chưa biết thường đếm thành 6.
+
+Đề xuất commit: `feat: thêm 5 màn 2D tiếp theo (2D-06...2D-10) của Lắt Léo`.
 
 ### Riêng 3D-03 được duyệt ngày 17/11/2026
 
@@ -156,8 +179,8 @@ Mỗi màn đã được làm và kiểm riêng trước khi sang màn tiếp th
 | [LL-007] | E2 Khung chơi | Là người chơi, tôi muốn game nhớ các màn đã qua để lần sau chơi tiếp mà không làm lại từ đầu. | 5 | Must | LL-002, LL-005, LL-006 | Chưa làm | Có |
 | [LL-048] | E2 Khung chơi | Là người chơi, tôi muốn khi có lỗi (mạng, dữ liệu, lỗi trong màn) game báo rõ và cho thử lại hoặc về chọn màn để không gặp trang trắng. | 3 | Must | LL-005 | Chưa làm | Có |
 | [LL-025] | E5 Giao diện | Là người chơi, tôi muốn trang chọn màn và khung chơi dùng thoải mái trên cả điện thoại lẫn máy tính để chơi ở bất cứ đâu. | 3 | Must | LL-005, LL-006, LL-023 | Chưa làm | Có |
-| [LL-030] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 2 để dựng màn mà không phải đoán ý. [CẦN LÀM RÕ: Q6, Q10] | 5 | Must | LL-023, LL-028 | Chưa làm | Chưa |
-| [LL-011] | E3 2D | Là người chơi, tôi muốn chơi lô 2 (2D-06…10) để gặp những mẹo khó dần, buộc phải nghĩ lệch hướng. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-009, LL-030, LL-043 | Chưa làm | Chưa |
+| [LL-030] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 2 để dựng màn mà không phải đoán ý. [CẦN LÀM RÕ: Q6, Q10] | 5 | Must | LL-023, LL-028 | Chờ duyệt (lô 2, bằng chứng 18/11) | Có |
+| [LL-011] | E3 2D | Là người chơi, tôi muốn chơi lô 2 (2D-06…10) để gặp những mẹo khó dần, buộc phải nghĩ lệch hướng. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-009, LL-030, LL-043 | Chờ duyệt (lô 2, bằng chứng 18/11) | Có |
 | [LL-044] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có kịch bản chi tiết 4 màn 3D còn lại (3D-02…05) để dựng đúng và ước lượng lại chính xác. | 3 | Must | LL-028 | Đang làm (3D-02/03; 3D-04/05 chưa làm) | Có |
 | [LL-045] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-02 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 3 | Must | LL-016, LL-044 | Chờ duyệt (mô hình bằng code, 17/11) | Có |
 | [LL-018] | E4 3D | Là người chơi, tôi muốn chơi màn 3D-02 để giải một câu đố hack não trong không gian 3D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-015, LL-016, LL-045 | Chờ duyệt (3D-02, bằng chứng 17/11) | Có |

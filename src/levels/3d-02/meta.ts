@@ -2,8 +2,8 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '3d-02',
-  // Thứ 7 trong bản hiện có; vị trí thiết kế #13 khi đủ các màn 2D xen kẽ.
-  ordinal: 7,
+  // Thứ 12 trong bản hiện có; vị trí thiết kế #13 khi có 2D-11 xen kẽ.
+  ordinal: 12,
   kind: '3d',
   title: 'Tìm chìa khóa xe máy',
   prompt: 'Sắp trễ giờ! Chìa khóa xe máy đâu rồi?',
