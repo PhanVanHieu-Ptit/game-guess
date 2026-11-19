@@ -14,6 +14,20 @@ import { solution as level07 } from './solutions/2d-07';
 import { solution as level08 } from './solutions/2d-08';
 import { solution as level09 } from './solutions/2d-09';
 import { solution as level10 } from './solutions/2d-10';
+import { solution as level11 } from './solutions/2d-11';
+import { solution as level12 } from './solutions/2d-12';
+import { solution as level13 } from './solutions/2d-13';
+import { solution as level14 } from './solutions/2d-14';
+import { solution as level15 } from './solutions/2d-15';
+import { solution as level16 } from './solutions/2d-16';
+import { solution as level17 } from './solutions/2d-17';
+import { solution as level18 } from './solutions/2d-18';
+import { solution as level19 } from './solutions/2d-19';
+import { solution as level20 } from './solutions/2d-20';
+import { solution as level21 } from './solutions/2d-21';
+import { solution as level22 } from './solutions/2d-22';
+import { solution as level23 } from './solutions/2d-23';
+import { solution as level24 } from './solutions/2d-24';
 import { solution as level3d01 } from './solutions/3d-01';
 import { solution as level3d02 } from './solutions/3d-02';
 import { solution as level3d03 } from './solutions/3d-03';
@@ -29,6 +43,7 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
   guard,
   browserName,
 }, testInfo) => {
+  test.setTimeout(120_000);
   // Chromium headless báo khi chụp framebuffer của cảnh 3D.
   if (browserName === 'chromium')
     guard.allow(/GL Driver Message .*GPU stall due to ReadPixels/);
@@ -141,8 +156,22 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
     level08,
     level09,
     level10,
+    level11,
     level3d02,
+    level12,
+    level13,
+    level14,
     level3d03,
+    level15,
+    level16,
+    level17,
+    level18,
+    level19,
+    level20,
+    level21,
+    level22,
+    level23,
+    level24,
   ]) {
     await result.next(page).tap();
     await expect(page).toHaveURL(`/play/${level.meta.id}`);

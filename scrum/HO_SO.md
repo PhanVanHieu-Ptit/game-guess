@@ -1,6 +1,6 @@
 # Hồ sơ dự án — Lắt Léo
 
-> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-17.
+> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-19.
 > Đây là bộ nhớ của dự án: mục tiêu, giả định, điểm lệch, câu hỏi chờ, quyết định. Backlog: [BACKLOG.md](BACKLOG.md) · Sprint: [SPRINT.md](SPRINT.md) · Lịch sử: [LICH_SU.md](LICH_SU.md).
 
 ## 1. Nguồn đã đọc (chỉ đọc, không sửa)
@@ -26,6 +26,8 @@
 | Bằng chứng | [docs/evidence/LL-001-T02.md](../docs/evidence/LL-001-T02.md) | `4d126b7c76bf` | bằng chứng task thứ hai (đang chờ bạn duyệt) |
 
 ## 2. Hồ sơ dự án
+
+**Phạm vi mới ngày 19/11/2026 — 2D-20 và bốn đề bổ sung:** khi nhận việc đã có 2D-01…19, trong đó 2D-15…19 chưa commit. Người dùng chọn “Làm 2D-20 và bổ sung 4 đề 2D mới sau khi thống nhất”, sau đó duyệt cả bốn đề 2D-21…24 bằng “Duyệt cả bốn đề, triển khai lần lượt”. Các đề/ba gợi ý/giải thích bổ sung đã ghi vào LEVELS mục 6 trước khi dựng. Đã làm và kiểm riêng từng màn, dùng khung/hook hiện có và SVG tự vẽ; kiểm chứng ở [E3-2D-20-24.md](../docs/evidence/E3-2D-20-24.md). Từng màn và LL-013/032 **Chờ duyệt (`in_review`)**, chưa commit hoặc đặt Xong. Bốn màn mới là phạm vi bổ sung ngoài 25 màn MVP, không đổi GDD hoặc baseline 51 story/147 task. Hiện có 27 màn (24 2D + 3 3D); 3D-04/05 vẫn chưa dựng. Ordinal 2D-20…24 tạm là 23…27, sẽ theo vị trí 24/26…29 khi đủ hai màn 3D còn lại. Giữ nguyên phần 2D-15…19 đã có; chưa cộng điểm hoặc velocity.
 
 **Phạm vi mới ngày 17/11/2026 — chỉ 3D-03 “Nồi bánh chưng có mấy cái?”:** người dùng xem lại đề/cơ chế/lời giải và phương án cảnh, trả lời **“oke”** để duyệt. Thêm nồi/nắp, bánh chưng và bệ gạch low-poly vào thư viện chung; chạm mở nắp thấy bốn bánh, kéo nghiêng nồi thấy bánh thứ năm có sẵn dưới đáy, nhập **5** thắng. Dùng Scene3D, vùng chạm ≥44 px, kiểm góc nhìn, bàn phím số đổi nhãn và cơ chế kéo vật tách khỏi camera. LL-046/019 bàn giao **Chờ duyệt (`in_review`)**; LL-044 mới có kịch bản 3D-02/03, còn 3D-04/05. Catalog tám màn dùng `3d-03.ordinal=8`, thiết kế đầy đủ vẫn #17, mã tiến trình `3d-03` giữ nguyên. [Bằng chứng](../docs/evidence/E4-3D-03.md). Giữ phần 3D-02 chưa commit của lượt trước; không tự commit, đặt Xong hoặc cộng velocity.
 
@@ -104,6 +106,7 @@
 
 | Ngày | Quyết định / sự kiện | Nguồn |
 |---|---|---|
+| 2026-11-19 | Người dùng thống nhất làm 2D-20 và thêm bốn đề mới, rồi duyệt cả 2D-21…24 để triển khai lần lượt. Ghi nội dung bổ sung trong LEVELS mục 6; phạm vi ngoài MVP, không tự đổi GDD/51 story/147 task. Các màn và LL-013/032 Chờ duyệt; chưa tự commit hoặc đặt Xong. | Hai câu trả lời trực tiếp trong phiên; [E3-2D-20-24.md](../docs/evidence/E3-2D-20-24.md) |
 | 2026-11-17 | Người dùng duyệt phương án 3D-03 bằng “oke”; chỉ dựng màn này. Nghiêng nồi bằng kéo trên màn hình hoặc chọn quai/chạm nút, không dùng cảm biến; thắng bằng nhập 5. Mô hình bằng code và cơ chế kéo dùng chung. LL-044 mới có 2/4 kịch bản, còn 3D-04/05. Ngân sách <50 draw call/frame, <1 MB tải thêm gồm gói 3D chung; đo bằng trình duyệt tự động. | Yêu cầu trực tiếp; [E4-3D-03.md](../docs/evidence/E4-3D-03.md) |
 | 2026-11-17 | Người dùng duyệt phương án 3D-02 bằng “oke”; chỉ triển khai màn này, mô hình bằng code dùng chung, hai bước lật dép/nhặt chìa. Ngân sách <50 draw call/frame, <1 MB tải thêm; số đo trình duyệt tự động, chưa đo điện thoại thật. LL-044 chỉ có phần 3D-02, không coi cả bốn kịch bản đã xong. | Yêu cầu trực tiếp; [E4-3D-02.md](../docs/evidence/E4-3D-02.md) |
 | 2026-11-16 | Người dùng yêu cầu chỉ làm màn 3D tiếp theo, duyệt phương án bằng “tiếp tục”. Thực hiện riêng 3D-01; mô hình bằng hình khối trong code thay tài nguyên glTF của baseline cũ. Ngân sách của lượt này: <50 draw call/frame và <1 MB tải thêm, gồm gói 3D chung ở lần đầu. Đo ở trình duyệt tự động; chưa có số đo điện thoại thật. | Yêu cầu trực tiếp; [E4-3D-01.md](../docs/evidence/E4-3D-01.md) |

@@ -45,6 +45,7 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
         <path d="M180 55h145m-122 14h95" stroke="#e4c98a" strokeWidth={6} />
         <g
           {...ash.targetProps}
+          aria-disabled={false}
           aria-label="Bàn tay"
           data-touch-target
           onClick={() =>

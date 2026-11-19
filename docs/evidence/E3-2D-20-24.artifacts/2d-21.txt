@@ -1,0 +1,54 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test tests/e2e/level-2d-21.spec.ts tests/e2e/levels-2d-20-24-hints.spec.ts --grep 2D-21|2d-21 --workers=3
+
+[WebServer] (node:44229) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:44253) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:44271) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:44269) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:44266) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:44268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:44270) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:44267) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:44272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:44298) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 3 workers
+
+(node:44299) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:44300) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:44301) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [iphone-se] › tests/e2e/level-2d-21.spec.ts:53:1 › 2D-21: kéo rèm tới giường trả về, kéo vào cửa sổ mới thắng (1.2s)
+(node:44338) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [iphone-se] › tests/e2e/levels-2d-20-24-hints.spec.ts:10:3 › 2d-21: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.4s)
+(node:44340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [pixel-5] › tests/e2e/level-2d-21.spec.ts:53:1 › 2D-21: kéo rèm tới giường trả về, kéo vào cửa sổ mới thắng (876ms)
+  ✓  3 [iphone-se] › tests/e2e/level-2d-21.spec.ts:6:1 › 2D-21: đèn, trăng và giường chưa thắng; chạm dời rèm che cửa sổ rồi chơi lại (2.8s)
+(node:44349) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [pixel-5] › tests/e2e/level-2d-21.spec.ts:6:1 › 2D-21: đèn, trăng và giường chưa thắng; chạm dời rèm che cửa sổ rồi chơi lại (2.5s)
+  ✓  6 [pixel-5] › tests/e2e/levels-2d-20-24-hints.spec.ts:10:3 › 2d-21: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.4s)
+(node:44354) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:44355) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  8 [mobile-360] › tests/e2e/level-2d-21.spec.ts:53:1 › 2D-21: kéo rèm tới giường trả về, kéo vào cửa sổ mới thắng (859ms)
+  ✓  9 [mobile-360] › tests/e2e/levels-2d-20-24-hints.spec.ts:10:3 › 2d-21: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (984ms)
+  ✓  7 [mobile-360] › tests/e2e/level-2d-21.spec.ts:6:1 › 2D-21: đèn, trăng và giường chưa thắng; chạm dời rèm che cửa sổ rồi chơi lại (2.9s)
+
+  9 passed (11.5s)
