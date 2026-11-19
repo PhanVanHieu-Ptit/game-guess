@@ -1,0 +1,5 @@
+2d-20: 21m1t07xs_mp1.js, riêng JS gzip 3357 byte
+2d-21: 1a-rh01th4gy6.js, riêng JS gzip 3024 byte
+2d-22: 1dt4hxjdtkedu.js, riêng JS gzip 1906 byte
+2d-23: 0wa8165kb08tr.js, riêng JS gzip 3378 byte
+2d-24: 2yd4y_jd58dn2.js, riêng JS gzip 2093 byte

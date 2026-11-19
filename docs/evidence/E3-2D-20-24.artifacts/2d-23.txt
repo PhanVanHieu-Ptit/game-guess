@@ -1,0 +1,56 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test tests/e2e/level-2d-23.spec.ts tests/e2e/levels-2d-20-24-hints.spec.ts --grep 2D-23|2d-23 --workers=3
+
+[WebServer] (node:45227) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45251) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45262) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45263) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45265) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45261) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45266) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45267) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45292) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 3 workers
+
+(node:45294) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:45293) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:45295) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [iphone-se] › tests/e2e/level-2d-23.spec.ts:76:1 › 2D-23: kéo đá sang cốc khác trả về, kéo ra khay không tự thắng (1.4s)
+  ✓  1 [iphone-se] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-23: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.6s)
+(node:45331) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:45332) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [iphone-se] › tests/e2e/level-2d-23.spec.ts:6:1 › 2D-23: đáp án sai không phạt; lấy đá ra thấy mực nước đổi rồi chọn phải (2.0s)
+(node:45341) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 [pixel-5] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-23: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (985ms)
+  ✓  5 [pixel-5] › tests/e2e/level-2d-23.spec.ts:76:1 › 2D-23: kéo đá sang cốc khác trả về, kéo ra khay không tự thắng (1.5s)
+  ✓  4 [pixel-5] › tests/e2e/level-2d-23.spec.ts:6:1 › 2D-23: đáp án sai không phạt; lấy đá ra thấy mực nước đổi rồi chọn phải (1.6s)
+(node:45347) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:45348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:45349) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  8 [mobile-360] › tests/e2e/level-2d-23.spec.ts:76:1 › 2D-23: kéo đá sang cốc khác trả về, kéo ra khay không tự thắng (960ms)
+  ✓  9 [mobile-360] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-23: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (995ms)
+  ✓  7 [mobile-360] › tests/e2e/level-2d-23.spec.ts:6:1 › 2D-23: đáp án sai không phạt; lấy đá ra thấy mực nước đổi rồi chọn phải (1.6s)
+
+  9 passed (10.7s)

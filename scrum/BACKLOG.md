@@ -2,7 +2,7 @@
 
 Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/backlog.md](../docs/backlog.md) v2.1 (cập nhật 2026-11-10, sha256 `3dda35d427a0`). File gốc giữ nguyên, không sửa; khi nó đổi, `/docmoi` so hash và đề xuất cập nhật ở đây. Mã story giữ ổn định: LL-001…LL-051 (story mới từ LL-052).
 
-- **Cập nhật gần nhất:** 2026-11-18 (lô 2D-06…10: Chờ duyệt; 3D-01…03 và 2D-01…05 trước đó).
+- **Cập nhật gần nhất:** 2026-11-19 (2D-20…24: Chờ duyệt; đủ 20 màn 2D MVP và thêm 4 màn được duyệt riêng).
 - **Trạng thái story:** Chưa làm → Đang làm → Chờ duyệt → Xong (hoặc Chặn). *Xong* theo DoD tạm ở [HO_SO.md](HO_SO.md) mục 2.
 - **Sẵn sàng = Có** khi đủ 4 điều kiện: mô tả rõ, có tiêu chí nghiệm thu kiểm tra được, đã ước lượng, không bị câu hỏi mở chặn. Thứ tự bảng là thứ tự làm, từ trên xuống.
 - **Điểm:** 1-2-3-5-8-13, trên 8 phải chia nhỏ (hiện không story nào vượt 8). Thang tương đối, tạm quy 1 điểm ≈ ½ ngày công một người (giả định).
@@ -11,8 +11,8 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 ## Tóm tắt
 
 - **51 story · 211 điểm** · Must 44 (192 đ) · Should 6 (17 đ) · Could 1 (2 đ) · Won't 0 (đã chốt, không ước lượng).
-- **Sẵn sàng:** 35 story "Có" (136 đ) · 16 story "Chưa" (75 đ).
-- **Tiến độ:** Chưa làm 38 · Đang làm 2 · Chờ duyệt 11 · Xong 0 → **0 / 211 điểm xong**.
+- **Sẵn sàng:** 39 story "Có" (162 đ) · 12 story "Chưa" (49 đ).
+- **Tiến độ:** Chưa làm 34 · Đang làm 2 · Chờ duyệt 15 · Xong 0 → **0 / 211 điểm xong**. Bốn màn bổ sung theo yêu cầu trực tiếp được theo dõi riêng, chưa gán điểm story hoặc đổi baseline.
 - **Dự báo thô (giả định, chưa có hạn chót — Q1):** 211 điểm ÷ 20 điểm/sprint ≈ 10,6 sprint; ÷ 18 điểm (cam kết 90%) ≈ 11,7 sprint. Nếu Sprint 1 bắt đầu thứ Hai 16/11/2026 thì xong sau 11–12 sprint, tức khoảng **29/01–05/02/2027**, chưa trừ nghỉ lễ và chưa tính lỗi phát sinh.
 
 ## Epic
@@ -26,6 +26,61 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 - **E7 Chất lượng** — giấy phép, kiểm thử, sửa lỗi, tối ưu tải, đo lường, ghi công (8 · 28)
 
 ## 1. Bảng backlog
+
+### Phạm vi 2D-20…24 được thống nhất ngày 19/11/2026
+
+**Trạng thái từng màn: Chờ duyệt (`in_review`).** Khi nhận việc đã có 2D-01…19, nên trong LEVELS chỉ còn 2D-20 chưa dựng. Chủ dự án chọn **“Làm 2D-20 và bổ sung 4 đề 2D mới sau khi thống nhất”**, rồi duyệt cả bốn đề bằng **“Duyệt cả bốn đề, triển khai lần lượt”**. Đã bổ sung đề/cách giải/ba gợi ý/giải thích của 2D-21…24 tại LEVELS mục 6 trước khi triển khai. Mỗi màn được kiểm riêng, đạt rồi mới sang màn tiếp.
+
+| Mã | Tên | Trạng thái | Kiểm chứng hành vi |
+|---|---|---|---|
+| 2D-20 | Ba túi nhãn nhầm | Chờ duyệt | Hai cách xếp ngẫu nhiên; lấy đúng một quả ở túi nhãn hỗn hợp, đủ ba nhãn mới thắng; kéo sai hồi về; chơi lại có thể đổi cách xếp |
+| 2D-21 | Tắt đèn cho bé ngủ | Chờ duyệt | Chạm chọn/kéo rèm che cửa sổ thắng; đèn, trăng, giường và kéo lệch chưa thắng; chơi lại mở rèm |
+| 2D-22 | Cái bóng đi lạc | Chờ duyệt | Chỉ bóng nối chân và đổ sang trái thắng; hai bóng sai hướng, mặt trời hoặc bé chưa thắng |
+| 2D-23 | Cốc nào nhiều nước hơn? | Chờ duyệt | Lấy đá bằng kéo/chạm làm mực nước hạ; chọn cốc phải thắng, kể cả suy luận ngay; chọn trái/bằng nhau/không thể biết chưa thắng |
+| 2D-24 | Qua cổng hội chợ | Chờ duyệt | Ba biển dễ đọc; chỉ A làm đúng một biển đúng; B/C chưa thắng và được thử lại; giải được từ hình hoặc nút có nội dung biển |
+
+SVG tự vẽ cùng nét tròn, màu tươi và nhân vật có sẵn của dự án; không ảnh/nhân vật thương hiệu, không thêm thư viện. Dùng `PuzzleArt`, `ArtButton`, `Kid`, `usePuzzleFeedback`, `useDrag` và khung chơi hiện có. Thêm CSS tùy chọn cho các màn mới: nền SVG cho vuốt dọc để tiếp cận điều khiển trên màn nhỏ, vật kéo vẫn khóa cuộn. Không viết lại khung/hook hoặc thay cách hoạt động của màn cũ.
+
+**Trạng thái story:** LL-013/032 → Chờ duyệt vì đã đủ 2D-16…20. Bốn màn 2D-21…24 là đợt bổ sung được duyệt ngoài 25 màn MVP, không gộp vào lô 4 và không tự thêm điểm vào 51 story/211 điểm hay đổi 147 task baseline. Catalog hiện có **27 màn: 24 màn 2D + 3 màn 3D**; vẫn còn 3D-04/05. Không ghi Xong, cộng velocity hoặc tự commit.
+
+**Điểm cần thử với người chơi:**
+
+- **2D-20 (khó 5):** phải dùng đồng thời điều kiện “nhãn nào cũng sai” và một mẫu; có thể quá khó với người chưa quen suy luận loại trừ. Chỉ túi nhãn hỗn hợp bảo đảm suy ra được từ mọi mẫu; phản hồi ngay khi dán sai cũng có thể khiến người chơi đoán thử thay vì suy luận.
+- **2D-21/22 (khó 3):** có thể quá dễ ở mức 3 vì rèm và hướng nắng là manh mối quen thuộc. Cần đo thời gian giải trước khi hạ mức; đây là đợt bổ sung riêng nên không sửa đường cong của 25 màn MVP.
+- **2D-23 (khó 4, dễ hiểu khác giả định):** kết luận dựa trên cốc giống nhau, đá chìm hoàn toàn và không hút nước; điều kiện đã ghi rõ trong cảnh/tài liệu. Không buộc người đã suy luận đúng phải lấy đá ra trước.
+- **2D-24 (khó 5):** hai câu phủ định cộng điều kiện “đúng một biển” có thể gây quá tải khi đọc nhanh. Đã ghi rõ chỉ có một cổng dẫn ra ngoài; trong mô hình này A là đáp án duy nhất.
+
+Kiểm chứng: `npm run check` và **295 unit/component** đạt; **336 ca Playwright production** đạt trên ba cấu hình, gồm chiến dịch 27 màn. Sau chỉnh hình cuối, chạy lại **48/48 ca** của năm màn mới. Kiểm thêm cả 2D-16…24 ở 1366×768 trên ba cấu hình engine: **3/3 đạt**, đủ bằng chứng bố cục rộng cho lô 4. Các lượt kiểm chồng phạm vi, không cộng thành số ca riêng. Bằng chứng, thứ tự kiểm từng màn, ảnh và giới hạn ở [E3-2D-20-24.md](../docs/evidence/E3-2D-20-24.md). Chưa thử người chơi hoặc điện thoại vật lý; chưa tự duyệt độ khó cuối.
+
+Đề xuất commit: `feat: hoàn thiện 2D-20 và thêm bốn màn 2D mới`.
+
+### Phạm vi 2D-15…19 được giao ngày 19/11/2026
+
+**Trạng thái từng màn: Chờ duyệt (`in_review`).** Yêu cầu trực tiếp làm 5 màn 2D tiếp theo theo `docs/LEVELS.md` là quyền triển khai nội dung và SVG trong phạm vi này. Kiểm riêng từng màn trên ba cấu hình điện thoại, qua rồi mới sang màn kế. Không sửa GDD/LEVELS, khung chơi hoặc hook dùng chung; không tự commit hoặc ghi Xong.
+
+| Mã | Tên | Trạng thái | Kiểm chứng hành vi |
+|---|---|---|---|
+| 2D-15 | Học sinh học sinh học | Chờ duyệt | Chỉ khe 2 và 3 rồi Xong mới thắng; thiếu/thừa khe chưa thắng; sửa tại chỗ, chơi lại được |
+| 2D-16 | Gánh hàng rong | Chờ duyệt | Chạm chọn vai rồi đặt 1/3; kéo kiểm vùng ±3% chiều dài; thúng/lệch điểm tựa chưa thắng |
+| 2D-17 | Đồng hồ quán cà phê | Chờ duyệt | 3:40 chưa thắng; nhận 8:20, 8h20, 820, 08:20, 8 giờ 20; bàn phím số giải bằng chạm |
+| 2D-18 | Chia trâu | Chờ duyệt | Mượn trâu mới chia 9–6–2; chưa thắng cho tới khi trả con dư; kéo sai hồi về |
+| 2D-19 | Que diêm | Chờ duyệt | Dời que trên bên phải số 8 vào dấu trừ thành 6 + 3 = 9; sai số/dấu hoặc kéo lệch chưa thắng |
+
+**Trạng thái story tại thời điểm kết thúc đợt 2D-15…19:** LL-012/031 chuyển Chờ duyệt vì 2D-11…14 đã tồn tại và nay bổ sung 2D-15. LL-013/032 chỉ Đang làm: 4/5 màn 2D-16…20 đã có, 2D-20 chưa thuộc phạm vi được giao. Hai cổng nội dung/phong cách chỉ áp dụng cho các màn được giao; giữ nguyên ID, điểm và phụ thuộc của baseline, không thay cam kết sprint hoặc trạng thái 147 task kế hoạch AI. Chưa cộng điểm Xong.
+
+**Điểm cần thử với người chơi:**
+
+- **2D-15 (khó 4):** câu chơi chữ cần đọc soát độc lập; người chơi có thể hiểu ngắt câu thay cho tách từ. Chưa khẳng định đây là cách tách có nghĩa duy nhất ngoài quy ước trong tài liệu.
+- **2D-16 (khó 3):** khái niệm mô-men có thể khó với người chưa học đòn bẩy; cho phép chạm các vị trí để thử. Dung sai ±3% giữ theo tài liệu, cần thử ngón tay thật trước khi chốt.
+- **2D-17 (khó 4):** cần quen mặt đồng hồ kim; người đọc đồng hồ điện tử dễ bí. Số và kim đều phản chiếu bằng SVG để có manh mối thị giác.
+- **2D-18 (khó 4, dễ tranh luận nhất):** 1/2 + 1/3 + 1/9 = 17/18; các phần 9–6–2 tính trên đàn tạm 18 con, không phải phân số chính xác của 17 con ban đầu. Giữ nguyên đề/lời giải được yêu cầu, ghi rõ hạn chế này để chủ dự án đọc soát.
+- **2D-19 (khó 4):** cần hiểu số dạng bảy đoạn và giữ phép đẳng thức; người chơi có thể thử biến dấu bằng thành dấu khác. Không tự kết luận tính duy nhất cho các cách viết số hoặc ký hiệu ngoài quy ước.
+
+Kiểm chứng cuối: `npm run check` đạt, **290 unit/component**, **288 ca Playwright production** trên iPhone SE, Pixel 5 và 360 px, gồm 45 ca cho năm màn mới và chiến dịch 22 màn.
+
+Bằng chứng, lệnh và giới hạn kiểm chứng: [E3-2D-15-19.md](../docs/evidence/E3-2D-15-19.md). Chưa thử người chơi hoặc điện thoại vật lý; giả lập WebKit không được tính là Safari trên máy thật.
+
+Đề xuất commit: `feat: thêm 5 màn 2D-15 đến 2D-19 của Lắt Léo`.
 
 ### Lô 2D-06…10 được giao ngày 18/11/2026
 
@@ -184,12 +239,12 @@ Mỗi màn đã được làm và kiểm riêng trước khi sang màn tiếp th
 | [LL-044] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có kịch bản chi tiết 4 màn 3D còn lại (3D-02…05) để dựng đúng và ước lượng lại chính xác. | 3 | Must | LL-028 | Đang làm (3D-02/03; 3D-04/05 chưa làm) | Có |
 | [LL-045] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-02 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 3 | Must | LL-016, LL-044 | Chờ duyệt (mô hình bằng code, 17/11) | Có |
 | [LL-018] | E4 3D | Là người chơi, tôi muốn chơi màn 3D-02 để giải một câu đố hack não trong không gian 3D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-015, LL-016, LL-045 | Chờ duyệt (3D-02, bằng chứng 17/11) | Có |
-| [LL-031] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 3 để dựng màn mà không phải đoán ý. [CẦN LÀM RÕ: Q6, Q10] | 5 | Must | LL-023, LL-028 | Chưa làm | Chưa |
-| [LL-012] | E3 2D | Là người chơi, tôi muốn chơi lô 3 (2D-11…15) để tiếp tục được thử thách bằng những mẹo mới, không lặp lại. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-009, LL-031, LL-043 | Chưa làm | Chưa |
+| [LL-031] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 3 để dựng màn mà không phải đoán ý. [CẦN LÀM RÕ: Q6, Q10] | 5 | Must | LL-023, LL-028 | Chờ duyệt (2D-11…14 đã có; bổ sung 2D-15, 19/11) | Có |
+| [LL-012] | E3 2D | Là người chơi, tôi muốn chơi lô 3 (2D-11…15) để tiếp tục được thử thách bằng những mẹo mới, không lặp lại. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-009, LL-031, LL-043 | Chờ duyệt (2D-11…14 đã có; bổ sung 2D-15, 19/11) | Có |
 | [LL-046] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-03 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 2 | Must | LL-016, LL-044 | Chờ duyệt (mô hình bằng code, 17/11) | Có |
 | [LL-019] | E4 3D | Là người chơi, tôi muốn chơi màn 3D-03 để giải một câu đố hack não trong không gian 3D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-015, LL-016, LL-046 | Chờ duyệt (3D-03, bằng chứng 17/11) | Có |
-| [LL-032] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 4 để dựng màn mà không phải đoán ý. [CẦN LÀM RÕ: Q6, Q10] | 5 | Must | LL-023, LL-028 | Chưa làm | Chưa |
-| [LL-013] | E3 2D | Là người chơi, tôi muốn chơi lô 4 (2D-16…20) để hoàn thành trọn bộ 20 màn 2D với những mẹo khó nhất phần 2D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-009, LL-032, LL-043 | Chưa làm | Chưa |
+| [LL-032] | E6 Nội dung | Là lập trình viên, tôi muốn có kịch bản chi tiết và đồ họa cho 5 màn 2D lô 4 để dựng màn mà không phải đoán ý. | 5 | Must | LL-023, LL-028 | Chờ duyệt (đủ 2D-16…20, bằng chứng 19/11) | Có |
+| [LL-013] | E3 2D | Là người chơi, tôi muốn chơi lô 4 (2D-16…20) để hoàn thành trọn bộ 20 màn 2D với những mẹo khó nhất phần 2D. | 8 | Must | LL-009, LL-032, LL-043 | Chờ duyệt (đủ 2D-16…20, bằng chứng 19/11) | Có |
 | [LL-035] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-04 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 3 | Must | LL-016, LL-044 | Chưa làm | Chưa |
 | [LL-020] | E4 3D | Là người chơi, tôi muốn chơi màn 3D-04 để giải một câu đố hack não trong không gian 3D. [CẦN LÀM RÕ: Q6] | 8 | Must | LL-015, LL-016, LL-035 | Chưa làm | Chưa |
 | [LL-047] | E6 Nội dung | Là lập trình viên 3D, tôi muốn có mô hình 3D đã tối ưu cho web của màn 3D-05 để không phải tự làm. [CẦN LÀM RÕ: Q10] | 2 | Must | LL-016, LL-044 | Chưa làm | Chưa |
@@ -772,3 +827,7 @@ Lịch sử v1 → v2.1 của backlog gốc xem [docs/backlog.md](../docs/backlo
 
 - **2026-11-11** — Khởi tạo bản làm việc từ v2.1: giữ nguyên 51 story, điểm, ưu tiên, phụ thuộc, tiêu chí nghiệm thu, task (script đối chiếu khớp mọi tổng của nguồn). Đổi trạng thái LL-001: Chưa làm → Đang làm (LL-001-T01 làm xong lượt 2 lúc 20:40, chờ bạn duyệt). Thêm mục 6 "Phát sinh từ kế hoạch kỹ thuật của AI" và cột thời hạn cần trả lời ở mục 4. Chưa đổi điểm hay ưu tiên nào.
 - **2026-11-16** — Theo yêu cầu trực tiếp, làm và kiểm riêng lần lượt 2D-01…05. LL-010/LL-029: Chưa làm → Chờ duyệt; Sẵn sàng → Có trong phạm vi lô 1. Cập nhật tổng 27 story sẵn sàng/24 chưa, 48 chưa làm/1 đang làm/2 chờ duyệt, vẫn 0 điểm Xong. Thay hai mẫu bằng nội dung thật; `check`, 219 unit/component, 138 ca Playwright production và 9 ca ví dụ đạt. Bằng chứng: [E3-2D-01-05.md](../docs/evidence/E3-2D-01-05.md). Ghi điểm cần thử/đọc soát, chưa đổi độ khó hoặc nội dung LEVELS, chưa commit.
+
+- **2026-11-19** — Theo yêu cầu trực tiếp, thêm lần lượt 2D-15…19; từng màn Chờ duyệt. LL-012/031 Chờ duyệt, LL-013/032 Đang làm (còn 2D-20). Bổ sung luồng hồi quy 22 màn, kiểm nội dung và ba gợi ý. Bằng chứng tại [E3-2D-15-19.md](../docs/evidence/E3-2D-15-19.md). Không tự commit, thay baseline hoặc cộng điểm hoàn thành.
+
+- **2026-11-19** — Chủ dự án duyệt 2D-20 cùng bốn đề bổ sung 2D-21…24, làm lần lượt và kiểm qua từng màn. LL-013/032 → Chờ duyệt; tổng 39 story sẵn sàng/162 điểm, 34 chưa làm/2 đang làm/15 chờ duyệt, vẫn 0 điểm Xong. Bốn màn bổ sung theo dõi riêng, không đổi baseline hoặc cam kết sprint. [Bằng chứng](../docs/evidence/E3-2D-20-24.md); chưa tự commit.

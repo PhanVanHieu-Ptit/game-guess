@@ -1,0 +1,4 @@
+/* Sân dài cuộn bằng một ngón trên nền. useDrag vẫn khóa cuộn riêng trên vật kéo. */
+.scrollable svg {
+  touch-action: pan-y;
+}

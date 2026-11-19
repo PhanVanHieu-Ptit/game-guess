@@ -1,0 +1,202 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test tests/e2e/level-2d-20.spec.ts tests/e2e/level-2d-21.spec.ts tests/e2e/level-2d-22.spec.ts tests/e2e/level-2d-23.spec.ts tests/e2e/levels-2d-20-24-hints.spec.ts --workers=3
+
+[WebServer] (node:47120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47160) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47158) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47161) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47157) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47159) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47162) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47188) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 39 tests using 3 workers
+
+(node:47192) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47190) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47191) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [iphone-se] › tests/e2e/level-2d-20.spec.ts:114:1 › 2D-20: kéo nhãn sai trả về; đổi nhãn đang chọn và kéo đúng vẫn giải được (1.9s)
+  ✓   4 [iphone-se] › tests/e2e/level-2d-21.spec.ts:6:1 › 2D-21: đèn, trăng và giường chưa thắng; chạm dời rèm che cửa sổ rồi chơi lại (2.4s)
+  ✓   5 [iphone-se] › tests/e2e/level-2d-21.spec.ts:53:1 › 2D-21: kéo rèm tới giường trả về, kéo vào cửa sổ mới thắng (1.1s)
+  ✓   6 [iphone-se] › tests/e2e/level-2d-22.spec.ts:6:1 › 2D-22: hai bóng sai hướng, mặt trời và bé chưa thắng; bóng trái thắng, chơi lại được (2.3s)
+  ✓   3 [iphone-se] › tests/e2e/level-2d-20.spec.ts:7:3 › 2D-20: lấy bưởi, sai không mất lượt; đủ ba nhãn mới thắng và chơi lại được (8.4s)
+  ✓   2 [iphone-se] › tests/e2e/level-2d-20.spec.ts:7:3 › 2D-20: lấy cam, sai không mất lượt; đủ ba nhãn mới thắng và chơi lại được (8.4s)
+  ✓   9 [iphone-se] › tests/e2e/level-2d-23.spec.ts:101:1 › 2D-23: kéo đá sang cốc khác trả về, kéo ra khay không tự thắng (825ms)
+  ✓   8 [iphone-se] › tests/e2e/level-2d-23.spec.ts:31:1 › 2D-23: đáp án sai không phạt; lấy đá ra thấy mực nước đổi rồi chọn phải (1.4s)
+  ✓  10 [iphone-se] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-20: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.4s)
+  ✓  11 [iphone-se] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-21: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (895ms)
+  ✓  12 [iphone-se] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-22: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.0s)
+  ✓  13 [iphone-se] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-23: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.0s)
+(node:47275) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 [iphone-se] › tests/e2e/level-2d-23.spec.ts:7:1 › 2D-23: nền nhận vuốt dọc để tới đáp án, vật kéo vẫn khóa cuộn (5.3s)
+(node:47285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  16 [pixel-5] › tests/e2e/level-2d-20.spec.ts:114:1 › 2D-20: kéo nhãn sai trả về; đổi nhãn đang chọn và kéo đúng vẫn giải được (1.9s)
+  ✓  17 [pixel-5] › tests/e2e/level-2d-21.spec.ts:6:1 › 2D-21: đèn, trăng và giường chưa thắng; chạm dời rèm che cửa sổ rồi chơi lại (2.4s)
+  ✓  18 [pixel-5] › tests/e2e/level-2d-21.spec.ts:53:1 › 2D-21: kéo rèm tới giường trả về, kéo vào cửa sổ mới thắng (1.3s)
+  ✓  15 [pixel-5] › tests/e2e/level-2d-20.spec.ts:7:3 › 2D-20: lấy bưởi, sai không mất lượt; đủ ba nhãn mới thắng và chơi lại được (7.9s)
+  ✓  14 [pixel-5] › tests/e2e/level-2d-20.spec.ts:7:3 › 2D-20: lấy cam, sai không mất lượt; đủ ba nhãn mới thắng và chơi lại được (7.9s)
+  ✓  21 [pixel-5] › tests/e2e/level-2d-23.spec.ts:31:1 › 2D-23: đáp án sai không phạt; lấy đá ra thấy mực nước đổi rồi chọn phải (1.5s)
+  ✓  19 [pixel-5] › tests/e2e/level-2d-22.spec.ts:6:1 › 2D-22: hai bóng sai hướng, mặt trời và bé chưa thắng; bóng trái thắng, chơi lại được (2.9s)
+  ✓  22 [pixel-5] › tests/e2e/level-2d-23.spec.ts:101:1 › 2D-23: kéo đá sang cốc khác trả về, kéo ra khay không tự thắng (1.1s)
+  ✓  23 [pixel-5] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-20: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.1s)
+  ✓  24 [pixel-5] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-21: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (959ms)
+  ✓  25 [pixel-5] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-22: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.5s)
+(node:47331) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  26 [pixel-5] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-23: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.4s)
+(node:47336) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  20 [pixel-5] › tests/e2e/level-2d-23.spec.ts:7:1 › 2D-23: nền nhận vuốt dọc để tới đáp án, vật kéo vẫn khóa cuộn (5.2s)
+(node:47337) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  29 [mobile-360] › tests/e2e/level-2d-20.spec.ts:114:1 › 2D-20: kéo nhãn sai trả về; đổi nhãn đang chọn và kéo đúng vẫn giải được (1.5s)
+  ✓  30 [mobile-360] › tests/e2e/level-2d-21.spec.ts:6:1 › 2D-21: đèn, trăng và giường chưa thắng; chạm dời rèm che cửa sổ rồi chơi lại (2.8s)
+  ✓  31 [mobile-360] › tests/e2e/level-2d-21.spec.ts:53:1 › 2D-21: kéo rèm tới giường trả về, kéo vào cửa sổ mới thắng (1.4s)
+  ✓  27 [mobile-360] › tests/e2e/level-2d-20.spec.ts:7:3 › 2D-20: lấy cam, sai không mất lượt; đủ ba nhãn mới thắng và chơi lại được (7.8s)
+  ✓  28 [mobile-360] › tests/e2e/level-2d-20.spec.ts:7:3 › 2D-20: lấy bưởi, sai không mất lượt; đủ ba nhãn mới thắng và chơi lại được (7.8s)
+  ✓  32 [mobile-360] › tests/e2e/level-2d-22.spec.ts:6:1 › 2D-22: hai bóng sai hướng, mặt trời và bé chưa thắng; bóng trái thắng, chơi lại được (2.8s)
+  ✓  34 [mobile-360] › tests/e2e/level-2d-23.spec.ts:31:1 › 2D-23: đáp án sai không phạt; lấy đá ra thấy mực nước đổi rồi chọn phải (1.9s)
+  ✓  35 [mobile-360] › tests/e2e/level-2d-23.spec.ts:101:1 › 2D-23: kéo đá sang cốc khác trả về, kéo ra khay không tự thắng (1.4s)
+  ✓  36 [mobile-360] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-20: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.5s)
+  ✓  37 [mobile-360] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-21: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.4s)
+  ✓  39 [mobile-360] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-23: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (963ms)
+  ✘  33 [mobile-360] › tests/e2e/level-2d-23.spec.ts:7:1 › 2D-23: nền nhận vuốt dọc để tới đáp án, vật kéo vẫn khóa cuộn (5.2s)
+  ✓  38 [mobile-360] › tests/e2e/levels-2d-20-24-hints.spec.ts:12:3 › 2d-22: ba gợi ý tuần tự, lời giải thích và sự kiện qua khung chung (1.4s)
+
+
+  1) [iphone-se] › tests/e2e/level-2d-23.spec.ts:7:1 › 2D-23: nền nhận vuốt dọc để tới đáp án, vật kéo vẫn khóa cuộn 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: getByTestId('puzzle-art').locator('xpath=ancestor::svg')
+    Expected: "pan-y"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveCSS" getByTestId('puzzle-art').locator('xpath=ancestor::svg') with timeout 5000ms
+      - waiting for getByTestId('puzzle-art').locator('xpath=ancestor::svg')
+
+
+      11 |   await openCampaignLevel(page, solution.meta.id);
+      12 |   const art = page.getByTestId('puzzle-art').locator('xpath=ancestor::svg');
+    > 13 |   await expect(art).toHaveCSS('touch-action', 'pan-y');
+         |                     ^
+      14 |   await expect(
+      15 |     page.getByRole('button', { name: 'Đá lớn ở cốc trái', exact: true }),
+      16 |   ).toHaveCSS('touch-action', 'none');
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-23.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [pixel-5] › tests/e2e/level-2d-23.spec.ts:7:1 › 2D-23: nền nhận vuốt dọc để tới đáp án, vật kéo vẫn khóa cuộn 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: getByTestId('puzzle-art').locator('xpath=ancestor::svg')
+    Expected: "pan-y"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveCSS" getByTestId('puzzle-art').locator('xpath=ancestor::svg') with timeout 5000ms
+      - waiting for getByTestId('puzzle-art').locator('xpath=ancestor::svg')
+
+
+      11 |   await openCampaignLevel(page, solution.meta.id);
+      12 |   const art = page.getByTestId('puzzle-art').locator('xpath=ancestor::svg');
+    > 13 |   await expect(art).toHaveCSS('touch-action', 'pan-y');
+         |                     ^
+      14 |   await expect(
+      15 |     page.getByRole('button', { name: 'Đá lớn ở cốc trái', exact: true }),
+      16 |   ).toHaveCSS('touch-action', 'none');
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-23.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-360] › tests/e2e/level-2d-23.spec.ts:7:1 › 2D-23: nền nhận vuốt dọc để tới đáp án, vật kéo vẫn khóa cuộn 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: getByTestId('puzzle-art').locator('xpath=ancestor::svg')
+    Expected: "pan-y"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveCSS" getByTestId('puzzle-art').locator('xpath=ancestor::svg') with timeout 5000ms
+      - waiting for getByTestId('puzzle-art').locator('xpath=ancestor::svg')
+
+
+      11 |   await openCampaignLevel(page, solution.meta.id);
+      12 |   const art = page.getByTestId('puzzle-art').locator('xpath=ancestor::svg');
+    > 13 |   await expect(art).toHaveCSS('touch-action', 'pan-y');
+         |                     ^
+      14 |   await expect(
+      15 |     page.getByRole('button', { name: 'Đá lớn ở cốc trái', exact: true }),
+      16 |   ).toHaveCSS('touch-action', 'none');
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-23.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-23-2D-23-nền-nhận-0f91f-áp-án-vật-kéo-vẫn-khóa-cuộn-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [iphone-se] › tests/e2e/level-2d-23.spec.ts:7:1 › 2D-23: nền nhận vuốt dọc để tới đáp án, vật kéo vẫn khóa cuộn 
+    [pixel-5] › tests/e2e/level-2d-23.spec.ts:7:1 › 2D-23: nền nhận vuốt dọc để tới đáp án, vật kéo vẫn khóa cuộn 
+    [mobile-360] › tests/e2e/level-2d-23.spec.ts:7:1 › 2D-23: nền nhận vuốt dọc để tới đáp án, vật kéo vẫn khóa cuộn 
+  36 passed (44.8s)

@@ -1,4 +1,4 @@
-# LEVELS — 25 màn của Lắt Léo
+# LEVELS — 25 màn MVP và 4 màn bổ sung của Lắt Léo
 
 > **Trạng thái:** NHÁP v0.1, chờ chủ dự án duyệt · **Ngày soạn:** 2026-11-13 · **Soạn:** Claude. Thiết kế chung: [GDD.md](GDD.md); cách khai báo một màn trong mã: [TECH.md](TECH.md) mục 5.
 > 10 ý tưởng của chủ dự án giữ nguyên tinh thần; 15 màn 2D còn lại do tôi đề xuất. Chỗ tôi phải hiểu hoặc quyết thay: mục 3.
@@ -94,4 +94,17 @@ Bối cảnh Việt: Tết (1, 17, 21), chợ (7, 16, 19, 24), quán cà phê (2
 4. **Rà nguồn:** ghi cho từng màn là "tự sáng tác", "dân gian" hoặc "kinh điển". Các màn dựa trên câu đố quen thuộc: 2D-02, 2D-05, 2D-10, 2D-14, 2D-17, 2D-18, 2D-19, 2D-20 (giả định G15).
 5. **Thử với người thật** (5–10 người, có cả nhóm 12–14 tuổi) rồi mới chốt độ khó cuối, đối chiếu với giả thuyết ở GDD mục 9.3.
 6. **Đồ họa:** chờ chốt phong cách (H5); 3D dựng từ hình khối cơ bản trong code.
+
+## 6. Bốn màn 2D bổ sung được duyệt ngày 19/11/2026
+
+Chủ dự án chọn **“Làm 2D-20 và bổ sung 4 đề 2D mới sau khi thống nhất”**, sau đó duyệt cả bốn đề dưới đây bằng **“Duyệt cả bốn đề, triển khai lần lượt”**. Đây là phạm vi bổ sung ngoài 25 màn MVP; bảng, số liệu và đường cong độ khó của 25 màn phía trên giữ nguyên. Các màn này bắt đầu một đợt nhỏ có độ khó 3 → 3 → 4 → 5, sau màn MVP cuối cùng khi đủ nội dung. Không tự đổi GDD hoặc baseline 51 story/147 task.
+
+| # | Mã | Tên | 2D/3D | Cơ chế | Đề bài | Cách giải | 3 gợi ý | Câu giải thích | Độ khó |
+|---|---|---|---|---|---|---|---|---|---|
+| 26 | 2D-21 | Tắt đèn cho bé ngủ | 2D | Logic · Kéo | Đèn đã tắt mà bé vẫn chói mắt. Giúp bé ngủ ngon. | Cửa sổ có trăng sáng, rèm đang mở. Kéo rèm che kín cửa sổ; có thể chạm chọn rèm rồi chạm cửa sổ. Chạm đèn đã tắt, giường hoặc trăng chỉ có phản hồi vui. Kéo sai trả rèm về, không mất lượt. | 1) Đèn đã tắt. Thứ gì khác còn chiếu sáng căn phòng?<br>2) Ánh trăng đang lọt qua cửa sổ mở rèm.<br>3) Kéo rèm che kín cửa sổ để ánh trăng không rọi vào bé. | Đèn ngủ tắt rồi, nhưng trăng vẫn tăng ca. Kéo rèm là bé được ngủ ngon. | 3 |
+| 27 | 2D-22 | Cái bóng đi lạc | 2D | Thị giác · Chạm | Mặt trời ở bên phải bé. Chạm vào chiếc bóng đúng của bé. | Ba bóng cùng hình dáng nối từ chân bé: một kéo dài sang trái, hai bóng sai hướng sang phía có mặt trời. Chạm bóng sang trái mới thắng. Hai bóng còn lại, bé và mặt trời có phản hồi riêng, không bị phạt. | 1) Bóng bắt đầu từ chân, còn ánh sáng đến từ đâu?<br>2) Mặt trời ở bên phải, bóng phải đổ về phía đối diện.<br>3) Chạm bóng kéo dài sang trái, nối liền với chân bé. | Mặt trời bên phải thì bóng nằm bên trái. Bóng theo bạn cả ngày mà thỉnh thoảng cũng cần chỉ đường. | 3 |
+| 28 | 2D-23 | Cốc nào nhiều nước hơn? | 2D | Vật lý · Kéo (rồi chọn) | Hai cốc giống nhau, mực nước bằng nhau. Cốc nào chứa nhiều nước hơn? | Hai cốc cùng kích thước và mực nước, cốc trái có đá lớn, cốc phải có đá nhỏ; cả hai viên đá chìm hoàn toàn và không hút nước. Kéo đá ra khay để thấy mực nước hạ khác nhau; chạm chọn đá rồi chạm khay cũng được. Chọn cốc phải thì thắng, có thể suy ra mà không cần lấy đá ra. Chọn cốc trái, bằng nhau hoặc không thể biết đều chưa thắng. | 1) Mực nước và lượng nước có luôn giống nhau không?<br>2) Đá chiếm chỗ trong cốc. Thử lấy cả hai viên đá ra.<br>3) Đá nhỏ chiếm ít chỗ hơn, nên cốc bên phải chứa nhiều nước hơn. | Mực nước bằng nhau nhưng đá chiếm chỗ khác nhau. Cốc phải có đá nhỏ nên được phần nước nhiều hơn, không cần uống thử. | 4 |
+| 29 | 2D-24 | Qua cổng hội chợ | 2D | Logic · Chạm | Chỉ một tấm biển nói đúng. Chạm cổng dẫn ra ngoài. | Có ba cổng A/B/C và chỉ một cổng dẫn ra ngoài (ghi rõ trong cảnh). Biển A: “Lối ra ở B”; biển B: “Lối ra không ở B”; biển C: “Lối ra không ở A”. Chọn A: chỉ biển B đúng. Nếu lối ra ở B hoặc C thì có hai biển đúng, mâu thuẫn với đề. Chạm B/C có phản hồi riêng và thử lại ngay. | 1) Thử giả sử từng cổng là lối ra rồi đếm biển đúng.<br>2) Nếu đi ra ở B hoặc C, sẽ có hai biển nói đúng.<br>3) Chọn cổng A: biển A sai, biển B đúng, biển C sai. | Chọn A thì chỉ biển B nói đúng. Ở hội chợ này, đọc biển cũng phải biết kiểm tra chéo, kẻo đi một vòng lại về quầy bắp. | 5 |
+
+Các con số 26–29 là vị trí thiết kế khi đủ 29 màn. Trong bản chưa có 3D-04/05, `ordinal` tạm liên tục theo số màn đã dựng; `id` luôn giữ nguyên. SVG tự vẽ trong code, dùng khung và hook hiện có. Đề, ba gợi ý và giải thích của các màn bổ sung được kiểm nguyên văn bằng cùng kiểm thử nội dung như 25 màn MVP. Độ khó cần thử lại với người chơi thật; riêng 2D-22 có thể dễ hơn mức 3 và 2D-24 cần đọc kỹ điều kiện **đúng một biển**.
 
