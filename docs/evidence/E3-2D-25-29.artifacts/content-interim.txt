@@ -1,0 +1,22 @@
+
+> game-guess@0.1.0 pretest
+> npm run levels:generate
+
+
+> game-guess@0.1.0 levels:generate
+> node scripts/generate-levels.mjs
+
+Đã nhận 29 màn (meta.ts + scene.tsx).
+
+> game-guess@0.1.0 test
+> vitest run tests/unit/levels/content.test.ts
+
+
+ RUN  v5.1.0 /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess
+
+
+ Test Files  1 passed (1)
+      Tests  29 passed (29)
+   Start at  07:16:59
+   Duration  816ms (environment 70%, setup 21%, transform 6%, import 2%, tests 1%)
+

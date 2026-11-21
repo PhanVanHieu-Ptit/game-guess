@@ -1,0 +1,11 @@
+import config from '/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/playwright.config';
+
+export default {
+  ...config,
+  testDir: '/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e',
+  webServer: {
+    ...config.webServer,
+    command: 'npm run dev -- --webpack --port 3100',
+    cwd: '/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess',
+  },
+};
