@@ -1,4 +1,4 @@
-# LEVELS — 25 màn MVP và 4 màn bổ sung của Lắt Léo
+# LEVELS — 25 màn MVP và 9 màn bổ sung của Lắt Léo
 
 > **Trạng thái:** NHÁP v0.1, chờ chủ dự án duyệt · **Ngày soạn:** 2026-11-13 · **Soạn:** Claude. Thiết kế chung: [GDD.md](GDD.md); cách khai báo một màn trong mã: [TECH.md](TECH.md) mục 5.
 > 10 ý tưởng của chủ dự án giữ nguyên tinh thần; 15 màn 2D còn lại do tôi đề xuất. Chỗ tôi phải hiểu hoặc quyết thay: mục 3.
@@ -108,3 +108,16 @@ Chủ dự án chọn **“Làm 2D-20 và bổ sung 4 đề 2D mới sau khi th�
 
 Các con số 26–29 là vị trí thiết kế khi đủ 29 màn. Trong bản chưa có 3D-04/05, `ordinal` tạm liên tục theo số màn đã dựng; `id` luôn giữ nguyên. SVG tự vẽ trong code, dùng khung và hook hiện có. Đề, ba gợi ý và giải thích của các màn bổ sung được kiểm nguyên văn bằng cùng kiểm thử nội dung như 25 màn MVP. Độ khó cần thử lại với người chơi thật; riêng 2D-22 có thể dễ hơn mức 3 và 2D-24 cần đọc kỹ điều kiện **đúng một biển**.
 
+## 7. Năm màn 2D bổ sung được duyệt ngày 20/11/2026
+
+Chủ dự án chọn đề xuất thêm năm màn, sau đó duyệt cả 2D-25…29 bằng **“tat ca”**. Đề, ba gợi ý và giải thích dưới đây là nội dung chuẩn trước khi triển khai; giữ nguyên 25 màn MVP, GDD và baseline 51 story/147 task. Vị trí thiết kế là 30…34; trong bản chưa dựng 3D-04/05, ordinal tạm liên tục theo số màn thực có.
+
+| # | Mã | Tên | 2D/3D | Cơ chế | Đề bài | Cách giải | 3 gợi ý | Câu giải thích | Độ khó |
+|---|---|---|---|---|---|---|---|---|---|
+| 30 | 2D-25 | Ốc sên về nhà | 2D | Chơi chữ · Chạm | Trời sắp mưa rồi. Giúp ốc sên về nhà. | Chạm chiếc vỏ trên lưng: ốc sên thu mình vào trong. Chạm nhà, bụi cây hoặc thân ốc chỉ có phản hồi vui. | 1) Có bạn chẳng bao giờ phải đi xa để về nhà.<br>2) Ốc sên đang mang theo chỗ trú của mình.<br>3) Chạm vào chiếc vỏ trên lưng ốc sên. | Nhà ở ngay trên lưng! Ốc sên về nhà nhanh mà chẳng cần chạy. | 2 |
+| 31 | 2D-26 | Cân cả chiếc rổ | 2D | Đọc kỹ đề · Gõ | Cân đang thăng bằng. Riêng số cam trong rổ nặng mấy ký? | Rổ cam cân bằng quả cân 3 kg; ghi rõ rổ rỗng nặng 1 kg. Nhập 2 (chấp nhận hai) bằng ô nhập hoặc bàn phím số trong game. | 1) Trên đĩa cân đâu chỉ có cam.<br>2) Chiếc rổ cũng góp một phần cân nặng.<br>3) Lấy 3 ký trừ 1 ký của rổ: cam nặng 2 ký. | Cam nặng 2 ký, chiếc rổ góp thêm 1 ký. Mang rổ đi chợ thì nhớ trừ bì! | 2 |
+| 32 | 2D-27 | Cắt một góc | 2D | Thị giác · Gõ | Tờ giấy hình vuông bị cắt mất một góc như hình. Phần còn lại có mấy góc? | Một góc vuông bị cắt bởi một đoạn thẳng nối hai cạnh kề, không qua đỉnh khác. Mảnh tam giác đặt tách xa. Nhập 5 (chấp nhận năm), chỉ đếm phần giấy còn lại. | 1) Mất một góc chưa chắc số góc sẽ ít đi.<br>2) Vết cắt tạo thêm góc ở hai đầu.<br>3) Ba góc cũ cộng hai góc mới: có 5 góc. | Cắt mất một góc nhưng sinh thêm hai góc mới. Tờ giấy còn lại có 5 góc! | 3 |
+| 33 | 2D-28 | Ngày mai của hôm qua | 2D | Đọc kỹ đề · Chọn | Hôm qua bà nói: “Ngày mai là thứ Sáu.” Hôm nay là thứ mấy? | Chọn Thứ Sáu. Lời bà luôn hiện khi chọn; cảnh có lịch không ghi ngày. Thứ Năm, Thứ Bảy và Chủ nhật có phản hồi riêng. | 1) Bà nói câu đó vào lúc nào?<br>2) Ngày mai của hôm qua chính là hôm nay.<br>3) Hôm nay là thứ Sáu. Chạm đáp án Thứ Sáu. | Bà nói từ hôm qua, nên ngày mai của bà chính là hôm nay. Thứ Sáu tới rồi! | 3 |
+| 34 | 2D-29 | Sáu cốc nước | 2D | Logic · Kéo | Chỉ nhấc một cốc, được rót nước. Làm cho cốc đầy và cốc rỗng đứng xen kẽ. | Sáu cốc giống nhau xếp cố định 1–6: ba cốc đầu đầy, ba cốc sau rỗng. Kéo cốc 2 tới cốc 5 để rót hết rồi tự đặt lại; có thể chạm chọn rồi chạm đích. Không đổi vị trí hoặc rót ra ngoài. Cặp sai cho xem kết quả và thử lại ngay, không mất lượt. | 1) Đổi lượng nước có thể hữu ích hơn đổi vị trí cốc.<br>2) Cốc thứ hai cần rỗng, cốc thứ năm cần đầy.<br>3) Rót hết nước từ cốc 2 sang cốc 5, rồi đặt cốc 2 về chỗ cũ. | Chỉ một cốc được nhấc, nhưng hai cốc đổi trạng thái. Dãy mới là đầy, rỗng, đầy, rỗng, đầy, rỗng. | 4 |
+
+Nguồn: 2D-25/26/28 là kịch bản tự soạn; 2D-27/29 là biến thể câu đố kinh điển. Toàn bộ hình tự vẽ bằng SVG trong code. Độ khó 2D-25/26 có thể thấp hơn dự kiến; 2D-27 cần hình cắt rõ; 2D-29 phải nói rõ được rót và đặt cốc lại. Chưa có thử nghiệm độ khó với người chơi thật.

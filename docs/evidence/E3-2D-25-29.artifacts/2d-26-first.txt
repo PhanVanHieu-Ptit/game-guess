@@ -1,0 +1,178 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test tests/e2e/level-2d-26.spec.ts --workers=3
+
+[WebServer] (node:77480) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:77504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:77511) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:77512) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:77514) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:77513) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:77516) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:77515) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:77517) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:77542) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 12 tests using 3 workers
+
+(node:77543) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:77544) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:77545) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [iphone-se] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-26: bố cục rộng, vẫn giải bằng chạm (1.2s)
+  ✓   3 [iphone-se] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-26: ba gợi ý đúng thứ tự, giải thích và đo lường (1.4s)
+(node:77582) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 [iphone-se] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai (536ms)
+  ✓   2 [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-26: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (1.9s)
+(node:77585) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:77588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [pixel-5] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-26: ba gợi ý đúng thứ tự, giải thích và đo lường (968ms)
+  ✓   7 [pixel-5] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-26: bố cục rộng, vẫn giải bằng chạm (1.2s)
+  ✓   5 [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-26: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (1.7s)
+  ✘   8 [pixel-5] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai (474ms)
+(node:77663) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:77664) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:77665) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [mobile-360] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-26: bố cục rộng, vẫn giải bằng chạm (691ms)
+  ✓  10 [mobile-360] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-26: ba gợi ý đúng thứ tự, giải thích và đo lường (1.0s)
+  ✘  12 [mobile-360] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai (494ms)
+  ✓   9 [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-26: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (1.7s)
+
+
+  1) [iphone-se] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByLabel('Số ký cam', { exact: true })
+    Expected: ""
+    Error: strict mode violation: getByLabel('Số ký cam', { exact: true }) resolved to 2 elements:
+        1) <input value="" id="_r_0_" type="text" autocomplete="off" spellcheck="false" class="Hr6TrW_input" autocapitalize="none" data-touch-target="true" aria-describedby="_r_0_-message"/> aka getByRole('textbox', { name: 'Số ký cam' })
+        2) <output id="_r_1_" aria-live="polite" class="EnBtpq_value">—</output> aka getByText('—')
+
+    Call log:
+      - Expect "toHaveValue" getByLabel('Số ký cam', { exact: true }) with timeout 5000ms
+      - waiting for getByLabel('Số ký cam', { exact: true })
+
+
+      13 |   for (const value of ['2', 'hai', '  HAI  ']) {
+      14 |     const input = page.getByLabel('Số ký cam', { exact: true });
+    > 15 |     await expect(input).toHaveValue('');
+         |                         ^
+      16 |     await page.getByRole('button', { name: 'Trả lời', exact: true }).tap();
+      17 |     await expect(page.getByRole('dialog')).toHaveCount(0);
+      18 |     await input.fill(value);
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-26.spec.ts:15:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [pixel-5] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByLabel('Số ký cam', { exact: true })
+    Expected: ""
+    Error: strict mode violation: getByLabel('Số ký cam', { exact: true }) resolved to 2 elements:
+        1) <input value="" id="_r_2_" type="text" autocomplete="off" spellcheck="false" class="Hr6TrW_input" autocapitalize="none" data-touch-target="true" aria-describedby="_r_2_-message"/> aka getByRole('textbox', { name: 'Số ký cam' })
+        2) <output id="_r_3_" aria-live="polite" class="EnBtpq_value">—</output> aka getByText('—')
+
+    Call log:
+      - Expect "toHaveValue" getByLabel('Số ký cam', { exact: true }) with timeout 5000ms
+      - waiting for getByLabel('Số ký cam', { exact: true })
+
+
+      13 |   for (const value of ['2', 'hai', '  HAI  ']) {
+      14 |     const input = page.getByLabel('Số ký cam', { exact: true });
+    > 15 |     await expect(input).toHaveValue('');
+         |                         ^
+      16 |     await page.getByRole('button', { name: 'Trả lời', exact: true }).tap();
+      17 |     await expect(page.getByRole('dialog')).toHaveCount(0);
+      18 |     await input.fill(value);
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-26.spec.ts:15:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-360] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByLabel('Số ký cam', { exact: true })
+    Expected: ""
+    Error: strict mode violation: getByLabel('Số ký cam', { exact: true }) resolved to 2 elements:
+        1) <input value="" id="_r_2_" type="text" autocomplete="off" spellcheck="false" class="Hr6TrW_input" autocapitalize="none" data-touch-target="true" aria-describedby="_r_2_-message"/> aka getByRole('textbox', { name: 'Số ký cam' })
+        2) <output id="_r_3_" aria-live="polite" class="EnBtpq_value">—</output> aka getByText('—')
+
+    Call log:
+      - Expect "toHaveValue" getByLabel('Số ký cam', { exact: true }) with timeout 5000ms
+      - waiting for getByLabel('Số ký cam', { exact: true })
+
+
+      13 |   for (const value of ['2', 'hai', '  HAI  ']) {
+      14 |     const input = page.getByLabel('Số ký cam', { exact: true });
+    > 15 |     await expect(input).toHaveValue('');
+         |                         ^
+      16 |     await page.getByRole('button', { name: 'Trả lời', exact: true }).tap();
+      17 |     await expect(page.getByRole('dialog')).toHaveCount(0);
+      18 |     await input.fill(value);
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-26.spec.ts:15:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-26-2d-26-ô-nhập-n-7f325--thường-rỗng-không-tính-sai-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [iphone-se] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai 
+    [pixel-5] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai 
+    [mobile-360] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai 
+  9 passed (11.0s)

@@ -1,6 +1,6 @@
 # Hồ sơ dự án — Lắt Léo
 
-> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-19.
+> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-20.
 > Đây là bộ nhớ của dự án: mục tiêu, giả định, điểm lệch, câu hỏi chờ, quyết định. Backlog: [BACKLOG.md](BACKLOG.md) · Sprint: [SPRINT.md](SPRINT.md) · Lịch sử: [LICH_SU.md](LICH_SU.md).
 
 ## 1. Nguồn đã đọc (chỉ đọc, không sửa)
@@ -26,6 +26,8 @@
 | Bằng chứng | [docs/evidence/LL-001-T02.md](../docs/evidence/LL-001-T02.md) | `4d126b7c76bf` | bằng chứng task thứ hai (đang chờ bạn duyệt) |
 
 ## 2. Hồ sơ dự án
+
+**Phạm vi mới ngày 20/11/2026 — 2D-25…29:** sau khi xác nhận cả 24 màn 2D đã có mã, chủ dự án chọn đề xuất thêm năm đề, rồi duyệt cả năm bằng **“tat ca”**. Ghi đề/lời giải/ba gợi ý/giải thích vào LEVELS mục 7 trước khi dựng; triển khai và kiểm riêng lần lượt. Từng màn bàn giao **Chờ duyệt (`in_review`)**. Catalog hiện có 32 màn (29 2D + 3 3D); ordinal tạm 28…32 cho năm màn mới, vị trí thiết kế 30…34 khi đủ 3D-04/05. Dùng SVG tự vẽ, bộ máy và hook có sẵn, sai không phạt, đủ lời giải chạm. 2D-27/29 là biến thể câu đố kinh điển. [Bằng chứng](../docs/evidence/E3-2D-25-29.md). Giữ nguyên baseline/cam kết/velocity; chưa tự commit hoặc đặt Xong.
 
 **Phạm vi mới ngày 19/11/2026 — 2D-20 và bốn đề bổ sung:** khi nhận việc đã có 2D-01…19, trong đó 2D-15…19 chưa commit. Người dùng chọn “Làm 2D-20 và bổ sung 4 đề 2D mới sau khi thống nhất”, sau đó duyệt cả bốn đề 2D-21…24 bằng “Duyệt cả bốn đề, triển khai lần lượt”. Các đề/ba gợi ý/giải thích bổ sung đã ghi vào LEVELS mục 6 trước khi dựng. Đã làm và kiểm riêng từng màn, dùng khung/hook hiện có và SVG tự vẽ; kiểm chứng ở [E3-2D-20-24.md](../docs/evidence/E3-2D-20-24.md). Từng màn và LL-013/032 **Chờ duyệt (`in_review`)**, chưa commit hoặc đặt Xong. Bốn màn mới là phạm vi bổ sung ngoài 25 màn MVP, không đổi GDD hoặc baseline 51 story/147 task. Hiện có 27 màn (24 2D + 3 3D); 3D-04/05 vẫn chưa dựng. Ordinal 2D-20…24 tạm là 23…27, sẽ theo vị trí 24/26…29 khi đủ hai màn 3D còn lại. Giữ nguyên phần 2D-15…19 đã có; chưa cộng điểm hoặc velocity.
 
@@ -106,6 +108,7 @@
 
 | Ngày | Quyết định / sự kiện | Nguồn |
 |---|---|---|
+| 2026-11-20 | Người dùng chọn đề xuất thêm năm đề 2D để duyệt, sau đó duyệt cả năm bằng “tat ca”. Thêm 2D-25…29 vào LEVELS trước khi triển khai; từng màn Chờ duyệt, ngoài MVP, giữ baseline/cam kết và không tự commit. | Yêu cầu trực tiếp; [E3-2D-25-29.md](../docs/evidence/E3-2D-25-29.md) |
 | 2026-11-19 | Người dùng thống nhất làm 2D-20 và thêm bốn đề mới, rồi duyệt cả 2D-21…24 để triển khai lần lượt. Ghi nội dung bổ sung trong LEVELS mục 6; phạm vi ngoài MVP, không tự đổi GDD/51 story/147 task. Các màn và LL-013/032 Chờ duyệt; chưa tự commit hoặc đặt Xong. | Hai câu trả lời trực tiếp trong phiên; [E3-2D-20-24.md](../docs/evidence/E3-2D-20-24.md) |
 | 2026-11-17 | Người dùng duyệt phương án 3D-03 bằng “oke”; chỉ dựng màn này. Nghiêng nồi bằng kéo trên màn hình hoặc chọn quai/chạm nút, không dùng cảm biến; thắng bằng nhập 5. Mô hình bằng code và cơ chế kéo dùng chung. LL-044 mới có 2/4 kịch bản, còn 3D-04/05. Ngân sách <50 draw call/frame, <1 MB tải thêm gồm gói 3D chung; đo bằng trình duyệt tự động. | Yêu cầu trực tiếp; [E4-3D-03.md](../docs/evidence/E4-3D-03.md) |
 | 2026-11-17 | Người dùng duyệt phương án 3D-02 bằng “oke”; chỉ triển khai màn này, mô hình bằng code dùng chung, hai bước lật dép/nhặt chìa. Ngân sách <50 draw call/frame, <1 MB tải thêm; số đo trình duyệt tự động, chưa đo điện thoại thật. LL-044 chỉ có phần 3D-02, không coi cả bốn kịch bản đã xong. | Yêu cầu trực tiếp; [E4-3D-02.md](../docs/evidence/E4-3D-02.md) |

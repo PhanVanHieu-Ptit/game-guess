@@ -1,0 +1,26 @@
+
+> game-guess@0.1.0 pretest
+> npm run levels:generate
+
+
+> game-guess@0.1.0 levels:generate
+> node scripts/generate-levels.mjs
+
+Đã nhận 32 màn (meta.ts + scene.tsx).
+
+> game-guess@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess
+
+
+ Test Files  28 passed (28)
+      Tests  300 passed (300)
+   Start at  07:24:07
+   Duration  3.15s (environment 70%, setup 20%, tests 6%, transform 3%, import 1%)
+
+Environment  jsdom was created 28 times · 16.13s total, 70% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

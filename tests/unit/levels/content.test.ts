@@ -1,40 +1,12 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { promptText } from '@/domain/levels/prompt';
-import { findLevel } from '@/levels';
+import { findLevel, LEVEL_METAS } from '@/levels';
 
 const source = readFileSync('docs/LEVELS.md', 'utf8');
 
 describe('nội dung màn sản phẩm khớp tài liệu thiết kế', () => {
-  for (const id of [
-    '2d-01',
-    '2d-02',
-    '2d-03',
-    '2d-04',
-    '2d-05',
-    '2d-06',
-    '2d-07',
-    '2d-08',
-    '2d-09',
-    '2d-10',
-    '2d-11',
-    '2d-12',
-    '2d-13',
-    '2d-14',
-    '2d-15',
-    '2d-16',
-    '2d-17',
-    '2d-18',
-    '2d-19',
-    '2d-20',
-    '2d-21',
-    '2d-22',
-    '2d-23',
-    '2d-24',
-    '3d-01',
-    '3d-02',
-    '3d-03',
-  ]) {
+  for (const { id } of LEVEL_METAS) {
     it(`${id}: đúng đề, ba gợi ý, giải thích và độ khó`, () => {
       const row = source
         .split('\n')

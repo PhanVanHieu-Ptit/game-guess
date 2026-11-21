@@ -1,0 +1,298 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test --config /tmp/latleo-dev-webpack.config.ts tests/e2e/level-2d-25.spec.ts tests/e2e/level-2d-26.spec.ts tests/e2e/level-2d-27.spec.ts tests/e2e/level-2d-28.spec.ts tests/e2e/level-2d-29.spec.ts --workers=3
+
+[WebServer] (node:81318) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81342) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81345) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 57 tests using 3 workers
+
+(node:81350) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81351) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81349) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81388) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [iphone-se] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-25: bố cục rộng, vẫn giải bằng chạm (5.8s)
+[WebServer] (node:81393) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [iphone-se] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-25: ba gợi ý đúng thứ tự, giải thích và đo lường (6.1s)
+  ✓   2 [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-25: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (7.0s)
+[WebServer] (node:81399) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [iphone-se] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-26: ba gợi ý đúng thứ tự, giải thích và đo lường (1.4s)
+[WebServer] (node:81402) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-26: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.2s)
+  ✓   6 [iphone-se] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-26: bố cục rộng, vẫn giải bằng chạm (1.3s)
+[WebServer] (node:81405) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [iphone-se] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai (1.6s)
+[WebServer] (node:81408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [iphone-se] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-27: ba gợi ý đúng thứ tự, giải thích và đo lường (1.5s)
+[WebServer] (node:81410) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-27: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.2s)
+  ✓  10 [iphone-se] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-27: bố cục rộng, vẫn giải bằng chạm (1.2s)
+[WebServer] (node:81414) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [iphone-se] › tests/e2e/level-2d-27.spec.ts:8:1 › 2d-27: nhận năm không dấu, hoa/thường và Unicode tổ hợp; chơi lại xóa ô nhập (1.6s)
+[WebServer] (node:81417) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 [iphone-se] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-28: ba gợi ý đúng thứ tự, giải thích và đo lường (1.6s)
+  ✓  12 [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-28: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (1.9s)
+[WebServer] (node:81420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 [iphone-se] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-28: bố cục rộng, vẫn giải bằng chạm (1.0s)
+  ✓  16 [iphone-se] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-29: ba gợi ý đúng thứ tự, giải thích và đo lường (1.4s)
+  ✓  17 [iphone-se] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-29: bố cục rộng, vẫn giải bằng chạm (1.3s)
+[WebServer] (node:81426) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-29: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.6s)
+(node:81433) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  19 [iphone-se] › tests/e2e/level-2d-29.spec.ts:55:1 › 2d-29: kéo lệch và vào cốc đầy chưa thắng; kéo 2 sang 5 thì thắng (1.2s)
+(node:81434) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81442) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 [pixel-5] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-25: ba gợi ý đúng thứ tự, giải thích và đo lường (1.7s)
+[WebServer] (node:81445) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  20 [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-25: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.8s)
+[WebServer] (node:81447) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  22 [pixel-5] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-25: bố cục rộng, vẫn giải bằng chạm (1.2s)
+  ✘  18 [iphone-se] › tests/e2e/level-2d-29.spec.ts:8:1 › 2d-29: tám cặp rót sai chưa thắng và không được rót cốc thứ hai; chỉ 2 sang 5 thắng (5.1s)
+(node:81449) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81455) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  24 [pixel-5] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-26: ba gợi ý đúng thứ tự, giải thích và đo lường (1.7s)
+[WebServer] (node:81458) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  23 [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-26: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.4s)
+  ✓  25 [pixel-5] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-26: bố cục rộng, vẫn giải bằng chạm (1.5s)
+[WebServer] (node:81460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  26 [pixel-5] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai (1.7s)
+[WebServer] (node:81463) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  28 [pixel-5] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-27: ba gợi ý đúng thứ tự, giải thích và đo lường (1.7s)
+[WebServer] (node:81465) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  27 [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-27: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.5s)
+  ✓  29 [pixel-5] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-27: bố cục rộng, vẫn giải bằng chạm (1.4s)
+[WebServer] (node:81470) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  30 [pixel-5] › tests/e2e/level-2d-27.spec.ts:8:1 › 2d-27: nhận năm không dấu, hoa/thường và Unicode tổ hợp; chơi lại xóa ô nhập (1.8s)
+[WebServer] (node:81475) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  32 [pixel-5] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-28: ba gợi ý đúng thứ tự, giải thích và đo lường (1.6s)
+  ✓  31 [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-28: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.1s)
+[WebServer] (node:81477) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  33 [pixel-5] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-28: bố cục rộng, vẫn giải bằng chạm (1.3s)
+[WebServer] (node:81482) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  35 [pixel-5] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-29: ba gợi ý đúng thứ tự, giải thích và đo lường (1.7s)
+  ✓  36 [pixel-5] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-29: bố cục rộng, vẫn giải bằng chạm (1.4s)
+[WebServer] (node:81484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  34 [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-29: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (3.0s)
+(node:81486) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81491) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  38 [pixel-5] › tests/e2e/level-2d-29.spec.ts:55:1 › 2d-29: kéo lệch và vào cốc đầy chưa thắng; kéo 2 sang 5 thì thắng (1.9s)
+(node:81492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81497) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  39 [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-25: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.5s)
+  ✓  40 [mobile-360] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-25: ba gợi ý đúng thứ tự, giải thích và đo lường (1.7s)
+[WebServer] (node:81499) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  41 [mobile-360] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-25: bố cục rộng, vẫn giải bằng chạm (1.5s)
+[WebServer] (node:81504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  37 [pixel-5] › tests/e2e/level-2d-29.spec.ts:8:1 › 2d-29: tám cặp rót sai chưa thắng và không được rót cốc thứ hai; chỉ 2 sang 5 thắng (5.5s)
+(node:81506) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81516) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  42 [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-26: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.5s)
+  ✓  43 [mobile-360] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-26: ba gợi ý đúng thứ tự, giải thích và đo lường (1.7s)
+[WebServer] (node:81519) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  44 [mobile-360] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-26: bố cục rộng, vẫn giải bằng chạm (1.5s)
+[WebServer] (node:81521) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  45 [mobile-360] › tests/e2e/level-2d-26.spec.ts:8:1 › 2d-26: ô nhập nhận hai có dấu/không dấu, hoa/thường; rỗng không tính sai (1.7s)
+[WebServer] (node:81523) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  46 [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-27: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.4s)
+  ✓  47 [mobile-360] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-27: ba gợi ý đúng thứ tự, giải thích và đo lường (1.8s)
+  ✓  48 [mobile-360] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-27: bố cục rộng, vẫn giải bằng chạm (1.4s)
+[WebServer] (node:81526) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  51 [mobile-360] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-28: ba gợi ý đúng thứ tự, giải thích và đo lường (1.6s)
+  ✓  49 [mobile-360] › tests/e2e/level-2d-27.spec.ts:8:1 › 2d-27: nhận năm không dấu, hoa/thường và Unicode tổ hợp; chơi lại xóa ô nhập (1.8s)
+[WebServer] (node:81530) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  50 [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-28: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.1s)
+  ✓  52 [mobile-360] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-28: bố cục rộng, vẫn giải bằng chạm (1.5s)
+[WebServer] (node:81533) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  54 [mobile-360] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-29: ba gợi ý đúng thứ tự, giải thích và đo lường (1.7s)
+[WebServer] (node:81537) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  55 [mobile-360] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-29: bố cục rộng, vẫn giải bằng chạm (1.3s)
+[WebServer] (node:81540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  53 [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-29: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (3.1s)
+  ✓  57 [mobile-360] › tests/e2e/level-2d-29.spec.ts:55:1 › 2d-29: kéo lệch và vào cốc đầy chưa thắng; kéo 2 sang 5 thì thắng (1.8s)
+  ✘  56 [mobile-360] › tests/e2e/level-2d-29.spec.ts:8:1 › 2d-29: tám cặp rót sai chưa thắng và không được rót cốc thứ hai; chỉ 2 sang 5 thắng (5.5s)
+
+
+  1) [iphone-se] › tests/e2e/level-2d-29.spec.ts:8:1 › 2d-29: tám cặp rót sai chưa thắng và không được rót cốc thứ hai; chỉ 2 sang 5 thắng 
+
+    Error: Trang có lỗi console hoặc lỗi mạng
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 7
+
+    - Array []
+    + Array [
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/error.css?v=1795134791762 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/not-found.css?v=1795134791762 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/play/%5Bid%5D/error.css?v=1795134791762 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/play/%5Bid%5D/not-found.css?v=1795134791762 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/global-error.css?v=1795134791762 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.",
+    + ]
+
+       at fixtures.ts:76
+
+      74 |         const errorText = request.failure()?.errorText;
+      75 |         if (!isAborted(errorText))
+    > 76 |           report(
+         |                  ^
+      77 |             `yêu cầu lỗi: ${request.method()} ${request.url()} (${errorText})`,
+      78 |           );
+      79 |       });
+        at Object.exports.test._test.test.extend.guard.auto (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/fixtures.ts:76:71)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [pixel-5] › tests/e2e/level-2d-29.spec.ts:8:1 › 2d-29: tám cặp rót sai chưa thắng và không được rót cốc thứ hai; chỉ 2 sang 5 thắng 
+
+    Error: Trang có lỗi console hoặc lỗi mạng
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 7
+
+    - Array []
+    + Array [
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/play/%5Bid%5D/not-found.css?v=1795134804961 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/play/%5Bid%5D/error.css?v=1795134804961 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/global-error.css?v=1795134804961 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/not-found.css?v=1795134804961 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/error.css?v=1795134804961 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    + ]
+
+       at fixtures.ts:76
+
+      74 |         const errorText = request.failure()?.errorText;
+      75 |         if (!isAborted(errorText))
+    > 76 |           report(
+         |                  ^
+      77 |             `yêu cầu lỗi: ${request.method()} ${request.url()} (${errorText})`,
+      78 |           );
+      79 |       });
+        at Object.exports.test._test.test.extend.guard.auto (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/fixtures.ts:76:71)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-360] › tests/e2e/level-2d-29.spec.ts:8:1 › 2d-29: tám cặp rót sai chưa thắng và không được rót cốc thứ hai; chỉ 2 sang 5 thắng 
+
+    Error: Trang có lỗi console hoặc lỗi mạng
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 7
+
+    - Array []
+    + Array [
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/global-error.css?v=1795134818317 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/play/%5Bid%5D/not-found.css?v=1795134818317 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/error.css?v=1795134818317 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/play/%5Bid%5D/error.css?v=1795134818317 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    +   "console.warning: The resource http://localhost:3100/_next/static/css/app/not-found.css?v=1795134818317 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+    + ]
+
+       at fixtures.ts:76
+
+      74 |         const errorText = request.failure()?.errorText;
+      75 |         if (!isAborted(errorText))
+    > 76 |           report(
+         |                  ^
+      77 |             `yêu cầu lỗi: ${request.method()} ${request.url()} (${errorText})`,
+      78 |           );
+      79 |       });
+        at Object.exports.test._test.test.extend.guard.auto (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/fixtures.ts:76:71)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-29-2d-29-tám-cặp--01521--thứ-hai-chỉ-2-sang-5-thắng-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [iphone-se] › tests/e2e/level-2d-29.spec.ts:8:1 › 2d-29: tám cặp rót sai chưa thắng và không được rót cốc thứ hai; chỉ 2 sang 5 thắng 
+    [pixel-5] › tests/e2e/level-2d-29.spec.ts:8:1 › 2d-29: tám cặp rót sai chưa thắng và không được rót cốc thứ hai; chỉ 2 sang 5 thắng 
+    [mobile-360] › tests/e2e/level-2d-29.spec.ts:8:1 › 2d-29: tám cặp rót sai chưa thắng và không được rót cốc thứ hai; chỉ 2 sang 5 thắng 
+  54 passed (50.8s)
