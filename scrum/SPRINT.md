@@ -1,6 +1,6 @@
 # Sprint hiện tại — Sprint 1
 
-> Cập nhật gần nhất: 2026-11-20 (Thứ Sáu). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); các phạm vi giao trực tiếp được ghi riêng bên dưới.
+> Cập nhật gần nhất: 2026-11-23 (Thứ Hai). **Trạng thái: ĐỀ XUẤT, chưa chốt.** Nạp từ [docs/sprint-1.md](../docs/sprint-1.md) (sha256 `c4d7e01d2dea`); các phạm vi giao trực tiếp được ghi riêng bên dưới.
 
 | | |
 |---|---|
@@ -10,6 +10,8 @@
 | Họp | Daily 09:00 (15') · kiểm tra giữa sprint thứ Tư 16:30 · Sprint Review thứ Sáu 15:00 (45') · Retro thứ Sáu 16:00 (30') · làm mịn Sprint 2 thứ Sáu 16:30 |
 
 ## Mục tiêu sprint
+
+**Phạm vi giao trực tiếp duyệt ngày 23/11 — 2D-30…34:** người dùng xác nhận “Duyệt cả năm”; nội dung ở LEVELS mục 8. Làm lần lượt, kiểm riêng qua từng màn trước màn tiếp (9/15/12/39/15 ca). Catalog 37 màn; `check` và 310 unit/component đạt; đang kiểm hồi quy. SVG tự vẽ, dùng khung/hook cũ; thêm lời giải chạm vào chiến dịch. [Bằng chứng](../docs/evidence/E3-2D-30-34.md). Ngoài MVP, không đổi cam kết 18 điểm hoặc velocity, không tự commit/đặt Xong; lịch Sprint 1 bên dưới vẫn là đề xuất cũ chưa được xác nhận.
 
 **Phạm vi giao trực tiếp duyệt ngày 20/11 — 2D-25…29: Chờ duyệt (`in_review`).** Chủ dự án duyệt cả năm đề bằng “tat ca”; nội dung chuẩn ở LEVELS mục 7, kiểm riêng từng màn trước màn kế. Thêm năm cảnh SVG và kiểm đúng/sai/gợi ý/chơi lại/chạm, nối luồng chiến dịch 32 màn; check/300 unit và 393 ca production đạt. Bản dev còn cảnh báo CSS preload trang lỗi (54/57), ghi rõ trong bằng chứng. [Bằng chứng](../docs/evidence/E3-2D-25-29.md). Đây là phạm vi ngoài MVP, không đổi cam kết 18 điểm hoặc tính velocity; chưa tự commit.
 

@@ -2,7 +2,7 @@
 
 Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/backlog.md](../docs/backlog.md) v2.1 (cập nhật 2026-11-10, sha256 `3dda35d427a0`). File gốc giữ nguyên, không sửa; khi nó đổi, `/docmoi` so hash và đề xuất cập nhật ở đây. Mã story giữ ổn định: LL-001…LL-051 (story mới từ LL-052).
 
-- **Cập nhật gần nhất:** 2026-11-20 (2D-25…29: Chờ duyệt; catalog 32 màn, gồm 29 màn 2D và 3 màn 3D).
+- **Cập nhật gần nhất:** 2026-11-23 (2D-30…34: đang kiểm hồi quy; catalog 37 màn, gồm 34 màn 2D và 3 màn 3D).
 - **Trạng thái story:** Chưa làm → Đang làm → Chờ duyệt → Xong (hoặc Chặn). *Xong* theo DoD tạm ở [HO_SO.md](HO_SO.md) mục 2.
 - **Sẵn sàng = Có** khi đủ 4 điều kiện: mô tả rõ, có tiêu chí nghiệm thu kiểm tra được, đã ước lượng, không bị câu hỏi mở chặn. Thứ tự bảng là thứ tự làm, từ trên xuống.
 - **Điểm:** 1-2-3-5-8-13, trên 8 phải chia nhỏ (hiện không story nào vượt 8). Thang tương đối, tạm quy 1 điểm ≈ ½ ngày công một người (giả định).
@@ -12,7 +12,7 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 
 - **51 story · 211 điểm** · Must 44 (192 đ) · Should 6 (17 đ) · Could 1 (2 đ) · Won't 0 (đã chốt, không ước lượng).
 - **Sẵn sàng:** 39 story "Có" (162 đ) · 12 story "Chưa" (49 đ).
-- **Tiến độ:** Chưa làm 34 · Đang làm 2 · Chờ duyệt 15 · Xong 0 → **0 / 211 điểm xong**. Chín màn bổ sung theo yêu cầu trực tiếp được theo dõi riêng, chưa gán điểm story hoặc đổi baseline.
+- **Tiến độ:** Chưa làm 34 · Đang làm 2 · Chờ duyệt 15 · Xong 0 → **0 / 211 điểm xong**. 14 màn bổ sung theo yêu cầu trực tiếp được theo dõi riêng, chưa gán điểm story hoặc đổi baseline.
 - **Dự báo thô (giả định, chưa có hạn chót — Q1):** 211 điểm ÷ 20 điểm/sprint ≈ 10,6 sprint; ÷ 18 điểm (cam kết 90%) ≈ 11,7 sprint. Nếu Sprint 1 bắt đầu thứ Hai 16/11/2026 thì xong sau 11–12 sprint, tức khoảng **29/01–05/02/2027**, chưa trừ nghỉ lễ và chưa tính lỗi phát sinh.
 
 ## Epic
@@ -26,6 +26,32 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 - **E7 Chất lượng** — giấy phép, kiểm thử, sửa lỗi, tối ưu tải, đo lường, ghi công (8 · 28)
 
 ## 1. Bảng backlog
+
+### Phạm vi 2D-30…34 được duyệt ngày 23/11/2026
+
+Chủ dự án chọn đề xuất thêm năm đề vì cả 29 màn 2D cũ đã có mã, rồi xác nhận **“Duyệt cả năm”**. Nội dung chuẩn đã ghi tại LEVELS mục 8 trước khi dựng. Đã triển khai và kiểm riêng lần lượt: 2D-30 đạt 9/9, 2D-31 đạt 15/15, 2D-32 đạt 12/12, 2D-33 đạt 39/39, 2D-34 đạt 15/15; mỗi màn qua rồi mới sang màn tiếp. **Đang kiểm hồi quy toàn game.**
+
+| Mã | Tên | Trạng thái | Kiểm chứng hành vi |
+|---|---|---|---|
+| 2D-30 | Thắp gì trước? | Đang kiểm hồi quy | Chạm diêm thắng; nến/đèn dầu chưa thắng; ba gợi ý, chơi lại |
+| 2D-31 | Bánh còn trong giỏ | Đang kiểm hồi quy | Chia hai bánh rồi giỏ còn một bánh; nhận thứ tự khác, kéo hoặc chạm; giỏ nhiều bánh/bé đã có bánh/chia hết bánh riêng/kéo lệch chưa thắng |
+| 2D-32 | Ốc sên leo tường | Đang kiểm hồi quy | Nhập 3/ba thắng; 5/2 và chạm tường chưa thắng; nhập rỗng không tính sai, bàn phím chạm, hoa/thường/khoảng trắng |
+| 2D-33 | Chín viên bi | Đang kiểm hồi quy | Đủ chín vị trí bi nhẹ, suy từ kết quả tối đa hai lần cân; chọn sai/cân lần ba chưa thắng; lịch sử đọc lại được, Thử lại giữ bi nhẹ |
+| 2D-34 | Chuyến đò của bác | Đang kiểm hồi quy | Hai lời giải bảy chuyến và chuỗi chín chuyến an toàn đều thắng; sai kiểm cả hai bờ và giữ tiến triển; unit tìm đủ 10 trạng thái an toàn |
+
+SVG tự vẽ cùng nét tròn/màu tươi; nguồn cả năm là biến thể câu đố kinh điển. Dùng nguyên khung và hook có sẵn, không thêm thư viện. Sai rung nhẹ và câu đùa, không trừ điểm/mất lượt; đề/ba gợi ý/giải thích khớp nguyên văn LEVELS. Đã nối năm lời giải vào chiến dịch 37 màn. Ordinal tạm 33…37, vị trí thiết kế 35…39 khi đủ 3D-04/05. Không đổi baseline, điểm hoặc velocity; không tự commit/đặt Xong.
+
+Điểm cần thử với người thật:
+
+- **2D-30 (2):** có thể quá dễ với người biết câu đố.
+- **2D-31 (3):** có thể tranh luận việc nhận giỏ là nhận bánh; hình và trạng thái cuối thể hiện rõ bánh còn trong giỏ đã giao.
+- **2D-32 (3):** cần đọc điều kiện chạm đỉnh thì dừng; không tính thêm đêm trượt khi đã tới nơi.
+- **2D-33 (4):** có thể quá khó khi chưa quen chia ba nhóm; đĩa ghi số bi, bảng chọn và lịch sử luôn có thể đọc lại. Cần cuộn trên màn hình thấp.
+- **2D-34 (5):** khó nhất lô; luật chở tối đa một món và được đi một mình luôn hiện; cần chở dê quay lại, nhận mọi chuỗi an toàn.
+
+Kiểm chứng hiện có: `npm run check`, 310 unit/component và 90 ca Playwright riêng của năm màn đạt. Các phạm vi kiểm chồng nhau, không cộng thành tổng độc lập. [Bằng chứng, log, ảnh và giới hạn](../docs/evidence/E3-2D-30-34.md). Chưa thử người chơi thật hoặc điện thoại vật lý; chưa đo 4G/FPS đợt này.
+
+Đề xuất commit: `feat: thêm năm màn 2D-30 đến 2D-34`.
 
 ### Phạm vi 2D-25…29 được duyệt ngày 20/11/2026
 
@@ -863,3 +889,5 @@ Lịch sử v1 → v2.1 của backlog gốc xem [docs/backlog.md](../docs/backlo
 - **2026-11-19** — Chủ dự án duyệt 2D-20 cùng bốn đề bổ sung 2D-21…24, làm lần lượt và kiểm qua từng màn. LL-013/032 → Chờ duyệt; tổng 39 story sẵn sàng/162 điểm, 34 chưa làm/2 đang làm/15 chờ duyệt, vẫn 0 điểm Xong. Bốn màn bổ sung theo dõi riêng, không đổi baseline hoặc cam kết sprint. [Bằng chứng](../docs/evidence/E3-2D-20-24.md); chưa tự commit.
 
 - **2026-11-20** — Chủ dự án duyệt cả năm đề mới bằng “tat ca”; triển khai và kiểm lần lượt 2D-25…29, bàn giao từng màn Chờ duyệt. Tổng catalog 32 màn; chín màn ngoài MVP theo dõi riêng, không đổi tổng story/điểm hoặc velocity. [Bằng chứng](../docs/evidence/E3-2D-25-29.md); chưa tự commit.
+
+- **2026-11-23** — Chủ dự án duyệt cả năm đề 2D-30…34; nội dung ở LEVELS mục 8. Kiểm riêng từng màn đạt trước khi sang màn tiếp; đang kiểm hồi quy. Catalog 37 màn, 14 màn ngoài MVP theo dõi riêng; giữ nguyên baseline/velocity. [Bằng chứng](../docs/evidence/E3-2D-30-34.md).

@@ -33,6 +33,11 @@ import { solution as level26 } from './solutions/2d-26';
 import { solution as level27 } from './solutions/2d-27';
 import { solution as level28 } from './solutions/2d-28';
 import { solution as level29 } from './solutions/2d-29';
+import { solution as level30 } from './solutions/2d-30';
+import { solution as level31 } from './solutions/2d-31';
+import { solution as level32 } from './solutions/2d-32';
+import { solution as level33 } from './solutions/2d-33';
+import { solution as level34 } from './solutions/2d-34';
 import { solution as level3d01 } from './solutions/3d-01';
 import { solution as level3d02 } from './solutions/3d-02';
 import { solution as level3d03 } from './solutions/3d-03';
@@ -182,6 +187,11 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
     level27,
     level28,
     level29,
+    level30,
+    level31,
+    level32,
+    level33,
+    level34,
   ]) {
     await result.next(page).tap();
     await expect(page).toHaveURL(`/play/${level.meta.id}`);
