@@ -1,0 +1,62 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test tests/e2e/level-2d-31.spec.ts --workers=3
+
+[WebServer] (node:81629) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81656) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81665) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81663) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81662) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81666) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81664) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81668) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81693) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 3 workers
+
+(node:81694) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81696) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81695) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [iphone-se] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-31: bố cục rộng, vẫn giải bằng chạm (1.2s)
+  ✓   3 [iphone-se] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-31: ba gợi ý đúng thứ tự, giải thích và đo lường (1.3s)
+  ✓   5 [iphone-se] › tests/e2e/level-2d-31.spec.ts:45:1 › 2d-31: kéo bánh lệch trả về, kéo bánh và giỏ đúng đích thì thắng (1.2s)
+(node:81737) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.8s)
+(node:81781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [iphone-se] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng (1.8s)
+(node:81801) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [pixel-5] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-31: ba gợi ý đúng thứ tự, giải thích và đo lường (970ms)
+  ✓   8 [pixel-5] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-31: bố cục rộng, vẫn giải bằng chạm (1.3s)
+  ✓   6 [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (2.8s)
+(node:81820) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [pixel-5] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng (1.9s)
+(node:81825) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [pixel-5] › tests/e2e/level-2d-31.spec.ts:45:1 › 2d-31: kéo bánh lệch trả về, kéo bánh và giỏ đúng đích thì thắng (1.8s)
+(node:81831) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 [mobile-360] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-31: ba gợi ý đúng thứ tự, giải thích và đo lường (975ms)
+  ✓  13 [mobile-360] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-31: bố cục rộng, vẫn giải bằng chạm (804ms)
+  ✓  11 [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (3.1s)
+  ✓  14 [mobile-360] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng (1.9s)
+  ✓  15 [mobile-360] › tests/e2e/level-2d-31.spec.ts:45:1 › 2d-31: kéo bánh lệch trả về, kéo bánh và giỏ đúng đích thì thắng (1.8s)
+
+  15 passed (13.9s)

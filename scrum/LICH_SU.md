@@ -1,6 +1,6 @@
 # Lịch sử sprint — Lắt Léo
 
-> Cập nhật gần nhất: 2026-11-20. File này ghi kết quả review, retro, năng lực và các phạm vi được giao trực tiếp. Sprint hiện tại ở [SPRINT.md](SPRINT.md).
+> Cập nhật gần nhất: 2026-11-23. File này ghi kết quả review, retro, năng lực và các phạm vi được giao trực tiếp. Sprint hiện tại ở [SPRINT.md](SPRINT.md).
 
 **Chưa có sprint nào kết thúc.** Sprint 1 (đề xuất 16–20/11/2026) chưa được xác nhận cam kết.
 
@@ -21,6 +21,8 @@
 - **2026-11-15** — Epic Bộ máy màn chơi theo tám mục được giao: LevelShell, đề chạm được, hook lắc/nghiêng/kéo/nhập, Scene3D thích ứng, kiểm góc, tài liệu và ví dụ hai file. Chuyển hai màn mẫu; 214 unit/component, 102 ca hồi quy, 9 ca ví dụ production và 9 ca dev/StrictMode đạt; bằng chứng check/build/hồi quy tại [E2-BO-MAY-MAN-CHOI.md](../docs/evidence/E2-BO-MAY-MAN-CHOI.md). Đã phát hiện/sửa thao tác chạm đề trước khi cảnh sẵn sàng; ghim Three/kiểu 0.182.0 để bỏ cảnh báo tương thích với R3F 9.8.2. Trạng thái `in_review`, chưa duyệt hoặc commit; không tính velocity.
 
 ## Phạm vi giao trực tiếp (không tính velocity)
+
+**Ngày 23/11/2026 — 2D-30…34:** sau khi chọn đề xuất năm đề mới vì 29 màn 2D cũ đã có mã, chủ dự án xác nhận “Duyệt cả năm”. Nội dung chuẩn ở LEVELS mục 8; làm và kiểm từng màn, đạt rồi mới sang màn tiếp (9/15/12/39/15 ca). SVG/lời thoại tự soạn, nguồn câu đố kinh điển, khung/hook dùng lại; catalog 37 màn (34 2D + 3 3D). `check` và 310 unit đạt; đang kiểm hồi quy. Không đổi baseline 51 story/211 điểm/147 task hoặc velocity; chưa tự commit/đặt Xong. [Bằng chứng](../docs/evidence/E3-2D-30-34.md).
 
 **Ngày 20/11/2026 — 2D-25…29:** chủ dự án duyệt cả năm đề mới bằng “tat ca”, sau lựa chọn đề xuất thêm màn vì toàn bộ 2D-01…24 đã được triển khai. Ghi nội dung vào LEVELS mục 7, làm và kiểm lần lượt từng màn. SVG tự vẽ, bộ máy/hook dùng lại; bàn giao cả năm Chờ duyệt. 2D-27/29 ghi nguồn kinh điển. Catalog 32 màn (29 2D + 3 3D); check/300 unit và 393 ca production đạt, kiểm dev 54/57 còn cảnh báo CSS preload trang lỗi; không đổi baseline 51 story/211 điểm/147 task, không cộng velocity hoặc tự commit. [Bằng chứng và giới hạn kiểm chứng](../docs/evidence/E3-2D-25-29.md).
 

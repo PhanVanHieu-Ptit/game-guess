@@ -1,0 +1,374 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test tests/e2e/level-2d-31.spec.ts --workers=3
+
+[WebServer] (node:79239) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:79332) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80046) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80045) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80050) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80047) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80049) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80051) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:80398) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 3 workers
+
+(node:80491) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80490) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [iphone-se] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-31: bố cục rộng, vẫn giải bằng chạm (1.2s)
+  ✓   1 [iphone-se] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-31: ba gợi ý đúng thứ tự, giải thích và đo lường (1.4s)
+  ✓   5 [iphone-se] › tests/e2e/level-2d-31.spec.ts:44:1 › 2d-31: kéo bánh lệch trả về, kéo bánh và giỏ đúng đích thì thắng (1.2s)
+(node:81262) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (30.1s)
+(node:81444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 [iphone-se] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng (30.1s)
+  ✓   7 [pixel-5] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-31: ba gợi ý đúng thứ tự, giải thích và đo lường (966ms)
+(node:81449) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [pixel-5] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-31: bố cục rộng, vẫn giải bằng chạm (1.3s)
+  ✘   6 [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (30.6s)
+(node:81458) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [pixel-5] › tests/e2e/level-2d-31.spec.ts:44:1 › 2d-31: kéo bánh lệch trả về, kéo bánh và giỏ đúng đích thì thắng (1.8s)
+(node:81463) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 [mobile-360] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-31: ba gợi ý đúng thứ tự, giải thích và đo lường (983ms)
+  ✓  13 [mobile-360] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-31: bố cục rộng, vẫn giải bằng chạm (1.3s)
+  ✘   8 [pixel-5] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng (30.6s)
+(node:81490) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [mobile-360] › tests/e2e/level-2d-31.spec.ts:44:1 › 2d-31: kéo bánh lệch trả về, kéo bánh và giỏ đúng đích thì thắng (1.9s)
+  ✘  11 [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (30.6s)
+  ✘  14 [mobile-360] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng (30.6s)
+
+
+  1) [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại 
+
+    Test timeout of 30000ms exceeded.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [iphone-se] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng 
+
+    Test timeout of 30000ms exceeded.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.tap: Test timeout of 30000ms exceeded.
+    Browser logs:
+
+    <launching> /Users/phanvanhieu/Library/Caches/ms-playwright/chromium_headless_shell-1254/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/6l/fp5yvrmn2131t05983p_dkxc0000gn/T/playwright_chromiumdev_profile-c24Nfs --remote-debugging-pipe --no-startup-window
+    <launched> pid=81332
+    [pid=81332][err] [1123/223648.759866:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81332][err] [1123/223648.885097:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81332][err] [1123/223649.252022:INFO:CONSOLE:1] "[track] {"type":"level_start","eventId":"7cfde77d-7aa3-4f4c-9474-7bb584a04e9e","installId":"11111111-1111-4111-8111-111111111111","sessionId":"f9a80715-16b6-469b-8218-f5a6ffd9b292","ts":"2026-11-23T15:36:49.250Z","appVersion":"0.1.0","device":{"kind":"android","w":393,"h":727,"quality":"medium"},"levelId":"2d-31","mode":"campaign","attemptNo":1,"restart":false}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81332] <gracefully close start>
+    Call log:
+      - waiting for getByRole('button', { name: 'Giỏ bánh', exact: true })
+        - locator resolved to <g tabindex="0" role="button" aria-pressed="false" aria-disabled="false" aria-label="Giỏ bánh" data-touch-target="true" transform="translate(180 105)">…</g>
+      - attempting tap action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying tap action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying tap action
+          - waiting 100ms
+        57 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <rect x="-32" y="-32" width="64" height="64" stroke="none" fill="transparent"></rect> from <g tabindex="0" role="button" aria-label="Bánh 2" aria-pressed="false" aria-disabled="false" data-touch-target="true" transform="translate(180 82)">…</g> subtree intercepts pointer events
+         - retrying tap action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+       at solutions/2d-31.ts:16
+
+      14 |     {
+      15 |       tap: async (page) => {
+    > 16 |         await page.getByRole('button', { name: 'Giỏ bánh', exact: true }).tap();
+         |                                                                           ^
+      17 |         await page
+      18 |           .getByRole('button', { name: 'Bé 2, chưa có bánh', exact: true })
+      19 |           .tap();
+        at Object.tap (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/solutions/2d-31.ts:16:75)
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/helpers/extra-2d.ts:23:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [pixel-5] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.tap: Test timeout of 30000ms exceeded.
+    Browser logs:
+
+    <launching> /Users/phanvanhieu/Library/Caches/ms-playwright/chromium_headless_shell-1254/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/6l/fp5yvrmn2131t05983p_dkxc0000gn/T/playwright_chromiumdev_profile-csRBHV --remote-debugging-pipe --no-startup-window
+    <launched> pid=81445
+    [pid=81445][err] [1123/223716.077874:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81445][err] [1123/223716.104640:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81445][err] [1123/223716.456118:INFO:CONSOLE:1] "[track] {"type":"level_start","eventId":"ad7373fc-c4ee-4db6-bc65-f4f8b0569f4e","installId":"11111111-1111-4111-8111-111111111111","sessionId":"b1207c29-31f1-4274-840f-03f380a0f70d","ts":"2026-11-23T15:37:16.455Z","appVersion":"0.1.0","device":{"kind":"android","w":393,"h":727,"quality":"medium"},"levelId":"2d-31","mode":"campaign","attemptNo":1,"restart":false}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81445][err] [1123/223716.791818:INFO:CONSOLE:1] "[track] {"type":"hint_used","eventId":"2a26fdfc-ea93-443d-a1b5-50892bc1d7c0","installId":"11111111-1111-4111-8111-111111111111","sessionId":"b1207c29-31f1-4274-840f-03f380a0f70d","ts":"2026-11-23T15:37:16.791Z","appVersion":"0.1.0","device":{"kind":"android","w":393,"h":727,"quality":"medium"},"levelId":"2d-31","mode":"campaign","tier":1,"elapsedMs":336}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81445][err] [1123/223716.839151:INFO:CONSOLE:1] "[track] {"type":"hint_used","eventId":"ab55cfd5-2c41-4795-a94e-7f1b30d26254","installId":"11111111-1111-4111-8111-111111111111","sessionId":"b1207c29-31f1-4274-840f-03f380a0f70d","ts":"2026-11-23T15:37:16.839Z","appVersion":"0.1.0","device":{"kind":"android","w":393,"h":727,"quality":"medium"},"levelId":"2d-31","mode":"campaign","tier":2,"elapsedMs":384}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81445][err] [1123/223716.939112:INFO:CONSOLE:1] "[track] {"type":"hint_used","eventId":"786910ec-0b3c-43b4-9a1c-acb42ad13c86","installId":"11111111-1111-4111-8111-111111111111","sessionId":"b1207c29-31f1-4274-840f-03f380a0f70d","ts":"2026-11-23T15:37:16.939Z","appVersion":"0.1.0","device":{"kind":"android","w":393,"h":727,"quality":"medium"},"levelId":"2d-31","mode":"campaign","tier":3,"elapsedMs":484}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81445][err] [1123/223716.939219:INFO:CONSOLE:1] "[track] {"type":"level_complete","eventId":"236b5439-4473-48cf-aeae-76983167d04b","installId":"11111111-1111-4111-8111-111111111111","sessionId":"b1207c29-31f1-4274-840f-03f380a0f70d","ts":"2026-11-23T15:37:16.939Z","appVersion":"0.1.0","device":{"kind":"android","w":393,"h":727,"quality":"medium"},"levelId":"2d-31","mode":"campaign","durationMs":484,"hintsUsed":3,"result":"revealed","wrongCount":0}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81445][err] [1123/223717.034958:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81445][err] [1123/223717.064187:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81445][err] [1123/223717.414985:INFO:CONSOLE:1] "[track] {"type":"level_start","eventId":"ade6c7fb-6a1f-49d3-9d44-27675337f642","installId":"11111111-1111-4111-8111-111111111111","sessionId":"c8b05df9-1f91-4518-ae16-5995ca13b29e","ts":"2026-11-23T15:37:17.414Z","appVersion":"0.1.0","device":{"kind":"android","w":393,"h":727,"quality":"medium"},"levelId":"2d-31","mode":"campaign","attemptNo":1,"restart":false}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81445] <gracefully close start>
+    Call log:
+      - waiting for getByRole('button', { name: 'Giỏ bánh', exact: true })
+        - locator resolved to <g tabindex="0" role="button" aria-pressed="false" aria-disabled="false" aria-label="Giỏ bánh" data-touch-target="true" transform="translate(180 105)">…</g>
+      - attempting tap action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <rect x="-32" y="-32" width="64" height="64" stroke="none" fill="transparent"></rect> from <g tabindex="0" role="button" aria-label="Bánh 2" aria-pressed="false" aria-disabled="false" data-touch-target="true" transform="translate(180 82)">…</g> subtree intercepts pointer events
+        - retrying tap action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <rect x="-32" y="-32" width="64" height="64" stroke="none" fill="transparent"></rect> from <g tabindex="0" role="button" aria-label="Bánh 2" aria-pressed="false" aria-disabled="false" data-touch-target="true" transform="translate(180 82)">…</g> subtree intercepts pointer events
+        - retrying tap action
+          - waiting 100ms
+        55 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <rect x="-32" y="-32" width="64" height="64" stroke="none" fill="transparent"></rect> from <g tabindex="0" role="button" aria-label="Bánh 2" aria-pressed="false" aria-disabled="false" data-touch-target="true" transform="translate(180 82)">…</g> subtree intercepts pointer events
+         - retrying tap action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      30 |       .tap();
+      31 |   }
+    > 32 |   await page.getByRole('button', { name: 'Giỏ bánh', exact: true }).tap();
+         |                                                                     ^
+      33 |   await page
+      34 |     .getByRole('button', { name: 'Bé 1, chưa có bánh', exact: true })
+      35 |     .tap();
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-31.spec.ts:32:69
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.tap: Test timeout of 30000ms exceeded.
+    Browser logs:
+
+    <launching> /Users/phanvanhieu/Library/Caches/ms-playwright/chromium_headless_shell-1254/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/6l/fp5yvrmn2131t05983p_dkxc0000gn/T/playwright_chromiumdev_profile-n48sux --remote-debugging-pipe --no-startup-window
+    <launched> pid=81459
+    [pid=81459][err] [1123/223720.158920:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81459][err] [1123/223720.187184:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81459][err] [1123/223720.537621:INFO:CONSOLE:1] "[track] {"type":"level_start","eventId":"737ba951-706c-408e-822d-4c96ba496123","installId":"11111111-1111-4111-8111-111111111111","sessionId":"f804d3bd-0a34-4802-aede-560018169175","ts":"2026-11-23T15:37:20.537Z","appVersion":"0.1.0","device":{"kind":"android","w":360,"h":640,"quality":"medium"},"levelId":"2d-31","mode":"campaign","attemptNo":1,"restart":false}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81459] <gracefully close start>
+    Call log:
+      - waiting for getByRole('button', { name: 'Giỏ bánh', exact: true })
+        - locator resolved to <g tabindex="0" role="button" aria-pressed="false" aria-disabled="false" aria-label="Giỏ bánh" data-touch-target="true" transform="translate(180 105)">…</g>
+      - attempting tap action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying tap action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not stable
+        - retrying tap action
+          - waiting 100ms
+        57 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <rect x="-32" y="-32" width="64" height="64" stroke="none" fill="transparent"></rect> from <g tabindex="0" role="button" aria-label="Bánh 2" aria-pressed="false" aria-disabled="false" data-touch-target="true" transform="translate(180 82)">…</g> subtree intercepts pointer events
+         - retrying tap action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+       at solutions/2d-31.ts:16
+
+      14 |     {
+      15 |       tap: async (page) => {
+    > 16 |         await page.getByRole('button', { name: 'Giỏ bánh', exact: true }).tap();
+         |                                                                           ^
+      17 |         await page
+      18 |           .getByRole('button', { name: 'Bé 2, chưa có bánh', exact: true })
+      19 |           .tap();
+        at Object.tap (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/solutions/2d-31.ts:16:75)
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/helpers/extra-2d.ts:23:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-31-2d-31-sai-khôn-eed5f--giải-bằng-chạm-và-chơi-lại-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [mobile-360] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.tap: Test timeout of 30000ms exceeded.
+    Browser logs:
+
+    <launching> /Users/phanvanhieu/Library/Caches/ms-playwright/chromium_headless_shell-1254/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/var/folders/6l/fp5yvrmn2131t05983p_dkxc0000gn/T/playwright_chromiumdev_profile-nhr9qK --remote-debugging-pipe --no-startup-window
+    <launched> pid=81467
+    [pid=81467][err] [1123/223720.756399:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81467][err] [1123/223720.784226:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81467][err] [1123/223721.138630:INFO:CONSOLE:1] "[track] {"type":"level_start","eventId":"941cf5b6-40d3-4b4d-9618-df776381db5b","installId":"11111111-1111-4111-8111-111111111111","sessionId":"ddf8a650-ae6c-4f4b-94ba-e85b761e572f","ts":"2026-11-23T15:37:21.137Z","appVersion":"0.1.0","device":{"kind":"android","w":360,"h":640,"quality":"medium"},"levelId":"2d-31","mode":"campaign","attemptNo":1,"restart":false}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81467][err] [1123/223721.473311:INFO:CONSOLE:1] "[track] {"type":"hint_used","eventId":"5dd32c5a-af23-495f-9573-f4ae8ed81a61","installId":"11111111-1111-4111-8111-111111111111","sessionId":"ddf8a650-ae6c-4f4b-94ba-e85b761e572f","ts":"2026-11-23T15:37:21.472Z","appVersion":"0.1.0","device":{"kind":"android","w":360,"h":640,"quality":"medium"},"levelId":"2d-31","mode":"campaign","tier":1,"elapsedMs":335}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81467][err] [1123/223721.536264:INFO:CONSOLE:1] "[track] {"type":"hint_used","eventId":"b1506d90-6d77-4ee3-bbd9-b44fbf6447d0","installId":"11111111-1111-4111-8111-111111111111","sessionId":"ddf8a650-ae6c-4f4b-94ba-e85b761e572f","ts":"2026-11-23T15:37:21.536Z","appVersion":"0.1.0","device":{"kind":"android","w":360,"h":640,"quality":"medium"},"levelId":"2d-31","mode":"campaign","tier":2,"elapsedMs":399}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81467][err] [1123/223721.635871:INFO:CONSOLE:1] "[track] {"type":"hint_used","eventId":"6a826061-2267-4ca7-8a70-a4e0ae135f48","installId":"11111111-1111-4111-8111-111111111111","sessionId":"ddf8a650-ae6c-4f4b-94ba-e85b761e572f","ts":"2026-11-23T15:37:21.635Z","appVersion":"0.1.0","device":{"kind":"android","w":360,"h":640,"quality":"medium"},"levelId":"2d-31","mode":"campaign","tier":3,"elapsedMs":498}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81467][err] [1123/223721.636031:INFO:CONSOLE:1] "[track] {"type":"level_complete","eventId":"8f1a4273-70b5-4e79-9515-f1b197e62c1f","installId":"11111111-1111-4111-8111-111111111111","sessionId":"ddf8a650-ae6c-4f4b-94ba-e85b761e572f","ts":"2026-11-23T15:37:21.635Z","appVersion":"0.1.0","device":{"kind":"android","w":360,"h":640,"quality":"medium"},"levelId":"2d-31","mode":"campaign","durationMs":498,"hintsUsed":3,"result":"revealed","wrongCount":0}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81467][err] [1123/223721.729183:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81467][err] [1123/223721.761001:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81467][err] [1123/223722.117805:INFO:CONSOLE:1] "[track] {"type":"level_start","eventId":"ccd21973-6fe7-4bf9-9835-a34ae23af226","installId":"11111111-1111-4111-8111-111111111111","sessionId":"489ffdb1-6a26-4463-aae1-d76ff3c5ff46","ts":"2026-11-23T15:37:22.116Z","appVersion":"0.1.0","device":{"kind":"android","w":1366,"h":768,"quality":"medium"},"levelId":"2d-31","mode":"campaign","attemptNo":1,"restart":false}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81467][err] [1123/223722.914360:INFO:CONSOLE:1] "[track] {"type":"level_complete","eventId":"b216da8e-8127-46ea-8188-15ddb16276a5","installId":"11111111-1111-4111-8111-111111111111","sessionId":"489ffdb1-6a26-4463-aae1-d76ff3c5ff46","ts":"2026-11-23T15:37:22.913Z","appVersion":"0.1.0","device":{"kind":"android","w":1366,"h":768,"quality":"medium"},"levelId":"2d-31","mode":"campaign","durationMs":798,"hintsUsed":0,"result":"solved","wrongCount":0}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81467][err] [1123/223723.048160:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81467][err] [1123/223723.080386:ERROR:ui/display/mac/cv_display_link_mac.mm:191] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [pid=81467][err] [1123/223723.433457:INFO:CONSOLE:1] "[track] {"type":"level_start","eventId":"e7e106c5-b1cf-4e8b-b161-63d490cd968e","installId":"11111111-1111-4111-8111-111111111111","sessionId":"53f25b8c-afa3-4182-af92-dea2030cd493","ts":"2026-11-23T15:37:23.432Z","appVersion":"0.1.0","device":{"kind":"android","w":360,"h":640,"quality":"medium"},"levelId":"2d-31","mode":"campaign","attemptNo":1,"restart":false}", source: http://localhost:3100/_next/static/chunks/3050sypj5l52k.js (1)
+    [pid=81467] <gracefully close start>
+    Call log:
+      - waiting for getByRole('button', { name: 'Giỏ bánh', exact: true })
+        - locator resolved to <g tabindex="0" role="button" aria-pressed="false" aria-disabled="false" aria-label="Giỏ bánh" data-touch-target="true" transform="translate(180 105)">…</g>
+      - attempting tap action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <rect x="-32" y="-32" width="64" height="64" stroke="none" fill="transparent"></rect> from <g tabindex="0" role="button" aria-label="Bánh 2" aria-pressed="false" aria-disabled="false" data-touch-target="true" transform="translate(180 82)">…</g> subtree intercepts pointer events
+        - retrying tap action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <rect x="-32" y="-32" width="64" height="64" stroke="none" fill="transparent"></rect> from <g tabindex="0" role="button" aria-label="Bánh 2" aria-pressed="false" aria-disabled="false" data-touch-target="true" transform="translate(180 82)">…</g> subtree intercepts pointer events
+        - retrying tap action
+          - waiting 100ms
+        55 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <rect x="-32" y="-32" width="64" height="64" stroke="none" fill="transparent"></rect> from <g tabindex="0" role="button" aria-label="Bánh 2" aria-pressed="false" aria-disabled="false" data-touch-target="true" transform="translate(180 82)">…</g> subtree intercepts pointer events
+         - retrying tap action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      30 |       .tap();
+      31 |   }
+    > 32 |   await page.getByRole('button', { name: 'Giỏ bánh', exact: true }).tap();
+         |                                                                     ^
+      33 |   await page
+      34 |     .getByRole('button', { name: 'Bé 1, chưa có bánh', exact: true })
+      35 |     .tap();
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-31.spec.ts:32:69
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-31-2d-31-chia-cả--60a4c--chia-thứ-tự-khác-vẫn-thắng-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6 failed
+    [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại 
+    [iphone-se] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng 
+    [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại 
+    [pixel-5] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng 
+    [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-31: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại 
+    [mobile-360] › tests/e2e/level-2d-31.spec.ts:8:1 › 2d-31: chia cả ba bánh riêng chưa thắng; thử lại và chia thứ tự khác vẫn thắng 
+  9 passed (1.2m)
