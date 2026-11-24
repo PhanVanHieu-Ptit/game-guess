@@ -1,6 +1,6 @@
 # Lịch sử sprint — Lắt Léo
 
-> Cập nhật gần nhất: 2026-11-23. File này ghi kết quả review, retro, năng lực và các phạm vi được giao trực tiếp. Sprint hiện tại ở [SPRINT.md](SPRINT.md).
+> Cập nhật gần nhất: 2026-11-24. File này ghi kết quả review, retro, năng lực và các phạm vi được giao trực tiếp. Sprint hiện tại ở [SPRINT.md](SPRINT.md).
 
 **Chưa có sprint nào kết thúc.** Sprint 1 (đề xuất 16–20/11/2026) chưa được xác nhận cam kết.
 
@@ -22,7 +22,9 @@
 
 ## Phạm vi giao trực tiếp (không tính velocity)
 
-**Ngày 23/11/2026 — 2D-30…34:** sau khi chọn đề xuất năm đề mới vì 29 màn 2D cũ đã có mã, chủ dự án xác nhận “Duyệt cả năm”. Nội dung chuẩn ở LEVELS mục 8; làm và kiểm từng màn, đạt rồi mới sang màn tiếp (9/15/12/39/15 ca). SVG/lời thoại tự soạn, nguồn câu đố kinh điển, khung/hook dùng lại; catalog 37 màn (34 2D + 3 3D). `check` và 310 unit đạt; đang kiểm hồi quy. Không đổi baseline 51 story/211 điểm/147 task hoặc velocity; chưa tự commit/đặt Xong. [Bằng chứng](../docs/evidence/E3-2D-30-34.md).
+**Ngày 24/11/2026 — 2D-35…39:** sau khi đối soát 34/34 màn 2D đã có mã/spec, chủ dự án chọn đề xuất thêm năm đề rồi xác nhận “duyệt cả 5”. Ghi LEVELS mục 9 trước triển khai; làm/kiểm tuần tự, lần lượt 12/9/12/15/15 ca đạt. SVG tự vẽ, khung/hook giữ nguyên, không thêm thư viện; nhận mọi chuỗi đong nước hợp lệ, kiểm đủ 16 tập thẻ. `check`, 320 unit và hồi quy production **546/546 đạt**; từng màn **Chờ duyệt (`in_review`)**. Catalog 42 màn (39 2D + 3 3D); không đổi baseline/cam kết/velocity hoặc tự commit/đặt Xong. [Bằng chứng](../docs/evidence/E3-2D-35-39.md).
+
+**Ngày 23/11/2026 — 2D-30…34:** sau khi chọn đề xuất năm đề mới vì 29 màn 2D cũ đã có mã, chủ dự án xác nhận “Duyệt cả năm”. Nội dung chuẩn ở LEVELS mục 8; làm và kiểm từng màn, đạt rồi mới sang màn tiếp (9/15/12/39/15 ca). SVG/lời thoại tự soạn, nguồn câu đố kinh điển, khung/hook dùng lại; catalog 37 màn (34 2D + 3 3D). `check` và 310 unit đạt; log hồi quy đã kết thúc 483/483 ca đạt, từng màn Chờ duyệt (đối soát 24/11). Không đổi baseline 51 story/211 điểm/147 task hoặc velocity; chưa tự commit/đặt Xong. [Bằng chứng](../docs/evidence/E3-2D-30-34.md).
 
 **Ngày 20/11/2026 — 2D-25…29:** chủ dự án duyệt cả năm đề mới bằng “tat ca”, sau lựa chọn đề xuất thêm màn vì toàn bộ 2D-01…24 đã được triển khai. Ghi nội dung vào LEVELS mục 7, làm và kiểm lần lượt từng màn. SVG tự vẽ, bộ máy/hook dùng lại; bàn giao cả năm Chờ duyệt. 2D-27/29 ghi nguồn kinh điển. Catalog 32 màn (29 2D + 3 3D); check/300 unit và 393 ca production đạt, kiểm dev 54/57 còn cảnh báo CSS preload trang lỗi; không đổi baseline 51 story/211 điểm/147 task, không cộng velocity hoặc tự commit. [Bằng chứng và giới hạn kiểm chứng](../docs/evidence/E3-2D-25-29.md).
 

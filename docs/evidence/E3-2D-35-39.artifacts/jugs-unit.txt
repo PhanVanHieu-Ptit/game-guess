@@ -1,0 +1,22 @@
+
+> game-guess@0.1.0 pretest
+> npm run levels:generate
+
+
+> game-guess@0.1.0 levels:generate
+> node scripts/generate-levels.mjs
+
+Đã nhận 41 màn (meta.ts + scene.tsx).
+
+> game-guess@0.1.0 test
+> vitest run tests/unit/domain/water-jugs.test.ts
+
+
+ RUN  v5.1.0 /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess
+
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  07:06:47
+   Duration  533ms (environment 69%, setup 26%, transform 4%, tests 1%)
+

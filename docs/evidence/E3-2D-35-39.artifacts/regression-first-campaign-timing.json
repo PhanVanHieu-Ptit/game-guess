@@ -1,0 +1,39 @@
+[
+  {
+    "type": "before",
+    "callId": "daio@510",
+    "startTime": 15416.499,
+    "class": "Test",
+    "method": "expect",
+    "title": "Expect \"toContainText\"",
+    "subtitle": "getByRole('dialog')",
+    "params": {
+      "locator": "getByRole('dialog')",
+      "expected": "Bấm còi giữa kẹt xe cũng như hét vào quạt: ồn thêm mà gió vẫn thế. Kiên nhẫn là mẹo giỏi nhất."
+    },
+    "stack": [
+      {
+        "file": "/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/solutions/2d-12.ts",
+        "line": 25,
+        "column": 44,
+        "function": "Object.solve"
+      },
+      {
+        "file": "/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/campaign-flow.spec.ts",
+        "line": 212,
+        "column": 17
+      }
+    ]
+  },
+  {
+    "type": "after",
+    "callId": "daio@510",
+    "endTime": 1048397.424,
+    "annotations": [],
+    "error": {
+      "name": "",
+      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"Bấm còi giữa kẹt xe cũng như hét vào quạt: ồn thêm mà gió vẫn thế. Kiên nhẫn là mẹo giỏi nhất.\"\u001b[39m\nTimeout: 7500ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 7500ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n",
+      "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected substring: \u001b[32m\"Bấm còi giữa kẹt xe cũng như hét vào quạt: ồn thêm mà gió vẫn thế. Kiên nhẫn là mẹo giỏi nhất.\"\u001b[39m\nTimeout: 7500ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 7500ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\n    at Object.solve (/Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/solutions/2d-12.ts:25:44)\n    at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/campaign-flow.spec.ts:212:17"
+    }
+  }
+]

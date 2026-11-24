@@ -1,0 +1,19 @@
+regression-first-trace-2.zip
+(1018.0605939999996, 'Tap', 'pw:api')
+(0.32578600000031294, 'Expect "toBeVisible"', 'expect')
+(0.1825329999998212, 'After Hooks', 'hook')
+(0.11836299999989569, 'Before Hooks', 'hook')
+(0.11357500000018626, 'Fixture "page"', 'fixture')
+(0.11344099999964237, 'Create page', 'pw:api')
+(0.10399599999934435, 'Fixture "context"', 'fixture')
+(0.07215200000070035, 'Tap', 'pw:api')
+
+regression-first-trace-1.zip
+(1032.980925, 'Expect "toContainText"', 'expect')
+(0.7956590000000014, 'Tap', 'pw:api')
+(0.7937330000000001, 'Tap', 'pw:api')
+(0.7932690000000002, 'Tap', 'pw:api')
+(0.7894430000000002, 'Tap', 'pw:api')
+(0.7886290000000008, 'Expect "toBeVisible"', 'expect')
+(0.7812340000000004, 'Tap', 'pw:api')
+(0.7797939999999999, 'Tap', 'pw:api')

@@ -1,0 +1,62 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test tests/e2e/level-2d-38.spec.ts --workers=3
+
+[WebServer] (node:564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:608) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:611) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:606) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:612) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:614) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:613) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:653) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 3 workers
+
+(node:657) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:656) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:655) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [iphone-se] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-38: bố cục rộng, vẫn giải bằng chạm (1.2s)
+  ✓   3 [iphone-se] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-38: ba gợi ý đúng thứ tự, giải thích và đo lường (1.3s)
+  ✓   2 [iphone-se] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-38: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (1.6s)
+(node:725) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [iphone-se] › tests/e2e/level-2d-38.spec.ts:9:1 › 2d-38: lời giải sáu bước; sai giữ tiến triển; chỉ thắng khi đủ 4 lít (1.3s)
+  ✓   5 [iphone-se] › tests/e2e/level-2d-38.spec.ts:43:1 › 2d-38: nhận lời giải khác tám bước; Thử lại xóa lượng nước và bộ đếm (1.3s)
+(node:732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:733) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [pixel-5] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-38: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (1.6s)
+  ✓   7 [pixel-5] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-38: ba gợi ý đúng thứ tự, giải thích và đo lường (972ms)
+  ✓   8 [pixel-5] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-38: bố cục rộng, vẫn giải bằng chạm (858ms)
+(node:747) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [pixel-5] › tests/e2e/level-2d-38.spec.ts:9:1 › 2d-38: lời giải sáu bước; sai giữ tiến triển; chỉ thắng khi đủ 4 lít (1.3s)
+(node:752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [pixel-5] › tests/e2e/level-2d-38.spec.ts:43:1 › 2d-38: nhận lời giải khác tám bước; Thử lại xóa lượng nước và bộ đếm (1.4s)
+(node:754) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [mobile-360] › tests/e2e/helpers/extra-2d.ts:11:3 › 2d-38: sai không thắng, phản hồi vui, giải bằng chạm và chơi lại (1.6s)
+  ✓  12 [mobile-360] › tests/e2e/helpers/extra-2d.ts:48:3 › 2d-38: ba gợi ý đúng thứ tự, giải thích và đo lường (952ms)
+  ✓  13 [mobile-360] › tests/e2e/helpers/extra-2d.ts:76:3 › 2d-38: bố cục rộng, vẫn giải bằng chạm (1.4s)
+  ✓  14 [mobile-360] › tests/e2e/level-2d-38.spec.ts:9:1 › 2d-38: lời giải sáu bước; sai giữ tiến triển; chỉ thắng khi đủ 4 lít (1.3s)
+  ✓  15 [mobile-360] › tests/e2e/level-2d-38.spec.ts:43:1 › 2d-38: nhận lời giải khác tám bước; Thử lại xóa lượng nước và bộ đếm (1.4s)
+
+  15 passed (13.1s)
