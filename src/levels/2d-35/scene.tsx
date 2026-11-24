@@ -1,6 +1,7 @@
 'use client';
 
-import { useId } from 'react';
+import { useId, useState } from 'react';
+import lab from '@/engine/stage2d/experiment.module.css';
 import type { SceneProps } from '@/engine/scene';
 import { useAnswerInput } from '@/engine/input/use-answer-input';
 import { NumberPad } from '@/engine/input/number-pad';
@@ -17,6 +18,7 @@ import touch from '@/engine/stage2d/touch-scene.module.css';
 
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const id = useId();
+  const [overtaken, setOvertaken] = useState(false);
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
   const reject = (value: string) =>
     wrong(
@@ -67,7 +69,24 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
             height={98}
             onPress={() => wrong('runner')}
           >
-            <Kid x={x} y={y} shirt={shirt} />
+            <g
+              style={{
+                transform: `translateX(${index === 0 ? 0 : index === 1 ? (overtaken ? 84 : 0) : overtaken ? -84 : 0}px)`,
+              }}
+            >
+              <Kid x={x} y={y} shirt={shirt} />
+              <text
+                x={x}
+                y={y - 20}
+                textAnchor="middle"
+                fontSize={18}
+                fontWeight={800}
+                fill="#231f3f"
+                stroke="none"
+              >
+                {index === 2 ? 'BÉ' : index === 0 ? 'DẪN ĐẦU' : 'THỨ HAI'}
+              </text>
+            </g>
             <path
               d={`M${x - 34} ${y + 41}h-12m10 15h-14`}
               stroke="#b47b3c"
@@ -79,6 +98,26 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
       <p className={styles.note}>
         Bé vừa vượt người thứ hai. Bé chưa vượt người dẫn đầu.
       </p>
+      <section className={lab.lab} aria-label="Diễn lại pha vượt người">
+        <p className={lab.title}>🏃 Xem vị trí đổi thế nào</p>
+        <div className={lab.actions}>
+          <button
+            type="button"
+            data-touch-target
+            onClick={() => {
+              setOvertaken(!overtaken);
+              onProgress();
+            }}
+          >
+            {overtaken ? 'Trở về trước khi vượt' : 'Vượt người thứ hai'}
+          </button>
+        </div>
+        <p aria-live="polite">
+          {overtaken
+            ? 'Bé đã đổi chỗ với người thứ hai. Người dẫn đầu vẫn ở phía trước.'
+            : 'Bé ở phía sau người thứ hai. Chạy về bên trái nhé!'}
+        </p>
+      </section>
       <form className={controls.controls} onSubmit={answer.submit}>
         <label htmlFor={id}>Vị trí của bé</label>
         <input

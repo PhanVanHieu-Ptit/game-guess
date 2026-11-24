@@ -1,0 +1,98 @@
+.card,
+.compact,
+.collection {
+  border: 2px solid var(--c-ink);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.compact {
+  padding: 6px 10px;
+}
+
+.compact .eyebrow,
+.compact .track {
+  display: none;
+}
+.compact .icon {
+  font-size: 1rem;
+}
+.compact .row {
+  gap: 6px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.copy {
+  flex: 1;
+  min-width: 0;
+}
+.icon {
+  font-size: 1.75rem;
+}
+.eyebrow {
+  font-size: 1rem;
+  color: var(--c-muted);
+  font-weight: 600;
+}
+.name {
+  font-size: 1rem;
+  font-weight: 800;
+}
+.track {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+.track span {
+  height: 7px;
+  flex: 1;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid var(--c-ink);
+}
+.track span[data-filled='true'] {
+  background: var(--c-ink);
+}
+.caption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: var(--c-muted);
+  line-height: 1.45;
+}
+.collection {
+  background: #fff;
+}
+.collection .name {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.collection .name > span {
+  color: var(--c-muted);
+  font-weight: 600;
+}
+.stamps {
+  display: flex;
+  gap: 7px;
+  margin-top: 12px;
+}
+.stamp {
+  flex: 1;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 2px dashed var(--c-line);
+  border-radius: 50%;
+  color: var(--c-muted);
+  font-size: 1.5rem;
+}
+.stamp[data-earned='true'] {
+  border-style: solid;
+  border-color: var(--c-ink);
+  background: #fff0ac;
+  transform: rotate(-7deg);
+}

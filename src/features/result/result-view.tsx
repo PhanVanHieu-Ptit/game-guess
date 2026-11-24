@@ -1,6 +1,16 @@
 import { solveLevelOf, type HintTier } from '@/domain/hints/hint-machine';
 import type { LevelMeta } from '@/domain/levels/types';
 import { formatDuration } from '@/domain/share/format-duration';
+import {
+  CHAPTERS,
+  chapterIndex,
+  chapterProgress,
+  replayChallenge,
+} from '@/domain/progress/journey';
+import { JourneyCard } from '@/features/journey/journey-card';
+import { LEVEL_METAS } from '@/levels';
+import { flavorOf } from '@/levels/flavor';
+import { useProgress } from '@/stores/progress';
 import { strings } from '@/features/strings';
 import { Button, ButtonLink } from '@/features/ui/button';
 import { BulbIcon, CheckIcon } from '@/features/ui/icons';
@@ -33,8 +43,30 @@ export function ResultView({
   onRestart,
 }: ResultViewProps) {
   const revealed = status === 'revealed';
+  const results = useProgress((state) => state.levels);
+  const chapter = CHAPTERS[chapterIndex(meta.ordinal)];
+  const progress = chapterProgress(
+    LEVEL_METAS,
+    results,
+    chapterIndex(meta.ordinal),
+  );
+  const replay = replayChallenge(LEVEL_METAS, results);
   return (
     <Modal open={open} label={strings.result.dialogLabel} variant="full">
+      {!revealed && (
+        <div className={styles.confetti} aria-hidden="true">
+          {Array.from({ length: 12 }, (_, i) => (
+            <i
+              key={i}
+              style={{
+                left: `${5 + i * 8}%`,
+                animationDelay: `${(i % 4) * 80}ms`,
+                background: ['#ffc53d', '#73c892', '#b694df', '#ef6b68'][i % 4],
+              }}
+            />
+          ))}
+        </div>
+      )}
       <div className={styles.mark} aria-hidden="true">
         {revealed ? <BulbIcon size={44} /> : <CheckIcon size={44} />}
       </div>
@@ -42,8 +74,34 @@ export function ResultView({
         {revealed ? strings.result.revealedTitle : strings.result.solvedTitle}
       </h2>
       <p className={styles.lead}>
-        {revealed ? strings.result.revealedLead : strings.result.solvedLead}
+        {revealed
+          ? strings.result.revealedLead
+          : (flavorOf(meta.id)?.[1] ?? strings.result.solvedLead)}
       </p>
+
+      {progress.earned && (
+        <p className={styles.stamp} data-testid="earned-stamp">
+          <span aria-hidden="true">{chapter.icon}</span> Chặng hoàn tất ·{' '}
+          {chapter.stamp}
+        </p>
+      )}
+      <JourneyCard ordinal={meta.ordinal} compact />
+
+      <div className={styles.nextCard}>
+        <p className={styles.cardLabel}>
+          {next ? 'Tiếp theo có gì?' : 'Hộ chiếu đã đầy dấu!'}
+        </p>
+        <p>{flavorOf(meta.id)?.[2]}</p>
+        {next ? (
+          <ButtonLink block variant="primary" href={`/play/${next.id}`}>
+            {strings.result.next}
+          </ButtonLink>
+        ) : (
+          <ButtonLink block variant="primary" href="/levels">
+            {strings.result.backToLevels}
+          </ButtonLink>
+        )}
+      </div>
 
       {revealed ? (
         <div className={styles.card}>
@@ -72,9 +130,6 @@ export function ResultView({
       <div className={styles.actions}>
         {next ? (
           <>
-            <ButtonLink block variant="primary" href={`/play/${next.id}`}>
-              {strings.result.next}
-            </ButtonLink>
             <Button block onClick={onRestart}>
               {strings.result.restart}
             </Button>
@@ -84,9 +139,11 @@ export function ResultView({
           </>
         ) : (
           <>
-            <ButtonLink block variant="primary" href="/levels">
-              {strings.result.backToLevels}
-            </ButtonLink>
+            {replay && (
+              <ButtonLink block href={`/play/${replay.id}`}>
+                Thử tự giải lại · Màn {replay.ordinal}
+              </ButtonLink>
+            )}
             <Button block onClick={onRestart}>
               {strings.result.restart}
             </Button>

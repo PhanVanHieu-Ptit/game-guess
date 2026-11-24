@@ -19,6 +19,21 @@
   line-height: 1.35;
 }
 
+.sceneIntro {
+  margin: 12px 0;
+  padding: 10px 12px;
+  border-left: 4px solid var(--c-teal);
+  border-radius: 0 12px 12px 0;
+  background: #fff;
+  color: var(--c-muted);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.sceneIntro > span {
+  color: var(--c-teal);
+}
+
 /* Sân chơi chiếm phần còn lại; nếu màn hình quá thấp thì cuộn bên trong thay vì tràn khỏi trang. */
 .stage {
   position: relative;
@@ -26,6 +41,12 @@
   min-height: 0;
   overflow-y: auto;
   padding-bottom: 4px;
+}
+
+/* Cảnh dài phải tăng chiều cao theo nội dung để lời thoại phía sau không đè lên nút chơi. */
+.sceneFrame {
+  display: flow-root;
+  min-height: 100%;
 }
 
 /* Khung báo lỗi nạp màn nằm trong sân chơi nên chỉ chiếm vùng sân, không phủ cả màn hình. */

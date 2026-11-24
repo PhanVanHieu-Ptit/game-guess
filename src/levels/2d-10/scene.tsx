@@ -1,6 +1,7 @@
 'use client';
 
-import { useId } from 'react';
+import { useId, useState } from 'react';
+import lab from '@/engine/stage2d/experiment.module.css';
 import type { SceneProps } from '@/engine/scene';
 import { normalizeAnswer } from '@/domain/answers/normalize';
 import { useAnswerInput } from '@/engine/input/use-answer-input';
@@ -16,6 +17,7 @@ const ACCEPTED = ['4', 'bốn', 'bon', 'bốn con', '4 con'] as const;
 
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const id = useId();
+  const [counted, setCounted] = useState<number[]>([]);
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
 
   const answer = useAnswerInput({
@@ -96,6 +98,19 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
               {/* Mắt vịt đen lay láy */}
               <circle cx="19" cy="-10" r="2.5" fill="#231f3f" stroke="none" />
               <circle cx="18.5" cy="-11" r="0.8" fill="#ffffff" stroke="none" />
+              {counted.includes(index) && (
+                <text
+                  x={0}
+                  y={-34}
+                  textAnchor="middle"
+                  fontSize={22}
+                  fontWeight={800}
+                  stroke="none"
+                  fill="#126b5e"
+                >
+                  ✓
+                </text>
+              )}
             </g>
           ))}
         </ArtButton>
@@ -108,6 +123,41 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
           strokeWidth={2}
         />
       </PuzzleArt>
+
+      <section className={lab.lab} aria-label="Điểm danh vịt">
+        <p className={lab.title}>🦆 Điểm danh từng bạn, đừng đếm lời kể!</p>
+        <div className={lab.actions}>
+          {ducks.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              data-touch-target
+              aria-pressed={counted.includes(index)}
+              onClick={() => {
+                setCounted((previous) =>
+                  previous.includes(index)
+                    ? previous.filter((value) => value !== index)
+                    : [...previous, index],
+                );
+                onProgress();
+              }}
+            >
+              Vịt {index + 1}
+              {counted.includes(index) ? ' ✓' : ''}
+            </button>
+          ))}
+        </div>
+        <p aria-live="polite">Đã điểm danh: {counted.length} bạn.</p>
+        <div className={lab.actions}>
+          <button
+            type="button"
+            data-touch-target
+            onClick={() => (counted.length === 4 ? onSolved() : wrong('other'))}
+          >
+            Chốt số vịt đã đếm
+          </button>
+        </div>
+      </section>
 
       <form className={controls.controls} onSubmit={answer.submit}>
         <label htmlFor={id}>Có tất cả mấy con vịt?</label>

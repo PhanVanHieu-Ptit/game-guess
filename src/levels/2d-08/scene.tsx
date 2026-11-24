@@ -1,6 +1,7 @@
 'use client';
 
 import { useId } from 'react';
+import { WordWorkshop } from '@/engine/stage2d/word-workshop';
 import type { SceneProps } from '@/engine/scene';
 import { normalizeAnswer } from '@/domain/answers/normalize';
 import { useAnswerInput } from '@/engine/input/use-answer-input';
@@ -121,6 +122,8 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
           <path d="M180 97v4" stroke="#231f3f" strokeWidth={2} />
         </ArtButton>
       </PuzzleArt>
+
+      <WordWorkshop onProgress={onProgress} onSolved={onSolved} />
 
       <form className={controls.controls} onSubmit={answer.submit}>
         <label htmlFor={id}>Từ nói lái của &quot;bí mật&quot;</label>

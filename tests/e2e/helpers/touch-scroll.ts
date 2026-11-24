@@ -2,8 +2,7 @@ import { expect, type Page } from '@playwright/test';
 
 /** Vuốt cảm ứng thật (khác scrollIntoView của locator), không sửa scrollTop của game. */
 export async function swipeStageUp(page: Page) {
-  const art = page.getByTestId('puzzle-art').locator('..');
-  const stage = art.locator('xpath=../../..');
+  const stage = page.getByTestId('play-stage');
   const box = await stage.boundingBox();
   if (!box) throw new Error('Thiếu sân chơi để vuốt');
   if (

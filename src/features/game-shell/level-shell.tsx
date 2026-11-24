@@ -6,11 +6,13 @@ import { levelAfter } from '@/domain/progress/unlock';
 import { FeedbackToast } from '@/features/hud/feedback-toast';
 import { BottomBar } from '@/features/hud/bottom-bar';
 import { TopBar } from '@/features/hud/top-bar';
+import { JourneyCard } from '@/features/journey/journey-card';
 import { HintSheet } from '@/features/hints/hint-sheet';
 import { ResultView } from '@/features/result/result-view';
 import { strings } from '@/features/strings';
 import { Button, ButtonLink } from '@/features/ui/button';
 import { LEVEL_METAS } from '@/levels';
+import { flavorOf } from '@/levels/flavor';
 import styles from './game-shell.module.css';
 import { getLazyScene, preloadScene, resetLazyScene } from './lazy-scene';
 import type { LevelRun } from './level-run';
@@ -69,6 +71,7 @@ export function LevelShell({ level }: { level: Level }) {
           onRestart={restart}
         />
         <StorageNotice />
+        <JourneyCard ordinal={meta.ordinal} compact />
         <PromptText
           prompt={meta.prompt}
           className={styles.prompt}
@@ -76,35 +79,40 @@ export function LevelShell({ level }: { level: Level }) {
           onTap={() => run.session.progress()}
         />
 
-        <div className={styles.stage}>
+        <div className={styles.stage} data-testid="play-stage">
           <FeedbackToast feedback={snapshot.feedback} />
-          <SceneBoundary
-            onRetry={() => {
-              resetLazyScene(meta.id);
-              setScene(getLazyScene(meta.id, level.component));
-            }}
-            fallback={(retry) => (
-              <div className={styles.errorBox} role="alert">
-                <p>{strings.play.loadError}</p>
-                <Button block variant="primary" onClick={retry}>
-                  {strings.play.retry}
-                </Button>
-                <ButtonLink block href="/levels">
-                  {strings.play.back}
-                </ButtonLink>
-              </div>
-            )}
-          >
-            <Suspense fallback={<SceneLoading />}>
-              <Scene
-                key={snapshot.epoch}
-                onSolved={run.session.solve}
-                onWrong={run.session.wrong}
-                onProgress={run.session.progress}
-              />
-              <SceneReady run={run} />
-            </Suspense>
-          </SceneBoundary>
+          <div className={styles.sceneFrame}>
+            <SceneBoundary
+              onRetry={() => {
+                resetLazyScene(meta.id);
+                setScene(getLazyScene(meta.id, level.component));
+              }}
+              fallback={(retry) => (
+                <div className={styles.errorBox} role="alert">
+                  <p>{strings.play.loadError}</p>
+                  <Button block variant="primary" onClick={retry}>
+                    {strings.play.retry}
+                  </Button>
+                  <ButtonLink block href="/levels">
+                    {strings.play.back}
+                  </ButtonLink>
+                </div>
+              )}
+            >
+              <Suspense fallback={<SceneLoading />}>
+                <Scene
+                  key={snapshot.epoch}
+                  onSolved={run.session.solve}
+                  onWrong={run.session.wrong}
+                  onProgress={run.session.progress}
+                />
+                <SceneReady run={run} />
+              </Suspense>
+            </SceneBoundary>
+          </div>
+          <p className={styles.sceneIntro}>
+            <span aria-hidden="true">✦</span> {flavorOf(meta.id)?.[0]}
+          </p>
         </div>
 
         <BottomBar

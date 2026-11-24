@@ -17,8 +17,8 @@
   margin: 0 0 var(--sp-4);
   padding: 0;
   display: grid;
-  /* Lưới 5 cột: ở 320 px mỗi ô vẫn rộng ≥ 51 px (≥ 44 px theo docs/GDD.md mục 4). */
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  /* Mỗi chặng hai hàng, ba ô; vùng chạm thoải mái cả ở chiều rộng 320 px. */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--sp-2);
 }
 
@@ -28,8 +28,7 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
-  aspect-ratio: 1;
-  min-height: 52px;
+  min-height: 64px;
   border: 2px solid var(--c-ink);
   border-radius: var(--radius-md);
   background: var(--c-surface);
@@ -69,5 +68,25 @@ a.cell:active {
 
 .legend {
   font-size: var(--fs-sm);
+  color: var(--c-muted);
+}
+
+.chapter {
+  margin: 24px 0;
+}
+.chapterTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.125rem;
+}
+.chapterTitle > :last-child {
+  margin-left: auto;
+  color: var(--c-muted);
+  font-size: 1rem;
+}
+.chapterCaption {
+  margin: 6px 0 12px;
+  font-size: 1rem;
   color: var(--c-muted);
 }

@@ -1,6 +1,7 @@
 'use client';
 
-import { useId } from 'react';
+import { useId, useState } from 'react';
+import lab from '@/engine/stage2d/experiment.module.css';
 import type { SceneProps } from '@/engine/scene';
 import { useAnswerInput } from '@/engine/input/use-answer-input';
 import { NumberPad } from '@/engine/input/number-pad';
@@ -18,6 +19,7 @@ const accepted = ['2', 'hai'];
 
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const id = useId();
+  const [unpacked, setUnpacked] = useState(false);
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
   const reject = (value: string) =>
     wrong(['3', 'ba'].includes(normalizeAnswer(value)) ? 'total' : 'other');
@@ -99,6 +101,27 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
       <p className={styles.note}>
         Cân đang thăng bằng. <strong>Rổ rỗng: 1 kg.</strong>
       </p>
+      <section className={lab.lab} aria-label="Tách hàng trên cân">
+        <p className={lab.title}>🍊 Dỡ hàng để nghĩ thử</p>
+        <p className={lab.readout} aria-live="polite">
+          {unpacked
+            ? '🧺 Rổ rỗng 1 kg + 🍊 cam ? kg = 3 kg'
+            : '🧺 Rổ còn nguyên cam = 3 kg'}
+        </p>
+        <div className={lab.actions}>
+          <button
+            type="button"
+            data-touch-target
+            aria-pressed={unpacked}
+            onClick={() => {
+              setUnpacked(!unpacked);
+              onProgress();
+            }}
+          >
+            {unpacked ? 'Xếp lại vào rổ' : 'Tách rổ và cam'}
+          </button>
+        </div>
+      </section>
       <form className={controls.controls} onSubmit={answer.submit}>
         <label htmlFor={id}>Số ký cam</label>
         <input

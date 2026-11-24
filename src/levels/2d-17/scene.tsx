@@ -1,6 +1,7 @@
 'use client';
 
-import { useId } from 'react';
+import { useId, useState } from 'react';
+import lab from '@/engine/stage2d/experiment.module.css';
 import type { SceneProps } from '@/engine/scene';
 import { useAnswerInput } from '@/engine/input/use-answer-input';
 import { NumberPad } from '@/engine/input/number-pad';
@@ -17,6 +18,7 @@ const accepted = ['8:20', '8h20', '820', '08:20', '0820', '8 giờ 20'];
 
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const id = useId();
+  const [mirror, setMirror] = useState(true);
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
   const reject = (value: string) =>
     wrong(
@@ -33,13 +35,17 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   return (
     <div className={styles.scene}>
       <PuzzleArt
-        label="Đồng hồ kim phản chiếu trong gương ở quán cà phê"
+        label={
+          mirror
+            ? 'Đồng hồ kim phản chiếu trong gương ở quán cà phê'
+            : 'Đồng hồ nhìn trực tiếp, không qua gương'
+        }
         height={285}
         reaction={reaction}
       >
         <rect x={35} y={12} width={290} height={225} rx={25} fill="#d8f1f7" />
         <path d="M55 53l25-23m211 181l15-15" stroke="#fff" strokeWidth={7} />
-        <g transform="translate(360 0) scale(-1 1)">
+        <g transform={mirror ? 'translate(360 0) scale(-1 1)' : undefined}>
           <circle cx={180} cy={118} r={88} fill="#ffd66e" />
           <circle cx={180} cy={118} r={78} fill="#fffdf3" />
           {Array.from({ length: 12 }, (_, i) => {
@@ -78,6 +84,27 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
       <p className={styles.note}>
         Trong gương: <strong>3:40</strong>
       </p>
+      <section className={lab.lab} aria-label="Thử phản chiếu đồng hồ">
+        <p className={lab.title}>🪞 Đổi góc nhìn, nhìn đường đi của kim</p>
+        <div className={lab.actions}>
+          <button
+            type="button"
+            data-touch-target
+            aria-pressed={!mirror}
+            onClick={() => {
+              setMirror(!mirror);
+              onProgress();
+            }}
+          >
+            {mirror ? 'Nhìn trực tiếp đồng hồ' : 'Nhìn lại qua gương'}
+          </button>
+        </div>
+        <p aria-live="polite">
+          {mirror
+            ? 'Bạn đang nhìn ảnh trong gương.'
+            : 'Mặt số và cả hai kim đã được phản chiếu lại. Tự đọc giờ nào!'}
+        </p>
+      </section>
       <form className={controls.controls} onSubmit={answer.submit}>
         <label htmlFor={id}>Giờ thật</label>
         <input

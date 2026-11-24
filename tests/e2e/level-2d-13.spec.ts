@@ -32,7 +32,9 @@ test('2D-13: chạm sông/giữ ngắn chưa thắng; giữ liên tục bốn gi
   await page.waitForTimeout(2400);
   await expect(page.getByRole('dialog')).toHaveCount(0);
   await rail.dispatchEvent('pointerup', pointer);
-  await expect(page.getByRole('progressbar')).toHaveAttribute('value', '0');
+  await expect(
+    page.getByRole('progressbar', { name: 'Bé qua cầu' }),
+  ).toHaveAttribute('value', '0');
   await page.waitForTimeout(1800);
   await expect(page.getByRole('dialog')).toHaveCount(0);
   await solution.solve(page);
@@ -63,7 +65,9 @@ test('2D-13: hủy con trỏ và chơi lại đều xóa thời gian giữ', asy
   await rail.dispatchEvent('pointerdown', pointer);
   await page.waitForTimeout(800);
   await rail.dispatchEvent('pointercancel', pointer);
-  await expect(page.getByRole('progressbar')).toHaveAttribute('value', '0');
+  await expect(
+    page.getByRole('progressbar', { name: 'Bé qua cầu' }),
+  ).toHaveAttribute('value', '0');
   await page.waitForTimeout(3500);
   await expect(page.getByRole('dialog')).toHaveCount(0);
   await solution.solve(page);
@@ -74,7 +78,9 @@ test('2D-13: hủy con trỏ và chơi lại đều xóa thời gian giữ', asy
     .getByRole('dialog')
     .getByRole('button', { name: 'Chơi lại', exact: true })
     .tap();
-  await expect(page.getByRole('progressbar')).toHaveAttribute('value', '0');
+  await expect(
+    page.getByRole('progressbar', { name: 'Bé qua cầu' }),
+  ).toHaveAttribute('value', '0');
   await expect(page.getByRole('dialog')).toHaveCount(0);
   await solution.solve(page);
   await expect(page.getByRole('dialog')).toContainText(
