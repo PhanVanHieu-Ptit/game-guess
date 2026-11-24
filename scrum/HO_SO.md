@@ -1,6 +1,6 @@
 # Hồ sơ dự án — Lắt Léo
 
-> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-23.
+> Khởi tạo 2026-11-11 (Thứ Tư) · Cập nhật gần nhất: 2026-11-24.
 > Đây là bộ nhớ của dự án: mục tiêu, giả định, điểm lệch, câu hỏi chờ, quyết định. Backlog: [BACKLOG.md](BACKLOG.md) · Sprint: [SPRINT.md](SPRINT.md) · Lịch sử: [LICH_SU.md](LICH_SU.md).
 
 ## 1. Nguồn đã đọc (chỉ đọc, không sửa)
@@ -27,7 +27,9 @@
 
 ## 2. Hồ sơ dự án
 
-**Phạm vi mới ngày 23/11/2026 — 2D-30…34:** đối chiếu cả 29 màn 2D trong LEVELS đều có mã và spec. Chủ dự án chọn **“Đề xuất 5 đề mới 2D-30…34 để tôi duyệt trước khi triển khai”**, rồi xác nhận **“Duyệt cả năm”**. Ghi nội dung chuẩn vào LEVELS mục 8 trước khi dựng; triển khai và kiểm riêng lần lượt 9/15/12/39/15 ca, qua rồi mới sang màn kế. Cả năm là biến thể câu đố kinh điển; SVG/lời thoại tự soạn, dùng khung/hook hiện có, không sửa engine hoặc thêm thư viện. Đang kiểm hồi quy; catalog 37 màn (34 2D + 3 3D), ordinal tạm 33…37, vị trí thiết kế 35…39. [Bằng chứng](../docs/evidence/E3-2D-30-34.md). Giữ nguyên baseline/cam kết/velocity, chưa tự commit hoặc đặt Xong.
+**Phạm vi mới ngày 24/11/2026 — 2D-35…39:** cả 34 màn 2D trong LEVELS đã có mã/spec, chủ dự án chọn đề xuất năm đề mới trước rồi xác nhận **“duyệt cả 5”**. Nội dung chuẩn ghi tại LEVELS mục 9 trước triển khai. Kiểm riêng lần lượt 12/9/12/15/15 ca, mỗi màn qua rồi mới sang màn kế; SVG tự vẽ, khung/hook cũ, luật nước TypeScript thuần. `check` và 320 unit/component đạt; hồi quy production **546/546 đạt**, từng màn **Chờ duyệt (`in_review`)**. Catalog 42 màn (39 2D + 3 3D); ordinal tạm 38…42, vị trí thiết kế 40…44. [Bằng chứng](../docs/evidence/E3-2D-35-39.md). Ngoài MVP, không đổi baseline/cam kết/velocity hoặc tự commit/đặt Xong.
+
+**Phạm vi mới ngày 23/11/2026 — 2D-30…34:** đối chiếu cả 29 màn 2D trong LEVELS đều có mã và spec. Chủ dự án chọn **“Đề xuất 5 đề mới 2D-30…34 để tôi duyệt trước khi triển khai”**, rồi xác nhận **“Duyệt cả năm”**. Ghi nội dung chuẩn vào LEVELS mục 8 trước khi dựng; triển khai và kiểm riêng lần lượt 9/15/12/39/15 ca, qua rồi mới sang màn kế. Cả năm là biến thể câu đố kinh điển; SVG/lời thoại tự soạn, dùng khung/hook hiện có, không sửa engine hoặc thêm thư viện. Log hồi quy đã kết thúc 483/483 ca đạt, từng màn Chờ duyệt (đối soát 24/11); catalog 37 màn (34 2D + 3 3D), ordinal tạm 33…37, vị trí thiết kế 35…39. [Bằng chứng](../docs/evidence/E3-2D-30-34.md). Giữ nguyên baseline/cam kết/velocity, chưa tự commit hoặc đặt Xong.
 
 **Phạm vi mới ngày 20/11/2026 — 2D-25…29:** sau khi xác nhận cả 24 màn 2D đã có mã, chủ dự án chọn đề xuất thêm năm đề, rồi duyệt cả năm bằng **“tat ca”**. Ghi đề/lời giải/ba gợi ý/giải thích vào LEVELS mục 7 trước khi dựng; triển khai và kiểm riêng lần lượt. Từng màn bàn giao **Chờ duyệt (`in_review`)**. Catalog hiện có 32 màn (29 2D + 3 3D); ordinal tạm 28…32 cho năm màn mới, vị trí thiết kế 30…34 khi đủ 3D-04/05. Dùng SVG tự vẽ, bộ máy và hook có sẵn, sai không phạt, đủ lời giải chạm. 2D-27/29 là biến thể câu đố kinh điển. [Bằng chứng](../docs/evidence/E3-2D-25-29.md). Giữ nguyên baseline/cam kết/velocity; chưa tự commit hoặc đặt Xong.
 
@@ -110,6 +112,7 @@
 
 | Ngày | Quyết định / sự kiện | Nguồn |
 |---|---|---|
+| 2026-11-24 | Chủ dự án chọn đề xuất năm đề mới sau khi đối soát 34 màn 2D đã có mã, rồi xác nhận “duyệt cả 5” cho 2D-35…39. Ghi LEVELS mục 9 trước triển khai, làm/kiểm tuần tự; ngoài MVP, giữ baseline, không tự commit/đặt Xong. | Yêu cầu trực tiếp; [E3-2D-35-39.md](../docs/evidence/E3-2D-35-39.md) |
 | 2026-11-20 | Người dùng chọn đề xuất thêm năm đề 2D để duyệt, sau đó duyệt cả năm bằng “tat ca”. Thêm 2D-25…29 vào LEVELS trước khi triển khai; từng màn Chờ duyệt, ngoài MVP, giữ baseline/cam kết và không tự commit. | Yêu cầu trực tiếp; [E3-2D-25-29.md](../docs/evidence/E3-2D-25-29.md) |
 | 2026-11-19 | Người dùng thống nhất làm 2D-20 và thêm bốn đề mới, rồi duyệt cả 2D-21…24 để triển khai lần lượt. Ghi nội dung bổ sung trong LEVELS mục 6; phạm vi ngoài MVP, không tự đổi GDD/51 story/147 task. Các màn và LL-013/032 Chờ duyệt; chưa tự commit hoặc đặt Xong. | Hai câu trả lời trực tiếp trong phiên; [E3-2D-20-24.md](../docs/evidence/E3-2D-20-24.md) |
 | 2026-11-17 | Người dùng duyệt phương án 3D-03 bằng “oke”; chỉ dựng màn này. Nghiêng nồi bằng kéo trên màn hình hoặc chọn quai/chạm nút, không dùng cảm biến; thắng bằng nhập 5. Mô hình bằng code và cơ chế kéo dùng chung. LL-044 mới có 2/4 kịch bản, còn 3D-04/05. Ngân sách <50 draw call/frame, <1 MB tải thêm gồm gói 3D chung; đo bằng trình duyệt tự động. | Yêu cầu trực tiếp; [E4-3D-03.md](../docs/evidence/E4-3D-03.md) |

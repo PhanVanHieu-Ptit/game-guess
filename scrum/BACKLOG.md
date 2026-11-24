@@ -2,7 +2,7 @@
 
 Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/backlog.md](../docs/backlog.md) v2.1 (cập nhật 2026-11-10, sha256 `3dda35d427a0`). File gốc giữ nguyên, không sửa; khi nó đổi, `/docmoi` so hash và đề xuất cập nhật ở đây. Mã story giữ ổn định: LL-001…LL-051 (story mới từ LL-052).
 
-- **Cập nhật gần nhất:** 2026-11-23 (2D-30…34: đang kiểm hồi quy; catalog 37 màn, gồm 34 màn 2D và 3 màn 3D).
+- **Cập nhật gần nhất:** 2026-11-24 (2D-35…39: Chờ duyệt, hồi quy production 546/546 đạt; catalog 42 màn: 39 2D + 3 3D).
 - **Trạng thái story:** Chưa làm → Đang làm → Chờ duyệt → Xong (hoặc Chặn). *Xong* theo DoD tạm ở [HO_SO.md](HO_SO.md) mục 2.
 - **Sẵn sàng = Có** khi đủ 4 điều kiện: mô tả rõ, có tiêu chí nghiệm thu kiểm tra được, đã ước lượng, không bị câu hỏi mở chặn. Thứ tự bảng là thứ tự làm, từ trên xuống.
 - **Điểm:** 1-2-3-5-8-13, trên 8 phải chia nhỏ (hiện không story nào vượt 8). Thang tương đối, tạm quy 1 điểm ≈ ½ ngày công một người (giả định).
@@ -12,7 +12,7 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 
 - **51 story · 211 điểm** · Must 44 (192 đ) · Should 6 (17 đ) · Could 1 (2 đ) · Won't 0 (đã chốt, không ước lượng).
 - **Sẵn sàng:** 39 story "Có" (162 đ) · 12 story "Chưa" (49 đ).
-- **Tiến độ:** Chưa làm 34 · Đang làm 2 · Chờ duyệt 15 · Xong 0 → **0 / 211 điểm xong**. 14 màn bổ sung theo yêu cầu trực tiếp được theo dõi riêng, chưa gán điểm story hoặc đổi baseline.
+- **Tiến độ:** Chưa làm 34 · Đang làm 2 · Chờ duyệt 15 · Xong 0 → **0 / 211 điểm xong**. 19 màn bổ sung theo yêu cầu trực tiếp được theo dõi riêng, chưa gán điểm story hoặc đổi baseline.
 - **Dự báo thô (giả định, chưa có hạn chót — Q1):** 211 điểm ÷ 20 điểm/sprint ≈ 10,6 sprint; ÷ 18 điểm (cam kết 90%) ≈ 11,7 sprint. Nếu Sprint 1 bắt đầu thứ Hai 16/11/2026 thì xong sau 11–12 sprint, tức khoảng **29/01–05/02/2027**, chưa trừ nghỉ lễ và chưa tính lỗi phát sinh.
 
 ## Epic
@@ -27,17 +27,47 @@ Bản làm việc của Scrum Master, khởi tạo **2026-11-11** từ [docs/bac
 
 ## 1. Bảng backlog
 
-### Phạm vi 2D-30…34 được duyệt ngày 23/11/2026
+### Phạm vi 2D-35…39 được duyệt ngày 24/11/2026
 
-Chủ dự án chọn đề xuất thêm năm đề vì cả 29 màn 2D cũ đã có mã, rồi xác nhận **“Duyệt cả năm”**. Nội dung chuẩn đã ghi tại LEVELS mục 8 trước khi dựng. Đã triển khai và kiểm riêng lần lượt: 2D-30 đạt 9/9, 2D-31 đạt 15/15, 2D-32 đạt 12/12, 2D-33 đạt 39/39, 2D-34 đạt 15/15; mỗi màn qua rồi mới sang màn tiếp. **Đang kiểm hồi quy toàn game.**
+Chủ dự án chọn đề xuất năm đề mới rồi xác nhận **“duyệt cả 5”**. Nội dung chuẩn ở LEVELS mục 9 được ghi trước triển khai. Đã nhắc lại đề/cơ chế/cách giải và làm lần lượt từng màn, kiểm riêng qua rồi mới sang màn kế.
 
 | Mã | Tên | Trạng thái | Kiểm chứng hành vi |
 |---|---|---|---|
-| 2D-30 | Thắp gì trước? | Đang kiểm hồi quy | Chạm diêm thắng; nến/đèn dầu chưa thắng; ba gợi ý, chơi lại |
-| 2D-31 | Bánh còn trong giỏ | Đang kiểm hồi quy | Chia hai bánh rồi giỏ còn một bánh; nhận thứ tự khác, kéo hoặc chạm; giỏ nhiều bánh/bé đã có bánh/chia hết bánh riêng/kéo lệch chưa thắng |
-| 2D-32 | Ốc sên leo tường | Đang kiểm hồi quy | Nhập 3/ba thắng; 5/2 và chạm tường chưa thắng; nhập rỗng không tính sai, bàn phím chạm, hoa/thường/khoảng trắng |
-| 2D-33 | Chín viên bi | Đang kiểm hồi quy | Đủ chín vị trí bi nhẹ, suy từ kết quả tối đa hai lần cân; chọn sai/cân lần ba chưa thắng; lịch sử đọc lại được, Thử lại giữ bi nhẹ |
-| 2D-34 | Chuyến đò của bác | Đang kiểm hồi quy | Hai lời giải bảy chuyến và chuỗi chín chuyến an toàn đều thắng; sai kiểm cả hai bờ và giữ tiến triển; unit tìm đủ 10 trạng thái an toàn |
+| 2D-35 | Vượt ai rồi? | Chờ duyệt | Nhập 2/hai/thứ hai thắng; nhận không dấu/hoa thường/khoảng trắng; 1/3/chạm bạn chạy chưa thắng; chơi lại |
+| 2D-36 | Màu nào mới đúng? | Chờ duyệt | Chỉ XANH tô đỏ thắng; ĐỎ tô xanh, VÀNG tô tím, TÍM tô vàng chưa thắng, câu đùa riêng |
+| 2D-37 | Bánh và túi | Chờ duyệt | Nhập 500/năm trăm/đơn vị đồng và 0,5 nghìn thắng; 1000/10000/chạm bánh chưa thắng; NFD/không dấu |
+| 2D-38 | Đong nước nấu chè | Chờ duyệt | Lời giải 6 và 8 bước đều thắng; nhận mọi chuỗi hợp lệ; rót nguồn rỗng/đích đầy không đổi nước hoặc số bước; Thử lại |
+| 2D-39 | Lật thẻ kiểm luật | Chờ duyệt | Thử đủ 16 tập thẻ, chỉ A+7 rồi Kiểm tra thắng; sai giữ lựa chọn, sửa tại chỗ; không tự thắng khi chỉ chọn |
+
+SVG tự vẽ trong code, nét tròn/màu tươi; không tài nguyên thương hiệu hoặc thư viện mới. Dùng nguyên khung, `PuzzleArt`, `ArtButton`, `Kid`, `usePuzzleFeedback`, `useAnswerInput`, `NumberPad` và CSS cuộn. Luật bình nước là TypeScript thuần; không sửa engine/hook/feature. Sai rung nhẹ và có câu đùa, không trừ điểm hoặc mất tiến triển. Ba gợi ý/giải thích khớp nguyên văn LEVELS. Đã nối đủ lời giải chạm vào chiến dịch **42 màn (39 2D + 3 3D)**. Ordinal tạm 38…42, vị trí thiết kế 40…44 khi đủ 3D-04/05.
+
+Điểm cần thử với người chơi thật:
+
+- **2D-35 (2):** có thể quá dễ hoặc đã quen câu đố; tình huống không đề cập chạy vòng hay đồng hạng.
+- **2D-36 (2):** có thể dễ; phụ thuộc khả năng phân biệt màu. Chữ màu có tương phản trên thẻ sáng, nhãn trình đọc màn hình mô tả cả tên và mực; cần thử với người gặp khó khăn về thị giác màu.
+- **2D-37 (3):** dễ nhập 1000 do đọc lướt. Tổng và chênh lệch luôn hiện; câu hỏi/ô nhập ghi rõ đơn vị đồng, nhận cả chữ và đơn vị đã nêu.
+- **2D-38 (4):** nhiều bước; không có vạch chia hay quyền đổ một phần. Nêu rõ lấy nước không giới hạn, rót tới nguồn hết/đích đầy; nhận mọi chuỗi hợp lệ, không ép lời giải mẫu.
+- **2D-39 (5):** có thể quá khó; dễ đọc luật theo hai chiều. Luật một chiều và việc chọn cả nhóm trước khi lật luôn hiện. Chọn thêm B/4 không đạt điều kiện ít thẻ nhất; sai không xóa lựa chọn.
+
+Kiểm riêng theo thứ tự **12/9/12/15/15 ca Playwright**, đều đạt trước khi sang màn kế; `npm run check` và **320 unit/component** đạt. Hồi quy production **546/546 ca đạt** trên ba cấu hình, gồm chiến dịch 42 màn. Lượt đầu bị gián đoạn với nhiều timeout; đã lưu log/trace và chạy lại toàn bộ trên cùng mã, không tăng timeout hoặc tắt kiểm lỗi. [Bằng chứng, log và ảnh](../docs/evidence/E3-2D-35-39.md). Ngoài MVP, giữ nguyên baseline 51 story/211 điểm, 147 task, cam kết/velocity. Chưa thử người chơi thật/điện thoại vật lý hoặc đo 4G/FPS; không tự commit/đặt Xong.
+
+Đề xuất commit: `feat: thêm năm màn 2D-35 đến 2D-39`.
+
+### Đối soát yêu cầu năm màn 2D tiếp theo ngày 24/11/2026
+
+Khi nhận yêu cầu, cả **34/34 màn 2D** trong LEVELS (2D-01…34) đều có `meta.ts`, `scene.tsx`, spec Playwright và lời giải chiến dịch. Lúc đó không còn màn 2D chưa dựng trong tài liệu và chưa có nội dung 2D-35…39. Chủ dự án chọn đề xuất năm đề mới để duyệt trước, sau đó xác nhận **“duyệt cả 5”**. Phạm vi được duyệt là 2D-35…39 ở bảng trên; không thay đổi các màn đã có. Phần còn thiếu trong danh sách hiện tại là 3D-04/05, ngoài yêu cầu 2D.
+
+### Phạm vi 2D-30…34 được duyệt ngày 23/11/2026
+
+Chủ dự án chọn đề xuất thêm năm đề vì cả 29 màn 2D cũ đã có mã, rồi xác nhận **“Duyệt cả năm”**. Nội dung chuẩn đã ghi tại LEVELS mục 8 trước khi dựng. Đã triển khai và kiểm riêng lần lượt: 2D-30 đạt 9/9, 2D-31 đạt 15/15, 2D-32 đạt 12/12, 2D-33 đạt 39/39, 2D-34 đạt 15/15; mỗi màn qua rồi mới sang màn tiếp. **Chờ duyệt (`in_review`): log hồi quy toàn game đã kết thúc với 483/483 ca đạt.**
+
+| Mã | Tên | Trạng thái | Kiểm chứng hành vi |
+|---|---|---|---|
+| 2D-30 | Thắp gì trước? | Chờ duyệt | Chạm diêm thắng; nến/đèn dầu chưa thắng; ba gợi ý, chơi lại |
+| 2D-31 | Bánh còn trong giỏ | Chờ duyệt | Chia hai bánh rồi giỏ còn một bánh; nhận thứ tự khác, kéo hoặc chạm; giỏ nhiều bánh/bé đã có bánh/chia hết bánh riêng/kéo lệch chưa thắng |
+| 2D-32 | Ốc sên leo tường | Chờ duyệt | Nhập 3/ba thắng; 5/2 và chạm tường chưa thắng; nhập rỗng không tính sai, bàn phím chạm, hoa/thường/khoảng trắng |
+| 2D-33 | Chín viên bi | Chờ duyệt | Đủ chín vị trí bi nhẹ, suy từ kết quả tối đa hai lần cân; chọn sai/cân lần ba chưa thắng; lịch sử đọc lại được, Thử lại giữ bi nhẹ |
+| 2D-34 | Chuyến đò của bác | Chờ duyệt | Hai lời giải bảy chuyến và chuỗi chín chuyến an toàn đều thắng; sai kiểm cả hai bờ và giữ tiến triển; unit tìm đủ 10 trạng thái an toàn |
 
 SVG tự vẽ cùng nét tròn/màu tươi; nguồn cả năm là biến thể câu đố kinh điển. Dùng nguyên khung và hook có sẵn, không thêm thư viện. Sai rung nhẹ và câu đùa, không trừ điểm/mất lượt; đề/ba gợi ý/giải thích khớp nguyên văn LEVELS. Đã nối năm lời giải vào chiến dịch 37 màn. Ordinal tạm 33…37, vị trí thiết kế 35…39 khi đủ 3D-04/05. Không đổi baseline, điểm hoặc velocity; không tự commit/đặt Xong.
 
@@ -49,7 +79,7 @@ SVG tự vẽ cùng nét tròn/màu tươi; nguồn cả năm là biến thể c
 - **2D-33 (4):** có thể quá khó khi chưa quen chia ba nhóm; đĩa ghi số bi, bảng chọn và lịch sử luôn có thể đọc lại. Cần cuộn trên màn hình thấp.
 - **2D-34 (5):** khó nhất lô; luật chở tối đa một món và được đi một mình luôn hiện; cần chở dê quay lại, nhận mọi chuỗi an toàn.
 
-Kiểm chứng hiện có: `npm run check`, 310 unit/component và 90 ca Playwright riêng của năm màn đạt. Các phạm vi kiểm chồng nhau, không cộng thành tổng độc lập. [Bằng chứng, log, ảnh và giới hạn](../docs/evidence/E3-2D-30-34.md). Chưa thử người chơi thật hoặc điện thoại vật lý; chưa đo 4G/FPS đợt này.
+Kiểm chứng hiện có: `npm run check`, 310 unit/component và 90 ca Playwright riêng của năm màn đạt. Log hồi quy production hiện có ghi **483/483 ca đạt**, gồm chiến dịch 37 màn trên ba cấu hình. Đối soát ngày 24/11 chạy lại 42 kiểm thử nội dung/catalog, đều đạt; không chạy lại Playwright trong lượt đối soát này. Các phạm vi kiểm chồng nhau, không cộng thành tổng độc lập. [Bằng chứng, log, ảnh và giới hạn](../docs/evidence/E3-2D-30-34.md). Chưa thử người chơi thật hoặc điện thoại vật lý; chưa đo 4G/FPS đợt này.
 
 Đề xuất commit: `feat: thêm năm màn 2D-30 đến 2D-34`.
 
@@ -890,4 +920,5 @@ Lịch sử v1 → v2.1 của backlog gốc xem [docs/backlog.md](../docs/backlo
 
 - **2026-11-20** — Chủ dự án duyệt cả năm đề mới bằng “tat ca”; triển khai và kiểm lần lượt 2D-25…29, bàn giao từng màn Chờ duyệt. Tổng catalog 32 màn; chín màn ngoài MVP theo dõi riêng, không đổi tổng story/điểm hoặc velocity. [Bằng chứng](../docs/evidence/E3-2D-25-29.md); chưa tự commit.
 
-- **2026-11-23** — Chủ dự án duyệt cả năm đề 2D-30…34; nội dung ở LEVELS mục 8. Kiểm riêng từng màn đạt trước khi sang màn tiếp; đang kiểm hồi quy. Catalog 37 màn, 14 màn ngoài MVP theo dõi riêng; giữ nguyên baseline/velocity. [Bằng chứng](../docs/evidence/E3-2D-30-34.md).
+- **2026-11-24** — Chủ dự án duyệt 2D-35…39 bằng “duyệt cả 5”; nội dung ở LEVELS mục 9. Kiểm tuần tự 12/9/12/15/15 ca đạt; `check`/320 unit và hồi quy production 546/546 đạt; từng màn Chờ duyệt. Catalog 42 màn, 19 màn ngoài MVP theo dõi riêng; không đổi baseline/velocity. [Bằng chứng](../docs/evidence/E3-2D-35-39.md).
+- **2026-11-23** — Chủ dự án duyệt cả năm đề 2D-30…34; nội dung ở LEVELS mục 8. Kiểm riêng từng màn đạt trước khi sang màn tiếp; log hồi quy đã kết thúc 483/483 đạt (đối soát 24/11). Catalog 37 màn, 14 màn ngoài MVP theo dõi riêng; giữ nguyên baseline/velocity. [Bằng chứng](../docs/evidence/E3-2D-30-34.md).
