@@ -30,11 +30,14 @@ test('2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qu
     );
     await expect(page.getByRole('dialog')).toHaveCount(0);
   }
-  await solution.solve(page);
+  await page.getByRole('button', { name: 'Đèn giao thông', exact: true }).tap();
   await expect(page.locator('[data-traffic]')).toHaveAttribute(
     'data-traffic',
     'stopped',
   );
+  // Dừng xe mới là bước chuẩn bị, người chơi còn chủ động đưa bé qua.
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Bé qua đường', exact: true }).tap();
   await expect(page.getByRole('dialog')).toContainText(
     solution.meta.explanation,
     { timeout: 1000 },

@@ -4,10 +4,10 @@ import type { LevelResults } from './types';
 export const CHAPTER_SIZE = 6;
 export const CHAPTERS = [
   {
-    name: 'Khởi động độ lầy',
+    name: 'Tết nhà ngoại',
     stamp: 'Mầm lắt léo',
-    icon: '🌱',
-    color: '#d8f2e0',
+    icon: '🧧',
+    color: '#ffe4d4',
   },
   {
     name: 'Đừng tin mắt mình',

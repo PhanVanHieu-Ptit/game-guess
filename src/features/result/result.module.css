@@ -128,6 +128,27 @@
   font-size: 1rem;
 }
 
+.feast {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 16px;
+  border: 2px solid var(--c-ink);
+  border-radius: 18px;
+  background: #ffe4d4;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.feast > span {
+  font-size: 2rem;
+}
+
+.feast p {
+  margin: 0;
+  line-height: 1.4;
+}
+
 @keyframes pop {
   from {
     transform: scale(0.8);

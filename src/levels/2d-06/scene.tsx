@@ -1,7 +1,11 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import type { SceneProps } from '@/engine/scene';
 import { usePromptWordTap } from '@/engine/prompt-words';
+import { useDrag } from '@/engine/input/use-drag';
+import { TetDialogue } from '@/engine/stage2d/tet-dialogue';
+import tet from '@/engine/stage2d/tet.module.css';
 import {
   ArtButton,
   PuzzleArt,
@@ -9,12 +13,41 @@ import {
 } from '@/engine/stage2d/puzzle-art';
 import styles from '@/engine/stage2d/puzzle.module.css';
 
-export default function Scene({ onSolved, onWrong }: SceneProps) {
-  const { reaction, wrong } = usePuzzleFeedback(onWrong);
+export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
+  const svgRef = useRef<SVGSVGElement>(null);
+  const [found, setFound] = useState(false);
+  const [lastWrong, setLastWrong] = useState('');
+  const { reaction, wrong: feedback } = usePuzzleFeedback(onWrong);
+  const wrong = (code: string) => {
+    if (!fish.placed) {
+      setLastWrong(code);
+      feedback(code);
+    }
+  };
+  const fish = useDrag({
+    svgRef,
+    initialPosition: { x: 186, y: 185 },
+    target: { x: 14, y: 274, width: 84, height: 76 },
+    onDrop: onProgress,
+    onMiss: () => wrong('miss'),
+    onProgress,
+  });
+  const deliver = () => {
+    if (fish.selected) fish.targetProps.onClick();
+    else if (!fish.placed) wrong(found ? 'basket' : 'empty');
+  };
+  useEffect(() => {
+    if (!fish.placed) return;
+    const timer = setTimeout(onSolved, 500);
+    return () => clearTimeout(timer);
+  }, [fish.placed, onSolved]);
 
   usePromptWordTap(({ id }) => {
-    if (id === 'cac') {
-      onSolved();
+    if (id === 'ca') {
+      if (!found) {
+        setFound(true);
+        onProgress();
+      }
     } else {
       wrong('not_fish');
     }
@@ -22,7 +55,11 @@ export default function Scene({ onSolved, onWrong }: SceneProps) {
 
   return (
     <div className={styles.scene}>
-      <PuzzleArt label="Ao sen với cần câu và bóng nước" reaction={reaction}>
+      <PuzzleArt
+        svgRef={svgRef}
+        label="Ao sen không có cá và chiếc giỏ của ngoại"
+        reaction={reaction}
+      >
         {/* Nền trời và mặt ao */}
         <path d="M0 0h360v360H0z" fill="#dff4f3" stroke="none" />
         <path d="M0 110q180-25 360 0v250H0z" fill="#a7e3db" stroke="none" />
@@ -211,10 +248,82 @@ export default function Scene({ onSolved, onWrong }: SceneProps) {
           <ellipse cx="2" cy="2" rx="12" ry="3" fill="#ef6b68" />
           <circle cx="-10" cy="2" r="3" fill="#231f3f" />
         </g>
+        <g
+          {...fish.targetProps}
+          aria-disabled={fish.placed}
+          aria-label="Giỏ của ngoại"
+          data-touch-target
+          onClick={deliver}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              deliver();
+            }
+          }}
+        >
+          <path d="M23 306q33-36 66 0" fill="none" />
+          <path d="M18 306h75l-12 37H30z" fill="#dba05d" />
+          <path
+            d="M26 318h58m-54 12h50m-41-22v31m17-31v31m17-31v31"
+            stroke="#996735"
+            strokeWidth={2}
+          />
+          <rect
+            x={14}
+            y={274}
+            width={84}
+            height={76}
+            fill="transparent"
+            stroke="none"
+          />
+        </g>
+        {found && (
+          <g
+            {...fish.dragProps}
+            aria-label="Cá vừa tìm thấy"
+            data-touch-target
+            transform={`translate(${fish.position.x} ${fish.position.y})`}
+          >
+            <g className={tet.reveal}>
+              <path d="M18 0l25-20v40z" fill="#ef6b68" />
+              <ellipse
+                rx={30}
+                ry={19}
+                fill="#ffcf63"
+                stroke={fish.selected ? '#126b5e' : '#231f3f'}
+              />
+              <path d="M-3-18l12-12 7 14m-13 32 11 10" fill="#ef6b68" />
+              <circle cx={-17} cy={-5} r={3} fill="#231f3f" stroke="none" />
+              <path d="M-12 6q5 5 9 0" fill="none" />
+            </g>
+            <rect
+              x={-34}
+              y={-30}
+              width={82}
+              height={60}
+              fill="transparent"
+              stroke="none"
+            />
+          </g>
+        )}
       </PuzzleArt>
-      <p className={styles.note} role="status">
-        Tranh vẽ ao sen thanh bình... con cá trốn ở đâu?
-      </p>
+      <TetDialogue speaker={found && !fish.placed ? 'Cá:' : 'Ngoại:'}>
+        {fish.placed
+          ? 'Đủ mặt cả nhà rồi. Ngoại mời con vào mâm!'
+          : fish.selected
+            ? 'Chọn mình rồi, chạm giỏ để đưa mình về nhé!'
+            : found
+              ? 'Bơi từ lời nhắn ra đây rồi! Giờ cho mình vào giỏ nhé.'
+              : lastWrong === 'fishing_rod'
+                ? 'Phao nhúc nhích… kéo lên chỉ thấy một chiếc lá!'
+                : lastWrong === 'lotus'
+                  ? 'Sen đẹp thì đẹp, nhưng chưa mọc vây đâu con.'
+                  : lastWrong === 'water'
+                    ? 'Ao trong veo. Có khi con phải tìm ngoài bức tranh.'
+                    : lastWrong === 'empty'
+                      ? 'Giỏ đang chờ khách. Con tìm cá trước nhé.'
+                      : 'Mọi thứ trên màn hình đều có thể giấu điều bất ngờ.'}
+      </TetDialogue>
     </div>
   );
 }

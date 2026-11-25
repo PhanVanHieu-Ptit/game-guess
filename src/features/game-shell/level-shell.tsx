@@ -64,14 +64,17 @@ export function LevelShell({ level }: { level: Level }) {
 
   return (
     <PromptWordsProvider key={snapshot.epoch}>
-      <main className={styles.play}>
+      <main
+        className={`${styles.play} ${meta.ordinal <= 6 ? styles.opening : ''}`}
+      >
         <TopBar
           ordinal={meta.ordinal}
           total={LEVEL_METAS.length}
           onRestart={restart}
+          chapter={meta.ordinal <= 6 ? 'Tết nhà ngoại' : undefined}
         />
         <StorageNotice />
-        <JourneyCard ordinal={meta.ordinal} compact />
+        {meta.ordinal > 6 && <JourneyCard ordinal={meta.ordinal} compact />}
         <PromptText
           prompt={meta.prompt}
           className={styles.prompt}
@@ -110,12 +113,15 @@ export function LevelShell({ level }: { level: Level }) {
               </Suspense>
             </SceneBoundary>
           </div>
-          <p className={styles.sceneIntro}>
-            <span aria-hidden="true">✦</span> {flavorOf(meta.id)?.[0]}
-          </p>
+          {meta.ordinal > 6 && (
+            <p className={styles.sceneIntro}>
+              <span aria-hidden="true">✦</span> {flavorOf(meta.id)?.[0]}
+            </p>
+          )}
         </div>
 
         <BottomBar
+          hideRestart={meta.ordinal <= 6}
           hintTier={snapshot.hintTier}
           nudge={snapshot.nudge}
           onOpenHints={() => setHintsOpen(true)}

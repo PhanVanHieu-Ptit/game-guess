@@ -20,6 +20,10 @@ export const solution: LevelSolution = {
       feedback: meta.wrong.car,
     },
   ],
-  solve: (page) =>
-    page.getByRole('button', { name: 'Đèn giao thông', exact: true }).tap(),
+  solve: async (page) => {
+    await page
+      .getByRole('button', { name: 'Đèn giao thông', exact: true })
+      .tap();
+    await page.getByRole('button', { name: 'Bé qua đường', exact: true }).tap();
+  },
 };

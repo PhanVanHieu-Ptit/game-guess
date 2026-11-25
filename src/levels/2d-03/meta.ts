@@ -5,17 +5,17 @@ export const meta = {
   ordinal: 3,
   kind: '2d',
   title: 'Qua đường an toàn',
-  prompt: 'Bé muốn qua đường nhưng xe chạy ào ào. Giúp bé qua đường an toàn.',
+  prompt: 'Đưa bé út qua đường về nhà ngoại an toàn.',
   thinking: 'logic',
   input: 'tap',
   difficulty: 1,
   hints: [
-    'Ai điều khiển dòng xe?',
+    'Làm sao cho xe chịu dừng trước đã?',
     'Nhìn lên cái cột nhỏ ở góc đường.',
-    'Chạm vào đèn giao thông cho nó đổi sang đỏ.',
+    'Chạm đèn giao thông cho xe dừng, rồi chạm bé để cùng qua vạch.',
   ],
   explanation:
-    'Thay vì cố lách qua xe, hãy làm cho xe dừng lại. Ngoài đời nhớ chờ đèn đỏ thật nha.',
+    'Xe dừng rồi mới đưa bé qua vạch. Tết vui là cả nhà về đủ; ngoài đời nhớ quan sát và tuân theo đèn thật nhé.',
   wrong: {
     child: 'Xe còn chạy kìa. Bé chưa muốn thi chạy với xe đâu!',
     car: 'Xe còn chạy kìa. Chạm mui xe không phải phanh đâu!',

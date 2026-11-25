@@ -5,17 +5,13 @@ export const solution: LevelSolution = {
   meta,
   mistakes: [
     {
-      tap: async (page) => {
-        await page.getByRole('textbox', { name: 'Đáp án của bạn' }).fill('cá');
-        await page.getByRole('button', { name: 'Trả lời', exact: true }).tap();
-      },
+      tap: (page) =>
+        page.getByRole('button', { name: 'Con cá', exact: true }).tap(),
       feedback: meta.wrong.animal,
     },
     {
-      tap: async (page) => {
-        await page.getByRole('textbox', { name: 'Đáp án của bạn' }).fill('tôm');
-        await page.getByRole('button', { name: 'Trả lời', exact: true }).tap();
-      },
+      tap: (page) =>
+        page.getByRole('button', { name: 'Con tôm', exact: true }).tap(),
       feedback: meta.wrong.shrimp,
     },
     {
@@ -24,8 +20,6 @@ export const solution: LevelSolution = {
       feedback: meta.wrong.water,
     },
   ],
-  solve: async (page) => {
-    await page.getByRole('textbox', { name: 'Đáp án của bạn' }).fill('cua');
-    await page.getByRole('button', { name: 'Trả lời', exact: true }).tap();
-  },
+  solve: (page) =>
+    page.getByRole('button', { name: 'Con cua', exact: true }).tap(),
 };

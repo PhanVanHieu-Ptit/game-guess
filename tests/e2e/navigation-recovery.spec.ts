@@ -7,7 +7,7 @@ import { solution as level01 } from './solutions/2d-01';
 import { solution as level02 } from './solutions/2d-02';
 
 // Chặn riêng gói cảnh màn 2, kể cả lần tải trước khi người chơi đang xem kết quả màn 1.
-const SCENE_MARKER = 'Góc ao với dấu hỏi';
+const SCENE_MARKER = 'Ao nhà ngoại: cá, tôm và cua có hai càng khác cỡ';
 
 test('Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được', async ({
   page,
@@ -54,7 +54,7 @@ test('Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại
   networkDown = false;
   await alert.getByRole('button', { name: strings.play.retry }).tap();
   await expect(
-    page.getByRole('textbox', { name: 'Đáp án của bạn', exact: true }),
+    page.getByRole('button', { name: 'Con cua', exact: true }),
   ).toBeVisible();
   await expect(alert).toHaveCount(0);
   await level02.solve(page);

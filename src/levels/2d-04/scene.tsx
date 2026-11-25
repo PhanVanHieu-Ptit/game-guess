@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import type { SceneProps } from '@/engine/scene';
 import { useShake } from '@/engine/input/use-shake';
 import { SensorControls } from '@/engine/input/sensor-controls';
+import { useDrag } from '@/engine/input/use-drag';
+import { TetDialogue } from '@/engine/stage2d/tet-dialogue';
+import tet from '@/engine/stage2d/tet.module.css';
 import {
   ArtButton,
   Kid,
@@ -16,9 +19,32 @@ import motion from './scene.module.css';
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const [fallen, setFallen] = useState(false);
   const [taps, setTaps] = useState(0);
+  const [lastWrong, setLastWrong] = useState('');
+  const svgRef = useRef<SVGSVGElement>(null);
   const recentTaps = useRef<number[]>([]);
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
+  const basket = useDrag({
+    svgRef,
+    initialPosition: { x: 138, y: 302 },
+    target: { x: 242, y: 275, width: 92, height: 60 },
+    onDrop: () => {
+      recentTaps.current = [];
+      setTaps(0);
+      onProgress();
+    },
+    onMiss: () => {
+      setLastWrong('miss');
+      wrong('miss');
+    },
+    onProgress,
+  });
   const drop = () => {
+    if (fallen) return;
+    if (!basket.placed) {
+      setLastWrong('no_basket');
+      wrong('no_basket');
+      return;
+    }
     setFallen(true);
     onProgress();
   };
@@ -40,11 +66,15 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
     return () => clearTimeout(timer);
   }, [fallen, onSolved]);
   const attempt = (code: string) => {
-    if (!fallen) wrong(code);
+    if (!fallen) {
+      setLastWrong(code);
+      wrong(code);
+    }
   };
   return (
     <div className={styles.scene}>
       <PuzzleArt
+        svgRef={svgRef}
         label="Cây xoài cao, bé và chiếc giỏ"
         height={340}
         reaction={reaction}
@@ -107,39 +137,84 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
             <Kid x={74} y={247} shirt="#b694df" />
           </ArtButton>
         </g>
-        <ArtButton
-          label="Giỏ hứng xoài"
-          x={247}
-          y={277}
-          width={87}
-          height={60}
-          onPress={() => attempt('basket')}
+        <g
+          {...basket.targetProps}
+          aria-label="Chỗ hứng dưới quả xoài"
+          data-touch-target
         >
-          <path d="M254 294q34-37 68 0" fill="none" />
-          <path d="M252 294h74l-10 35h-54z" fill="#dba05d" />
+          <rect
+            x={242}
+            y={275}
+            width={92}
+            height={60}
+            rx={18}
+            fill={basket.placed ? 'transparent' : '#fff8df'}
+            stroke={basket.placed ? 'none' : '#231f3f'}
+            strokeDasharray="6 7"
+          />
+          <ellipse
+            cx={288}
+            cy={319}
+            rx={31}
+            ry={6}
+            fill="#bce3b1"
+            stroke="none"
+          />
+        </g>
+        <g
+          {...basket.dragProps}
+          aria-label="Giỏ hứng xoài"
+          data-touch-target
+          transform={`translate(${basket.position.x} ${basket.position.y})`}
+        >
+          <path d="M-34-10q34-37 68 0" fill="none" />
+          <path d="M-37-10h74l-10 35h-54z" fill="#dba05d" />
           <path
-            d="M260 304h58m-54 12h50m-38-20v31m16-31v31m16-31v31"
+            d="M-29 0h58m-54 12h50m-38-20v31m16-31v31m16-31v31"
             stroke="#996735"
             strokeWidth={2}
           />
-        </ArtButton>
+          <rect
+            x={-40}
+            y={-34}
+            width={80}
+            height={66}
+            fill="transparent"
+            stroke="none"
+          />
+        </g>
       </PuzzleArt>
-      <p className={styles.note} role="status">
+      <TetDialogue
+        speaker={
+          lastWrong === 'child' || lastWrong === 'mango' ? 'Bé:' : 'Ngoại:'
+        }
+      >
         {fallen
-          ? 'Xoài rụng vào giỏ rồi!'
-          : 'Không cần cảm biến: chạm thân cây 3 lần liên tục trong 2 giây.'}
-      </p>
-      <SensorControls
-        sensor={{
-          ...shake,
-          fallbackProps: {
-            ...shake.fallbackProps,
-            onClick: tapTree,
-            disabled: fallen,
-          },
-        }}
-        label="Lắc"
-      />
+          ? 'Hứng gọn! Đĩa xoài đầu năm có công của con.'
+          : basket.selected
+            ? 'Chọn giỏ rồi, chạm chỗ con muốn đặt xuống nhé.'
+            : lastWrong === 'no_basket' && !basket.placed
+              ? 'Khoan! Xoài sắp rụng mà giỏ còn ở xa kìa!'
+              : basket.placed
+                ? 'Giỏ vào chỗ rồi. Làm sao cho xoài chịu xuống nhỉ?'
+                : lastWrong === 'child' || lastWrong === 'mango'
+                  ? 'Nhảy cao hết cỡ rồi! Chắc phải nhờ cái cây thôi.'
+                  : 'Hái một quả đãi cả nhà. Nhớ đừng để xoài chạm đất nha!'}
+      </TetDialogue>
+      <details className={tet.optional}>
+        <summary data-touch-target>Chơi bằng lắc điện thoại</summary>
+        <SensorControls
+          sensor={{
+            ...shake,
+            fallbackProps: {
+              ...shake.fallbackProps,
+              onClick: tapTree,
+              disabled: fallen,
+            },
+          }}
+          label="Lắc"
+        />
+      </details>
     </div>
   );
 }
