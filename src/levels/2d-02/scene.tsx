@@ -1,6 +1,7 @@
 'use client';
 
-import { useId } from 'react';
+import { useId, useState } from 'react';
+import lab from '@/engine/stage2d/experiment.module.css';
 import type { SceneProps } from '@/engine/scene';
 import { normalizeAnswer } from '@/domain/answers/normalize';
 import { useAnswerInput } from '@/engine/input/use-answer-input';
@@ -16,6 +17,7 @@ const ACCEPTED = ['cua', 'con cua', 'cua bể', 'cua đồng'] as const;
 
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const id = useId();
+  const [size, setSize] = useState(0);
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
   const answer = useAnswerInput({
     accepted: ACCEPTED,
@@ -71,6 +73,25 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
           </text>
         </ArtButton>
       </PuzzleArt>
+      <section className={lab.lab} aria-label="Thử nghĩa của to và nhỏ">
+        <p className={lab.title}>🫧 “To” theo cách nào nhỉ?</p>
+        <p className={lab.readout} aria-live="polite">
+          <span style={{ fontSize: `${24 + size * 8}px` }}>TO</span>
+          <span style={{ fontSize: `${32 - size * 5}px` }}>nhỏ</span>
+        </p>
+        <div className={lab.actions}>
+          <button
+            type="button"
+            data-touch-target
+            onClick={() => {
+              setSize((size + 1) % 4);
+              onProgress();
+            }}
+          >
+            Cho “to” thêm một chút
+          </button>
+        </div>
+      </section>
       <form className={controls.controls} onSubmit={answer.submit}>
         <label htmlFor={id}>Đáp án của bạn</label>
         <input

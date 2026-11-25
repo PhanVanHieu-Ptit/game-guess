@@ -5,7 +5,7 @@
 export const strings = {
   appName: 'Lắt Léo',
   tagline:
-    'Game đố mẹo hack não kiểu Việt. Mở link là chơi, không cần đăng nhập.',
+    'Tưởng dễ hả? Thử một màn xem. 42 cú xoắn não, 7 chặng quậy, mở là chơi.',
 
   home: {
     play: 'Chơi',
@@ -13,7 +13,7 @@ export const strings = {
     playAgain: 'Chơi lại từ màn 1',
     continueTo: (ordinal: number, total: number) =>
       `Tới màn ${ordinal} / ${total}`,
-    allDone: 'Bạn đã qua hết các màn hiện có. Mai có đố mẹo mới nha.',
+    allDone: 'Đủ 42 màn rồi! Thử tự giải lại những màn từng cần gợi ý nhé.',
     daily: 'Đố mẹo mỗi ngày',
     dailyEmpty: 'Chưa có câu hôm nay',
     levels: 'Chọn màn',
@@ -70,7 +70,7 @@ export const strings = {
       'Chưa phải đâu. Thử nghĩ khác cái đầu tiên bạn nghĩ nha.',
       'Gần rồi! Nhưng "gần" chưa phải "đúng".',
     ],
-    wrongStuck: 'Bí rồi hả? Nút gợi ý đang nhấp nháy kìa.',
+    wrongStuck: 'Đổi góc nghĩ thử nhé. Gợi ý luôn ở đây nếu bạn cần.',
   },
 
   hints: {

@@ -1,0 +1,17 @@
+{
+  "startTime": 1795513637472,
+  "duration": 24439.49,
+  "projectNames": [
+    "iphone-se",
+    "pixel-5",
+    "mobile-360"
+  ],
+  "stats": {
+    "total": 6,
+    "expected": 6,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "ok": true
+  }
+}

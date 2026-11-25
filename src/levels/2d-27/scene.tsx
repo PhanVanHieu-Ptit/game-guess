@@ -1,6 +1,7 @@
 'use client';
 
-import { useId } from 'react';
+import { useId, useState } from 'react';
+import lab from '@/engine/stage2d/experiment.module.css';
 import type { SceneProps } from '@/engine/scene';
 import { useAnswerInput } from '@/engine/input/use-answer-input';
 import { NumberPad } from '@/engine/input/number-pad';
@@ -18,6 +19,7 @@ const accepted = ['5', 'năm'];
 
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const id = useId();
+  const [corners, setCorners] = useState<number[]>([]);
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
   const reject = (value: string) =>
     wrong(['3', 'ba'].includes(normalizeAnswer(value)) ? 'subtract' : 'other');
@@ -44,6 +46,49 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
         />
         <path d="M200 60l60 60" stroke="#ef6b68" strokeWidth={5} />
         <path d="M50 87h117m-117 25h74" stroke="#dff4f3" strokeWidth={8} />
+        {[
+          [30, 60],
+          [200, 60],
+          [260, 120],
+          [260, 290],
+          [30, 290],
+        ].map(([x, y], index) => (
+          <ArtButton
+            key={index}
+            label={`Đánh dấu góc ${index + 1}`}
+            x={x - 29}
+            y={y - 29}
+            width={58}
+            height={58}
+            onPress={() => {
+              setCorners((previous) =>
+                previous.includes(index)
+                  ? previous.filter((value) => value !== index)
+                  : [...previous, index],
+              );
+              onProgress();
+            }}
+          >
+            <circle
+              cx={x}
+              cy={y}
+              r={15}
+              fill={corners.includes(index) ? '#73c892' : '#ffda72'}
+              strokeWidth={2}
+            />
+            <text
+              x={x}
+              y={y + 6}
+              textAnchor="middle"
+              fontSize={18}
+              fontWeight={800}
+              stroke="none"
+              fill="#231f3f"
+            >
+              {corners.includes(index) ? '✓' : '·'}
+            </text>
+          </ArtButton>
+        ))}
         <ArtButton
           label="Mảnh giấy đã cắt rời"
           x={235}
@@ -62,6 +107,21 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
         />
       </PuzzleArt>
       <p className={styles.note}>Chỉ đếm góc của phần giấy lớn còn lại.</p>
+      <section className={lab.lab} aria-label="Đếm góc bằng chạm">
+        <p>✂️ Chạm từng góc giấy để đánh dấu.</p>
+        <p aria-live="polite">
+          Đã đánh dấu: {corners.length} góc. Chạm lại để bỏ dấu.
+        </p>
+        <div className={lab.actions}>
+          <button
+            type="button"
+            data-touch-target
+            onClick={() => (corners.length === 5 ? onSolved() : wrong('other'))}
+          >
+            Chốt các góc đã đánh dấu
+          </button>
+        </div>
+      </section>
       <form className={controls.controls} onSubmit={answer.submit}>
         <label htmlFor={id}>Số góc còn lại</label>
         <input

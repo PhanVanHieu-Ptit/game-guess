@@ -1,6 +1,7 @@
 'use client';
 
-import { useId } from 'react';
+import { useId, useState } from 'react';
+import lab from '@/engine/stage2d/experiment.module.css';
 import type { SceneProps } from '@/engine/scene';
 import { useAnswerInput } from '@/engine/input/use-answer-input';
 import { NumberPad } from '@/engine/input/number-pad';
@@ -16,6 +17,9 @@ import touch from '@/engine/stage2d/touch-scene.module.css';
 
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const id = useId();
+  const [step, setStep] = useState(0);
+  const climb = [0, 3, 1, 4, 2, 5];
+  const metres = climb[step];
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
   const reject = (value: string) =>
     wrong(['5', 'nam'].includes(normalizeAnswer(value)) ? 'five' : 'other');
@@ -74,21 +78,63 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
             </g>
           ))}
         </ArtButton>
-        <path d="M39 265q-6-19 25-19h69l11-20 17 9-5 30z" fill="#70bb87" />
-        <circle cx={91} cy={234} r={29} fill="#ffd66e" />
-        <path
-          d="M106 247q-37 8-31-20 7-20 25-8 14 14-5 18-8 0-6-7"
-          fill="none"
-          stroke="#b47b3c"
-        />
-        <path d="M147 237l-2-19m12 23 9-18" fill="none" />
-        <circle cx={145} cy={216} r={4} fill="#231f3f" stroke="none" />
-        <circle cx={167} cy={220} r={4} fill="#231f3f" stroke="none" />
-        <path d="M155 250q5 5 10-1" fill="none" strokeWidth={2} />
+        <g style={{ transform: `translateY(${-metres * 40}px)` }}>
+          <path d="M39 265q-6-19 25-19h69l11-20 17 9-5 30z" fill="#70bb87" />
+          <circle cx={91} cy={234} r={29} fill="#ffd66e" />
+          <path
+            d="M106 247q-37 8-31-20 7-20 25-8 14 14-5 18-8 0-6-7"
+            fill="none"
+            stroke="#b47b3c"
+          />
+          <path d="M147 237l-2-19m12 23 9-18" fill="none" />
+          <circle cx={145} cy={216} r={4} fill="#231f3f" stroke="none" />
+          <circle cx={167} cy={220} r={4} fill="#231f3f" stroke="none" />
+          <path d="M155 250q5 5 10-1" fill="none" strokeWidth={2} />
+        </g>
       </PuzzleArt>
       <p className={styles.note}>
         Ngày: lên 3 m. Đêm: tụt 2 m. Chạm đỉnh là dừng.
       </p>
+      <section className={lab.lab} aria-label="Diễn thử ốc leo tường">
+        <p className={lab.title}>🐌 Tự cho ốc leo thử</p>
+        <p aria-live="polite">
+          {step === 0
+            ? 'Xuất phát'
+            : `${step % 2 === 1 ? 'Ban ngày' : 'Ban đêm'} · Ngày ${Math.ceil(step / 2)}`}{' '}
+          · {metres} m{metres === 5 ? ' · Chạm đỉnh, về nhà thôi!' : ''}
+        </p>
+        <div className={lab.meter} aria-hidden="true">
+          <span style={{ width: `${metres * 20}%` }} />
+        </div>
+        <div className={lab.actions}>
+          <button
+            type="button"
+            data-touch-target
+            disabled={step === 5}
+            onClick={() => {
+              setStep(step + 1);
+              onProgress();
+            }}
+          >
+            {step % 2 === 0 ? 'Cho ốc leo ban ngày' : 'Trời tối, ốc nghỉ'}
+          </button>
+          <button
+            type="button"
+            data-touch-target
+            onClick={() => {
+              setStep(0);
+              onProgress();
+            }}
+          >
+            Diễn lại
+          </button>
+          {step === 5 && (
+            <button type="button" data-touch-target onClick={onSolved}>
+              Hoàn thành chuyến leo
+            </button>
+          )}
+        </div>
+      </section>
       <form className={controls.controls} onSubmit={answer.submit}>
         <label htmlFor={id}>Số ngày leo tường</label>
         <input

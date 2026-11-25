@@ -8,6 +8,7 @@ import { StorageNotice } from '@/features/game-shell/storage-notice';
 import { strings } from '@/features/strings';
 import { ButtonLink } from '@/features/ui/button';
 import { LEVEL_METAS } from '@/levels';
+import { JourneyCard, StampCollection } from '@/features/journey/journey-card';
 import { ensureProgressHydrated, useProgress } from '@/stores/progress';
 import styles from './home.module.css';
 
@@ -61,6 +62,10 @@ export function HomeActions() {
   return (
     <nav className={styles.menu} aria-label={strings.home.menuLabel}>
       {primary}
+      {hydrated && (
+        <JourneyCard ordinal={target?.ordinal ?? LEVEL_METAS.length} />
+      )}
+      <StampCollection />
       <Link className={styles.daily} data-touch-target href="/daily">
         <span className={styles.dailyTitle}>{strings.home.daily}</span>
         <span className={styles.dailyHint}>{strings.home.dailyEmpty}</span>

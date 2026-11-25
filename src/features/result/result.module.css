@@ -1,4 +1,5 @@
 .mark {
+  flex-shrink: 0;
   display: grid;
   place-items: center;
   width: 88px;
@@ -10,6 +11,39 @@
   color: var(--c-ink);
   box-shadow: 0 4px 0 var(--c-ink);
   animation: pop 220ms ease-out;
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.confetti i {
+  position: absolute;
+  top: -20px;
+  width: 9px;
+  height: 17px;
+  border-radius: 2px;
+  animation: celebrate 900ms ease-out both;
+}
+@keyframes celebrate {
+  from {
+    transform: translateY(-20px) rotate(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(160px) rotate(240deg);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti {
+    display: none;
+  }
 }
 
 .title {
@@ -71,6 +105,27 @@
 .actions {
   display: grid;
   gap: var(--sp-3);
+}
+
+.stamp {
+  margin: 0 0 12px;
+  padding: 12px;
+  border: 2px dashed var(--c-ink);
+  border-radius: 16px;
+  background: #fff0ac;
+  text-align: center;
+  font-weight: 800;
+}
+
+.nextCard {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+  padding: 14px;
+  border: 2px solid var(--c-ink);
+  border-radius: 16px;
+  background: #eee2ff;
+  font-size: 1rem;
 }
 
 @keyframes pop {

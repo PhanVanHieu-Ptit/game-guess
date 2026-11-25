@@ -1,6 +1,7 @@
 'use client';
 
 import { useId } from 'react';
+import { PriceWorkshop } from '@/engine/stage2d/price-workshop';
 import type { SceneProps } from '@/engine/scene';
 import { useAnswerInput } from '@/engine/input/use-answer-input';
 import { NumberPad } from '@/engine/input/number-pad';
@@ -89,6 +90,7 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
         <circle cx={294} cy={110} r={4} fill="#fffdf3" />
         <path d="M244 145h36m-28 13h20" stroke="#fffdf3" strokeWidth={5} />
       </PuzzleArt>
+      <PriceWorkshop onProgress={onProgress} onSolved={onSolved} />
       <p className={styles.note}>
         Tổng: 11.000 đồng. Bánh đắt hơn túi: 10.000 đồng.
       </p>

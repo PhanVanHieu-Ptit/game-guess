@@ -42,9 +42,9 @@
 .toast {
   margin: var(--sp-2) 0 0;
   padding: var(--sp-3) var(--sp-4);
-  border: 2px solid var(--c-danger);
+  border: 2px solid var(--c-ink);
   border-radius: var(--radius-md);
-  background: var(--c-danger-bg);
+  background: #fff0ac;
   color: var(--c-ink);
   font-size: var(--fs-base);
   font-weight: 600;
