@@ -4,8 +4,7 @@
 
 export const strings = {
   appName: 'Lắt Léo',
-  tagline:
-    'Tưởng dễ hả? Thử một màn xem. 42 cú xoắn não, 7 chặng quậy, mở là chơi.',
+  tagline: 'Nhanh tay chưa chắc thắng. Tỉnh táo mới qua được những cú lừa!',
 
   home: {
     play: 'Chơi',
@@ -15,16 +14,9 @@ export const strings = {
       `Tới màn ${ordinal} / ${total}`,
     allDone: 'Đủ 42 màn rồi! Thử tự giải lại những màn từng cần gợi ý nhé.',
     daily: 'Đố mẹo mỗi ngày',
-    dailyEmpty: 'Chưa có câu hôm nay',
+    dailyHint: 'Một bộ câu chung mỗi ngày. Rủ bạn so điểm!',
     levels: 'Chọn màn',
     menuLabel: 'Menu chính',
-  },
-
-  daily: {
-    title: 'Đố mẹo mỗi ngày',
-    empty:
-      'Chưa có câu hôm nay. Bạn quay lại sau nhé, mình đang soạn thêm câu mới.',
-    home: 'Về trang chủ',
   },
 
   levels: {

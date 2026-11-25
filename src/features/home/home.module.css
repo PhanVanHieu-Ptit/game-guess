@@ -94,3 +94,59 @@
   text-align: center;
   color: var(--c-muted);
 }
+
+.rush {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  background: #e9dff8;
+  border: 2px solid var(--c-ink);
+  border-radius: 22px;
+  box-shadow: 4px 5px 0 var(--c-ink);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.rush:active {
+  transform: translate(3px, 4px);
+  box-shadow: 1px 1px 0 var(--c-ink);
+}
+
+.rushEyebrow {
+  font-size: 16px;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  color: #67429a;
+}
+
+.rushTitle {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.rushHint {
+  font-size: 16px;
+  color: #50416a;
+}
+
+.rushCta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid #baa8d5;
+  font-weight: 850;
+}
+
+.rushCta > span {
+  font-size: 28px;
+  line-height: 1;
+}

@@ -61,6 +61,20 @@ export function HomeActions() {
 
   return (
     <nav className={styles.menu} aria-label={strings.home.menuLabel}>
+      <Link className={styles.rush} data-touch-target href="/rush">
+        <span className={styles.rushEyebrow}>⚡ THỬ THÁCH TỐC ĐỘ</span>
+        <span className={styles.rushTitle}>
+          60 giây.
+          <br />
+          Bạn tỉnh được bao lâu?
+        </span>
+        <span className={styles.rushHint}>
+          3 mạng · 6 kiểu bẫy · Combo tăng điểm
+        </span>
+        <span className={styles.rushCta}>
+          Vào đấu trí ngay <span aria-hidden="true">↗</span>
+        </span>
+      </Link>
       {primary}
       {hydrated && (
         <JourneyCard ordinal={target?.ordinal ?? LEVEL_METAS.length} />
@@ -68,7 +82,7 @@ export function HomeActions() {
       <StampCollection />
       <Link className={styles.daily} data-touch-target href="/daily">
         <span className={styles.dailyTitle}>{strings.home.daily}</span>
-        <span className={styles.dailyHint}>{strings.home.dailyEmpty}</span>
+        <span className={styles.dailyHint}>{strings.home.dailyHint}</span>
       </Link>
       <ButtonLink block href="/levels">
         {strings.home.levels}

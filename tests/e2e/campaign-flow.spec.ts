@@ -292,16 +292,18 @@ test('chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, khôn
   await expect(page).toHaveURL(/\/play\/2d-01$/);
 });
 
-test('đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về', async ({
+test('đố mẹo mỗi ngày có thử thách chơi được và có đường quay về', async ({
   page,
 }) => {
   await page.goto('/');
   await home.daily(page).tap();
   await expect(page).toHaveURL(/\/daily$/);
-  await expect(page.getByTestId('daily-empty')).toHaveText(strings.daily.empty);
+  await expect(
+    page.getByRole('button', { name: 'Vào trận · 60 giây →' }),
+  ).toBeVisible();
   await expectLayoutOk(page, 'đố mẹo mỗi ngày');
 
-  await page.getByRole('link', { name: strings.daily.home }).tap();
+  await page.getByRole('link', { name: '← Trang chủ' }).tap();
   await expect(page).toHaveURL(/\/$/);
   await expect(home.play(page)).toBeVisible();
 });
