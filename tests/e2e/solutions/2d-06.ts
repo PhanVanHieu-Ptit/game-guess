@@ -25,9 +25,16 @@ export const solution: LevelSolution = {
       feedback: meta.wrong.water,
     },
   ],
-  solve: (page) =>
-    page
+  solve: async (page) => {
+    await page
       .locator('[data-testid="prompt"]')
-      .getByRole('button', { name: 'các', exact: true })
-      .tap(),
+      .getByRole('button', { name: 'cá', exact: true })
+      .tap();
+    await page
+      .getByRole('button', { name: 'Cá vừa tìm thấy', exact: true })
+      .tap();
+    await page
+      .getByRole('button', { name: 'Giỏ của ngoại', exact: true })
+      .tap();
+  },
 };

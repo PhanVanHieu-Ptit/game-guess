@@ -1,7 +1,15 @@
+import type { Page } from '@playwright/test';
 import { test, expect } from './fixtures';
 import { expectLayoutOk } from './helpers/layout';
 import { openCampaignLevel } from './helpers/campaign';
 import { solution } from './solutions/2d-04';
+
+async function placeBasket(page: Page) {
+  await page.getByRole('button', { name: 'Giỏ hứng xoài', exact: true }).tap();
+  await page
+    .getByRole('button', { name: 'Chỗ hứng dưới quả xoài', exact: true })
+    .tap();
+}
 
 test.beforeEach(({ guard }) => {
   if (process.env.E2E_DEV === '1')
@@ -30,6 +38,7 @@ test('2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn gi�
     path: testInfo.outputPath('2d-04.png'),
     animations: 'disabled',
   });
+  await page.getByText('Chơi bằng lắc điện thoại', { exact: true }).tap();
   await page.getByRole('button', { name: 'Bật cảm biến', exact: true }).tap();
   await expect(
     page.getByText('Bạn chưa cho phép cảm biến.', { exact: false }),
@@ -67,6 +76,8 @@ test('2D-04: bật cảm biến rồi mẫu lắc làm xoài rụng', async ({ p
     });
   });
   await openCampaignLevel(page, '2d-04');
+  await placeBasket(page);
+  await page.getByText('Chơi bằng lắc điện thoại', { exact: true }).tap();
   await page.getByRole('button', { name: 'Bật cảm biến', exact: true }).tap();
   await expect(
     page.getByRole('button', { name: 'Bật cảm biến', exact: true }),
@@ -87,6 +98,7 @@ test('2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng d�
   page,
 }) => {
   await openCampaignLevel(page, '2d-04');
+  await placeBasket(page);
   const tree = page.getByRole('button', { name: 'Thân cây', exact: true });
   await tree.tap();
   await tree.tap();
@@ -109,6 +121,8 @@ test('2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm',
   page,
 }) => {
   await openCampaignLevel(page, '2d-04');
+  await placeBasket(page);
+  await page.getByText('Chơi bằng lắc điện thoại', { exact: true }).tap();
   const shake = page.getByRole('button', { name: 'Lắc', exact: true });
   await shake.tap();
   await shake.tap();

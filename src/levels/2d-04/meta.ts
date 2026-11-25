@@ -4,22 +4,24 @@ export const meta = {
   id: '2d-04',
   ordinal: 4,
   kind: '2d',
-  title: 'Hái xoài cho bé',
-  prompt: 'Xoài chín trên cao, bé với mãi không tới. Giúp bé hái xoài.',
+  title: 'Hái xoài đãi cả nhà',
+  prompt: 'Hứng xoài vào giỏ đãi cả nhà. Đừng để chạm đất!',
   thinking: 'physics',
   input: 'shake',
   difficulty: 1,
   hints: [
-    'Cây cao quá, nhưng quả chín thì dễ rụng.',
-    'Làm cho cái cây rung lên.',
-    'Lắc điện thoại (hoặc chạm liên tục vào thân cây) để xoài rụng.',
+    'Xoài trên cao, giỏ còn ở xa. Chuẩn bị trước khi hái nhé.',
+    'Dời giỏ tới chỗ trống dưới quả xoài, rồi làm cây rung.',
+    'Kéo giỏ sang phải dưới xoài. Lắc điện thoại hoặc chạm thân cây 3 lần nhanh.',
   ],
   explanation:
-    'Không có thang thì có điện thoại! Lắc cho xoài rụng, nhớ hứng bằng giỏ chứ đừng bằng đầu.',
+    'Đặt giỏ trước, rung cây sau: xoài xuống là hứng gọn. Ngoại giao luôn chức trưởng ban tráng miệng!',
   wrong: {
-    mango: 'Bé nhảy rồi mà vẫn hụt. Xoài chưa chịu xuống!',
+    mango: 'Bé nhảy hết cỡ rồi. Xoài vẫn cao hơn một cái đầu!',
     basket: 'Giỏ chỉ biết hứng, chưa biết trèo cây đâu!',
     child: 'Tay bé chưa dài bằng cây. Thử nhờ cái cây xem!',
+    no_basket: 'Khoan rung! Giỏ còn xa, xoài rụng ai hứng?',
+    miss: 'Dời giỏ tới chỗ trống ngay dưới quả xoài nhé!',
   },
   sensors: {
     shake: {

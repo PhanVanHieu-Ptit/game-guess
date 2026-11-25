@@ -5,8 +5,7 @@ export const meta = {
   ordinal: 1,
   kind: '2d',
   title: 'Lì xì cho đứa nhỏ nhất',
-  prompt:
-    'Ông chỉ còn một bao lì xì cuối cùng, phải trao cho đứa nhỏ nhất nhà. Chạm vào em đó.',
+  prompt: 'Trao lì xì cho đứa nhỏ nhất nhà. Bé đâu rồi?',
   thinking: 'visual',
   input: 'drag',
   difficulty: 1,

@@ -10,9 +10,13 @@ export const solution: LevelSolution = {
       feedback: meta.wrong.mango,
     },
     {
-      tap: (page) =>
-        page.getByRole('button', { name: 'Giỏ hứng xoài', exact: true }).tap(),
-      feedback: meta.wrong.basket,
+      tap: async (page) => {
+        for (let i = 0; i < 3; i++)
+          await page
+            .getByRole('button', { name: 'Thân cây', exact: true })
+            .tap();
+      },
+      feedback: meta.wrong.no_basket,
     },
     {
       tap: (page) =>
@@ -21,6 +25,12 @@ export const solution: LevelSolution = {
     },
   ],
   solve: async (page) => {
+    await page
+      .getByRole('button', { name: 'Giỏ hứng xoài', exact: true })
+      .tap();
+    await page
+      .getByRole('button', { name: 'Chỗ hứng dưới quả xoài', exact: true })
+      .tap();
     for (let index = 0; index < 3; index++)
       await page.getByRole('button', { name: 'Thân cây', exact: true }).tap();
   },

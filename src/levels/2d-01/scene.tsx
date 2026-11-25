@@ -1,6 +1,8 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { TetDialogue } from '@/engine/stage2d/tet-dialogue';
+import tet from '@/engine/stage2d/tet.module.css';
 import type { SceneProps } from '@/engine/scene';
 import { useDrag } from '@/engine/input/use-drag';
 import {
@@ -13,6 +15,7 @@ import styles from '@/engine/stage2d/puzzle.module.css';
 
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const svgRef = useRef<SVGSVGElement>(null);
+  const [child, setChild] = useState<number | null>(null);
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
   const envelope = useDrag({
     svgRef,
@@ -28,6 +31,7 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
         svgRef={svgRef}
         label="Bốn bé và bao lì xì khổng lồ"
         reaction={reaction}
+        height={336}
       >
         <path d="M0 210h360v150H0z" fill="#e3f4d5" stroke="none" />
         <path d="M24 32q156 35 312 0" fill="none" />
@@ -51,13 +55,21 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
             x={x - 30}
             y={100}
             height={100}
-            onPress={() => wrong('child')}
+            onPress={() => {
+              setChild(index);
+              wrong('child');
+            }}
           >
-            <Kid
-              x={x}
-              y={110 + index * 4}
-              shirt={['#59b9d5', '#ffbd59', '#b694df', '#73c892'][index]}
-            />
+            <g
+              key={child === index ? reaction : 'still'}
+              className={child === index ? tet.react : undefined}
+            >
+              <Kid
+                x={x}
+                y={110 + index * 4}
+                shirt={['#59b9d5', '#ffbd59', '#b694df', '#73c892'][index]}
+              />
+            </g>
           </ArtButton>
         ))}
         <g
@@ -109,12 +121,30 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
           <circle cy={16} r={23} fill="#ffda72" />
           <path d="M-9 16h18m-9-9v18" stroke="#c62f3b" />
         </g>
+        {!envelope.placed && (
+          <g stroke="#231f3f" fill="#ffd0a1">
+            <ellipse cx={251} cy={326} rx={7} ry={4} />
+            <ellipse cx={273} cy={326} rx={7} ry={4} />
+          </g>
+        )}
       </PuzzleArt>
-      <p className={styles.note}>
-        {envelope.selected
-          ? 'Đã chọn bao lì xì. Chạm chỗ trống để dời bao.'
-          : 'Có thể kéo đồ vật, hoặc chạm chọn rồi chạm chỗ trống.'}
-      </p>
+      <TetDialogue
+        speaker={
+          envelope.placed
+            ? 'Bé út:'
+            : child !== null
+              ? `Bé ${child + 1}:`
+              : 'Ông:'
+        }
+      >
+        {envelope.placed
+          ? 'Ú òa! Nãy giờ cả nhà quên con!'
+          : envelope.selected
+            ? 'Chọn bao rồi, chạm chỗ trống bên trái để dời nhé.'
+            : child !== null
+              ? 'Con cũng nhỏ… nhưng hình như còn thiếu một đứa!'
+              : 'Đếm bốn đứa mà nghe năm tiếng cười. Thử dời đồ vật xem!'}
+      </TetDialogue>
     </div>
   );
 }

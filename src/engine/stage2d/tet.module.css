@@ -1,0 +1,105 @@
+.dialogue {
+  margin: 0;
+  padding: 12px 14px;
+  border: 2px solid var(--c-ink);
+  border-radius: 4px 18px 18px;
+  background: #fffdf3;
+  color: var(--c-ink);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.dialogue strong {
+  color: #a22e3a;
+}
+
+.optional {
+  border-top: 1px dashed #b8b0a5;
+  padding-top: 10px;
+}
+
+.optional summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hint {
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--c-muted);
+}
+
+.react {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: react 400ms ease-out;
+}
+
+.float {
+  animation: float 2.2s ease-in-out infinite;
+}
+
+.reveal {
+  animation: reveal 350ms ease-out both;
+}
+
+.cloud {
+  animation: cloud 2.8s ease-in-out infinite;
+}
+
+.sun {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sunshine 2.4s ease-in-out infinite;
+}
+
+@keyframes react {
+  35% {
+    transform: translateY(-12px) rotate(-5deg);
+  }
+  65% {
+    transform: translateY(-5px) rotate(4deg);
+  }
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cloud {
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes sunshine {
+  50% {
+    opacity: 0.65;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .react,
+  .float,
+  .reveal,
+  .cloud,
+  .sun {
+    animation: none;
+  }
+}

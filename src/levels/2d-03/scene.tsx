@@ -10,17 +10,23 @@ import {
 } from '@/engine/stage2d/puzzle-art';
 import styles from '@/engine/stage2d/puzzle.module.css';
 import motion from './scene.module.css';
+import { TetDialogue } from '@/engine/stage2d/tet-dialogue';
 
 export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
   const [red, setRed] = useState(false);
+  const [crossing, setCrossing] = useState(false);
+  const [lastWrong, setLastWrong] = useState('');
   const { reaction, wrong } = usePuzzleFeedback(onWrong);
   useEffect(() => {
-    if (!red) return;
+    if (!crossing) return;
     const timer = setTimeout(onSolved, 700);
     return () => clearTimeout(timer);
-  }, [red, onSolved]);
+  }, [crossing, onSolved]);
   const attempt = (code: string) => {
-    if (!red) wrong(code);
+    if (!red) {
+      setLastWrong(code);
+      wrong(code);
+    }
   };
   return (
     <div className={styles.scene}>
@@ -57,8 +63,10 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
           width={80}
           height={118}
           onPress={() => {
-            setRed(true);
-            onProgress();
+            if (!red) {
+              setRed(true);
+              onProgress();
+            }
           }}
         >
           <path d="M306 91v35" strokeWidth={8} />
@@ -120,7 +128,11 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
         <g
           key={reaction}
           className={
-            red ? motion.crossing : reaction ? motion.retreat : undefined
+            crossing
+              ? motion.crossing
+              : reaction && !red
+                ? motion.retreat
+                : undefined
           }
         >
           <ArtButton
@@ -129,17 +141,28 @@ export default function Scene({ onSolved, onWrong, onProgress }: SceneProps) {
             y={271}
             width={70}
             height={86}
-            onPress={() => attempt('child')}
+            onPress={() => {
+              if (red && !crossing) {
+                setCrossing(true);
+                onProgress();
+              } else attempt('child');
+            }}
           >
             <Kid x={57} y={278} shirt="#ef6b68" />
           </ArtButton>
         </g>
       </PuzzleArt>
-      <p className={styles.note} role="status">
-        {red
-          ? 'Đèn đỏ — xe đã dừng, bé đang qua vạch.'
-          : 'Đèn xanh — xe đang chạy.'}
-      </p>
+      <TetDialogue speaker={lastWrong === 'car' && !red ? 'Bác tài:' : 'Bé:'}>
+        {crossing
+          ? 'Qua được rồi! Ngoại ơi, con về nè!'
+          : red
+            ? 'Xe dừng rồi. Chạm vào mình, hai đứa cùng qua nhé!'
+            : lastWrong === 'car'
+              ? 'Chạm mui xe không phải nút phanh đâu nha!'
+              : lastWrong === 'child'
+                ? 'Mình muốn ăn Tết, chưa muốn thi chạy với xe!'
+                : 'Ngoại ở bên kia đường. Mình chờ một chút cho an toàn nhé.'}
+      </TetDialogue>
     </div>
   );
 }

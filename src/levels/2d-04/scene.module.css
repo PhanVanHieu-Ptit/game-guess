@@ -3,6 +3,8 @@
   animation: sway 220ms ease-out;
 }
 .fall {
+  transform-box: fill-box;
+  transform-origin: center;
   transform: translate(29px, 168px) rotate(20deg);
   transition: transform 450ms ease-in;
 }

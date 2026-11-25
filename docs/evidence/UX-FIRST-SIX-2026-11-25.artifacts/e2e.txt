@@ -1,0 +1,298 @@
+
+> game-guess@0.1.0 test:e2e
+> playwright test tests/e2e/level-2d-01.spec.ts tests/e2e/level-2d-02.spec.ts tests/e2e/level-2d-03.spec.ts tests/e2e/level-2d-04.spec.ts tests/e2e/level-2d-05.spec.ts tests/e2e/level-2d-06.spec.ts tests/e2e/engagement.spec.ts tests/e2e/campaign-flow.spec.ts tests/e2e/navigation-recovery.spec.ts tests/e2e/hints-and-runs.spec.ts tests/e2e/storage.spec.ts --workers=3
+
+[WebServer] (node:47578) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47602) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47614) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47615) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47613) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47611) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47612) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47617) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:47642) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 129 tests using 3 workers
+
+(node:47643) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47645) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    2 [iphone-se] › tests/e2e/campaign-flow.spec.ts:273:1 › chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn (855ms)
+  ✓    4 [iphone-se] › tests/e2e/campaign-flow.spec.ts:295:1 › đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về (379ms)
+  ✓    3 [iphone-se] › tests/e2e/campaign-flow.spec.ts:254:1 › Chơi tiếp đưa về màn chưa xong đầu tiên (1.3s)
+  ✓    6 [iphone-se] › tests/e2e/engagement.spec.ts:44:1 › rương có thể giải bằng ghép chữ, chơi lại khôi phục mật khẩu ban đầu (822ms)
+  ✓    7 [iphone-se] › tests/e2e/engagement.spec.ts:74:1 › ốc chạm đỉnh ngày ba và dừng; diễn thử không tự thắng hoặc tính sai (1.2s)
+  ✓    8 [iphone-se] › tests/e2e/engagement.spec.ts:98:1 › quầy tính tiền kiểm cả tổng và chênh lệch; giá túi không âm (715ms)
+  ✓    9 [iphone-se] › tests/e2e/engagement.spec.ts:121:1 › điểm danh vịt bật tắt độc lập, không tự nộp đáp án (830ms)
+  ✓   10 [iphone-se] › tests/e2e/engagement.spec.ts:145:1 › đếm góc trực tiếp trên giấy, bỏ dấu không cộng trùng (1.7s)
+  ✓   11 [iphone-se] › tests/e2e/engagement.spec.ts:167:1 › đổi giữa ảnh gương và đồng hồ thật, không tự nộp đáp án (671ms)
+  ✓   12 [iphone-se] › tests/e2e/engagement.spec.ts:190:1 › tách rổ ra khỏi cam và xếp lại, thử nghiệm không phạt (685ms)
+  ✓    5 [iphone-se] › tests/e2e/engagement.spec.ts:11:1 › chơi trọn chặng, sưu tập dấu, chơi tiếp và tải lại vẫn giữ hộ chiếu (6.9s)
+  ✓   13 [iphone-se] › tests/e2e/engagement.spec.ts:206:1 › diễn lại pha vượt, bé tiến lên nhưng người dẫn đầu giữ vị trí (805ms)
+  ✓   14 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:12:1 › gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm (1.1s)
+  ✓   15 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:61:1 › xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn mở màn kế (988ms)
+  ✓   16 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:128:1 › chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đầu lượt mới (906ms)
+  ✓   18 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:198:1 › màn chưa mở không vào được và chỉ đường về màn đang chơi (682ms)
+  ✓   17 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:163:1 › chơi lại từ màn kết quả bắt đầu lượt mới và đếm lại gợi ý từ 0 (1.1s)
+  ✓   19 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:216:1 › mã màn không có hiện trang "không tìm thấy", không sập (682ms)
+  ✓   21 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:271:5 › nút Gợi ý khi người chơi bí › khi người dùng chọn giảm chuyển động › nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý (907ms)
+  ✓   20 [iphone-se] › tests/e2e/hints-and-runs.spec.ts:244:3 › nút Gợi ý khi người chơi bí › sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút (1.6s)
+  ✓   23 [iphone-se] › tests/e2e/level-2d-01.spec.ts:51:1 › 2D-01: kéo sai trả bao về; kéo đúng chưa thắng; chơi lại che bé và vẫn giải được (1.6s)
+  ✓   22 [iphone-se] › tests/e2e/level-2d-01.spec.ts:5:1 › 2D-01: bé khác chưa thắng; dời bao rồi chạm bé ẩn mới thắng bằng chạm (2.2s)
+  ✓   25 [iphone-se] › tests/e2e/level-2d-02.spec.ts:45:3 › 2D-02: chấp nhận " CON CUA " bằng ô nhập dùng bàn phím ảo (1.7s)
+  ✓   24 [iphone-se] › tests/e2e/level-2d-02.spec.ts:6:1 › 2D-02: cá, tôm và mặt nước phản hồi riêng; chạm cua thì thắng (3.0s)
+  ✓   26 [iphone-se] › tests/e2e/level-2d-02.spec.ts:45:3 › 2D-02: chấp nhận "CUA BE" bằng ô nhập dùng bàn phím ảo (2.2s)
+  ✓   27 [iphone-se] › tests/e2e/level-2d-02.spec.ts:45:3 › 2D-02: chấp nhận "cua đồng" bằng ô nhập dùng bàn phím ảo (1.7s)
+  ✓   28 [iphone-se] › tests/e2e/level-2d-03.spec.ts:6:1 › 2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qua đường (2.9s)
+  ✓   30 [iphone-se] › tests/e2e/level-2d-04.spec.ts:69:1 › 2D-04: bật cảm biến rồi mẫu lắc làm xoài rụng (1.6s)
+  ✓   29 [iphone-se] › tests/e2e/level-2d-04.spec.ts:21:1 › 2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn giải bằng chạm cây (4.5s)
+  ✓   32 [iphone-se] › tests/e2e/level-2d-04.spec.ts:120:1 › 2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm (1.9s)
+  ✓   31 [iphone-se] › tests/e2e/level-2d-04.spec.ts:97:1 › 2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng dồn; đủ ba chạm nhanh thì thắng (5.0s)
+  ✓   34 [iphone-se] › tests/e2e/level-2d-05.spec.ts:51:1 › 2D-05: kéo mây sai trả về; kéo đúng rồi chơi lại khôi phục gà ngủ (2.7s)
+  ✓   33 [iphone-se] › tests/e2e/level-2d-05.spec.ts:7:1 › 2D-05: gà còn ngủ khi mây che; dời mây rồi gọi gà mới thắng (7.0s)
+  ✓   35 [iphone-se] › tests/e2e/level-2d-06.spec.ts:7:1 › 2D-06: tìm cá trong lời nhắn chưa thắng; đưa cá vào giỏ mới hoàn tất chặng (7.2s)
+  ✘   36 [iphone-se] › tests/e2e/level-2d-06.spec.ts:67:1 › 2D-06: giỏ rỗng không thắng; cá kéo trượt trở lại ao, chơi lại giấu cá (6.1s)
+(node:47969) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    1 [iphone-se] › tests/e2e/campaign-flow.spec.ts:55:1 › trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ (39.0s)
+  ✓   39 [iphone-se] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi localStorage đầy dung lượng, có một dòng báo, không lỗi console (1.5s)
+  ✓   38 [iphone-se] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi trình duyệt chặn truy cập localStorage, có một dòng báo, không lỗi console (1.6s)
+  ✓   37 [iphone-se] › tests/e2e/navigation-recovery.spec.ts:12:1 › Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được (3.3s)
+  ✓   40 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu không phải JSON: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.3s)
+  ✓   41 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu đúng JSON nhưng sai kiểu: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.3s)
+(node:48001) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   42 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu phiên bản lạ: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.3s)
+(node:48055) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   43 [iphone-se] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu giá trị rỗng: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.3s)
+(node:48060) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   46 [pixel-5] › tests/e2e/campaign-flow.spec.ts:273:1 › chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn (404ms)
+  ✓   45 [pixel-5] › tests/e2e/campaign-flow.spec.ts:254:1 › Chơi tiếp đưa về màn chưa xong đầu tiên (891ms)
+  ✓   47 [pixel-5] › tests/e2e/campaign-flow.spec.ts:295:1 › đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về (385ms)
+  ✓   49 [pixel-5] › tests/e2e/engagement.spec.ts:44:1 › rương có thể giải bằng ghép chữ, chơi lại khôi phục mật khẩu ban đầu (1.2s)
+  ✓   50 [pixel-5] › tests/e2e/engagement.spec.ts:74:1 › ốc chạm đỉnh ngày ba và dừng; diễn thử không tự thắng hoặc tính sai (1.1s)
+  ✓   51 [pixel-5] › tests/e2e/engagement.spec.ts:98:1 › quầy tính tiền kiểm cả tổng và chênh lệch; giá túi không âm (679ms)
+  ✓   52 [pixel-5] › tests/e2e/engagement.spec.ts:121:1 › điểm danh vịt bật tắt độc lập, không tự nộp đáp án (971ms)
+  ✓   53 [pixel-5] › tests/e2e/engagement.spec.ts:145:1 › đếm góc trực tiếp trên giấy, bỏ dấu không cộng trùng (1.4s)
+  ✓   54 [pixel-5] › tests/e2e/engagement.spec.ts:167:1 › đổi giữa ảnh gương và đồng hồ thật, không tự nộp đáp án (1.0s)
+  ✓   48 [pixel-5] › tests/e2e/engagement.spec.ts:11:1 › chơi trọn chặng, sưu tập dấu, chơi tiếp và tải lại vẫn giữ hộ chiếu (7.0s)
+  ✓   55 [pixel-5] › tests/e2e/engagement.spec.ts:190:1 › tách rổ ra khỏi cam và xếp lại, thử nghiệm không phạt (1.0s)
+  ✓   56 [pixel-5] › tests/e2e/engagement.spec.ts:206:1 › diễn lại pha vượt, bé tiến lên nhưng người dẫn đầu giữ vị trí (1.1s)
+  ✓   57 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:12:1 › gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm (1.0s)
+  ✓   58 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:61:1 › xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn mở màn kế (930ms)
+  ✓   59 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:128:1 › chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đầu lượt mới (771ms)
+  ✓   60 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:163:1 › chơi lại từ màn kết quả bắt đầu lượt mới và đếm lại gợi ý từ 0 (1.0s)
+  ✓   61 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:198:1 › màn chưa mở không vào được và chỉ đường về màn đang chơi (627ms)
+  ✓   62 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:216:1 › mã màn không có hiện trang "không tìm thấy", không sập (418ms)
+  ✓   64 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:271:5 › nút Gợi ý khi người chơi bí › khi người dùng chọn giảm chuyển động › nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý (857ms)
+  ✓   63 [pixel-5] › tests/e2e/hints-and-runs.spec.ts:244:3 › nút Gợi ý khi người chơi bí › sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút (1.4s)
+  ✓   66 [pixel-5] › tests/e2e/level-2d-01.spec.ts:51:1 › 2D-01: kéo sai trả bao về; kéo đúng chưa thắng; chơi lại che bé và vẫn giải được (1.5s)
+  ✓   65 [pixel-5] › tests/e2e/level-2d-01.spec.ts:5:1 › 2D-01: bé khác chưa thắng; dời bao rồi chạm bé ẩn mới thắng bằng chạm (1.9s)
+  ✓   68 [pixel-5] › tests/e2e/level-2d-02.spec.ts:45:3 › 2D-02: chấp nhận " CON CUA " bằng ô nhập dùng bàn phím ảo (1.6s)
+  ✓   67 [pixel-5] › tests/e2e/level-2d-02.spec.ts:6:1 › 2D-02: cá, tôm và mặt nước phản hồi riêng; chạm cua thì thắng (2.8s)
+  ✓   69 [pixel-5] › tests/e2e/level-2d-02.spec.ts:45:3 › 2D-02: chấp nhận "CUA BE" bằng ô nhập dùng bàn phím ảo (1.6s)
+  ✓   70 [pixel-5] › tests/e2e/level-2d-02.spec.ts:45:3 › 2D-02: chấp nhận "cua đồng" bằng ô nhập dùng bàn phím ảo (1.6s)
+  ✓   71 [pixel-5] › tests/e2e/level-2d-03.spec.ts:6:1 › 2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qua đường (2.9s)
+  ✓   73 [pixel-5] › tests/e2e/level-2d-04.spec.ts:69:1 › 2D-04: bật cảm biến rồi mẫu lắc làm xoài rụng (2.1s)
+  ✓   72 [pixel-5] › tests/e2e/level-2d-04.spec.ts:21:1 › 2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn giải bằng chạm cây (4.7s)
+  ✓   75 [pixel-5] › tests/e2e/level-2d-04.spec.ts:120:1 › 2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm (1.7s)
+  ✓   74 [pixel-5] › tests/e2e/level-2d-04.spec.ts:97:1 › 2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng dồn; đủ ba chạm nhanh thì thắng (4.8s)
+  ✓   77 [pixel-5] › tests/e2e/level-2d-05.spec.ts:51:1 › 2D-05: kéo mây sai trả về; kéo đúng rồi chơi lại khôi phục gà ngủ (2.5s)
+  ✓   76 [pixel-5] › tests/e2e/level-2d-05.spec.ts:7:1 › 2D-05: gà còn ngủ khi mây che; dời mây rồi gọi gà mới thắng (7.0s)
+  ✓   78 [pixel-5] › tests/e2e/level-2d-06.spec.ts:7:1 › 2D-06: tìm cá trong lời nhắn chưa thắng; đưa cá vào giỏ mới hoàn tất chặng (7.6s)
+  ✘   79 [pixel-5] › tests/e2e/level-2d-06.spec.ts:67:1 › 2D-06: giỏ rỗng không thắng; cá kéo trượt trở lại ao, chơi lại giấu cá (5.8s)
+(node:48398) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   81 [pixel-5] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi trình duyệt chặn truy cập localStorage, có một dòng báo, không lỗi console (1.5s)
+  ✓   80 [pixel-5] › tests/e2e/navigation-recovery.spec.ts:12:1 › Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được (3.2s)
+  ✓   82 [pixel-5] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi localStorage đầy dung lượng, có một dòng báo, không lỗi console (1.5s)
+  ✓   83 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu không phải JSON: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓   84 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu đúng JSON nhưng sai kiểu: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓   85 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu phiên bản lạ: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+(node:48418) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   86 [pixel-5] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu giá trị rỗng: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+(node:48423) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   44 [pixel-5] › tests/e2e/campaign-flow.spec.ts:55:1 › trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ (45.2s)
+(node:48428) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   88 [mobile-360] › tests/e2e/campaign-flow.spec.ts:254:1 › Chơi tiếp đưa về màn chưa xong đầu tiên (843ms)
+  ✓   89 [mobile-360] › tests/e2e/campaign-flow.spec.ts:273:1 › chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn (378ms)
+  ✓   90 [mobile-360] › tests/e2e/campaign-flow.spec.ts:295:1 › đố mẹo mỗi ngày: kho câu chưa có thì báo rõ, có đường quay về (370ms)
+  ✓   92 [mobile-360] › tests/e2e/engagement.spec.ts:44:1 › rương có thể giải bằng ghép chữ, chơi lại khôi phục mật khẩu ban đầu (701ms)
+  ✓   93 [mobile-360] › tests/e2e/engagement.spec.ts:74:1 › ốc chạm đỉnh ngày ba và dừng; diễn thử không tự thắng hoặc tính sai (1.5s)
+  ✓   94 [mobile-360] › tests/e2e/engagement.spec.ts:98:1 › quầy tính tiền kiểm cả tổng và chênh lệch; giá túi không âm (651ms)
+  ✓   95 [mobile-360] › tests/e2e/engagement.spec.ts:121:1 › điểm danh vịt bật tắt độc lập, không tự nộp đáp án (1.3s)
+  ✓   96 [mobile-360] › tests/e2e/engagement.spec.ts:145:1 › đếm góc trực tiếp trên giấy, bỏ dấu không cộng trùng (1.8s)
+  ✓   91 [mobile-360] › tests/e2e/engagement.spec.ts:11:1 › chơi trọn chặng, sưu tập dấu, chơi tiếp và tải lại vẫn giữ hộ chiếu (6.9s)
+  ✓   97 [mobile-360] › tests/e2e/engagement.spec.ts:167:1 › đổi giữa ảnh gương và đồng hồ thật, không tự nộp đáp án (1.0s)
+  ✓   98 [mobile-360] › tests/e2e/engagement.spec.ts:190:1 › tách rổ ra khỏi cam và xếp lại, thử nghiệm không phạt (1.0s)
+  ✓   99 [mobile-360] › tests/e2e/engagement.spec.ts:206:1 › diễn lại pha vượt, bé tiến lên nhưng người dẫn đầu giữ vị trí (1.1s)
+  ✓  100 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:12:1 › gợi ý mở tuần tự, ghi hint_used đúng cấp, xem lại không tính thêm (1.0s)
+  ✓  101 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:61:1 › xem đáp án cần xác nhận, ghi kết quả "xem đáp án" và vẫn mở màn kế (929ms)
+  ✓  102 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:128:1 › chơi lại và rời màn giữa chừng ghi bỏ cuộc rồi bắt đầu lượt mới (702ms)
+  ✓  103 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:163:1 › chơi lại từ màn kết quả bắt đầu lượt mới và đếm lại gợi ý từ 0 (937ms)
+  ✓  104 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:198:1 › màn chưa mở không vào được và chỉ đường về màn đang chơi (622ms)
+  ✓  105 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:216:1 › mã màn không có hiện trang "không tìm thấy", không sập (465ms)
+  ✓  106 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:244:3 › nút Gợi ý khi người chơi bí › sai liền 3 lần thì nút nhấp nháy và lời phản hồi nhắc tới nút (1.5s)
+  ✓  107 [mobile-360] › tests/e2e/hints-and-runs.spec.ts:271:5 › nút Gợi ý khi người chơi bí › khi người dùng chọn giảm chuyển động › nút không nhấp nháy mãi, chạm được, và hết nhấp nháy sau khi mở gợi ý (1.4s)
+  ✓  109 [mobile-360] › tests/e2e/level-2d-01.spec.ts:51:1 › 2D-01: kéo sai trả bao về; kéo đúng chưa thắng; chơi lại che bé và vẫn giải được (1.5s)
+  ✓  108 [mobile-360] › tests/e2e/level-2d-01.spec.ts:5:1 › 2D-01: bé khác chưa thắng; dời bao rồi chạm bé ẩn mới thắng bằng chạm (1.9s)
+  ✓  111 [mobile-360] › tests/e2e/level-2d-02.spec.ts:45:3 › 2D-02: chấp nhận " CON CUA " bằng ô nhập dùng bàn phím ảo (1.9s)
+  ✓  110 [mobile-360] › tests/e2e/level-2d-02.spec.ts:6:1 › 2D-02: cá, tôm và mặt nước phản hồi riêng; chạm cua thì thắng (3.1s)
+  ✓  112 [mobile-360] › tests/e2e/level-2d-02.spec.ts:45:3 › 2D-02: chấp nhận "CUA BE" bằng ô nhập dùng bàn phím ảo (1.4s)
+  ✓  113 [mobile-360] › tests/e2e/level-2d-02.spec.ts:45:3 › 2D-02: chấp nhận "cua đồng" bằng ô nhập dùng bàn phím ảo (1.9s)
+  ✓  114 [mobile-360] › tests/e2e/level-2d-03.spec.ts:6:1 › 2D-03: chạm bé và xe chưa thắng; đèn đỏ dừng xe rồi bé qua đường (3.1s)
+  ✓  116 [mobile-360] › tests/e2e/level-2d-04.spec.ts:69:1 › 2D-04: bật cảm biến rồi mẫu lắc làm xoài rụng (1.9s)
+  ✓  115 [mobile-360] › tests/e2e/level-2d-04.spec.ts:21:1 › 2D-04: xoài, giỏ, bé chưa thắng; từ chối cảm biến vẫn giải bằng chạm cây (4.8s)
+  ✓  118 [mobile-360] › tests/e2e/level-2d-04.spec.ts:120:1 › 2D-04: nút Lắc thay thế luôn sẵn và cũng cần ba lần chạm (2.0s)
+  ✓  117 [mobile-360] › tests/e2e/level-2d-04.spec.ts:97:1 › 2D-04: hai chạm chưa đủ; chạm thưa quá 2 giây không cộng dồn; đủ ba chạm nhanh thì thắng (5.1s)
+  ✓  120 [mobile-360] › tests/e2e/level-2d-05.spec.ts:51:1 › 2D-05: kéo mây sai trả về; kéo đúng rồi chơi lại khôi phục gà ngủ (2.7s)
+  ✓  119 [mobile-360] › tests/e2e/level-2d-05.spec.ts:7:1 › 2D-05: gà còn ngủ khi mây che; dời mây rồi gọi gà mới thắng (7.1s)
+  ✓  121 [mobile-360] › tests/e2e/level-2d-06.spec.ts:7:1 › 2D-06: tìm cá trong lời nhắn chưa thắng; đưa cá vào giỏ mới hoàn tất chặng (7.3s)
+  ✘  122 [mobile-360] › tests/e2e/level-2d-06.spec.ts:67:1 › 2D-06: giỏ rỗng không thắng; cá kéo trượt trở lại ao, chơi lại giấu cá (6.1s)
+(node:48543) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   87 [mobile-360] › tests/e2e/campaign-flow.spec.ts:55:1 › trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiếp → màn cuối → chọn màn → tải lại vẫn nhớ (41.6s)
+  ✓  124 [mobile-360] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi trình duyệt chặn truy cập localStorage, có một dòng báo, không lỗi console (1.5s)
+  ✓  123 [mobile-360] › tests/e2e/navigation-recovery.spec.ts:12:1 › Màn tiếp gặp lỗi tải cảnh: hiện khung màn mới, Thử lại khôi phục và giải được (3.7s)
+  ✓  126 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu không phải JSON: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (753ms)
+  ✓  125 [mobile-360] › tests/e2e/storage.spec.ts:43:3 › vẫn chơi trọn luồng khi localStorage đầy dung lượng, có một dòng báo, không lỗi console (1.5s)
+  ✓  127 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu đúng JSON nhưng sai kiểu: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+  ✓  128 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu phiên bản lạ: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.3s)
+  ✓  129 [mobile-360] › tests/e2e/storage.spec.ts:122:3 › dữ liệu đã lưu giá trị rỗng: bắt đầu lại như người chơi mới và ghi lại dữ liệu sạch (1.2s)
+
+
+  1) [iphone-se] › tests/e2e/level-2d-06.spec.ts:67:1 › 2D-06: giỏ rỗng không thắng; cá kéo trượt trở lại ao, chơi lại giấu cá 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 135.25772094726562
+    Received: 137.60000610351562
+
+    Expected precision:    0
+    Expected difference: < 0.5
+    Received difference:   2.34228515625
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      92 |   await expect
+      93 |     .poll(async () => (await fish.boundingBox())?.x)
+    > 94 |     .toBeCloseTo(before.x, 0);
+         |      ^
+      95 |   const basket = await page
+      96 |     .getByRole('button', { name: 'Giỏ của ngoại', exact: true })
+      97 |     .boundingBox();
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-06.spec.ts:94:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-iphone-se/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-iphone-se/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-iphone-se/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-iphone-se/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [pixel-5] › tests/e2e/level-2d-06.spec.ts:67:1 › 2D-06: giỏ rỗng không thắng; cá kéo trượt trở lại ao, chơi lại giấu cá 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 165.02127075195312
+    Received: 168.42222595214844
+
+    Expected precision:    0
+    Expected difference: < 0.5
+    Received difference:   3.4009552001953125
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      92 |   await expect
+      93 |     .poll(async () => (await fish.boundingBox())?.x)
+    > 94 |     .toBeCloseTo(before.x, 0);
+         |      ^
+      95 |   const basket = await page
+      96 |     .getByRole('button', { name: 'Giỏ của ngoại', exact: true })
+      97 |     .boundingBox();
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-06.spec.ts:94:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-pixel-5/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-pixel-5/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-pixel-5/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-pixel-5/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-360] › tests/e2e/level-2d-06.spec.ts:67:1 › 2D-06: giỏ rỗng không thắng; cá kéo trượt trở lại ao, chơi lại giấu cá 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 152.51901245117188
+    Received: 154.4888916015625
+
+    Expected precision:    0
+    Expected difference: < 0.5
+    Received difference:   1.969879150390625
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      92 |   await expect
+      93 |     .poll(async () => (await fish.boundingBox())?.x)
+    > 94 |     .toBeCloseTo(before.x, 0);
+         |      ^
+      95 |   const basket = await page
+      96 |     .getByRole('button', { name: 'Giỏ của ngoại', exact: true })
+      97 |     .boundingBox();
+        at /Users/phanvanhieu/Documents/CaNhan/MyProject/game-guess/tests/e2e/level-2d-06.spec.ts:94:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-mobile-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-mobile-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-mobile-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/level-2d-06-2D-06-giỏ-rỗng-87fd4-trở-lại-ao-chơi-lại-giấu-cá-mobile-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [iphone-se] › tests/e2e/level-2d-06.spec.ts:67:1 › 2D-06: giỏ rỗng không thắng; cá kéo trượt trở lại ao, chơi lại giấu cá 
+    [pixel-5] › tests/e2e/level-2d-06.spec.ts:67:1 › 2D-06: giỏ rỗng không thắng; cá kéo trượt trở lại ao, chơi lại giấu cá 
+    [mobile-360] › tests/e2e/level-2d-06.spec.ts:67:1 › 2D-06: giỏ rỗng không thắng; cá kéo trượt trở lại ao, chơi lại giấu cá 
+  126 passed (2.3m)

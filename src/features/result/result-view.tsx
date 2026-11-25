@@ -87,6 +87,14 @@ export function ResultView({
       )}
       <JourneyCard ordinal={meta.ordinal} compact />
 
+      {meta.ordinal === 6 && !revealed && (
+        <div className={styles.feast} data-testid="tet-finale">
+          <span aria-hidden="true">🧧 🥭 🐓 🐟</span>
+          <strong>Tết vui vì có bạn!</strong>
+          <p>Ngoại mời con vào mâm. Một chuyến về nhà, sáu chuyện để kể.</p>
+        </div>
+      )}
+
       <div className={styles.nextCard}>
         <p className={styles.cardLabel}>
           {next ? 'Tiếp theo có gì?' : 'Hộ chiếu đã đầy dấu!'}

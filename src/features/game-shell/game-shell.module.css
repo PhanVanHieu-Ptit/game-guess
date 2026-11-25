@@ -19,6 +19,15 @@
   line-height: 1.35;
 }
 
+/* Chặng mở đầu dành chỗ cho cảnh và lời nhân vật trên điện thoại thấp. */
+.opening {
+  gap: 8px;
+}
+
+.opening .prompt {
+  font-size: 1.125rem;
+}
+
 .sceneIntro {
   margin: 12px 0;
   padding: 10px 12px;

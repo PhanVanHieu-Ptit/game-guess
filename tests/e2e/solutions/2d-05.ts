@@ -6,24 +6,20 @@ export const solution: LevelSolution = {
   mistakes: [
     {
       tap: (page) =>
-        page.getByRole('button', { name: 'Bên trái', exact: true }).tap(),
-      feedback: meta.wrong.left,
+        page.getByRole('button', { name: 'Gà trống', exact: true }).tap(),
+      feedback: meta.wrong.sleep,
     },
     {
       tap: (page) =>
-        page.getByRole('button', { name: 'Bên phải', exact: true }).tap(),
-      feedback: meta.wrong.right,
-    },
-    {
-      tap: (page) =>
-        page
-          .getByRole('button', { name: 'Rơi thẳng xuống', exact: true })
-          .tap(),
-      feedback: meta.wrong.down,
+        page.getByRole('button', { name: 'Mái nhà', exact: true }).tap(),
+      feedback: meta.wrong.roof,
     },
   ],
-  solve: (page) =>
-    page
-      .getByRole('button', { name: 'Gà trống không đẻ trứng', exact: true })
-      .tap(),
+  solve: async (page) => {
+    await page.getByRole('button', { name: 'Đám mây', exact: true }).tap();
+    await page
+      .getByRole('button', { name: 'Khoảng trời bên trái', exact: true })
+      .tap();
+    await page.getByRole('button', { name: 'Gà trống', exact: true }).tap();
+  },
 };

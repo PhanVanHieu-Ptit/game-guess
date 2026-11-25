@@ -3,34 +3,34 @@ import type { LevelId } from '@/domain/levels/types';
 /** Lời dẫn không tiết lộ đáp án; mỗi màn có một tình huống, một câu chốt và một lời mời khám phá. */
 export const LEVEL_FLAVOR = {
   '2d-01': [
-    'Ông đếm đủ cháu mà sao vẫn thiếu một đứa nhỉ?',
-    'Phát hiện nhân vật bí mật! Tết này bạn được giao phát lì xì.',
-    'Một câu đố mà càng nghĩ to, đáp án càng nhỏ.',
+    'Ngày đầu năm, cả nhà ngoại đông đủ… hình như còn thiếu một bé.',
+    'Bé út nhận lì xì rồi! Ông cười: “Mắt tinh, năm nay có lộc!”',
+    'Ngoại có một câu đố ở bờ ao. Đừng vội nghĩ theo nghĩa quen nhé.',
   ],
   '2d-02': [
-    'Chủ ao đố một câu. Cá trong ao cũng đang hóng đáp án.',
-    'Chủ ao xin thua. Chơi chữ mà bạn cũng bắt được!',
-    'Qua đường thôi, mà xe cộ có vẻ chưa hợp tác.',
+    'Ngoại dẫn ra ao, đố một câu mà tôm cá cũng muốn trả lời.',
+    'Cua giơ hai càng chúc Tết. Một to, một nhỏ, đủ cả đôi!',
+    'Bé út mải chơi bên kia đường. Đưa bé về cho ngoại yên tâm nào.',
   ],
   '2d-03': [
-    'Bé đã đợi ba bài nhạc rồi. Có cách nào lịch sự hơn lao ra đường?',
-    'Một pha qua đường không cần siêu năng lực.',
-    'Xoài thì chín rồi. Còn bạn đã có kế chưa?',
+    'Bé út muốn về nhà ngoại, nhưng xe vẫn chạy qua ngõ.',
+    'Bé út về đủ, ngoại hết ngóng. Giờ ra vườn kiếm món tráng miệng!',
+    'Ngoại chọn được quả xoài ngon. Con nhớ chuẩn bị chỗ hứng nhé.',
   ],
   '2d-04': [
-    'Bé: “Cao thêm hai phân nữa là với được… chắc vậy.”',
-    'Xoài rụng, bé vui. Newton cũng gật đầu.',
-    'Một câu chuyện trên mái nhà nghe hơi sai sai.',
+    'Cả nhà đang chờ đĩa xoài. Bé xung phong làm trợ lý của bạn.',
+    'Xoài vào giỏ, ngoại vào bếp. Bạn được phong trưởng ban tráng miệng!',
+    'Đủ đồ rồi mà gà vẫn ngủ. Ai gọi cả nhà ra sân đây?',
   ],
   '2d-05': [
-    'Gà trống có lời muốn nói về kịch bản này.',
-    'Gà trống cảm ơn bạn đã đòi lại công bằng.',
-    'Con cá này giấu kỹ hơn bạn tưởng.',
+    'Mặt trời lên rồi, riêng anh gà thì vẫn xin ngủ nướng.',
+    'Ò ó o! Cả nhà kéo ra sân. Chỉ còn một lời nhắn cuối của ngoại.',
+    'Ao trống trơn mà ngoại vẫn nhờ bắt cá. Lời nhắn có gì lạ nhỉ?',
   ],
   '2d-06': [
-    'Cá đâu? Đôi khi đọc kỹ còn lợi hơn soi kỹ.',
-    'Bạn bắt được cá bằng… mắt đọc. Đỉnh!',
-    'Hai quả cam, một bà bán hàng rất tự tin.',
+    'Chuyến ăn Tết sắp đủ mâm. Lần này thử ghép những mẹo đã học nhé.',
+    'Đủ mặt, đủ món, đủ tiếng cười. Ngoại dành sẵn chỗ đẹp nhất cho bạn!',
+    'Ăn Tết xong, ra chợ chơi nhé. Bà bán cam đang có một lời thách đố.',
   ],
   '2d-07': [
     'Bà bảo mắt bà tinh lắm. Mắt bạn thì sao?',
