@@ -429,6 +429,20 @@
   border-radius: 12px;
   font-size: 16px;
   user-select: text;
+  overflow-wrap: anywhere;
+}
+.challenge {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  background: #f1e9fa;
+  border: 2px solid #67429a;
+  border-radius: 16px;
+  font-size: 16px;
+  text-wrap: pretty;
+}
+.challenge > strong {
+  font-size: 22px;
 }
 @keyframes enter {
   from {

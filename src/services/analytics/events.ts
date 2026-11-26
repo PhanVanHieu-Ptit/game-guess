@@ -34,8 +34,38 @@ interface LevelRef {
   mode: PlayMode;
 }
 
+export type EntrySource =
+  'direct' | 'friend' | 'community' | 'short_video' | 'playtest';
+
+interface RushRef {
+  runId: string;
+  mode: 'rush' | 'daily';
+  seed: number;
+  /** Empty for a random run; otherwise the frozen Vietnam date. */
+  day: string;
+  attempt: number;
+  challenged: boolean;
+}
+
 /** Trường riêng của từng sự kiện: tên sự kiện → dữ liệu truyền vào `track`. */
 export interface EventPayloads {
+  page_view: {
+    page: 'home' | 'rush' | 'daily' | 'levels' | 'play' | 'other';
+    source: EntrySource;
+  };
+  rush_start: RushRef;
+  rush_complete: RushRef & {
+    score: number;
+    solved: number;
+    bestCombo: number;
+    durationMs: number;
+    reason: 'timeout' | 'lives' | 'deck';
+  };
+  rush_abandon: RushRef & { score: number; durationMs: number };
+  rush_share: RushRef & {
+    score: number;
+    outcome: 'copied' | 'shared' | 'manual' | 'cancelled';
+  };
   /** Màn bắt đầu cho thao tác (cảnh đã sẵn sàng). */
   level_start: LevelRef & { attemptNo: number; restart: boolean };
   /** Mở một cấp gợi ý lần đầu trong lượt chơi. */

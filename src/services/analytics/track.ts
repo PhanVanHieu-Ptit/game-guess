@@ -7,7 +7,7 @@ import type {
   GraphicsQuality,
 } from './events';
 import { generateId } from './ids';
-import { consoleSink, noopSink, type AnalyticsSink } from './sinks';
+import { consoleSink, httpSink, noopSink, type AnalyticsSink } from './sinks';
 
 /** Phần ngữ cảnh do tầng trên (features/) cung cấp, vì services/ không được import stores/. */
 export interface AnalyticsContext {
@@ -25,14 +25,15 @@ let contextProvider: () => AnalyticsContext = () => ({
 });
 
 /**
- * Chọn sink theo môi trường: `NEXT_PUBLIC_ANALYTICS=console|off`; bỏ trống thì chạy dev ghi ra console,
- * bản production không ghi (cho tới khi chọn xong nơi nhận sự kiện, câu hỏi H1 ở docs/GDD.md mục 13.2).
+ * Development logs to the browser; production sends to the same-origin receiver.
+ * NEXT_PUBLIC_ANALYTICS=console|http|off overrides the default.
  */
 function sinkFromEnvironment(): AnalyticsSink {
   const mode =
     process.env.NEXT_PUBLIC_ANALYTICS ||
-    (process.env.NODE_ENV === 'production' ? 'off' : 'console');
-  return mode === 'console' ? consoleSink : noopSink;
+    (process.env.NODE_ENV === 'production' ? 'http' : 'console');
+  if (mode === 'console') return consoleSink;
+  return mode === 'http' ? httpSink : noopSink;
 }
 
 /** Thay sink (dịch vụ thật, hoặc sink giả trong test). Truyền `null` để quay về sink mặc định theo môi trường. */

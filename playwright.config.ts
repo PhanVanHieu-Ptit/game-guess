@@ -41,7 +41,7 @@ export default defineConfig({
     reuseExistingServer: false,
     // Ghi sự kiện đo lường ra console cả ở bản production để E2E kiểm được (xem services/analytics).
     env: {
-      NEXT_PUBLIC_ANALYTICS: 'console',
+      NEXT_PUBLIC_ANALYTICS: process.env.E2E_ANALYTICS ?? 'console',
       // Ngắn hơn mặc định (20 giây) để test lỗi nạp cảnh chạy nhanh; vẫn dư sức cho lần nạp bình thường (vài mili giây).
       NEXT_PUBLIC_SCENE_TIMEOUT_MS: '5000',
     },

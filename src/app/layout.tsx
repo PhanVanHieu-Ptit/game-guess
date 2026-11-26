@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
-import type { ReactNode } from 'react';
+import { Suspense, type ReactNode } from 'react';
+import { PageAnalytics } from '@/features/analytics/page-analytics';
 import '@/styles/tokens.css';
 import '@/styles/globals.css';
 
@@ -21,7 +22,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="vi">
-      <body>{children}</body>
+      <body>
+        <Suspense fallback={null}>
+          <PageAnalytics />
+        </Suspense>
+        {children}
+      </body>
     </html>
   );
 }

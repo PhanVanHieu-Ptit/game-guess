@@ -16,6 +16,7 @@ export interface RushState {
   feedback: { correct: boolean; points: number } | null;
   previousBest: number;
   recordKey: string;
+  seed: number;
 }
 
 export function initialRushState(): RushState {
@@ -34,6 +35,7 @@ export function initialRushState(): RushState {
     feedback: null,
     previousBest: 0,
     recordKey: 'free',
+    seed: 0,
   };
 }
 
@@ -58,6 +60,7 @@ export function rushReducer(state: RushState, action: RushAction): RushState {
       deadline: action.now + RUSH_DURATION_MS,
       previousBest: action.previousBest,
       recordKey: action.recordKey,
+      seed: action.seed,
     };
   }
   if (state.phase === 'ready' || state.phase === 'finished') return state;

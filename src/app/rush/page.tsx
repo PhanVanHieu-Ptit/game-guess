@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { RushGame } from '@/features/rush/rush-game';
+import { RushEntry, type RushPageProps } from '@/features/rush/rush-entry';
 
 export const metadata: Metadata = { title: 'Đấu trí 60 giây' };
 
-export default function RushPage() {
-  return <RushGame />;
+export default function RushPage(props: RushPageProps) {
+  return <RushEntry {...props} />;
 }
