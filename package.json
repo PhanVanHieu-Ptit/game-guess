@@ -22,7 +22,9 @@
     "prebuild": "npm run levels:generate",
     "pretest": "npm run levels:generate",
     "pretypecheck": "npm run levels:generate",
-    "test:examples": "node scripts/test-engine-examples.mjs"
+    "test:examples": "node scripts/test-engine-examples.mjs",
+    "growth:report": "node scripts/growth-report.mjs",
+    "test:growth-report": "node --test tests/scripts/growth-report.test.mjs"
   },
   "dependencies": {
     "@react-three/drei": "10.7.9",

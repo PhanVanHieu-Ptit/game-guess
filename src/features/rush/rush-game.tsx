@@ -9,6 +9,10 @@ import {
 } from 'react';
 import { dailySeed, vietnamDay } from '@/domain/rush/puzzles';
 import {
+  rushChallengeUrl,
+  type RushChallenge,
+} from '@/domain/share/rush-challenge';
+import {
   initialRushState,
   RUSH_DURATION_MS,
   rushReducer,
@@ -21,6 +25,7 @@ import {
   subscribeRushBest,
 } from '@/services/storage/rush-records';
 import styles from './rush.module.css';
+import { useRushAnalytics } from './use-rush-analytics';
 
 function RushMascot() {
   return (
@@ -40,17 +45,33 @@ function RushMascot() {
   );
 }
 
-export function RushGame({ daily = false }: { daily?: boolean }) {
+export function RushGame({
+  daily = false,
+  challenge = null,
+  invalidChallenge = false,
+}: {
+  daily?: boolean;
+  challenge?: RushChallenge | null;
+  invalidChallenge?: boolean;
+}) {
   const [state, dispatch] = useReducer(
     rushReducer,
     undefined,
     initialRushState,
   );
   const [share, setShare] = useState('');
+  const analytics = useRushAnalytics(state);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const best = useSyncExternalStore(
     subscribeRushBest,
-    () => readRushBest(daily ? `daily:${vietnamDay(Date.now())}` : 'free'),
+    () =>
+      readRushBest(
+        daily
+          ? `daily:${challenge?.day ?? vietnamDay(Date.now())}`
+          : challenge
+            ? `challenge:v1:${challenge.seed}`
+            : 'free',
+      ),
     () => 0,
   );
   const active = state.phase === 'playing' || state.phase === 'feedback';
@@ -88,27 +109,71 @@ export function RushGame({ daily = false }: { daily?: boolean }) {
 
   function start() {
     const now = Date.now();
-    const day = vietnamDay(now);
-    const recordKey = daily ? `daily:${day}` : 'free';
+    const day = challenge?.day ?? vietnamDay(now);
+    const recordKey = daily
+      ? `daily:${day}`
+      : challenge
+        ? `challenge:v1:${challenge.seed}`
+        : 'free';
+    const seed =
+      challenge?.seed ??
+      (daily ? dailySeed(day) : crypto.getRandomValues(new Uint32Array(1))[0]);
     setShare('');
+    analytics.start({
+      mode: daily ? 'daily' : 'rush',
+      seed,
+      day: daily ? day : '',
+      challenged: challenge !== null,
+    });
     dispatch({
       type: 'start',
       now,
       recordKey,
-      seed: daily
-        ? dailySeed(day)
-        : crypto.getRandomValues(new Uint32Array(1))[0],
+      seed,
       previousBest: readRushBest(recordKey),
     });
   }
 
+  function challengeText() {
+    const url = rushChallengeUrl(window.location.origin, {
+      version: 1,
+      seed: state.seed,
+      score: state.score,
+      ...(daily ? { day: state.recordKey.slice(6) } : {}),
+    });
+    return `Mình đạt ${state.score} điểm, giải ${state.solved} câu trong Đấu trí 60 giây của Lắt Léo${daily ? `, bộ câu ngày ${state.recordKey.slice(6)}` : ''}. Cùng bộ câu, bạn vượt được không? ${url}`;
+  }
+
   async function copyChallenge() {
-    const text = `Mình được ${state.score} điểm, giải ${state.solved} câu trong Đấu trí 60 giây của Lắt Léo${daily ? `, bộ câu ngày ${state.recordKey.slice(6)}` : ''}. Bạn vượt được không? ${window.location.origin}${daily ? '/daily' : '/rush'}`;
+    const text = challengeText();
     try {
       await navigator.clipboard.writeText(text);
       setShare('Đã sao chép! Gửi cho người bạn muốn thách đấu nhé.');
+      analytics.share('copied');
     } catch {
       setShare(text);
+      analytics.share('manual');
+    }
+  }
+
+  async function shareChallenge() {
+    if (typeof navigator.share !== 'function') {
+      await copyChallenge();
+      return;
+    }
+    try {
+      await navigator.share({
+        title: 'Lắt Léo · Bạn vượt được không?',
+        text: challengeText(),
+      });
+      setShare('Đã mở lời thách đấu. Rủ bạn so điểm nhé!');
+      analytics.share('shared');
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') {
+        analytics.share('cancelled');
+        return;
+      }
+      await copyChallenge();
     }
   }
 
@@ -141,11 +206,32 @@ export function RushGame({ daily = false }: { daily?: boolean }) {
             {daily ? 'ĐẤU TRÍ MỖI NGÀY' : 'ĐẤU TRÍ 60 GIÂY'}
           </p>
           <h1 className={styles.title}>
-            Nhanh tay.
-            <br />
-            <span>Đừng nhanh tin.</span>
+            {challenge ? (
+              'Bạn vượt được?'
+            ) : (
+              <>
+                Nhanh tay.
+                <br />
+                <span>Đừng nhanh tin.</span>
+              </>
+            )}
           </h1>
-          <RushMascot />
+          {!challenge && <RushMascot />}
+          {challenge && (
+            <aside className={styles.challenge} aria-label="Lời thách đấu">
+              <strong>Bạn có vượt được {challenge.score} điểm?</strong>
+              <p>Cùng bộ câu, cùng thứ tự · 60 giây · 3 mạng.</p>
+              {challenge.day && (
+                <p>Bộ câu ngày {challenge.day} · giờ Việt Nam.</p>
+              )}
+            </aside>
+          )}
+          {invalidChallenge && (
+            <p className={styles.description} role="status">
+              Link thách đấu không hợp lệ hoặc thuộc phiên bản khác. Bạn vẫn có
+              thể chơi bộ câu hiện tại.
+            </p>
+          )}
           <Button
             className={styles.start}
             block
@@ -176,14 +262,21 @@ export function RushGame({ daily = false }: { daily?: boolean }) {
             </div>
           </div>
           <p className={styles.best}>
-            🏆 {daily ? 'Kỷ lục hôm nay của bạn' : 'Kỷ lục của bạn'}:{' '}
-            <strong>{best} điểm</strong>
+            🏆{' '}
+            {challenge
+              ? 'Kỷ lục bộ câu này của bạn'
+              : daily
+                ? 'Kỷ lục hôm nay của bạn'
+                : 'Kỷ lục của bạn'}
+            : <strong>{best} điểm</strong>
           </p>
           <p className={styles.finePrint}>
             Đúng liên tiếp tăng điểm: 100 → 125 → 150 → 175 → 200.{' '}
-            {daily
-              ? 'Bộ câu đổi lúc 0h, giờ Việt Nam.'
-              : 'Mỗi lượt xáo bộ câu mới.'}
+            {challenge
+              ? 'Bộ câu trong link được giữ nguyên khi chơi lại.'
+              : daily
+                ? 'Bộ câu đổi lúc 0h, giờ Việt Nam.'
+                : 'Mỗi lượt xáo bộ câu mới.'}
           </p>
           <ButtonLink variant="quiet" href={daily ? '/rush' : '/daily'}>
             {daily ? 'Chơi bộ câu ngẫu nhiên →' : 'Thử bộ câu hôm nay →'}
@@ -209,6 +302,15 @@ export function RushGame({ daily = false }: { daily?: boolean }) {
             <span>điểm</span>
           </p>
           {newRecord && <p className={styles.record}>✦ KỶ LỤC CÁ NHÂN MỚI ✦</p>}
+          {challenge && (
+            <p className={styles.challenge} role="status">
+              {state.score > challenge.score
+                ? `Bạn đã vượt mốc ${challenge.score} điểm!`
+                : state.score === challenge.score
+                  ? `Hòa rồi! Cùng đạt ${challenge.score} điểm.`
+                  : `Bạn đạt ${state.score} điểm. Thử lại để vượt mốc ${challenge.score} nhé!`}
+            </p>
+          )}
           <Button
             block
             variant="primary"
@@ -242,7 +344,10 @@ export function RushGame({ daily = false }: { daily?: boolean }) {
               ? 'Lượt vừa rồi bén đấy. Thêm một lượt, phá luôn kỷ lục mới?'
               : `Thử lại để vượt ${state.previousBest > 0 ? state.previousBest : 500} điểm nhé. Mỗi cú lừa đều có cách gỡ.`}
           </p>
-          <Button block onClick={copyChallenge}>
+          <Button block onClick={shareChallenge}>
+            Thách đấu bạn bè
+          </Button>
+          <Button block variant="quiet" onClick={copyChallenge}>
             Sao chép lời thách đấu
           </Button>
           {share && (
@@ -250,7 +355,15 @@ export function RushGame({ daily = false }: { daily?: boolean }) {
               {share}
             </p>
           )}
-          <p className={styles.finePrint}>Kỷ lục lưu trên thiết bị này.</p>
+          <p className={styles.finePrint}>
+            Kỷ lục lưu trên thiết bị này.
+            {challenge && ' Điểm bạn bè tự chia sẻ · Có thể chơi lại.'}
+          </p>
+          {challenge && (
+            <ButtonLink block variant="quiet" href={daily ? '/daily' : '/rush'}>
+              {daily ? 'Chơi bộ câu hôm nay' : 'Chơi bộ câu ngẫu nhiên'}
+            </ButtonLink>
+          )}
           <ButtonLink block variant="quiet" href="/levels">
             Đổi gió với 42 màn phiêu lưu →
           </ButtonLink>

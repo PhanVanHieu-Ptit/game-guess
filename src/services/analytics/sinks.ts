@@ -22,3 +22,30 @@ export const consoleSink: AnalyticsSink = {
 export const noopSink: AnalyticsSink = {
   send() {},
 };
+
+/** Same-origin transport; loss of analytics must never interrupt a game. */
+export const httpSink: AnalyticsSink = {
+  send(event) {
+    const body = JSON.stringify(event);
+    try {
+      if (
+        typeof navigator !== 'undefined' &&
+        typeof navigator.sendBeacon === 'function' &&
+        navigator.sendBeacon(
+          '/api/events',
+          new Blob([body], { type: 'application/json' }),
+        )
+      )
+        return;
+    } catch {
+      // Some browsers expose sendBeacon but reject it in private mode.
+    }
+    void fetch('/api/events', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body,
+      keepalive: true,
+      credentials: 'omit',
+    }).catch(() => {});
+  },
+};

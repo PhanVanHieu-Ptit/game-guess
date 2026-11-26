@@ -1,5 +1,6 @@
 import { expect, test as base } from '@playwright/test';
 import { findEventProblems, type TrackedEvent } from './helpers/events';
+import { isAnalyticsEvent } from '@/services/analytics/validate';
 
 // Fixture chung của mọi test E2E (docs/TECH.md mục 11):
 //  - `guard` chạy tự động: test THẤT BẠI nếu trang có console.error / console.warn, lỗi chưa bắt (pageerror),
@@ -18,6 +19,7 @@ interface Guard {
 interface Fixtures {
   guard: Guard;
   events: TrackedEvent[];
+  growthEvents: TrackedEvent[];
 }
 
 // Trình duyệt tự hủy một yêu cầu (ví dụ nạp trước một liên kết rồi người dùng đã sang trang khác) không phải lỗi mạng.
@@ -34,15 +36,40 @@ const isAborted = (errorText: string | undefined): boolean =>
 const ABORTED_PREFETCH_ERROR = /\?_rsc=\S+ due to access control checks/;
 
 export const test = base.extend<Fixtures>({
+  growthEvents: [
+    async ({ page }, provide) => {
+      const events: TrackedEvent[] = [];
+      page.on('console', (message) => {
+        const text = message.text();
+        if (!text.startsWith(TRACK_PREFIX)) return;
+        const event = JSON.parse(
+          text.slice(TRACK_PREFIX.length),
+        ) as TrackedEvent;
+        if (event.type === 'page_view' || event.type.startsWith('rush_'))
+          events.push(event);
+      });
+      await provide(events);
+      expect(
+        events.every(isAnalyticsEvent),
+        'Invalid growth analytics event',
+      ).toBe(true);
+      expect(new Set(events.map((event) => event.eventId)).size).toBe(
+        events.length,
+      );
+    },
+    { auto: true },
+  ],
   events: [
     async ({ page }, provide) => {
       const events: TrackedEvent[] = [];
       page.on('console', (message) => {
         const text = message.text();
         if (!text.startsWith(TRACK_PREFIX)) return;
-        events.push(
-          JSON.parse(text.slice(TRACK_PREFIX.length)) as TrackedEvent,
-        );
+        const event = JSON.parse(
+          text.slice(TRACK_PREFIX.length),
+        ) as TrackedEvent;
+        if (event.type !== 'page_view' && !event.type.startsWith('rush_'))
+          events.push(event);
       });
       await provide(events);
       expect(
