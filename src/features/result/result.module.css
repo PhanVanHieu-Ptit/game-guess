@@ -149,6 +149,33 @@
   line-height: 1.4;
 }
 
+.scoreCard {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border: 2px solid var(--c-ink);
+  border-radius: 16px;
+  background: #231f3f;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+.scoreCard > strong {
+  color: #ffdb76;
+  font-size: 2rem;
+}
+.milestone {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 14px;
+  background: #fff0ac;
+  border: 2px solid #8a5600;
+  border-radius: 16px;
+  font-size: 1rem;
+}
+
 @keyframes pop {
   from {
     transform: scale(0.8);

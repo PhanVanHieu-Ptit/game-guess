@@ -7,6 +7,7 @@ import {
   type OpenableTier,
 } from '@/domain/hints/hint-machine';
 import type { LevelMeta } from '@/domain/levels/types';
+import { formatScore, runScore } from '@/domain/progress/scoring';
 import { strings } from '@/features/strings';
 import { Button } from '@/features/ui/button';
 import { Modal } from '@/features/ui/modal';
@@ -76,6 +77,15 @@ function HintSheetBody({
             >
               <p className={styles.stepName}>
                 {strings.hints.tierName[step - 1]}
+                {' · '}
+                {formatScore(
+                  runScore(
+                    meta.ordinal,
+                    step === 3 ? 'revealed' : 'solved',
+                    step,
+                  ),
+                )}{' '}
+                điểm khi giải
               </p>
               {opened ? (
                 <p className={styles.stepText}>{meta.hints[step - 1]}</p>

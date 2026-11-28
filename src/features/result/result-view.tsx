@@ -8,6 +8,14 @@ import {
   replayChallenge,
 } from '@/domain/progress/journey';
 import { JourneyCard } from '@/features/journey/journey-card';
+import { PrizeLadder } from '@/features/journey/prize-ladder';
+import {
+  campaignScore,
+  chapterReward,
+  formatScore,
+  isCheckpoint,
+  runScore,
+} from '@/domain/progress/scoring';
 import { LEVEL_METAS } from '@/levels';
 import { flavorOf } from '@/levels/flavor';
 import { useProgress } from '@/stores/progress';
@@ -51,6 +59,19 @@ export function ResultView({
     chapterIndex(meta.ordinal),
   );
   const replay = replayChallenge(LEVEL_METAS, results);
+  const reward = chapterReward(
+    LEVEL_METAS,
+    results,
+    chapterIndex(meta.ordinal),
+  );
+  const nextChapter = next ? CHAPTERS[chapterIndex(next.ordinal)] : null;
+  const advancing =
+    next && chapterIndex(next.ordinal) !== chapterIndex(meta.ordinal);
+  const retryForRank = LEVEL_METAS.find(
+    (level) =>
+      chapterIndex(level.ordinal) === chapterIndex(meta.ordinal) &&
+      results[level.id]?.status === 'revealed',
+  );
   return (
     <Modal open={open} label={strings.result.dialogLabel} variant="full">
       {!revealed && (
@@ -79,27 +100,26 @@ export function ResultView({
           : (flavorOf(meta.id)?.[1] ?? strings.result.solvedLead)}
       </p>
 
-      {progress.earned && (
-        <p className={styles.stamp} data-testid="earned-stamp">
-          <span aria-hidden="true">{chapter.icon}</span> Chặng hoàn tất ·{' '}
-          {chapter.stamp}
+      <div className={styles.scoreCard} aria-label="Điểm chinh phục">
+        <p>
+          {isCheckpoint(meta.ordinal)
+            ? 'Màn chốt · điểm gấp đôi'
+            : 'Điểm lượt này'}
         </p>
-      )}
-      <JourneyCard ordinal={meta.ordinal} compact />
-
-      {meta.ordinal === 6 && !revealed && (
-        <div className={styles.feast} data-testid="tet-finale">
-          <span aria-hidden="true">🧧 🥭 🐓 🐟</span>
-          <strong>Tết vui vì có bạn!</strong>
-          <p>Ngoại mời con vào mâm. Một chuyến về nhà, sáu chuyện để kể.</p>
-        </div>
-      )}
+        <strong data-testid="run-score">
+          {formatScore(runScore(meta.ordinal, status, hintsUsed))} điểm
+        </strong>
+        <p>
+          Tổng tốt nhất:{' '}
+          <b data-testid="result-campaign-score">
+            {formatScore(campaignScore(LEVEL_METAS, results))}
+          </b>{' '}
+          điểm
+        </p>
+        {revealed && <p>Chơi lại để lấy điểm và nhận danh hiệu.</p>}
+      </div>
 
       <div className={styles.nextCard}>
-        <p className={styles.cardLabel}>
-          {next ? 'Tiếp theo có gì?' : 'Hộ chiếu đã đầy dấu!'}
-        </p>
-        <p>{flavorOf(meta.id)?.[2]}</p>
         {next ? (
           <ButtonLink block variant="primary" href={`/play/${next.id}`}>
             {strings.result.next}
@@ -109,7 +129,53 @@ export function ResultView({
             {strings.result.backToLevels}
           </ButtonLink>
         )}
+        <p className={styles.cardLabel}>
+          {next ? 'Tiếp theo có gì?' : 'Hộ chiếu đã đầy dấu!'}
+        </p>
+        <p>
+          {advancing && nextChapter
+            ? `Bước lên cấp ${chapterIndex(next.ordinal) + 1} · ${nextChapter.rank}. ${nextChapter.brief}`
+            : flavorOf(meta.id)?.[2]}
+        </p>
       </div>
+
+      {progress.earned && (
+        <p className={styles.stamp} data-testid="earned-stamp">
+          <span aria-hidden="true">{chapter.icon}</span> Chặng hoàn tất ·{' '}
+          {chapter.stamp}
+        </p>
+      )}
+      <JourneyCard ordinal={meta.ordinal} compact />
+
+      {progress.earned && (isCheckpoint(meta.ordinal) || reward.mastered) && (
+        <div className={styles.milestone} data-testid="rank-reward">
+          <strong>
+            {reward.mastered
+              ? `🏆 Danh hiệu: ${chapter.rank}`
+              : `Đã qua mốc màn ${reward.milestone}!`}
+          </strong>
+          <p>
+            {reward.mastered
+              ? `Giải đủ 6/6 màn · ${formatScore(reward.score)}/${formatScore(reward.maximum)} điểm của cấp.`
+              : `Đã giải ${reward.solved}/6 màn. Giải lại các màn đã xem đáp án để nhận danh hiệu.`}
+          </p>
+          {retryForRank && (
+            <ButtonLink block href={`/play/${retryForRank.id}`}>
+              Lấy lại điểm · Màn {retryForRank.ordinal}
+            </ButtonLink>
+          )}
+        </div>
+      )}
+
+      {meta.ordinal === 6 && !revealed && (
+        <div className={styles.feast} data-testid="tet-finale">
+          <span aria-hidden="true">🧧 🥭 🐓 🐟</span>
+          <strong>Tết vui vì có bạn!</strong>
+          <p>Ngoại mời con vào mâm. Một chuyến về nhà, sáu chuyện để kể.</p>
+        </div>
+      )}
+
+      {!next && <PrizeLadder />}
 
       {revealed ? (
         <div className={styles.card}>

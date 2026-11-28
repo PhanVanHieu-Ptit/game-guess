@@ -1,5 +1,6 @@
 # LEVELS — 25 màn MVP và 19 màn bổ sung của Lắt Léo
 
+> **Cập nhật 27/11/2026:** theo yêu cầu giữ đố mẹo tương tác, thêm cấp bậc và mốc thưởng: chiến dịch 42 màn được sắp tăng dần theo độ khó, giữ nguyên sáu màn Tết và mã lưu tiến trình. Bảng nội dung bên dưới giữ nhóm màn theo lần thiết kế; thứ tự chơi hiện hành và luật điểm xem [CAMPAIGN_PROGRESSION.md](CAMPAIGN_PROGRESSION.md).
 > **Trạng thái:** NHÁP v0.1, chờ chủ dự án duyệt · **Ngày soạn:** 2026-11-13 · **Soạn:** Claude. Thiết kế chung: [GDD.md](GDD.md); cách khai báo một màn trong mã: [TECH.md](TECH.md) mục 5.
 > 10 ý tưởng của chủ dự án giữ nguyên tinh thần; 15 màn 2D còn lại do tôi đề xuất. Chỗ tôi phải hiểu hoặc quyết thay: mục 3.
 > **Cập nhật 25/11/2026:** theo yêu cầu trực tiếp “cải tiến 6 màn đầu đi”, sáu màn mở đầu thành chặng **Tết nhà ngoại**. Bảng và mục 3 đã đồng bộ với cách chơi mới; không đổi mã màn hoặc xóa tiến trình đã lưu. GDD và baseline kế hoạch giữ nguyên. Bằng chứng: [UX-FIRST-SIX-2026-11-25.md](evidence/UX-FIRST-SIX-2026-11-25.md).

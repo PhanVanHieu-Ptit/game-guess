@@ -40,12 +40,12 @@ export const LEVEL_FLAVOR = {
   '3d-01': [
     'Shipper gọi lần thứ ba rồi. Địa chỉ có thật mà!',
     'Đã giao đúng nhà! Một đơn hàng, một pha xoay não.',
-    'Chiếc rương chỉ mở cho người biết nghịch chữ.',
+    'Một bài kiểm tra mà chăm chỉ quá lại dễ mắc bẫy.',
   ],
   '2d-08': [
     'Rương này không nhận chìa khóa. Nó thích nghe chơi chữ.',
     'Rương mở rồi! Hóa ra mật khẩu nằm ngay trên nhãn.',
-    'Một bài kiểm tra mà chăm chỉ quá lại dễ mắc bẫy.',
+    'Trời sắp mưa, ốc sên cần về nhà gấp.',
   ],
   '2d-09': [
     'Giáo viên: “Chỉ năm phút thôi.” Đọc kỹ đã nha.',
@@ -60,7 +60,7 @@ export const LEVEL_FLAVOR = {
   '2d-11': [
     'Mình giữ nó, mà người khác cứ gọi suốt ngày.',
     'Đúng rồi! Của bạn, nhưng cả xóm xài miễn phí.',
-    'Chìa khóa lại trốn. Chiếc dép có vẻ khả nghi.',
+    'Chiếc rương chỉ mở cho người biết nghịch chữ.',
   ],
   '3d-02': [
     'Xe chờ, người chờ. Chỉ có chìa khóa là thích trốn tìm.',
@@ -85,17 +85,17 @@ export const LEVEL_FLAVOR = {
   '3d-03': [
     'Cả nhà chờ chia bánh. Đếm hụt là có người giận đó!',
     'Đếm đủ bánh rồi. Năm nay chia phần khỏi cãi!',
-    'Một câu tiếng Việt trông như bị gõ lặp.',
+    'Gánh hàng lệch vai. Giúp bà một tay nào.',
   ],
   '2d-15': [
     'Bàn phím không hỏng đâu. Câu này có nghĩa thật.',
     'Câu chữ đã vào hàng. Giáo viên Văn thả tim.',
-    'Gánh hàng lệch vai. Giúp bà một tay nào.',
+    'Quán cà phê có chiếc đồng hồ thích đánh lừa.',
   ],
   '2d-16': [
     'Bà: “Chia sao cho đều, chứ vai bà hết chịu nổi rồi.”',
     'Vai bà nhẹ, đầu bạn sáng. Một công đôi việc!',
-    'Quán cà phê có chiếc đồng hồ thích đánh lừa.',
+    'Tắt đèn rồi mà bé vẫn chưa chịu ngủ.',
   ],
   '2d-17': [
     'Khách bảo trễ hẹn. Đồng hồ trong gương bảo chưa chắc.',
@@ -110,12 +110,12 @@ export const LEVEL_FLAVOR = {
   '2d-19': [
     'Phép tính này chỉ cần một cuộc chuyển nhà nhỏ.',
     'Đúng một que, cứu cả phép tính. Tiết kiệm ghê!',
-    'Ba túi trái cây. Ba cái nhãn. Không nhãn nào thật thà.',
+    'Hai cốc ngang mực, nhưng chưa chắc ngang nước.',
   ],
   '2d-20': [
     'Chủ sạp: “Ai dán nhãn vậy trời?” Bạn ra tay nhé.',
     'Sạp trái cây đã có trật tự. Chủ sạp tặng một tràng pháo tay.',
-    'Tắt đèn rồi mà bé vẫn chưa chịu ngủ.',
+    'Ba cổng hội chợ, chỉ một tấm biển thật thà.',
   ],
   '2d-21': [
     'Bé kéo chăn lần thứ năm. Vẫn chói!',
@@ -125,17 +125,17 @@ export const LEVEL_FLAVOR = {
   '2d-22': [
     'Mặt trời không biết nói dối. Còn mấy cái bóng thì…',
     'Bạn tóm được cái bóng chính chủ!',
-    'Hai cốc ngang mực, nhưng chưa chắc ngang nước.',
+    'Cắt mất một góc, sao nhìn lại thấy nhiều hơn?',
   ],
   '2d-23': [
     'Hai cốc đang tranh nhau danh hiệu “nhiều nước nhất”.',
     'Mực nước đã khai thật. Một pha điều tra trong veo!',
-    'Ba cổng hội chợ, chỉ một tấm biển thật thà.',
+    'Sáu cái cốc và đúng một lần nhấc tay.',
   ],
   '2d-24': [
     'Bác bảo vệ cũng đang chờ bạn chọn cổng.',
     'Ra được rồi! Mấy tấm biển hết đường đánh lạc hướng.',
-    'Trời sắp mưa, ốc sên cần về nhà gấp.',
+    'Sói, dê, bắp cải cùng muốn đi đò. Hơi căng.',
   ],
   '2d-25': [
     'Ốc sên không chạy nhanh. Nhưng có khi chẳng cần chạy.',
@@ -145,7 +145,7 @@ export const LEVEL_FLAVOR = {
   '2d-26': [
     'Cô bán cam: “Cân cả tình cảm… à nhầm, cả cái rổ.”',
     'Cam ra cam, rổ ra rổ. Tính tiền chuẩn rồi!',
-    'Cắt mất một góc, sao nhìn lại thấy nhiều hơn?',
+    'Trong phòng tối, việc đầu tiên là gì?',
   ],
   '2d-27': [
     'Tờ giấy: “Mất một góc chưa chắc là bớt một góc nha.”',
@@ -155,17 +155,17 @@ export const LEVEL_FLAVOR = {
   '2d-28': [
     'Bà nhớ rất rõ. Chỉ có lịch trong đầu mình hơi loạn.',
     'Lịch đã hết lú. Bà rủ bạn uống trà.',
-    'Sáu cái cốc và đúng một lần nhấc tay.',
+    'Chia bánh sao cho cái giỏ vẫn có phần?',
   ],
   '2d-29': [
     'Phục vụ quán có một thử thách dọn bàn hơi kỳ.',
     'Một lần nhấc, cả hàng cốc vào nếp. Tay nghề cao!',
-    'Trong phòng tối, việc đầu tiên là gì?',
+    'Một viên bi nhẹ hơn đang giả vờ giống tám viên còn lại.',
   ],
   '2d-30': [
     'Nến và đèn dầu đang chờ ai đó bắt đầu.',
     'Một tia sáng lóe lên. Cả căn phòng được nhờ!',
-    'Chia bánh sao cho cái giỏ vẫn có phần?',
+    'Vừa vượt một người, liệu đã được dẫn đầu?',
   ],
   '2d-31': [
     'Ba bé, ba bánh. Cái giỏ cũng nhất quyết không chịu rỗng.',
@@ -175,17 +175,17 @@ export const LEVEL_FLAVOR = {
   '2d-32': [
     'Ốc: “Lên tới đỉnh là tui về, không tăng ca đâu.”',
     'Ốc chạm đỉnh rồi! Đêm nay được ngủ ngon.',
-    'Một viên bi nhẹ hơn đang giả vờ giống tám viên còn lại.',
+    'Một chiếc bánh, một cái túi, một cái bẫy nhẩm nhanh.',
   ],
   '2d-33': [
     'Chiếc cân chỉ nhận hai lượt. Thám tử tính kỹ nhé.',
     'Viên bi hết đường giả vờ. Hai lượt cân quá gọn!',
-    'Sói, dê, bắp cải cùng muốn đi đò. Hơi căng.',
+    'Hai cái bình, không vạch chia, vẫn phải nấu chè.',
   ],
   '2d-34': [
     'Bác lái đò: “Miễn đừng ai ăn ai trên bờ là được.”',
     'Đủ khách, nguyên hàng. Bác đò nhận chuyến đi năm sao!',
-    'Vừa vượt một người, liệu đã được dẫn đầu?',
+    'Bốn tấm thẻ sắp thử xem bạn tin luật đến đâu.',
   ],
   '2d-35': [
     'Bình luận viên đang hét rất to. Bạn khoan ăn mừng vội.',
@@ -195,17 +195,17 @@ export const LEVEL_FLAVOR = {
   '2d-36': [
     'Màu mực và tên màu đang cố tình cãi nhau.',
     'Bạn nhìn màu chuẩn hơn máy in rồi đó!',
-    'Một chiếc bánh, một cái túi, một cái bẫy nhẩm nhanh.',
+    'Chìa khóa lại trốn. Chiếc dép có vẻ khả nghi.',
   ],
   '2d-37': [
     'Cô bán bánh: “Nhẩm nhanh quá là cô tính lại đó nha.”',
     'Hóa đơn khớp rồi. Cô bán bánh khỏi lo thối nhầm!',
-    'Hai cái bình, không vạch chia, vẫn phải nấu chè.',
+    'Một câu tiếng Việt trông như bị gõ lặp.',
   ],
   '2d-38': [
     'Nồi chè đang chờ đúng lượng nước. Đừng áng chừng nha.',
     'Đủ bốn lít! Chè ngon có công bạn đong nước.',
-    'Bốn tấm thẻ sắp thử xem bạn tin luật đến đâu.',
+    'Ba túi trái cây. Ba cái nhãn. Không nhãn nào thật thà.',
   ],
   '2d-39': [
     'Đây là bàn cuối. Ít thẻ thôi, nhưng phải bắt được mọi kẽ hở.',

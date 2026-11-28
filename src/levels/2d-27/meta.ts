@@ -2,7 +2,7 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '2d-27',
-  ordinal: 30,
+  ordinal: 26,
   kind: '2d',
   title: 'Cắt một góc',
   prompt:

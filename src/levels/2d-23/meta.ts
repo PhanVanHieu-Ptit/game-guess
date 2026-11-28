@@ -2,7 +2,7 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '2d-23',
-  ordinal: 26,
+  ordinal: 35,
   kind: '2d',
   title: 'Cốc nào nhiều nước hơn?',
   prompt:

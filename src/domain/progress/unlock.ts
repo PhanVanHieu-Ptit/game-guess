@@ -16,7 +16,7 @@ export function isUnlocked(
 ): boolean {
   const index = metas.findIndex((meta) => meta.id === id);
   if (index < 0) return false;
-  if (unlockAll || index === 0) return true;
+  if (unlockAll || index === 0 || hasResult(results, id)) return true;
   return hasResult(results, metas[index - 1].id);
 }
 

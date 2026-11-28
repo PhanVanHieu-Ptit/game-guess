@@ -19,7 +19,7 @@ export const meta = {
     other: 'Quầy bánh cần khớp cả tổng lẫn chênh lệch!',
     cake: 'Bánh ngon nhưng chưa biết tính tiền đâu!',
   },
-  ordinal: 40,
+  ordinal: 30,
   kind: '2d',
   source: 'classic',
 } as const satisfies LevelMeta;

@@ -32,9 +32,11 @@ export function JourneyCard({
         </span>
         <div className={styles.copy}>
           <p className={styles.eyebrow}>
-            Chặng {index + 1} / {CHAPTERS.length}
+            Cấp {index + 1} / {CHAPTERS.length} · {chapter.rank}
           </p>
-          <p className={styles.name}>{chapter.name}</p>
+          <p className={styles.name}>
+            {compact ? `Cấp ${index + 1} · ${chapter.rank}` : chapter.name}
+          </p>
         </div>
         <strong>
           {progress.completed}/{progress.total}
@@ -53,11 +55,16 @@ export function JourneyCard({
         ))}
       </div>
       {!compact && (
-        <p className={styles.caption}>
-          {progress.earned
-            ? `Đã sưu tập dấu “${chapter.stamp}”!`
-            : `Thêm ${progress.total - progress.completed} màn để sưu tập dấu “${chapter.stamp}”.`}
-        </p>
+        <>
+          <p className={styles.caption}>
+            {chapter.difficulty} · {chapter.brief}
+          </p>
+          <p className={styles.caption}>
+            {progress.earned
+              ? `Đã sưu tập dấu “${chapter.stamp}”!`
+              : `Thêm ${progress.total - progress.completed} màn để sưu tập dấu “${chapter.stamp}”.`}
+          </p>
+        </>
       )}
     </section>
   );
@@ -99,7 +106,7 @@ export function StampCollection() {
         })}
       </div>
       <p className={styles.caption}>
-        Mỗi chặng 6 màn, một dấu để nhớ chuyến đi.
+        Qua 6 màn nhận dấu hành trình. Giải đủ cả 6 để nhận danh hiệu.
       </p>
     </section>
   );

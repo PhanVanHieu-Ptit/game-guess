@@ -2,7 +2,7 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '2d-24',
-  ordinal: 27,
+  ordinal: 40,
   kind: '2d',
   title: 'Qua cổng hội chợ',
   prompt: 'Chỉ một tấm biển nói đúng. Chạm cổng dẫn ra ngoài.',

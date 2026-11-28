@@ -2,7 +2,7 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '2d-29',
-  ordinal: 32,
+  ordinal: 36,
   kind: '2d',
   title: 'Sáu cốc nước',
   prompt:

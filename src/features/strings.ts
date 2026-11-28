@@ -4,7 +4,7 @@
 
 export const strings = {
   appName: 'Lắt Léo',
-  tagline: 'Nhanh tay chưa chắc thắng. Tỉnh táo mới qua được những cú lừa!',
+  tagline: '42 màn đố mẹo · 7 cấp chinh phục. Bạn sẽ lên tới danh hiệu nào?',
 
   home: {
     play: 'Chơi',
