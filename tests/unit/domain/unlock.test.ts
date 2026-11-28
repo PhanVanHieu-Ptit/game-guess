@@ -40,6 +40,15 @@ describe('isUnlocked (mở tuần tự)', () => {
     expect(isUnlocked(metas, m3.id, {}, true)).toBe(true);
   });
 
+  it('màn đã có kết quả vẫn chơi lại được sau khi sắp xếp lại chiến dịch', () => {
+    expect(isUnlocked(metas, m3.id, { [m3.id]: done('solved') }, false)).toBe(
+      true,
+    );
+    expect(isUnlocked(metas, m3.id, { [m3.id]: done('revealed') }, false)).toBe(
+      true,
+    );
+  });
+
   it('mã màn không có trong danh sách thì không mở, kể cả khi unlockAll', () => {
     expect(isUnlocked(metas, '2d-khong-co', {}, true)).toBe(false);
   });

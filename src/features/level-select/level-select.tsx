@@ -11,6 +11,13 @@ import {
   chapterProgress,
 } from '@/domain/progress/journey';
 import { StampCollection } from '@/features/journey/journey-card';
+import { PrizeLadder } from '@/features/journey/prize-ladder';
+import {
+  chapterReward,
+  formatScore,
+  isCheckpoint,
+  maxLevelScore,
+} from '@/domain/progress/scoring';
 import { UNLOCK_ALL } from '@/features/config';
 import { StorageNotice } from '@/features/game-shell/storage-notice';
 import { strings } from '@/features/strings';
@@ -51,7 +58,7 @@ function markFor(state: CellState): ReactNode {
   return null;
 }
 
-/** Màn chọn màn (docs/GDD.md mục 4, màn hình số 2): lưới ô đánh số sinh từ dữ liệu màn; ô khóa chỉ hiện số. */
+/** Màn chọn màn: bảy cấp, lưới màn và mốc thưởng. Ô khóa không lộ tên hoặc đáp án. */
 export function LevelSelect() {
   useEffect(() => {
     ensureProgressHydrated();
@@ -69,18 +76,29 @@ export function LevelSelect() {
         <span aria-hidden="true" />
       </header>
 
+      <PrizeLadder />
       <StampCollection />
       <div aria-label={strings.levels.listLabel}>
         {CHAPTERS.map((chapter, index) => {
           const progress = chapterProgress(LEVEL_METAS, results, index);
+          const reward = chapterReward(LEVEL_METAS, results, index);
           return (
             <section key={chapter.name} className={styles.chapter}>
               <h2 className={styles.chapterTitle}>
-                <span aria-hidden="true">{chapter.icon}</span> {chapter.name}{' '}
+                <span aria-hidden="true">{chapter.icon}</span> Cấp {index + 1} ·{' '}
+                {chapter.rank}{' '}
                 <span>
                   {progress.completed}/{progress.total}
                 </span>
               </h2>
+              <p className={styles.chapterCaption}>
+                {chapter.difficulty} · {chapter.brief}
+              </p>
+              <p className={styles.reward}>
+                {reward.mastered
+                  ? `🏆 Đã nhận danh hiệu ${chapter.rank}`
+                  : `Mốc màn ${reward.milestone} · Tối đa ${formatScore(reward.maximum)} điểm`}
+              </p>
               <p className={styles.chapterCaption}>
                 {progress.earned
                   ? `Dấu “${chapter.stamp}” đã vào hộ chiếu!`
@@ -95,7 +113,20 @@ export function LevelSelect() {
                   const mark = markFor(state);
                   const content = (
                     <>
-                      {meta.ordinal}
+                      <strong>
+                        {meta.ordinal}
+                        {isCheckpoint(meta.ordinal) ? ' 🏆' : ''}
+                      </strong>
+                      <span className={styles.cellTitle}>
+                        {isCheckpoint(meta.ordinal)
+                          ? 'Màn chốt ×2'
+                          : state === 'locked'
+                            ? `Độ khó ${meta.difficulty}/5`
+                            : meta.title}
+                      </span>
+                      <span className={styles.cellScore}>
+                        {formatScore(maxLevelScore(meta.ordinal))} điểm
+                      </span>
                       {mark ? (
                         <span className={styles.mark} aria-hidden="true">
                           {mark}
@@ -109,6 +140,7 @@ export function LevelSelect() {
                         <span
                           className={styles.cell}
                           data-state={state}
+                          data-checkpoint={isCheckpoint(meta.ordinal)}
                           role="img"
                           aria-label={label}
                         >
@@ -118,6 +150,7 @@ export function LevelSelect() {
                         <Link
                           className={styles.cell}
                           data-state={state}
+                          data-checkpoint={isCheckpoint(meta.ordinal)}
                           data-touch-target
                           href={`/play/${meta.id}`}
                           aria-label={label}

@@ -26,7 +26,7 @@ export type Input =
 /** Thang độ khó 1–5 (docs/GDD.md mục 11). */
 export type Difficulty = 1 | 2 | 3 | 4 | 5;
 
-/** Chiến dịch (25 màn) hay câu đố mỗi ngày. */
+/** Chiến dịch (42 màn) hay câu đố mỗi ngày. */
 export type PlayMode = 'campaign' | 'daily';
 
 export interface LevelMeta {

@@ -18,7 +18,7 @@ export const meta = {
     yellow: 'Màu tím đang đóng vai màu vàng rồi!',
     purple: 'Chữ tím nhưng mực vàng, đổi vai vui ghê!',
   },
-  ordinal: 39,
+  ordinal: 17,
   kind: '2d',
   source: 'classic',
 } as const satisfies LevelMeta;

@@ -13,7 +13,7 @@ export interface HintState {
 
 export const INITIAL_HINT_STATE: HintState = { tier: 0 };
 
-/** Mức tự giải để hiện ở màn kết quả và (sau này) thẻ chia sẻ. Không có sao hay điểm (giả định G3). */
+/** Mức tự giải để hiện ở màn kết quả và thẻ chia sẻ; điểm chinh phục được tính riêng. */
 export type SolveLevel = 'self' | 'hinted' | 'revealed';
 
 /** Cấp kế tiếp được phép mở, hoặc null nếu đã mở hết. Các cấp mở tuần tự. */

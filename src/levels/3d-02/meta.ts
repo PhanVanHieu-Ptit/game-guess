@@ -3,7 +3,7 @@ import type { LevelMeta } from '@/domain/levels/types';
 export const meta = {
   id: '3d-02',
   // Vị trí #13 theo thiết kế, sau 2D-11.
-  ordinal: 13,
+  ordinal: 18,
   kind: '3d',
   title: 'Tìm chìa khóa xe máy',
   prompt: 'Sắp trễ giờ! Chìa khóa xe máy đâu rồi?',

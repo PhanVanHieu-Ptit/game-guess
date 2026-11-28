@@ -20,7 +20,7 @@ export const meta = {
     blocked: 'Bên nhận đầy rồi, chè chưa cần ngập bếp!',
     measure: 'Bình không có vạch, dùng nút để đong nhé!',
   },
-  ordinal: 41,
+  ordinal: 38,
   kind: '2d',
   source: 'classic',
 } as const satisfies LevelMeta;

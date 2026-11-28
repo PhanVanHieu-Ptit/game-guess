@@ -3,10 +3,11 @@
 import { Suspense, useEffect, useState } from 'react';
 import type { OpenableTier } from '@/domain/hints/hint-machine';
 import { levelAfter } from '@/domain/progress/unlock';
+import { CHAPTERS, chapterIndex } from '@/domain/progress/journey';
 import { FeedbackToast } from '@/features/hud/feedback-toast';
 import { BottomBar } from '@/features/hud/bottom-bar';
 import { TopBar } from '@/features/hud/top-bar';
-import { JourneyCard } from '@/features/journey/journey-card';
+import { ChallengeStakes } from '@/features/journey/challenge-stakes';
 import { HintSheet } from '@/features/hints/hint-sheet';
 import { ResultView } from '@/features/result/result-view';
 import { strings } from '@/features/strings';
@@ -71,10 +72,10 @@ export function LevelShell({ level }: { level: Level }) {
           ordinal={meta.ordinal}
           total={LEVEL_METAS.length}
           onRestart={restart}
-          chapter={meta.ordinal <= 6 ? 'Tết nhà ngoại' : undefined}
+          chapter={`Cấp ${chapterIndex(meta.ordinal) + 1} · ${CHAPTERS[chapterIndex(meta.ordinal)].rank}`}
         />
         <StorageNotice />
-        {meta.ordinal > 6 && <JourneyCard ordinal={meta.ordinal} compact />}
+        <ChallengeStakes ordinal={meta.ordinal} hints={snapshot.hintTier} />
         <PromptText
           prompt={meta.prompt}
           className={styles.prompt}

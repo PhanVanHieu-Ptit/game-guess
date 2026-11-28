@@ -202,7 +202,7 @@ test('trang chủ → màn 1 → sai rồi đúng → kết quả → màn tiế
     level37,
     level38,
     level39,
-  ]) {
+  ].sort((a, b) => a.meta.ordinal - b.meta.ordinal)) {
     await result.next(page).tap();
     await expect(page).toHaveURL(`/play/${level.meta.id}`);
     await expect(play.heading(page, level.meta.ordinal)).toBeVisible();
@@ -270,7 +270,7 @@ test('Chơi tiếp đưa về màn chưa xong đầu tiên', async ({ page }) =>
   await expect(play.heading(page, 2)).toBeVisible();
 });
 
-test('chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, không lộ tên màn', async ({
+test('chọn màn: màn đầu mở, màn sau khóa hiện độ khó và điểm, không lộ tên màn', async ({
   page,
 }) => {
   await page.goto('/');
@@ -283,7 +283,9 @@ test('chọn màn: màn đầu mở, màn sau khóa và chỉ hiện số, khôn
 
   const locked = levelCell(page, 2, 'locked');
   await expect(locked).toBeVisible();
-  await expect(locked).toHaveText('2');
+  await expect(locked.locator('strong')).toHaveText('2');
+  await expect(locked).toContainText('Độ khó 1/5');
+  await expect(locked).toContainText('100 điểm');
   await expect(locked).not.toHaveAttribute('href', /.*/);
   await expect(page.getByText(level02.meta.title)).toHaveCount(0);
   await expectLayoutOk(page, 'chọn màn của người chơi mới');

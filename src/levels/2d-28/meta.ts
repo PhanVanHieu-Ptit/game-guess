@@ -2,7 +2,7 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '2d-28',
-  ordinal: 31,
+  ordinal: 27,
   kind: '2d',
   title: 'Ngày mai của hôm qua',
   prompt: 'Hôm qua bà nói: “Ngày mai là thứ Sáu.” Hôm nay là thứ mấy?',

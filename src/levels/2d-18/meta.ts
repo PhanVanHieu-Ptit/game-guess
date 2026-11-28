@@ -1,7 +1,7 @@
 import type { LevelMeta } from '@/domain/levels/types';
 export const meta = {
   id: '2d-18',
-  ordinal: 21,
+  ordinal: 33,
   kind: '2d',
   title: 'Chia trâu',
   prompt:

@@ -19,7 +19,7 @@ export const meta = {
     other: 'Vị trí cũ nhường lại rồi, thử nghĩ thêm nhé!',
     runner: 'Bạn ấy đang chạy, chưa kịp trả lời đâu!',
   },
-  ordinal: 38,
+  ordinal: 16,
   kind: '2d',
   source: 'classic',
 } as const satisfies LevelMeta;

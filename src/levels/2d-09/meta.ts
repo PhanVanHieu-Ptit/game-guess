@@ -2,7 +2,7 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '2d-09',
-  ordinal: 10,
+  ordinal: 9,
   kind: '2d',
   title: 'Bài kiểm tra 5 phút',
   prompt: 'Đọc kỹ đề trước khi làm bài.',

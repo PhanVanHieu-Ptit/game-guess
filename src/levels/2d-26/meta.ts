@@ -2,7 +2,7 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '2d-26',
-  ordinal: 29,
+  ordinal: 14,
   kind: '2d',
   title: 'Cân cả chiếc rổ',
   prompt: 'Cân đang thăng bằng. Riêng số cam trong rổ nặng mấy ký?',

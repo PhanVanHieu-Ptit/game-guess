@@ -2,7 +2,7 @@ import type { LevelMeta } from '@/domain/levels/types';
 
 export const meta = {
   id: '2d-08',
-  ordinal: 9,
+  ordinal: 12,
   kind: '2d',
   title: 'Bật mí bí mật',
   prompt: 'Muốn biết bí mật, hãy nói lái nó. Gõ từ mới.',
